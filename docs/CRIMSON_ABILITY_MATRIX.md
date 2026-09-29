@@ -29,3 +29,17 @@ Base creatures remain intentionally simpler. Upgrade value comes from modest sta
 5. Blood Rite attach/transaction layer
 6. Bloodlord/Seer class skill grants
 7. local VCMI battle test
+
+
+## Blood Rite runtime progress
+- Rite of the Open Vein: executable server-side transaction script staged
+- Rite of Scarlet Shelter: executable server-side transaction script staged
+- both are nonlethal and target-limited once per battle
+- both sacrifice HP before applying their benefit
+- Hunt / Returning Embers / Red Moon remain gated on validated multi-target/action UI
+- these scripts expose an apply() transaction; the player-facing action/spell bridge is still required before they are usable in a normal battle UI
+
+## Caster runtime
+- Hemomancer: SPELLCASTER Weakness mastery 1, 2 casts, enchant power 2
+- Vein Oracle: Weakness mastery 2 + Stone Skin mastery 1, 3 shared casts, enchant power 3
+- VCMI Battle AI already evaluates active SPELLCASTER bonuses; final AI quality remains a local-test gate
