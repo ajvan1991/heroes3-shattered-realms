@@ -35,8 +35,8 @@ function Script:apply(mechanics, server, target)
         type = "PRIMARY_SKILL",
         subtype = self.stat or "attack",
         val = self.statValue or 2,
-        duration = "N_TURNS",
-        turns = mechanics:getEffectDuration(),
+        duration = ENUM.BonusDuration.nTurns,
+        turns = self.turns or 2,
         sourceType = "SPELL_EFFECT",
         sourceID = mechanics:getSpell():getJsonKey(),
         stacking = mechanics:getSpell():getJsonKey()
@@ -48,8 +48,8 @@ function Script:apply(mechanics, server, target)
             subtype = "damageTypeRanged",
             val = self.rangedReduction,
             effectRange = "ONLY_DISTANCE_FIGHT",
-            duration = "N_TURNS",
-            turns = mechanics:getEffectDuration(),
+            duration = ENUM.BonusDuration.nTurns,
+            turns = self.turns or 2,
             sourceType = "SPELL_EFFECT",
             sourceID = mechanics:getSpell():getJsonKey(),
             stacking = mechanics:getSpell():getJsonKey() .. ":ranged"
@@ -58,7 +58,7 @@ function Script:apply(mechanics, server, target)
 
     if self.usedMarker then
         server:addUnitBonus(battle, unit, {
-            type = self.usedMarker, val = 1, duration = "ONE_BATTLE"
+            type = self.usedMarker, val = 1, duration = ENUM.BonusDuration.oneBattle
         }, false)
     end
 end
