@@ -84,6 +84,14 @@
       "killed": "SOUNDS/CRIMSON/bloodbound_killed.wav",
       "move": "SOUNDS/CRIMSON/bloodbound_move.wav",
       "wince": "SOUNDS/CRIMSON/bloodbound_wince.wav"
+    },
+    "abilities": {
+      "bloodied": {
+        "type": "COMBAT_EVENT_TRIGGER",
+        "subtype": "crimsonBloodied",
+        "val": 1,
+        "stacking": "shattered-realms:bloodied"
+      }
     }
   },
   "thornDancer": {
@@ -177,6 +185,12 @@
         "type": "COMBAT_EVENT_TRIGGER",
         "subtype": "crimsonDancerGrace",
         "val": 1
+      },
+      "bloodied": {
+        "type": "COMBAT_EVENT_TRIGGER",
+        "subtype": "crimsonBloodied",
+        "val": 1,
+        "stacking": "shattered-realms:bloodied"
       }
     }
   },
@@ -265,6 +279,12 @@
           "requireKill": true,
           "allowCounter": false
         }
+      },
+      "bloodied": {
+        "type": "COMBAT_EVENT_TRIGGER",
+        "subtype": "crimsonBloodied",
+        "val": 1,
+        "stacking": "shattered-realms:bloodied"
       }
     },
     "graphics": {
@@ -371,6 +391,14 @@
       "killed": "SOUNDS/CRIMSON/veinOracle_killed.wav",
       "move": "SOUNDS/CRIMSON/veinOracle_move.wav",
       "wince": "SOUNDS/CRIMSON/veinOracle_wince.wav"
+    },
+    "abilities": {
+      "bloodied": {
+        "type": "COMBAT_EVENT_TRIGGER",
+        "subtype": "crimsonBloodied",
+        "val": 1,
+        "stacking": "shattered-realms:bloodied"
+      }
     }
   },
   "scarletHuntress": {
@@ -450,6 +478,12 @@
     "abilities": {
       "shooter": {
         "type": "SHOOTER"
+      },
+      "bloodied": {
+        "type": "COMBAT_EVENT_TRIGGER",
+        "subtype": "crimsonBloodied",
+        "val": 1,
+        "stacking": "shattered-realms:bloodied"
       }
     },
     "shots": 16,
@@ -557,6 +591,14 @@
       "killed": "SOUNDS/CRIMSON/crimsonArchon_killed.wav",
       "move": "SOUNDS/CRIMSON/crimsonArchon_move.wav",
       "wince": "SOUNDS/CRIMSON/crimsonArchon_wince.wav"
+    },
+    "abilities": {
+      "bloodied": {
+        "type": "COMBAT_EVENT_TRIGGER",
+        "subtype": "crimsonBloodied",
+        "val": 2,
+        "stacking": "shattered-realms:bloodied"
+      }
     }
   },
   "bloodPhoenix": {
@@ -645,6 +687,12 @@
         "addInfo": {
           "guaranteed": true
         }
+      },
+      "bloodied": {
+        "type": "COMBAT_EVENT_TRIGGER",
+        "subtype": "crimsonBloodied",
+        "val": 2,
+        "stacking": "shattered-realms:bloodied"
       }
     },
     "graphics": {
