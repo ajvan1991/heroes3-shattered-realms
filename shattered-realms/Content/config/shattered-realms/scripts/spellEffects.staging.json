@@ -41,6 +41,26 @@
         ],
         "additionalProperties": false
       }
+    },
+    "selectiveDispel": {
+      "implements": "spellEffect",
+      "script": "shattered-realms/spells/selectiveDispel",
+      "patches": [],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "positive": {
+            "type": "boolean"
+          },
+          "negative": {
+            "type": "boolean"
+          },
+          "neutral": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
     }
   }
 }
