@@ -62,3 +62,15 @@ Rites expose explicit estimated benefit and sacrifice values. If custom action v
 
 ## Network/save rule
 No Rite state is stored in Lua globals. Use engine bonuses/markers so clients and saves receive authoritative state.
+
+## Implemented UI bridge staging
+VCMI spellEffect scripts provide the player-facing bridge for single-target Rites. The engine calls target validation, AI/hover health prediction and apply separately.
+
+Open Vein and Scarlet Shelter now have staging spell definitions backed by bloodRiteUnitEffect:
+- target validation rejects dead/non-living/1-HP targets and repeated target use
+- getHealthChange exposes the sacrifice to AI/hover evaluation
+- apply performs server-authoritative damage before bonuses
+- Advanced/Expert staging demonstrates Crimson Divination-style sacrifice reduction with the hard 4% floor
+- gain chance is zero: these are class/faction actions, not ordinary random Mage Guild spells
+
+They remain unregistered in mod.json until icons and local schema/runtime tests exist.
