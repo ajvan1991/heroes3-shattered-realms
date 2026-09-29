@@ -12,7 +12,7 @@ local function isAdjacentTo(battle, source, candidate)
     return false
 end
 
-local function refresh(server, battle, source)
+local function refresh(server, battle, source, val)
     if not source or not source:isAlive() then return end
     local allies = battle:getUnitsIf(function(u)
         return u:isAlive() and u:getSide() == source:getSide()
@@ -27,7 +27,7 @@ local function refresh(server, battle, source)
             server:addUnitBonus(battle, ally, {
                 type = "PRIMARY_SKILL",
                 subtype = "defence",
-                val = self and self.val or 1,
+                val = val or 1,
                 duration = ENUM.BonusDuration.oneBattle,
                 stacking = STACKING
             }, false)
@@ -35,8 +35,8 @@ local function refresh(server, battle, source)
     end
 end
 
-function Script:onBattleStart(server,battle,unit) refresh(server,battle,unit) end
-function Script:onAfterMove(server,battle,unit) refresh(server,battle,unit) end
-function Script:onActionFinished(server,battle,unit) refresh(server,battle,unit) end
-function Script:onDeath(server,battle,unit) refresh(server,battle,unit) end
+function Script:onBattleStart(server,battle,unit) refresh(server,battle,unit,self.val) end
+function Script:onAfterMove(server,battle,unit) refresh(server,battle,unit,self.val) end
+function Script:onActionFinished(server,battle,unit) refresh(server,battle,unit,self.val) end
+function Script:onDeath(server,battle,unit) refresh(server,battle,unit,self.val) end
 return Script
