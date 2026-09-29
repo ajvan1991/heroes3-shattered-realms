@@ -9,7 +9,7 @@ function Script:apply(mechanics, server, target)
     server:addBattleBonus(battle, {
         type = "CHANGES_SPELL_COST_FOR_ALLY",
         val = self.allyDelta or 0,
-        duration = "N_TURNS",
+        duration = ENUM.BonusDuration.nTurns,
         turns = turns,
         sourceType = "SPELL_EFFECT",
         sourceID = key,
@@ -18,7 +18,7 @@ function Script:apply(mechanics, server, target)
     server:addBattleBonus(battle, {
         type = "CHANGES_SPELL_COST_FOR_ENEMY",
         val = self.enemyDelta or 0,
-        duration = "N_TURNS",
+        duration = ENUM.BonusDuration.nTurns,
         turns = turns,
         sourceType = "SPELL_EFFECT",
         sourceID = key,
