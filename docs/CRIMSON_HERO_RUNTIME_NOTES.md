@@ -29,3 +29,13 @@ Current common staging army is deliberately temporary. Before activation, each h
 
 ## Commander field
 The hero-class schema currently requires a commander identifier. Staging temporarily references a core creature solely to satisfy structural authoring while the project decides whether commanders are actually enabled in the target gameplay rules. This file must not be activated in a release with that placeholder intact.
+
+
+## Hero-class schema alignment pass
+Compared against current VCMI core heroClasses configuration:
+- commander is now the Crimson creature `bloodstalker` instead of the temporary core Pikeman placeholder;
+- defaultTavern restored to the core-style baseline of 5;
+- mapObject now uses a real `templates.default` structure with animation/editorAnimation placeholders rather than an empty filters object;
+- battle animations remain class-specific placeholders pending art production.
+
+Commander support itself is optional at runtime when the global WoG-style commanders feature is disabled, but the hero-class schema requires a valid creature reference. Using a faction-native identifier removes the cross-faction placeholder dependency.
