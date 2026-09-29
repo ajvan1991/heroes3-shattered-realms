@@ -704,7 +704,7 @@
     },
     "targetType": "CREATURE",
     "flags": {
-      "indifferent": true
+      "positive": true
     },
     "graphics": {
       "iconBook": "SPELLS/SHATTERED/flareWaking_book.png",
@@ -716,27 +716,70 @@
     "levels": {
       "none": {
         "range": "0",
-        "description": "Flare of Waking — staging description; exact effect pending engine-safe validation.",
+        "description": "Rallies a living stack after disruption: +1 Morale for a short duration.",
         "cost": 8,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "morale": {
+            "type": "MORALE",
+            "val": 1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "basic": {
         "range": "0",
-        "description": "Flare of Waking — Basic. Exact effect pending engine-safe validation.",
+        "description": "Rallies a living stack after disruption: +1 Morale and +1 Speed for a short duration.",
         "cost": 8,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "morale": {
+            "type": "MORALE",
+            "val": 1,
+            "duration": "N_TURNS"
+          },
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": 1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "advanced": {
         "range": "0",
-        "description": "Flare of Waking — Advanced. Exact effect pending engine-safe validation.",
+        "description": "Rallies a living stack after disruption: +2 Morale and +1 Speed for a short duration.",
         "cost": 9,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "morale": {
+            "type": "MORALE",
+            "val": 2,
+            "duration": "N_TURNS"
+          },
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": 1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "expert": {
         "range": "0",
-        "description": "Flare of Waking — Expert. Exact effect pending engine-safe validation.",
+        "description": "Rallies a living stack after disruption: +2 Morale and +2 Speed for a short duration.",
         "cost": 10,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "morale": {
+            "type": "MORALE",
+            "val": 2,
+            "duration": "N_TURNS"
+          },
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": 2,
+            "duration": "N_TURNS"
+          }
+        }
       }
     }
   },
@@ -1235,27 +1278,75 @@
     "levels": {
       "none": {
         "range": "X",
-        "description": "Hour of Silence — staging effect pending engine-safe validation.",
+        "description": "Creates a symmetrical spell-tempo tax: spell costs rise by 1 mana for both sides while the effect lasts.",
         "cost": 17,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "allyTax": {
+            "type": "CHANGES_SPELL_COST_FOR_ALLY",
+            "val": -1,
+            "duration": "N_TURNS"
+          },
+          "enemyTax": {
+            "type": "CHANGES_SPELL_COST_FOR_ENEMY",
+            "val": 1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "basic": {
         "range": "X",
-        "description": "Hour of Silence — Basic.",
+        "description": "Creates a symmetrical spell-tempo tax: spell costs rise by 1 mana for both sides while the effect lasts.",
         "cost": 17,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "allyTax": {
+            "type": "CHANGES_SPELL_COST_FOR_ALLY",
+            "val": -1,
+            "duration": "N_TURNS"
+          },
+          "enemyTax": {
+            "type": "CHANGES_SPELL_COST_FOR_ENEMY",
+            "val": 1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "advanced": {
         "range": "X",
-        "description": "Hour of Silence — Advanced.",
+        "description": "Creates a symmetrical spell-tempo tax: spell costs rise by 2 mana for both sides while the effect lasts.",
         "cost": 18,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "allyTax": {
+            "type": "CHANGES_SPELL_COST_FOR_ALLY",
+            "val": -2,
+            "duration": "N_TURNS"
+          },
+          "enemyTax": {
+            "type": "CHANGES_SPELL_COST_FOR_ENEMY",
+            "val": 2,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "expert": {
         "range": "X",
-        "description": "Hour of Silence — Expert.",
+        "description": "Creates a symmetrical spell-tempo tax: spell costs rise by 2 mana for both sides while the effect lasts.",
         "cost": 19,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "allyTax": {
+            "type": "CHANGES_SPELL_COST_FOR_ALLY",
+            "val": -2,
+            "duration": "N_TURNS"
+          },
+          "enemyTax": {
+            "type": "CHANGES_SPELL_COST_FOR_ENEMY",
+            "val": 2,
+            "duration": "N_TURNS"
+          }
+        }
       }
     }
   }
