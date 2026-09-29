@@ -97,8 +97,8 @@
       },
       "effects": {
         "riteDiscipline": {
-          "type": "MANA_PER_KNOWLEDGE",
-          "val": 1
+          "type": "MANA_PER_KNOWLEDGE_PERCENTAGE",
+          "val": 110
         }
       }
     },
@@ -112,8 +112,8 @@
       },
       "effects": {
         "riteDiscipline": {
-          "type": "MANA_PER_KNOWLEDGE",
-          "val": 1
+          "type": "MANA_PER_KNOWLEDGE_PERCENTAGE",
+          "val": 110
         },
         "riteFocus": {
           "type": "SPELL_DAMAGE",
@@ -132,8 +132,8 @@
       },
       "effects": {
         "riteDiscipline": {
-          "type": "MANA_PER_KNOWLEDGE",
-          "val": 2
+          "type": "MANA_PER_KNOWLEDGE_PERCENTAGE",
+          "val": 120
         },
         "riteFocus": {
           "type": "SPELL_DAMAGE",
