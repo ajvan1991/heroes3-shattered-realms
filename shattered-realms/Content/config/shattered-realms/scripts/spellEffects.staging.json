@@ -1,0 +1,46 @@
+{
+  "scripts": {
+    "bloodRiteUnitEffect": {
+      "implements": "spellEffect",
+      "script": "shattered-realms/spells/bloodRiteUnitEffect",
+      "patches": [],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "sacrifice": {
+            "type": "integer",
+            "minimum": 4,
+            "maximum": 25
+          },
+          "stat": {
+            "type": "string",
+            "enum": [
+              "attack",
+              "defence"
+            ]
+          },
+          "statValue": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "rangedReduction": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 30
+          },
+          "usedMarker": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sacrifice",
+          "stat",
+          "statValue",
+          "usedMarker"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}
