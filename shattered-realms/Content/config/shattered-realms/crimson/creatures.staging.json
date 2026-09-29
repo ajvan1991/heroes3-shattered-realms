@@ -1,5 +1,4 @@
 {
-  "_developmentNote": "STAGING CONFIG: structurally prepared for VCMI but intentionally NOT referenced by mod.json until the listed original assets exist. Custom Bloodied, lifesteal, Quarry Mark, aura, caster and rebirth bonuses are added only after their exact engine-safe representation is validated.",
 
   "veinling": {
     "name": {
