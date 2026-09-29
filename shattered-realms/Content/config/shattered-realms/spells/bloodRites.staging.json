@@ -34,7 +34,8 @@
             "sacrifice": 8,
             "stat": "attack",
             "statValue": 2,
-            "usedMarker": "shattered-realms:riteOpenVeinUsed"
+            "usedMarker": "shattered-realms:riteOpenVeinUsed",
+            "turns": 2
           }
         }
       },
@@ -49,7 +50,8 @@
             "sacrifice": 8,
             "stat": "attack",
             "statValue": 2,
-            "usedMarker": "shattered-realms:riteOpenVeinUsed"
+            "usedMarker": "shattered-realms:riteOpenVeinUsed",
+            "turns": 2
           }
         }
       },
@@ -64,7 +66,8 @@
             "sacrifice": 6,
             "stat": "attack",
             "statValue": 2,
-            "usedMarker": "shattered-realms:riteOpenVeinUsed"
+            "usedMarker": "shattered-realms:riteOpenVeinUsed",
+            "turns": 2
           }
         }
       },
@@ -79,7 +82,8 @@
             "sacrifice": 4,
             "stat": "attack",
             "statValue": 2,
-            "usedMarker": "shattered-realms:riteOpenVeinUsed"
+            "usedMarker": "shattered-realms:riteOpenVeinUsed",
+            "turns": 2
           }
         }
       }
@@ -121,7 +125,8 @@
             "stat": "defence",
             "statValue": 3,
             "rangedReduction": 10,
-            "usedMarker": "shattered-realms:riteScarletShelterUsed"
+            "usedMarker": "shattered-realms:riteScarletShelterUsed",
+            "turns": 2
           }
         }
       },
@@ -137,7 +142,8 @@
             "stat": "defence",
             "statValue": 3,
             "rangedReduction": 10,
-            "usedMarker": "shattered-realms:riteScarletShelterUsed"
+            "usedMarker": "shattered-realms:riteScarletShelterUsed",
+            "turns": 2
           }
         }
       },
@@ -153,7 +159,8 @@
             "stat": "defence",
             "statValue": 3,
             "rangedReduction": 10,
-            "usedMarker": "shattered-realms:riteScarletShelterUsed"
+            "usedMarker": "shattered-realms:riteScarletShelterUsed",
+            "turns": 2
           }
         }
       },
@@ -169,7 +176,8 @@
             "stat": "defence",
             "statValue": 3,
             "rangedReduction": 10,
-            "usedMarker": "shattered-realms:riteScarletShelterUsed"
+            "usedMarker": "shattered-realms:riteScarletShelterUsed",
+            "turns": 2
           }
         }
       }
