@@ -161,3 +161,26 @@ Goal: add **12 new combat spells** that create answers to Shattered Realms class
 5. No new spell combines mass hard-control with damage.
 6. New spells compete with existing H3 spells for hero actions and Mage Guild slots.
 7. AI valuation and Mage Guild appearance rates are tuned after test maps.
+
+
+# Universal Utility / Counterplay Rule
+
+These spells are **not faction-locked counter buttons**. Every hero class and every faction may learn and cast them through the normal spell system when the spell is available. Their baseline effect must be useful in ordinary battles against classic H3 armies, neutrals and Shattered Realms armies alike.
+
+Their counterplay identity comes from *what battlefield pattern they answer*, not from checking the enemy faction ID:
+
+- formation counters answer adjacency, defensive clustering and formation bonuses, but still disrupt ordinary defensive formations;
+- mind/dream counters protect against control effects generally, while being especially useful against Veil;
+- mobility counters answer high speed, teleport/reposition and dive units generally, while naturally checking Abyss/Veil mobility;
+- healing/rebirth counters answer regeneration, resurrection and sustain generally, while naturally checking Crimson and other sustain units;
+- oath/buff counters manipulate temporary positive/negative effects generally, while naturally checking Hollow's Oaths;
+- burst/formation defenses protect any army from concentrated damage generally, while naturally checking Starfall/Crimson burst windows.
+
+## Hard design rules
+1. No spell says “if enemy faction is X, do Y” in the normal implementation.
+2. No spell is restricted to one Shattered Realms hero class.
+3. Classic factions and neutral-heavy armies must have plausible reasons to cast every spell.
+4. A counter weakens a strategy; it does not disable a faction's signature mechanic.
+5. Immunity, dispel and spell-resistance rules remain normal VCMI rules unless explicitly documented.
+6. Availability is controlled by Mage Guild/RMG spell distribution and spell level, not faction ownership.
+7. New factions may have different gain weights for flavor/balance, but zero gain chance is reserved for genuine exclusions, not thematic ownership.
