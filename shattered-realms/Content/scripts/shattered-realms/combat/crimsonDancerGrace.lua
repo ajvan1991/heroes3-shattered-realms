@@ -14,7 +14,7 @@ function Script:onBeforeAttack(server, battle, unit, other, payload)
     server:addUnitBonus(battle, unit, {
         type = "BLOCKS_RETALIATION",
         val = 0,
-        duration = ENUM.BonusDuration.untilGetsTurn,
+        duration = ENUM.BonusDuration.untilAfterAttackSequence,
         stacking = "shattered-realms:crimsonGraceWindow"
     })
 end
