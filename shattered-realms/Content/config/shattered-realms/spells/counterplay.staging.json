@@ -682,5 +682,233 @@
         "power": 0
       }
     }
+  },
+  "leylineConvergence": {
+    "name": "Leyline Convergence",
+    "type": "combat",
+    "school": {
+      "air": true,
+      "earth": true,
+      "fire": false,
+      "water": false
+    },
+    "level": 4,
+    "power": 0,
+    "defaultGainChance": 12,
+    "gainChance": {
+      "crimsonCourt": 12,
+      "abyss": 12,
+      "veil": 12,
+      "hollow": 12,
+      "starfall": 12
+    },
+    "targetType": "NO_TARGET",
+    "flags": {
+      "indifferent": true
+    },
+    "graphics": {
+      "iconBook": "SPELLS/SHATTERED/leylineConvergence_book.png",
+      "iconScroll": "SPELLS/SHATTERED/leylineConvergence_scroll.png",
+      "iconEffect": "SPELLS/SHATTERED/leylineConvergence_effect.png",
+      "iconImmune": "SPELLS/SHATTERED/leylineConvergence_immune.png",
+      "iconScenarioBonus": "SPELLS/SHATTERED/leylineConvergence_scenario.png"
+    },
+    "levels": {
+      "none": {
+        "range": "X",
+        "description": "Leyline Convergence — staging effect pending engine-safe validation.",
+        "cost": 16,
+        "power": 0
+      },
+      "basic": {
+        "range": "X",
+        "description": "Leyline Convergence — Basic.",
+        "cost": 16,
+        "power": 0
+      },
+      "advanced": {
+        "range": "X",
+        "description": "Leyline Convergence — Advanced.",
+        "cost": 17,
+        "power": 0
+      },
+      "expert": {
+        "range": "X",
+        "description": "Leyline Convergence — Expert.",
+        "cost": 18,
+        "power": 0
+      }
+    }
+  },
+  "echoFallen": {
+    "name": "Echo of the Fallen",
+    "type": "combat",
+    "school": {
+      "air": false,
+      "earth": true,
+      "fire": false,
+      "water": true
+    },
+    "level": 3,
+    "power": 0,
+    "defaultGainChance": 12,
+    "gainChance": {
+      "crimsonCourt": 12,
+      "abyss": 12,
+      "veil": 12,
+      "hollow": 12,
+      "starfall": 12
+    },
+    "targetType": "CREATURE",
+    "flags": {
+      "indifferent": true
+    },
+    "graphics": {
+      "iconBook": "SPELLS/SHATTERED/echoFallen_book.png",
+      "iconScroll": "SPELLS/SHATTERED/echoFallen_scroll.png",
+      "iconEffect": "SPELLS/SHATTERED/echoFallen_effect.png",
+      "iconImmune": "SPELLS/SHATTERED/echoFallen_immune.png",
+      "iconScenarioBonus": "SPELLS/SHATTERED/echoFallen_scenario.png"
+    },
+    "levels": {
+      "none": {
+        "range": "0",
+        "description": "Echo of the Fallen — staging effect pending engine-safe validation.",
+        "cost": 11,
+        "power": 0
+      },
+      "basic": {
+        "range": "0",
+        "description": "Echo of the Fallen — Basic.",
+        "cost": 11,
+        "power": 0
+      },
+      "advanced": {
+        "range": "0",
+        "description": "Echo of the Fallen — Advanced.",
+        "cost": 12,
+        "power": 0
+      },
+      "expert": {
+        "range": "0",
+        "description": "Echo of the Fallen — Expert.",
+        "cost": 13,
+        "power": 0
+      }
+    }
+  },
+  "fatefulExchange": {
+    "name": "Fateful Exchange",
+    "type": "combat",
+    "school": {
+      "air": false,
+      "earth": false,
+      "fire": true,
+      "water": true
+    },
+    "level": 4,
+    "power": 0,
+    "defaultGainChance": 12,
+    "gainChance": {
+      "crimsonCourt": 12,
+      "abyss": 12,
+      "veil": 12,
+      "hollow": 12,
+      "starfall": 12
+    },
+    "targetType": "CREATURE",
+    "flags": {
+      "indifferent": true
+    },
+    "graphics": {
+      "iconBook": "SPELLS/SHATTERED/fatefulExchange_book.png",
+      "iconScroll": "SPELLS/SHATTERED/fatefulExchange_scroll.png",
+      "iconEffect": "SPELLS/SHATTERED/fatefulExchange_effect.png",
+      "iconImmune": "SPELLS/SHATTERED/fatefulExchange_immune.png",
+      "iconScenarioBonus": "SPELLS/SHATTERED/fatefulExchange_scenario.png"
+    },
+    "levels": {
+      "none": {
+        "range": "0",
+        "description": "Fateful Exchange — staging effect pending engine-safe validation.",
+        "cost": 15,
+        "power": 0
+      },
+      "basic": {
+        "range": "0",
+        "description": "Fateful Exchange — Basic.",
+        "cost": 15,
+        "power": 0
+      },
+      "advanced": {
+        "range": "0",
+        "description": "Fateful Exchange — Advanced.",
+        "cost": 16,
+        "power": 0
+      },
+      "expert": {
+        "range": "0",
+        "description": "Fateful Exchange — Expert.",
+        "cost": 17,
+        "power": 0
+      }
+    }
+  },
+  "hourSilence": {
+    "name": "Hour of Silence",
+    "type": "combat",
+    "school": {
+      "air": true,
+      "earth": false,
+      "fire": false,
+      "water": true
+    },
+    "level": 4,
+    "power": 0,
+    "defaultGainChance": 12,
+    "gainChance": {
+      "crimsonCourt": 12,
+      "abyss": 12,
+      "veil": 12,
+      "hollow": 12,
+      "starfall": 12
+    },
+    "targetType": "NO_TARGET",
+    "flags": {
+      "indifferent": true
+    },
+    "graphics": {
+      "iconBook": "SPELLS/SHATTERED/hourSilence_book.png",
+      "iconScroll": "SPELLS/SHATTERED/hourSilence_scroll.png",
+      "iconEffect": "SPELLS/SHATTERED/hourSilence_effect.png",
+      "iconImmune": "SPELLS/SHATTERED/hourSilence_immune.png",
+      "iconScenarioBonus": "SPELLS/SHATTERED/hourSilence_scenario.png"
+    },
+    "levels": {
+      "none": {
+        "range": "X",
+        "description": "Hour of Silence — staging effect pending engine-safe validation.",
+        "cost": 17,
+        "power": 0
+      },
+      "basic": {
+        "range": "X",
+        "description": "Hour of Silence — Basic.",
+        "cost": 17,
+        "power": 0
+      },
+      "advanced": {
+        "range": "X",
+        "description": "Hour of Silence — Advanced.",
+        "cost": 18,
+        "power": 0
+      },
+      "expert": {
+        "range": "X",
+        "description": "Hour of Silence — Expert.",
+        "cost": 19,
+        "power": 0
+      }
+    }
   }
 }
