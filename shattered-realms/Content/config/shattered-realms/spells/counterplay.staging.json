@@ -396,55 +396,27 @@
     "levels": {
       "none": {
         "range": "0",
-        "description": "Reduces healing and restoration received by 20% for a short duration.",
+        "description": "Mortal Anchor — healing/resurrection suppression requires a validated VCMI hook; universal sustain-counter design retained but runtime effect remains gated.",
         "cost": 16,
-        "power": 0,
-        "effects": {
-          "heal": {
-            "type": "HEAL_EFFECTIVENESS",
-            "val": -20,
-            "duration": "N_TURNS"
-          }
-        }
+        "power": 0
       },
       "basic": {
         "range": "0",
-        "description": "Reduces healing and restoration received by 20% for a short duration.",
+        "description": "Mortal Anchor — healing/resurrection suppression requires a validated VCMI hook; universal sustain-counter design retained but runtime effect remains gated.",
         "cost": 16,
-        "power": 0,
-        "effects": {
-          "heal": {
-            "type": "HEAL_EFFECTIVENESS",
-            "val": -20,
-            "duration": "N_TURNS"
-          }
-        }
+        "power": 0
       },
       "advanced": {
         "range": "0",
-        "description": "Reduces healing and restoration received by 30%.",
+        "description": "Mortal Anchor — healing/resurrection suppression requires a validated VCMI hook; universal sustain-counter design retained but runtime effect remains gated.",
         "cost": 17,
-        "power": 0,
-        "effects": {
-          "heal": {
-            "type": "HEAL_EFFECTIVENESS",
-            "val": -30,
-            "duration": "N_TURNS"
-          }
-        }
+        "power": 0
       },
       "expert": {
         "range": "0",
-        "description": "Reduces healing and restoration received by 40%.",
+        "description": "Mortal Anchor — healing/resurrection suppression requires a validated VCMI hook; universal sustain-counter design retained but runtime effect remains gated.",
         "cost": 18,
-        "power": 0,
-        "effects": {
-          "heal": {
-            "type": "HEAL_EFFECTIVENESS",
-            "val": -40,
-            "duration": "N_TURNS"
-          }
-        }
+        "power": 0
       }
     }
   },
