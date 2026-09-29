@@ -25,13 +25,13 @@
       "knowledge": 1
     },
     "secondarySkills": {
-      "core:offence": 8,
-      "core:armorer": 7,
-      "core:leadership": 5,
-      "core:tactics": 7,
-      "core:logistics": 5,
-      "core:resistance": 4,
-      "core:wisdom": 2
+      "offence": 8,
+      "armorer": 7,
+      "leadership": 5,
+      "tactics": 7,
+      "logistics": 5,
+      "resistance": 4,
+      "wisdom": 2
     },
     "lowLevelChance": {
       "attack": 40,
@@ -76,14 +76,14 @@
       "knowledge": 2
     },
     "secondarySkills": {
-      "core:wisdom": 10,
-      "core:sorcery": 8,
-      "core:intelligence": 8,
-      "core:mysticism": 7,
-      "core:earthMagic": 5,
-      "core:waterMagic": 5,
-      "core:fireMagic": 5,
-      "core:airMagic": 4
+      "wisdom": 10,
+      "sorcery": 8,
+      "intelligence": 8,
+      "mysticism": 7,
+      "earthMagic": 5,
+      "waterMagic": 5,
+      "fireMagic": 5,
+      "airMagic": 4
     },
     "lowLevelChance": {
       "attack": 15,
