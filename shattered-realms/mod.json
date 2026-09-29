@@ -1,0 +1,17 @@
+{
+  "name": "Heroes III: Shattered Realms",
+  "description": "A mythology-first VCMI expansion introducing Crimson Court, Abyss, Veil, Hollow and Starfall.",
+  "author": "Ivan Vucenovic / Shattered Realms Project",
+  "version": "0.1.0",
+  "modType": "Expansion",
+  "compatibility": {
+    "min": "1.7.0"
+  },
+  "keepDisabled": true,
+  "changelog": {
+    "0.1.0": [
+      "Initial development skeleton",
+      "Crimson Court vertical-slice milestone established"
+    ]
+  }
+}
