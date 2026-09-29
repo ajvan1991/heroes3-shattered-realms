@@ -11,8 +11,8 @@ local function update(server, battle, unit, val)
     if total <= 0 then return end
 
     local shouldBeActive = available * 100 < total * 50
-    local current = unit:getBonuses(FILTER)
-    local active = current and #current > 0
+    local active = unit:hasBonuses(FILTER)
+    local current = active and unit:getBonuses(FILTER) or nil
 
     if shouldBeActive and not active then
         server:addUnitBonus(battle, unit, {
