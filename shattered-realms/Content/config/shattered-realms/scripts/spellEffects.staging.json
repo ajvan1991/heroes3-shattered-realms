@@ -31,13 +31,19 @@
           },
           "usedMarker": {
             "type": "string"
+          },
+          "turns": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
           }
         },
         "required": [
           "sacrifice",
           "stat",
           "statValue",
-          "usedMarker"
+          "usedMarker",
+          "turns"
         ],
         "additionalProperties": false
       }
