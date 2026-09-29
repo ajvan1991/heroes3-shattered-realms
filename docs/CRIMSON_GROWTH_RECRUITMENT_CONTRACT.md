@@ -18,8 +18,8 @@ VCMI town `horde` uses zero-based creature-tier indices. Crimson keeps the plann
 - index 4 = T5
 
 Two explicit horde buildings occupy stable custom IDs:
-- 44 Garden of Red Thorns — T2 horde building
-- 45 Scarlet Hunting Grounds — T5 horde building
+- -31 Garden of Red Thorns — native T2 horde slot, upgrading the T2 base dwelling
+- -34 Scarlet Hunting Grounds — native T5 horde slot, upgrading the T5 base dwelling
 
 The town horde mechanism, not an invented custom creature-growth bonus, is the source of the horde behavior.
 
@@ -43,3 +43,9 @@ Local activation test must verify:
 6. no horde building affects an unrelated tier;
 7. Mage Guild levels 1–5 render spell slots without overlap;
 8. universal spells can appear according to their configured availability, independent of hero class.
+
+
+## Cross-reference correction
+Current VCMI random-town configuration reserves negative IDs -30..-36 for horde buildings tied to dwelling levels 1..7. Crimson now follows that native contract instead of using positive custom IDs 44/45. This is important because the engine's horde semantics are coupled to these special building identities rather than being ordinary special-building slots.
+
+Adventure-map town staging now also contains village/castle/capitol templates and the standard capitol filter. The previous empty mapObject filter was not activation-ready.
