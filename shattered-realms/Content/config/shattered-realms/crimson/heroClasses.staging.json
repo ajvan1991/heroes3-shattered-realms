@@ -1,0 +1,95 @@
+{
+  "bloodlord": {
+    "name": "Bloodlord",
+    "faction": "crimsonCourt",
+    "affinity": "might",
+    "commander": "core:creature.pikeman",
+    "animation": {
+      "battle": {
+        "female": "SPRITES/CRIMSON/heroes/bloodlord_female_battle.DEF",
+        "male": "SPRITES/CRIMSON/heroes/bloodlord_male_battle.DEF"
+      }
+    },
+    "mapObject": {
+      "filters": {}
+    },
+    "primarySkills": {
+      "attack": 2,
+      "defence": 2,
+      "spellpower": 1,
+      "knowledge": 1
+    },
+    "secondarySkills": {
+      "core:offence": 8,
+      "core:armorer": 7,
+      "core:leadership": 5,
+      "core:tactics": 7,
+      "core:logistics": 5,
+      "core:resistance": 4,
+      "core:wisdom": 2
+    },
+    "lowLevelChance": {
+      "attack": 40,
+      "defence": 35,
+      "spellpower": 15,
+      "knowledge": 10
+    },
+    "highLevelChance": {
+      "attack": 30,
+      "defence": 30,
+      "spellpower": 20,
+      "knowledge": 20
+    },
+    "defaultTavern": 0,
+    "tavern": {
+      "crimsonCourt": 100
+    }
+  },
+  "sanguineSeer": {
+    "name": "Sanguine Seer",
+    "faction": "crimsonCourt",
+    "affinity": "magic",
+    "commander": "core:creature.pikeman",
+    "animation": {
+      "battle": {
+        "female": "SPRITES/CRIMSON/heroes/sanguineSeer_female_battle.DEF",
+        "male": "SPRITES/CRIMSON/heroes/sanguineSeer_male_battle.DEF"
+      }
+    },
+    "mapObject": {
+      "filters": {}
+    },
+    "primarySkills": {
+      "attack": 1,
+      "defence": 1,
+      "spellpower": 2,
+      "knowledge": 2
+    },
+    "secondarySkills": {
+      "core:wisdom": 10,
+      "core:sorcery": 8,
+      "core:intelligence": 8,
+      "core:mysticism": 7,
+      "core:earthMagic": 5,
+      "core:waterMagic": 5,
+      "core:fireMagic": 5,
+      "core:airMagic": 4
+    },
+    "lowLevelChance": {
+      "attack": 15,
+      "defence": 15,
+      "spellpower": 35,
+      "knowledge": 35
+    },
+    "highLevelChance": {
+      "attack": 20,
+      "defence": 20,
+      "spellpower": 30,
+      "knowledge": 30
+    },
+    "defaultTavern": 0,
+    "tavern": {
+      "crimsonCourt": 100
+    }
+  }
+}
