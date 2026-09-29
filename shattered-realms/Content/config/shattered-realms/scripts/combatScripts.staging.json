@@ -58,6 +58,24 @@
         "additionalProperties": false
       },
       "description": "{Bloodied}\nBelow half health, this stack gains +${val} Attack until it recovers above the threshold."
+    },
+    "crimsonQuarryMark": {
+      "implements": "combatEvent",
+      "script": "shattered-realms/combat/crimsonQuarryMark",
+      "patches": [],
+      "priority": 20,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "turns": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "{Quarry Mark}\nA qualifying attack marks its target for ${turns} turns, reducing Defense by ${val}. Marks do not stack."
     }
   }
 }
