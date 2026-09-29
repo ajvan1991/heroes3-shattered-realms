@@ -644,7 +644,7 @@
   "hordeThorns": {
     "id": 44,
     "name": "Garden of Red Thorns",
-    "description": "Increases weekly Thorn Dancer and Crimson Dancer growth.",
+    "description": "Horde building for the town's first designated growth tier (T2). Growth is driven by the town horde index.",
     "requires": [
       "thornGallery"
     ],
@@ -652,24 +652,12 @@
       "wood": 5,
       "crystal": 3,
       "gold": 1500
-    },
-    "bonuses": [
-      {
-        "type": "CREATURE_GROWTH",
-        "subtype": "thornDancer",
-        "val": 4
-      },
-      {
-        "type": "CREATURE_GROWTH",
-        "subtype": "crimsonDancer",
-        "val": 4
-      }
-    ]
+    }
   },
   "hordeHunt": {
     "id": 45,
     "name": "Scarlet Hunting Grounds",
-    "description": "Increases weekly Scarlet Huntress and Bloodstalker growth.",
+    "description": "Horde building for the town's second designated growth tier (T5). Growth is driven by the town horde index.",
     "requires": [
       "scarletLodge"
     ],
@@ -677,18 +665,6 @@
       "wood": 5,
       "crystal": 5,
       "gold": 2500
-    },
-    "bonuses": [
-      {
-        "type": "CREATURE_GROWTH",
-        "subtype": "scarletHuntress",
-        "val": 1
-      },
-      {
-        "type": "CREATURE_GROWTH",
-        "subtype": "bloodstalker",
-        "val": 1
-      }
-    ]
+    }
   }
 }
