@@ -19,19 +19,26 @@
         "villageHall": {
           "name": "Village Hall",
           "description": "Provides basic town income.",
-          "mode": "auto"
+          "mode": "auto",
+          "cost": {},
+          "id": 10,
+          "produce": {
+            "gold": 500
+          }
         },
         "townHall": {
           "name": "Town Hall",
           "description": "Improves town income.",
           "requires": [
-            "allOf",
-            [
-              "villageHall"
-            ]
+            "tavern"
           ],
           "cost": {
             "gold": 2500
+          },
+          "id": 11,
+          "upgrades": "villageHall",
+          "produce": {
+            "gold": 1000
           }
         },
         "cityHall": {
@@ -40,24 +47,37 @@
           "requires": [
             "allOf",
             [
-              "townHall"
+              "mageGuild1"
+            ],
+            [
+              "marketplace"
+            ],
+            [
+              "blacksmith"
             ]
           ],
           "cost": {
             "gold": 5000
+          },
+          "id": 12,
+          "upgrades": "townHall",
+          "produce": {
+            "gold": 2000
           }
         },
         "capitol": {
           "name": "Capitol",
           "description": "The seat of Crimson Court wealth and authority.",
           "requires": [
-            "allOf",
-            [
-              "cityHall"
-            ]
+            "castle"
           ],
           "cost": {
             "gold": 10000
+          },
+          "id": 13,
+          "upgrades": "cityHall",
+          "produce": {
+            "gold": 4000
           }
         },
         "fort": {
@@ -67,11 +87,12 @@
             "wood": 20,
             "ore": 20,
             "gold": 5000
-          }
+          },
+          "id": 7
         },
         "citadel": {
           "name": "Citadel",
-          "description": "Strengthens the court's fortifications and growth.",
+          "description": "Strengthens the court's fortifications and creature growth.",
           "requires": [
             "allOf",
             [
@@ -82,7 +103,9 @@
             "wood": 5,
             "ore": 5,
             "gold": 2500
-          }
+          },
+          "id": 8,
+          "upgrades": "fort"
         },
         "castle": {
           "name": "Castle",
@@ -97,20 +120,23 @@
             "wood": 10,
             "ore": 10,
             "gold": 5000
-          }
+          },
+          "id": 9,
+          "upgrades": "citadel"
         },
         "mageGuild1": {
           "name": "Mage Guild Level 1",
-          "description": "Teaches level 1 spells.",
+          "description": "Allows visiting heroes to learn level 1 spells.",
           "cost": {
             "wood": 5,
             "ore": 5,
             "gold": 2000
-          }
+          },
+          "id": 0
         },
         "mageGuild2": {
           "name": "Mage Guild Level 2",
-          "description": "Teaches level 2 spells.",
+          "description": "Adds level 2 spells.",
           "requires": [
             "allOf",
             [
@@ -125,11 +151,13 @@
             "gems": 4,
             "sulfur": 4,
             "gold": 1000
-          }
+          },
+          "id": 1,
+          "upgrades": "mageGuild1"
         },
         "mageGuild3": {
           "name": "Mage Guild Level 3",
-          "description": "Teaches level 3 spells.",
+          "description": "Adds level 3 spells.",
           "requires": [
             "allOf",
             [
@@ -144,11 +172,13 @@
             "gems": 6,
             "sulfur": 6,
             "gold": 1000
-          }
+          },
+          "id": 2,
+          "upgrades": "mageGuild2"
         },
         "mageGuild4": {
           "name": "Mage Guild Level 4",
-          "description": "Teaches level 4 spells.",
+          "description": "Adds level 4 spells.",
           "requires": [
             "allOf",
             [
@@ -163,11 +193,13 @@
             "gems": 8,
             "sulfur": 8,
             "gold": 1000
-          }
+          },
+          "id": 3,
+          "upgrades": "mageGuild3"
         },
         "mageGuild5": {
           "name": "Mage Guild Level 5",
-          "description": "Teaches level 5 spells.",
+          "description": "Adds level 5 spells.",
           "requires": [
             "allOf",
             [
@@ -182,7 +214,9 @@
             "gems": 10,
             "sulfur": 10,
             "gold": 1000
-          }
+          },
+          "id": 4,
+          "upgrades": "mageGuild4"
         },
         "veinHouse": {
           "name": "Vein House",
@@ -196,7 +230,8 @@
           "cost": {
             "wood": 5,
             "gold": 400
-          }
+          },
+          "id": 30
         },
         "veinHouseUp": {
           "name": "Consecrated Vein House",
@@ -211,7 +246,8 @@
           "cost": {
             "wood": 5,
             "gold": 900
-          }
+          },
+          "id": 37
         },
         "thornGallery": {
           "name": "Thorn Gallery",
@@ -226,7 +262,8 @@
             "wood": 5,
             "ore": 5,
             "gold": 1000
-          }
+          },
+          "id": 31
         },
         "crimsonGallery": {
           "name": "Crimson Gallery",
@@ -242,7 +279,8 @@
             "wood": 5,
             "crystal": 2,
             "gold": 1500
-          }
+          },
+          "id": 38
         },
         "gorewingRoost": {
           "name": "Gorewing Roost",
@@ -257,7 +295,8 @@
             "wood": 10,
             "ore": 5,
             "gold": 1800
-          }
+          },
+          "id": 32
         },
         "bloodwingRoost": {
           "name": "Bloodwing Roost",
@@ -273,7 +312,8 @@
             "wood": 5,
             "crystal": 3,
             "gold": 2200
-          }
+          },
+          "id": 39
         },
         "hallVeins": {
           "name": "Hall of Veins",
@@ -292,7 +332,8 @@
             "ore": 5,
             "crystal": 4,
             "gold": 2500
-          }
+          },
+          "id": 33
         },
         "oracleHall": {
           "name": "Oracle Hall",
@@ -308,7 +349,8 @@
             "crystal": 5,
             "gems": 3,
             "gold": 3000
-          }
+          },
+          "id": 40
         },
         "scarletLodge": {
           "name": "Scarlet Lodge",
@@ -324,7 +366,8 @@
             "ore": 5,
             "crystal": 5,
             "gold": 3500
-          }
+          },
+          "id": 34
         },
         "bloodstalkerLodge": {
           "name": "Bloodstalker Lodge",
@@ -341,7 +384,8 @@
             "crystal": 5,
             "gems": 5,
             "gold": 4500
-          }
+          },
+          "id": 41
         },
         "sanguinePalace": {
           "name": "Sanguine Palace",
@@ -363,7 +407,8 @@
             "ore": 10,
             "crystal": 10,
             "gold": 7000
-          }
+          },
+          "id": 35
         },
         "archonPalace": {
           "name": "Crimson Archon Palace",
@@ -380,7 +425,8 @@
             "crystal": 10,
             "gems": 5,
             "gold": 9000
-          }
+          },
+          "id": 42
         },
         "heartAviary": {
           "name": "Heart Aviary",
@@ -403,7 +449,8 @@
             "crystal": 15,
             "gems": 5,
             "gold": 12000
-          }
+          },
+          "id": 36
         },
         "eternalAviary": {
           "name": "Eternal Heart Aviary",
@@ -419,7 +466,8 @@
             "crystal": 15,
             "gems": 10,
             "gold": 16000
-          }
+          },
+          "id": 43
         },
         "courtVeins": {
           "name": "Court of Veins",
@@ -436,7 +484,8 @@
           "cost": {
             "crystal": 5,
             "gold": 2500
-          }
+          },
+          "id": 50
         },
         "scarletConservatory": {
           "name": "Scarlet Conservatory",
@@ -454,7 +503,8 @@
             "wood": 10,
             "crystal": 5,
             "gold": 3000
-          }
+          },
+          "id": 51
         },
         "firstChalice": {
           "name": "Hall of the First Chalice",
@@ -472,7 +522,8 @@
             "crystal": 5,
             "gems": 5,
             "gold": 4000
-          }
+          },
+          "id": 52
         },
         "moonlitMenagerie": {
           "name": "Moonlit Menagerie",
@@ -490,7 +541,8 @@
             "wood": 5,
             "crystal": 5,
             "gold": 3500
-          }
+          },
+          "id": 53
         },
         "thornTribunal": {
           "name": "Thorn Tribunal",
@@ -504,7 +556,8 @@
           "cost": {
             "ore": 10,
             "gold": 3000
-          }
+          },
+          "id": 54
         },
         "redMoonObservatory": {
           "name": "Red Moon Observatory",
@@ -522,13 +575,59 @@
             "crystal": 10,
             "gems": 5,
             "gold": 5000
-          }
+          },
+          "id": 55
         },
         "grail": {
           "name": "Heart of the Red Moon",
           "description": "The Grail of Crimson Court, awakening the Bloodwood beneath a crimson lunar halo.",
           "mode": "grail",
-          "cost": {}
+          "cost": {},
+          "id": 26,
+          "produce": {
+            "gold": 5000
+          }
+        },
+        "tavern": {
+          "name": "Tavern",
+          "description": "Allows recruitment of heroes.",
+          "cost": {
+            "wood": 5,
+            "gold": 500
+          },
+          "id": 5
+        },
+        "marketplace": {
+          "name": "Marketplace",
+          "description": "Allows resource trading.",
+          "cost": {
+            "wood": 5,
+            "gold": 500
+          },
+          "id": 14
+        },
+        "resourceSilo": {
+          "name": "Resource Silo",
+          "description": "Produces wood and ore for the court.",
+          "cost": {
+            "ore": 5,
+            "gold": 5000
+          },
+          "id": 15,
+          "upgrades": "marketplace",
+          "produce": {
+            "wood": 1,
+            "ore": 1
+          }
+        },
+        "blacksmith": {
+          "name": "Blacksmith",
+          "description": "Provides the Crimson Court war machine service.",
+          "cost": {
+            "wood": 5,
+            "gold": 1000
+          },
+          "id": 16
         }
       },
       "creatures": [
@@ -589,6 +688,16 @@
             "fort",
             "citadel",
             "castle"
+          ],
+          [
+            "tavern"
+          ],
+          [
+            "marketplace",
+            "resourceSilo"
+          ],
+          [
+            "blacksmith"
           ]
         ],
         [
