@@ -1,0 +1,650 @@
+{
+  "vaelor": {
+    "class": "bloodlord",
+    "female": false,
+    "images": {
+      "large": "HEROES/CRIMSON/vaelor_large.png",
+      "small": "HEROES/CRIMSON/vaelor_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/vaelor_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/vaelor_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:offence",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "creature": "veinling"
+    },
+    "texts": {
+      "name": "Vaelor",
+      "biography": "Vaelor has trained generations of court initiates to turn pain into discipline rather than frenzy.",
+      "specialty": {
+        "name": "Vein Master",
+        "description": "Veinlings and Bloodbound improve through Vaelor's creature specialty.",
+        "tooltip": "Veinlings and Bloodbound improve through Vaelor's creature specialty."
+      }
+    }
+  },
+  "seris": {
+    "class": "bloodlord",
+    "female": true,
+    "images": {
+      "large": "HEROES/CRIMSON/seris_large.png",
+      "small": "HEROES/CRIMSON/seris_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/seris_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/seris_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:offence",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "creature": "thornDancer"
+    },
+    "texts": {
+      "name": "Seris",
+      "biography": "Seris learned every path through the living Thorn Gallery and remembers the scars left by every mistake.",
+      "specialty": {
+        "name": "Thorn Dance",
+        "description": "Thorn Dancers and Crimson Dancers improve through Seris's creature specialty.",
+        "tooltip": "Thorn Dancers and Crimson Dancers improve through Seris's creature specialty."
+      }
+    }
+  },
+  "khaeren": {
+    "class": "bloodlord",
+    "female": false,
+    "images": {
+      "large": "HEROES/CRIMSON/khaeren_large.png",
+      "small": "HEROES/CRIMSON/khaeren_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/khaeren_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/khaeren_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:offence",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "creature": "gorewing"
+    },
+    "texts": {
+      "name": "Khaeren",
+      "biography": "Khaeren keeps the highest roosts of the Bloodwood, where few courtiers dare climb after moonrise.",
+      "specialty": {
+        "name": "Master of the Roost",
+        "description": "Gorewings and Bloodwings improve through Khaeren's creature specialty.",
+        "tooltip": "Gorewings and Bloodwings improve through Khaeren's creature specialty."
+      }
+    }
+  },
+  "maelira": {
+    "class": "bloodlord",
+    "female": true,
+    "images": {
+      "large": "HEROES/CRIMSON/maelira_large.png",
+      "small": "HEROES/CRIMSON/maelira_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/maelira_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/maelira_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:offence",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "creature": "scarletHuntress"
+    },
+    "texts": {
+      "name": "Maelira",
+      "biography": "Maelira considers a hunt finished only when the marked quarry has forgotten the possibility of escape.",
+      "specialty": {
+        "name": "Scarlet Hunt",
+        "description": "Scarlet Huntresses and Bloodstalkers improve through Maelira's creature specialty.",
+        "tooltip": "Scarlet Huntresses and Bloodstalkers improve through Maelira's creature specialty."
+      }
+    }
+  },
+  "othrys": {
+    "class": "bloodlord",
+    "female": false,
+    "images": {
+      "large": "HEROES/CRIMSON/othrys_large.png",
+      "small": "HEROES/CRIMSON/othrys_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/othrys_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/othrys_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:offence",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "creature": "sanguineNoble"
+    },
+    "texts": {
+      "name": "Othrys",
+      "biography": "Othrys served three generations of the court and has outlived every rival who mistook patience for weakness.",
+      "specialty": {
+        "name": "Noble Command",
+        "description": "Sanguine Nobles and Crimson Archons improve through Othrys's creature specialty.",
+        "tooltip": "Sanguine Nobles and Crimson Archons improve through Othrys's creature specialty."
+      }
+    }
+  },
+  "rhaevan": {
+    "class": "bloodlord",
+    "female": false,
+    "images": {
+      "large": "HEROES/CRIMSON/rhaevan_large.png",
+      "small": "HEROES/CRIMSON/rhaevan_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/rhaevan_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/rhaevan_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:offence",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "creature": "bloodPhoenix"
+    },
+    "texts": {
+      "name": "Rhaevan",
+      "biography": "Rhaevan guards the oldest ritual heart and speaks of the phoenix as a memory given wings.",
+      "specialty": {
+        "name": "Ritual Heart",
+        "description": "Blood Phoenixes and Eternal Blood Phoenixes improve through conservative high-tier specialty scaling.",
+        "tooltip": "Blood Phoenixes and Eternal Blood Phoenixes improve through conservative high-tier specialty scaling."
+      }
+    }
+  },
+  "thaliaVeyn": {
+    "class": "bloodlord",
+    "female": true,
+    "images": {
+      "large": "HEROES/CRIMSON/thaliaVeyn_large.png",
+      "small": "HEROES/CRIMSON/thaliaVeyn_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/thaliaVeyn_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/thaliaVeyn_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:offence",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "secondary": "core:offence"
+    },
+    "texts": {
+      "name": "Thalia Veyn",
+      "biography": "Thalia Veyn earned her place at court in open battle, where rank matters less than the edge of a blade.",
+      "specialty": {
+        "name": "Offense",
+        "description": "Thalia specializes in Offense.",
+        "tooltip": "Thalia specializes in Offense."
+      }
+    }
+  },
+  "ilyrThorn": {
+    "class": "bloodlord",
+    "female": false,
+    "images": {
+      "large": "HEROES/CRIMSON/ilyrThorn_large.png",
+      "small": "HEROES/CRIMSON/ilyrThorn_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/ilyrThorn_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/ilyrThorn_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:offence",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "bonuses": {}
+    },
+    "texts": {
+      "name": "Ilyr Thorn",
+      "biography": "Ilyr believes a commander should know exactly how much blood an army can lose before courage becomes hunger.",
+      "specialty": {
+        "name": "Blood Command",
+        "description": "Ilyr improves the tactical reliability of Blood Command without raising its permanent ceiling.",
+        "tooltip": "Ilyr improves the tactical reliability of Blood Command without raising its permanent ceiling."
+      }
+    }
+  },
+  "aveline": {
+    "class": "sanguineSeer",
+    "female": true,
+    "images": {
+      "large": "HEROES/CRIMSON/aveline_large.png",
+      "small": "HEROES/CRIMSON/aveline_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/aveline_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/aveline_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:wisdom",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "creature": "hemomancer"
+    },
+    "texts": {
+      "name": "Aveline",
+      "biography": "Aveline maps living veins as other scholars map rivers, claiming both reveal the history of the land.",
+      "specialty": {
+        "name": "Vein Lore",
+        "description": "Hemomancers and Vein Oracles improve through Aveline's creature specialty.",
+        "tooltip": "Hemomancers and Vein Oracles improve through Aveline's creature specialty."
+      }
+    },
+    "spellbook": []
+  },
+  "sevrin": {
+    "class": "sanguineSeer",
+    "female": false,
+    "images": {
+      "large": "HEROES/CRIMSON/sevrin_large.png",
+      "small": "HEROES/CRIMSON/sevrin_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/sevrin_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/sevrin_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:wisdom",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "bonuses": {}
+    },
+    "texts": {
+      "name": "Sevrin",
+      "biography": "Sevrin measures every ritual twice and considers uncontrolled magic merely another form of waste.",
+      "specialty": {
+        "name": "Blood Spellcraft",
+        "description": "Sevrin specializes in a signature blood spell selected after the final spell list is locked.",
+        "tooltip": "Sevrin specializes in a signature blood spell selected after the final spell list is locked."
+      }
+    },
+    "spellbook": []
+  },
+  "miraleth": {
+    "class": "sanguineSeer",
+    "female": true,
+    "images": {
+      "large": "HEROES/CRIMSON/miraleth_large.png",
+      "small": "HEROES/CRIMSON/miraleth_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/miraleth_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/miraleth_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:wisdom",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "bonuses": {}
+    },
+    "texts": {
+      "name": "Miraleth",
+      "biography": "Miraleth restored fragments of the First Chalice tablets and refuses to translate their final warning.",
+      "specialty": {
+        "name": "Blood Rite",
+        "description": "Miraleth improves a Blood Rite while preserving its minimum sacrifice.",
+        "tooltip": "Miraleth improves a Blood Rite while preserving its minimum sacrifice."
+      }
+    },
+    "spellbook": []
+  },
+  "caelis": {
+    "class": "sanguineSeer",
+    "female": false,
+    "images": {
+      "large": "HEROES/CRIMSON/caelis_large.png",
+      "small": "HEROES/CRIMSON/caelis_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/caelis_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/caelis_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:wisdom",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "secondary": "core:intelligence"
+    },
+    "texts": {
+      "name": "Caelis",
+      "biography": "Caelis remembers every ritual formula he has read, including several the court ordered destroyed.",
+      "specialty": {
+        "name": "Intelligence",
+        "description": "Caelis specializes in Intelligence.",
+        "tooltip": "Caelis specializes in Intelligence."
+      }
+    },
+    "spellbook": []
+  },
+  "vespera": {
+    "class": "sanguineSeer",
+    "female": true,
+    "images": {
+      "large": "HEROES/CRIMSON/vespera_large.png",
+      "small": "HEROES/CRIMSON/vespera_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/vespera_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/vespera_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:wisdom",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "secondary": "core:sorcery"
+    },
+    "texts": {
+      "name": "Vespera",
+      "biography": "Vespera treats battle magic as calligraphy written quickly enough to kill.",
+      "specialty": {
+        "name": "Sorcery",
+        "description": "Vespera specializes in Sorcery.",
+        "tooltip": "Vespera specializes in Sorcery."
+      }
+    },
+    "spellbook": []
+  },
+  "elyssVane": {
+    "class": "sanguineSeer",
+    "female": true,
+    "images": {
+      "large": "HEROES/CRIMSON/elyssVane_large.png",
+      "small": "HEROES/CRIMSON/elyssVane_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/elyssVane_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/elyssVane_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:wisdom",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "secondary": "core:mysticism"
+    },
+    "texts": {
+      "name": "Elyss Vane",
+      "biography": "Elyss listens to the slow pulse beneath the Bloodwood and returns from meditation with strength others cannot explain.",
+      "specialty": {
+        "name": "Mysticism",
+        "description": "Elyss specializes in Mysticism.",
+        "tooltip": "Elyss specializes in Mysticism."
+      }
+    },
+    "spellbook": []
+  },
+  "saereth": {
+    "class": "sanguineSeer",
+    "female": false,
+    "images": {
+      "large": "HEROES/CRIMSON/saereth_large.png",
+      "small": "HEROES/CRIMSON/saereth_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/saereth_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/saereth_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:wisdom",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "bonuses": {}
+    },
+    "texts": {
+      "name": "Saereth",
+      "biography": "Saereth joined the seers after discovering that a hunter's mark can be read as clearly as any prophecy.",
+      "specialty": {
+        "name": "Quarry Mark",
+        "description": "Saereth improves bounded Quarry Mark utility without multiplicative damage scaling.",
+        "tooltip": "Saereth improves bounded Quarry Mark utility without multiplicative damage scaling."
+      }
+    },
+    "spellbook": []
+  },
+  "lysandraNoct": {
+    "class": "sanguineSeer",
+    "female": true,
+    "images": {
+      "large": "HEROES/CRIMSON/lysandraNoct_large.png",
+      "small": "HEROES/CRIMSON/lysandraNoct_small.png",
+      "specialtyLarge": "HEROES/CRIMSON/specialties/lysandraNoct_large.png",
+      "specialtySmall": "HEROES/CRIMSON/specialties/lysandraNoct_small.png"
+    },
+    "army": [
+      {
+        "creature": "veinling",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "creature": "thornDancer",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "skill": "core:wisdom",
+        "level": "basic"
+      }
+    ],
+    "specialty": {
+      "bonuses": {}
+    },
+    "texts": {
+      "name": "Lysandra Noct",
+      "biography": "Lysandra wears a dark veil because she claims the present is the least interesting thing a seer can see.",
+      "specialty": {
+        "name": "Crimson Divination",
+        "description": "Lysandra improves Crimson Divination's tactical payoff without removing sacrifice costs.",
+        "tooltip": "Lysandra improves Crimson Divination's tactical payoff without removing sacrifice costs."
+      }
+    },
+    "spellbook": []
+  }
+}
