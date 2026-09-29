@@ -305,7 +305,7 @@
     },
     "targetType": "CREATURE",
     "flags": {
-      "indifferent": true
+      "negative": true
     },
     "graphics": {
       "iconBook": "SPELLS/SHATTERED/burdenStone_book.png",
@@ -317,27 +317,59 @@
     "levels": {
       "none": {
         "range": "0",
-        "description": "Burden of Stone — staging description; exact effect pending engine-safe validation.",
+        "description": "Reduces the target's Attack by 2 for a short duration.",
         "cost": 7,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "attack",
+            "val": -2,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "basic": {
         "range": "0",
-        "description": "Burden of Stone — Basic. Exact effect pending engine-safe validation.",
+        "description": "Reduces the target's Attack by 2 for a short duration.",
         "cost": 7,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "attack",
+            "val": -2,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "advanced": {
         "range": "0",
-        "description": "Burden of Stone — Advanced. Exact effect pending engine-safe validation.",
+        "description": "Reduces the target's Attack by 3 for a short duration.",
         "cost": 8,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "attack",
+            "val": -3,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "expert": {
         "range": "0",
-        "description": "Burden of Stone — Expert. Exact effect pending engine-safe validation.",
+        "description": "Reduces the target's Attack by 4 for a short duration.",
         "cost": 9,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "attack",
+            "val": -4,
+            "duration": "N_TURNS"
+          }
+        }
       }
     }
   },
@@ -362,7 +394,7 @@
     },
     "targetType": "CREATURE",
     "flags": {
-      "indifferent": true
+      "negative": true
     },
     "graphics": {
       "iconBook": "SPELLS/SHATTERED/brandFrailty_book.png",
@@ -374,27 +406,59 @@
     "levels": {
       "none": {
         "range": "0",
-        "description": "Brand of Frailty — staging description; exact effect pending engine-safe validation.",
+        "description": "Reduces the target's Defense by 2 for a short duration.",
         "cost": 11,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "defence",
+            "val": -2,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "basic": {
         "range": "0",
-        "description": "Brand of Frailty — Basic. Exact effect pending engine-safe validation.",
+        "description": "Reduces the target's Defense by 2 for a short duration.",
         "cost": 11,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "defence",
+            "val": -2,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "advanced": {
         "range": "0",
-        "description": "Brand of Frailty — Advanced. Exact effect pending engine-safe validation.",
+        "description": "Reduces the target's Defense by 3 for a short duration.",
         "cost": 12,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "defence",
+            "val": -3,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "expert": {
         "range": "0",
-        "description": "Brand of Frailty — Expert. Exact effect pending engine-safe validation.",
+        "description": "Reduces the target's Defense by 4 for a short duration.",
         "cost": 13,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "defence",
+            "val": -4,
+            "duration": "N_TURNS"
+          }
+        }
       }
     }
   },
@@ -533,7 +597,7 @@
     },
     "targetType": "CREATURE",
     "flags": {
-      "indifferent": true
+      "negative": true
     },
     "graphics": {
       "iconBook": "SPELLS/SHATTERED/quietBlood_book.png",
@@ -545,27 +609,59 @@
     "levels": {
       "none": {
         "range": "0",
-        "description": "Quiet the Blood — staging description; exact effect pending engine-safe validation.",
+        "description": "Suppresses offensive momentum, reducing Attack by 1 without disabling faction mechanics.",
         "cost": 10,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "attack",
+            "val": -1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "basic": {
         "range": "0",
-        "description": "Quiet the Blood — Basic. Exact effect pending engine-safe validation.",
+        "description": "Suppresses offensive momentum, reducing Attack by 1 without disabling faction mechanics.",
         "cost": 10,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "attack",
+            "val": -1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "advanced": {
         "range": "0",
-        "description": "Quiet the Blood — Advanced. Exact effect pending engine-safe validation.",
+        "description": "Suppresses offensive momentum, reducing Attack by 2 without disabling faction mechanics.",
         "cost": 11,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "attack",
+            "val": -2,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "expert": {
         "range": "0",
-        "description": "Quiet the Blood — Expert. Exact effect pending engine-safe validation.",
+        "description": "Suppresses offensive momentum, reducing Attack by 3 without disabling faction mechanics.",
         "cost": 12,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "attack",
+            "val": -3,
+            "duration": "N_TURNS"
+          }
+        }
       }
     }
   },
@@ -647,7 +743,7 @@
     },
     "targetType": "CREATURE",
     "flags": {
-      "indifferent": true
+      "positive": true
     },
     "graphics": {
       "iconBook": "SPELLS/SHATTERED/stillWater_book.png",
@@ -659,27 +755,59 @@
     "levels": {
       "none": {
         "range": "0",
-        "description": "Veil of Still Water — staging description; exact effect pending engine-safe validation.",
+        "description": "Reduces incoming damage by 10% for a short duration.",
         "cost": 15,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "GENERAL_DAMAGE_REDUCTION",
+            "subtype": "damageTypeAll",
+            "val": 10,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "basic": {
         "range": "0",
-        "description": "Veil of Still Water — Basic. Exact effect pending engine-safe validation.",
+        "description": "Reduces incoming damage by 10% for a short duration.",
         "cost": 15,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "GENERAL_DAMAGE_REDUCTION",
+            "subtype": "damageTypeAll",
+            "val": 10,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "advanced": {
         "range": "0",
-        "description": "Veil of Still Water — Advanced. Exact effect pending engine-safe validation.",
+        "description": "Reduces incoming damage by 15% for a short duration.",
         "cost": 16,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "GENERAL_DAMAGE_REDUCTION",
+            "subtype": "damageTypeAll",
+            "val": 15,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "expert": {
         "range": "0",
-        "description": "Veil of Still Water — Expert. Exact effect pending engine-safe validation.",
+        "description": "Reduces incoming damage by 20% for a short duration.",
         "cost": 17,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "main": {
+            "type": "GENERAL_DAMAGE_REDUCTION",
+            "subtype": "damageTypeAll",
+            "val": 20,
+            "duration": "N_TURNS"
+          }
+        }
       }
     }
   },
