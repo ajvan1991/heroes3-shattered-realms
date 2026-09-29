@@ -22,7 +22,7 @@
     ],
     "skills": [
       {
-        "skill": "core:offence",
+        "skill": "offence",
         "level": "basic"
       }
     ],
@@ -57,7 +57,7 @@
     ],
     "skills": [
       {
-        "skill": "core:offence",
+        "skill": "offence",
         "level": "basic"
       }
     ],
@@ -97,7 +97,7 @@
     ],
     "skills": [
       {
-        "skill": "core:offence",
+        "skill": "offence",
         "level": "basic"
       }
     ],
@@ -137,7 +137,7 @@
     ],
     "skills": [
       {
-        "skill": "core:offence",
+        "skill": "offence",
         "level": "basic"
       }
     ],
@@ -172,7 +172,7 @@
     ],
     "skills": [
       {
-        "skill": "core:offence",
+        "skill": "offence",
         "level": "basic"
       }
     ],
@@ -212,7 +212,7 @@
     ],
     "skills": [
       {
-        "skill": "core:offence",
+        "skill": "offence",
         "level": "basic"
       }
     ],
@@ -252,12 +252,12 @@
     ],
     "skills": [
       {
-        "skill": "core:offence",
+        "skill": "offence",
         "level": "basic"
       }
     ],
     "specialty": {
-      "secondary": "core:offence"
+      "secondary": "offence"
     },
     "texts": {
       "name": "Thalia Veyn",
@@ -287,7 +287,7 @@
     ],
     "skills": [
       {
-        "skill": "core:offence",
+        "skill": "offence",
         "level": "basic"
       }
     ],
@@ -324,7 +324,7 @@
     ],
     "skills": [
       {
-        "skill": "core:wisdom",
+        "skill": "wisdom",
         "level": "basic"
       }
     ],
@@ -360,7 +360,7 @@
     ],
     "skills": [
       {
-        "skill": "core:wisdom",
+        "skill": "wisdom",
         "level": "basic"
       }
     ],
@@ -398,7 +398,7 @@
     ],
     "skills": [
       {
-        "skill": "core:wisdom",
+        "skill": "wisdom",
         "level": "basic"
       }
     ],
@@ -436,12 +436,12 @@
     ],
     "skills": [
       {
-        "skill": "core:wisdom",
+        "skill": "wisdom",
         "level": "basic"
       }
     ],
     "specialty": {
-      "secondary": "core:intelligence"
+      "secondary": "intelligence"
     },
     "texts": {
       "name": "Caelis",
@@ -472,12 +472,12 @@
     ],
     "skills": [
       {
-        "skill": "core:wisdom",
+        "skill": "wisdom",
         "level": "basic"
       }
     ],
     "specialty": {
-      "secondary": "core:sorcery"
+      "secondary": "sorcery"
     },
     "texts": {
       "name": "Vespera",
@@ -513,12 +513,12 @@
     ],
     "skills": [
       {
-        "skill": "core:wisdom",
+        "skill": "wisdom",
         "level": "basic"
       }
     ],
     "specialty": {
-      "secondary": "core:mysticism"
+      "secondary": "mysticism"
     },
     "texts": {
       "name": "Elyss Vane",
@@ -554,7 +554,7 @@
     ],
     "skills": [
       {
-        "skill": "core:wisdom",
+        "skill": "wisdom",
         "level": "basic"
       }
     ],
@@ -587,7 +587,7 @@
     ],
     "skills": [
       {
-        "skill": "core:wisdom",
+        "skill": "wisdom",
         "level": "basic"
       }
     ],
