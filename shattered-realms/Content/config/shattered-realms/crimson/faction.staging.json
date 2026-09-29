@@ -1,0 +1,526 @@
+{
+  "crimsonCourt": {
+    "name": "Crimson Court",
+    "description": "An ancient blood-magic elven court rooted around the First Bloodwood. Crimson commanders trade vitality and tempo for bounded tactical power.",
+    "alignment": "neutral",
+    "nativeTerrain": "dirt",
+    "boat": "core:boat.castle",
+    "preferUndergroundPlacement": false,
+    "creatureBackground": {
+      "120px": "CRIMSON/UI/creature_background_120.png",
+      "130px": "CRIMSON/UI/creature_background_130.png"
+    },
+    "town": {
+      "mapObject": {
+        "filters": {}
+      },
+      "buildingsIcons": "CRIMSON/TOWN/building_icons.DEF",
+      "buildings": {},
+      "creatures": [
+        [
+          "veinling",
+          "bloodbound"
+        ],
+        [
+          "thornDancer",
+          "crimsonDancer"
+        ],
+        [
+          "gorewing",
+          "bloodwing"
+        ],
+        [
+          "hemomancer",
+          "veinOracle"
+        ],
+        [
+          "scarletHuntress",
+          "bloodstalker"
+        ],
+        [
+          "sanguineNoble",
+          "crimsonArchon"
+        ],
+        [
+          "bloodPhoenix",
+          "eternalBloodPhoenix"
+        ]
+      ],
+      "guildWindow": "CRIMSON/TOWN/mage_guild_window.png",
+      "names": [
+        "Veyrath",
+        "Sanguinar",
+        "Thornveil",
+        "Caer Veyn",
+        "Redharrow",
+        "Nocthyr",
+        "Velisara",
+        "Bloodmere",
+        "Ilyrion",
+        "Scarlet Reach",
+        "Vael Noctis",
+        "Moonthorn"
+      ],
+      "hallBackground": "CRIMSON/TOWN/hall_background.png",
+      "hallSlots": [
+        [
+          [
+            "villageHall",
+            "townHall",
+            "cityHall",
+            "capitol"
+          ],
+          [
+            "fort",
+            "citadel",
+            "castle"
+          ]
+        ],
+        [
+          [
+            "veinHouse",
+            "veinHouseUp"
+          ],
+          [
+            "thornGallery",
+            "crimsonGallery"
+          ],
+          [
+            "gorewingRoost",
+            "bloodwingRoost"
+          ],
+          [
+            "hallVeins",
+            "oracleHall"
+          ]
+        ],
+        [
+          [
+            "scarletLodge",
+            "bloodstalkerLodge"
+          ],
+          [
+            "sanguinePalace",
+            "archonPalace"
+          ],
+          [
+            "heartAviary",
+            "eternalAviary"
+          ]
+        ],
+        [
+          [
+            "mageGuild1",
+            "mageGuild2",
+            "mageGuild3",
+            "mageGuild4",
+            "mageGuild5"
+          ],
+          [
+            "courtVeins"
+          ],
+          [
+            "scarletConservatory"
+          ],
+          [
+            "firstChalice"
+          ]
+        ],
+        [
+          [
+            "moonlitMenagerie"
+          ],
+          [
+            "thornTribunal"
+          ],
+          [
+            "redMoonObservatory"
+          ],
+          [
+            "grail"
+          ]
+        ]
+      ],
+      "horde": [
+        1,
+        4
+      ],
+      "mageGuild": 5,
+      "primaryResource": "crystal",
+      "moatAbility": "core:spell.moat",
+      "defaultTavern": 0,
+      "tavern": {
+        "bloodlord": 100,
+        "sanguineSeer": 100
+      },
+      "guildSpells": {
+        "shattered-realms:spell.clearMind": 15,
+        "shattered-realms:spell.unboundStep": 12,
+        "shattered-realms:spell.mortalAnchor": 8,
+        "shattered-realms:spell.burdenStone": 14,
+        "shattered-realms:spell.brandFrailty": 15,
+        "shattered-realms:spell.flareWaking": 10,
+        "shattered-realms:spell.washAway": 14,
+        "shattered-realms:spell.stillWater": 12,
+        "shattered-realms:spell.leylineConvergence": 5,
+        "shattered-realms:spell.echoFallen": 8,
+        "shattered-realms:spell.fatefulExchange": 5,
+        "shattered-realms:spell.hourSilence": 5
+      },
+      "tavernVideo": "CRIMSON/TOWN/tavern.webm",
+      "guildBackground": "CRIMSON/TOWN/mage_guild_background.png",
+      "musicTheme": [
+        "CRIMSON/MUSIC/crimson_court.ogg"
+      ],
+      "siege": {
+        "shooter": "bloodstalker",
+        "towerIconLarge": "CRIMSON/SIEGE/tower_large.png",
+        "towerIconSmall": "CRIMSON/SIEGE/tower_small.png",
+        "imagePrefix": "CRIMSON/SIEGE/CRSG",
+        "static": {
+          "background": {
+            "x": 0,
+            "y": 0
+          },
+          "top": {
+            "x": 0,
+            "y": 0
+          },
+          "bottom": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "towers": {
+          "top": {
+            "tower": {
+              "x": 0,
+              "y": 0
+            },
+            "battlement": {
+              "x": 0,
+              "y": 0
+            },
+            "creature": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "keep": {
+            "tower": {
+              "x": 0,
+              "y": 0
+            },
+            "battlement": {
+              "x": 0,
+              "y": 0
+            },
+            "creature": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "bottom": {
+            "tower": {
+              "x": 0,
+              "y": 0
+            },
+            "battlement": {
+              "x": 0,
+              "y": 0
+            },
+            "creature": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        "walls": {
+          "upper": {
+            "x": 0,
+            "y": 0
+          },
+          "upperMid": {
+            "x": 0,
+            "y": 0
+          },
+          "bottomMid": {
+            "x": 0,
+            "y": 0
+          },
+          "bottom": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "gate": {
+          "arch": {
+            "x": 0,
+            "y": 0
+          },
+          "gate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "moat": {
+          "bank": {
+            "x": 0,
+            "y": 0
+          },
+          "moat": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      "structures": {},
+      "townBackground": "CRIMSON/TOWN/town_background.png"
+    },
+    "puzzleMap": {
+      "prefix": "CRIMSON/PUZZLE/CRP",
+      "pieces": [
+        {
+          "index": 0,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 1,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 2,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 3,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 4,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 5,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 6,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 7,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 8,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 9,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 10,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 11,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 12,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 13,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 14,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 15,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 16,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 17,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 18,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 19,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 20,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 21,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 22,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 23,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 24,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 25,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 26,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 27,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 28,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 29,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 30,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 31,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 32,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 33,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 34,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 35,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 36,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 37,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 38,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 39,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 40,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 41,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 42,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 43,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 44,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 45,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 46,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 47,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  }
+}
