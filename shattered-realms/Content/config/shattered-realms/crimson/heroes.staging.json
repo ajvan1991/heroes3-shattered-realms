@@ -11,13 +11,13 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
-        "max": 25
+        "min": 18,
+        "max": 24
       },
       {
         "creature": "thornDancer",
         "min": 3,
-        "max": 6
+        "max": 5
       }
     ],
     "skills": [
@@ -51,13 +51,8 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
-        "max": 25
-      },
-      {
-        "creature": "thornDancer",
-        "min": 3,
-        "max": 6
+        "min": 20,
+        "max": 27
       }
     ],
     "skills": [
@@ -92,11 +87,11 @@
       {
         "creature": "veinling",
         "min": 15,
-        "max": 25
+        "max": 20
       },
       {
         "creature": "thornDancer",
-        "min": 3,
+        "min": 4,
         "max": 6
       }
     ],
@@ -131,13 +126,13 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
-        "max": 25
+        "min": 18,
+        "max": 24
       },
       {
         "creature": "thornDancer",
         "min": 3,
-        "max": 6
+        "max": 5
       }
     ],
     "skills": [
@@ -171,13 +166,8 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
-        "max": 25
-      },
-      {
-        "creature": "thornDancer",
-        "min": 3,
-        "max": 6
+        "min": 20,
+        "max": 27
       }
     ],
     "skills": [
@@ -212,11 +202,11 @@
       {
         "creature": "veinling",
         "min": 15,
-        "max": 25
+        "max": 20
       },
       {
         "creature": "thornDancer",
-        "min": 3,
+        "min": 4,
         "max": 6
       }
     ],
@@ -251,13 +241,13 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
-        "max": 25
+        "min": 18,
+        "max": 24
       },
       {
         "creature": "thornDancer",
         "min": 3,
-        "max": 6
+        "max": 5
       }
     ],
     "skills": [
@@ -291,13 +281,8 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
-        "max": 25
-      },
-      {
-        "creature": "thornDancer",
-        "min": 3,
-        "max": 6
+        "min": 20,
+        "max": 27
       }
     ],
     "skills": [
@@ -331,13 +316,13 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
-        "max": 25
+        "min": 16,
+        "max": 22
       },
       {
         "creature": "thornDancer",
-        "min": 3,
-        "max": 6
+        "min": 2,
+        "max": 4
       }
     ],
     "skills": [
@@ -372,13 +357,8 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
+        "min": 18,
         "max": 25
-      },
-      {
-        "creature": "thornDancer",
-        "min": 3,
-        "max": 6
       }
     ],
     "skills": [
@@ -413,13 +393,13 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
-        "max": 25
+        "min": 14,
+        "max": 19
       },
       {
         "creature": "thornDancer",
         "min": 3,
-        "max": 6
+        "max": 5
       }
     ],
     "skills": [
@@ -454,13 +434,13 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
-        "max": 25
+        "min": 16,
+        "max": 22
       },
       {
         "creature": "thornDancer",
-        "min": 3,
-        "max": 6
+        "min": 2,
+        "max": 4
       }
     ],
     "skills": [
@@ -495,13 +475,8 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
+        "min": 18,
         "max": 25
-      },
-      {
-        "creature": "thornDancer",
-        "min": 3,
-        "max": 6
       }
     ],
     "skills": [
@@ -536,13 +511,13 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
-        "max": 25
+        "min": 14,
+        "max": 19
       },
       {
         "creature": "thornDancer",
         "min": 3,
-        "max": 6
+        "max": 5
       }
     ],
     "skills": [
@@ -577,13 +552,13 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
-        "max": 25
+        "min": 16,
+        "max": 22
       },
       {
         "creature": "thornDancer",
-        "min": 3,
-        "max": 6
+        "min": 2,
+        "max": 4
       }
     ],
     "skills": [
@@ -618,13 +593,8 @@
     "army": [
       {
         "creature": "veinling",
-        "min": 15,
+        "min": 18,
         "max": 25
-      },
-      {
-        "creature": "thornDancer",
-        "min": 3,
-        "max": 6
       }
     ],
     "skills": [
