@@ -642,10 +642,14 @@
         "stacking": "shattered-realms:bloodied"
       },
       "crimsonPresence": {
-        "type": "COMBAT_EVENT_TRIGGER",
-        "subtype": "crimsonArchonAura",
+        "type": "PRIMARY_SKILL",
+        "subtype": "defence",
         "val": 1,
-        "stacking": "shattered-realms:crimsonPresence"
+        "limiters": {
+          "type": "UNIT_ADJACENT",
+          "creature": "crimsonArchon"
+        },
+        "description": "Crimson Presence: adjacent allied stacks gain +1 Defense while next to a Crimson Archon."
       }
     }
   },
