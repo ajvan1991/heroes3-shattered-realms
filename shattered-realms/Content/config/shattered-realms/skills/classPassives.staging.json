@@ -1,0 +1,432 @@
+{
+  "bloodCommand": {
+    "name": "Blood Command",
+    "specialty": [],
+    "gainChance": {
+      "might": 0,
+      "magic": 0
+    },
+    "offerCooldown": 99,
+    "tags": {
+      "classExclusive": true,
+      "shatteredRealms": true
+    },
+    "basic": {
+      "description": "Basic Blood Command: Crimson creatures fight harder as blood is shed; the class mechanic remains capped and conditional.",
+      "images": {
+        "small": "SKILLS/SHATTERED/bloodCommand_small.png",
+        "medium": "SKILLS/SHATTERED/bloodCommand_medium.png",
+        "large": "SKILLS/SHATTERED/bloodCommand_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/bloodCommand_scenario.png"
+      },
+      "effects": {}
+    },
+    "advanced": {
+      "description": "Advanced Blood Command: Improves Blood Command's low-health tactical payoff.",
+      "images": {
+        "small": "SKILLS/SHATTERED/bloodCommand_small.png",
+        "medium": "SKILLS/SHATTERED/bloodCommand_medium.png",
+        "large": "SKILLS/SHATTERED/bloodCommand_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/bloodCommand_scenario.png"
+      },
+      "effects": {}
+    },
+    "expert": {
+      "description": "Expert Blood Command: Unlocks the full bounded Blood Command pattern without uncapped stacking.",
+      "images": {
+        "small": "SKILLS/SHATTERED/bloodCommand_small.png",
+        "medium": "SKILLS/SHATTERED/bloodCommand_medium.png",
+        "large": "SKILLS/SHATTERED/bloodCommand_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/bloodCommand_scenario.png"
+      },
+      "effects": {}
+    }
+  },
+  "crimsonDivination": {
+    "name": "Crimson Divination",
+    "specialty": [],
+    "gainChance": {
+      "might": 0,
+      "magic": 0
+    },
+    "offerCooldown": 99,
+    "tags": {
+      "classExclusive": true,
+      "shatteredRealms": true
+    },
+    "basic": {
+      "description": "Basic Crimson Divination: Reduces the reducible sacrifice of the first eligible Blood Rite while preserving its minimum cost.",
+      "images": {
+        "small": "SKILLS/SHATTERED/crimsonDivination_small.png",
+        "medium": "SKILLS/SHATTERED/crimsonDivination_medium.png",
+        "large": "SKILLS/SHATTERED/crimsonDivination_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/crimsonDivination_scenario.png"
+      },
+      "effects": {}
+    },
+    "advanced": {
+      "description": "Advanced Crimson Divination: Improves the bounded reduction and first-target protection.",
+      "images": {
+        "small": "SKILLS/SHATTERED/crimsonDivination_small.png",
+        "medium": "SKILLS/SHATTERED/crimsonDivination_medium.png",
+        "large": "SKILLS/SHATTERED/crimsonDivination_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/crimsonDivination_scenario.png"
+      },
+      "effects": {}
+    },
+    "expert": {
+      "description": "Expert Crimson Divination: Adds the once-per-battle next-spell payoff after a qualifying Rite.",
+      "images": {
+        "small": "SKILLS/SHATTERED/crimsonDivination_small.png",
+        "medium": "SKILLS/SHATTERED/crimsonDivination_medium.png",
+        "large": "SKILLS/SHATTERED/crimsonDivination_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/crimsonDivination_scenario.png"
+      },
+      "effects": {}
+    }
+  },
+  "dreadDominion": {
+    "name": "Dread Dominion",
+    "specialty": [],
+    "gainChance": {
+      "might": 0,
+      "magic": 0
+    },
+    "offerCooldown": 99,
+    "tags": {
+      "classExclusive": true,
+      "shatteredRealms": true
+    },
+    "basic": {
+      "description": "Basic Dread Dominion: Adds a mild first-hit pressure effect to eligible Abyss stacks.",
+      "images": {
+        "small": "SKILLS/SHATTERED/dreadDominion_small.png",
+        "medium": "SKILLS/SHATTERED/dreadDominion_medium.png",
+        "large": "SKILLS/SHATTERED/dreadDominion_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/dreadDominion_scenario.png"
+      },
+      "effects": {}
+    },
+    "advanced": {
+      "description": "Advanced Dread Dominion: Improves pressure duration or magnitude within the cap.",
+      "images": {
+        "small": "SKILLS/SHATTERED/dreadDominion_small.png",
+        "medium": "SKILLS/SHATTERED/dreadDominion_medium.png",
+        "large": "SKILLS/SHATTERED/dreadDominion_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/dreadDominion_scenario.png"
+      },
+      "effects": {}
+    },
+    "expert": {
+      "description": "Expert Dread Dominion: Adds the adjacency Defense pressure while preserving immunities.",
+      "images": {
+        "small": "SKILLS/SHATTERED/dreadDominion_small.png",
+        "medium": "SKILLS/SHATTERED/dreadDominion_medium.png",
+        "large": "SKILLS/SHATTERED/dreadDominion_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/dreadDominion_scenario.png"
+      },
+      "effects": {}
+    }
+  },
+  "deepCorruption": {
+    "name": "Deep Corruption",
+    "specialty": [],
+    "gainChance": {
+      "might": 0,
+      "magic": 0
+    },
+    "offerCooldown": 99,
+    "tags": {
+      "classExclusive": true,
+      "shatteredRealms": true
+    },
+    "basic": {
+      "description": "Basic Deep Corruption: Improves Corruption potency within its cap.",
+      "images": {
+        "small": "SKILLS/SHATTERED/deepCorruption_small.png",
+        "medium": "SKILLS/SHATTERED/deepCorruption_medium.png",
+        "large": "SKILLS/SHATTERED/deepCorruption_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/deepCorruption_scenario.png"
+      },
+      "effects": {}
+    },
+    "advanced": {
+      "description": "Advanced Deep Corruption: Extends the first qualifying Corruption application each round.",
+      "images": {
+        "small": "SKILLS/SHATTERED/deepCorruption_small.png",
+        "medium": "SKILLS/SHATTERED/deepCorruption_medium.png",
+        "large": "SKILLS/SHATTERED/deepCorruption_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/deepCorruption_scenario.png"
+      },
+      "effects": {}
+    },
+    "expert": {
+      "description": "Expert Deep Corruption: Adds one bounded once-per-battle threshold refund.",
+      "images": {
+        "small": "SKILLS/SHATTERED/deepCorruption_small.png",
+        "medium": "SKILLS/SHATTERED/deepCorruption_medium.png",
+        "large": "SKILLS/SHATTERED/deepCorruption_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/deepCorruption_scenario.png"
+      },
+      "effects": {}
+    }
+  },
+  "dreamstep": {
+    "name": "Dreamstep",
+    "specialty": [],
+    "gainChance": {
+      "might": 0,
+      "magic": 0
+    },
+    "offerCooldown": 99,
+    "tags": {
+      "classExclusive": true,
+      "shatteredRealms": true
+    },
+    "basic": {
+      "description": "Basic Dreamstep: Stance change grants a small temporary Defense bonus.",
+      "images": {
+        "small": "SKILLS/SHATTERED/dreamstep_small.png",
+        "medium": "SKILLS/SHATTERED/dreamstep_medium.png",
+        "large": "SKILLS/SHATTERED/dreamstep_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/dreamstep_scenario.png"
+      },
+      "effects": {}
+    },
+    "advanced": {
+      "description": "Advanced Dreamstep: Also grants a temporary +1 Speed.",
+      "images": {
+        "small": "SKILLS/SHATTERED/dreamstep_small.png",
+        "medium": "SKILLS/SHATTERED/dreamstep_medium.png",
+        "large": "SKILLS/SHATTERED/dreamstep_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/dreamstep_scenario.png"
+      },
+      "effects": {}
+    },
+    "expert": {
+      "description": "Expert Dreamstep: First eligible stance change may cleanse one whitelisted minor debuff.",
+      "images": {
+        "small": "SKILLS/SHATTERED/dreamstep_small.png",
+        "medium": "SKILLS/SHATTERED/dreamstep_medium.png",
+        "large": "SKILLS/SHATTERED/dreamstep_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/dreamstep_scenario.png"
+      },
+      "effects": {}
+    }
+  },
+  "oneiromancy": {
+    "name": "Oneiromancy",
+    "specialty": [],
+    "gainChance": {
+      "might": 0,
+      "magic": 0
+    },
+    "offerCooldown": 99,
+    "tags": {
+      "classExclusive": true,
+      "shatteredRealms": true
+    },
+    "basic": {
+      "description": "Basic Oneiromancy: Improves dream-control reliability against non-immune targets.",
+      "images": {
+        "small": "SKILLS/SHATTERED/oneiromancy_small.png",
+        "medium": "SKILLS/SHATTERED/oneiromancy_medium.png",
+        "large": "SKILLS/SHATTERED/oneiromancy_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/oneiromancy_scenario.png"
+      },
+      "effects": {}
+    },
+    "advanced": {
+      "description": "Advanced Oneiromancy: First successful dream-control cast receives a small efficiency benefit.",
+      "images": {
+        "small": "SKILLS/SHATTERED/oneiromancy_small.png",
+        "medium": "SKILLS/SHATTERED/oneiromancy_medium.png",
+        "large": "SKILLS/SHATTERED/oneiromancy_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/oneiromancy_scenario.png"
+      },
+      "effects": {}
+    },
+    "expert": {
+      "description": "Expert Oneiromancy: Natural expiration may apply one mild one-round aftereffect once per battle.",
+      "images": {
+        "small": "SKILLS/SHATTERED/oneiromancy_small.png",
+        "medium": "SKILLS/SHATTERED/oneiromancy_medium.png",
+        "large": "SKILLS/SHATTERED/oneiromancy_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/oneiromancy_scenario.png"
+      },
+      "effects": {}
+    }
+  },
+  "brokenVow": {
+    "name": "Broken Vow",
+    "specialty": [],
+    "gainChance": {
+      "might": 0,
+      "magic": 0
+    },
+    "offerCooldown": 99,
+    "tags": {
+      "classExclusive": true,
+      "shatteredRealms": true
+    },
+    "basic": {
+      "description": "Basic Broken Vow: Strengthens both the benefit and drawback of the chosen Oath.",
+      "images": {
+        "small": "SKILLS/SHATTERED/brokenVow_small.png",
+        "medium": "SKILLS/SHATTERED/brokenVow_medium.png",
+        "large": "SKILLS/SHATTERED/brokenVow_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/brokenVow_scenario.png"
+      },
+      "effects": {}
+    },
+    "advanced": {
+      "description": "Advanced Broken Vow: Once per battle suppresses one drawback for one round.",
+      "images": {
+        "small": "SKILLS/SHATTERED/brokenVow_small.png",
+        "medium": "SKILLS/SHATTERED/brokenVow_medium.png",
+        "large": "SKILLS/SHATTERED/brokenVow_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/brokenVow_scenario.png"
+      },
+      "effects": {}
+    },
+    "expert": {
+      "description": "Expert Broken Vow: Improves the benefit again while preserving the Oath's opportunity cost.",
+      "images": {
+        "small": "SKILLS/SHATTERED/brokenVow_small.png",
+        "medium": "SKILLS/SHATTERED/brokenVow_medium.png",
+        "large": "SKILLS/SHATTERED/brokenVow_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/brokenVow_scenario.png"
+      },
+      "effects": {}
+    }
+  },
+  "lastTestament": {
+    "name": "Last Testament",
+    "specialty": [],
+    "gainChance": {
+      "might": 0,
+      "magic": 0
+    },
+    "offerCooldown": 99,
+    "tags": {
+      "classExclusive": true,
+      "shatteredRealms": true
+    },
+    "basic": {
+      "description": "Basic Last Testament: First friendly Hollow stack death grants brief Defense to survivors.",
+      "images": {
+        "small": "SKILLS/SHATTERED/lastTestament_small.png",
+        "medium": "SKILLS/SHATTERED/lastTestament_medium.png",
+        "large": "SKILLS/SHATTERED/lastTestament_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/lastTestament_scenario.png"
+      },
+      "effects": {}
+    },
+    "advanced": {
+      "description": "Advanced Last Testament: Also grants modest spell resistance.",
+      "images": {
+        "small": "SKILLS/SHATTERED/lastTestament_small.png",
+        "medium": "SKILLS/SHATTERED/lastTestament_medium.png",
+        "large": "SKILLS/SHATTERED/lastTestament_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/lastTestament_scenario.png"
+      },
+      "effects": {}
+    },
+    "expert": {
+      "description": "Expert Last Testament: Allows one second, weaker trigger from a different stack death.",
+      "images": {
+        "small": "SKILLS/SHATTERED/lastTestament_small.png",
+        "medium": "SKILLS/SHATTERED/lastTestament_medium.png",
+        "large": "SKILLS/SHATTERED/lastTestament_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/lastTestament_scenario.png"
+      },
+      "effects": {}
+    }
+  },
+  "sacredFormation": {
+    "name": "Sacred Formation",
+    "specialty": [],
+    "gainChance": {
+      "might": 0,
+      "magic": 0
+    },
+    "offerCooldown": 99,
+    "tags": {
+      "classExclusive": true,
+      "shatteredRealms": true
+    },
+    "basic": {
+      "description": "Basic Sacred Formation: Eligible adjacent Starfall stacks gain +1 Defense.",
+      "images": {
+        "small": "SKILLS/SHATTERED/sacredFormation_small.png",
+        "medium": "SKILLS/SHATTERED/sacredFormation_medium.png",
+        "large": "SKILLS/SHATTERED/sacredFormation_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/sacredFormation_scenario.png"
+      },
+      "effects": {}
+    },
+    "advanced": {
+      "description": "Advanced Sacred Formation: Adds modest ranged/spell mitigation.",
+      "images": {
+        "small": "SKILLS/SHATTERED/sacredFormation_small.png",
+        "medium": "SKILLS/SHATTERED/sacredFormation_medium.png",
+        "large": "SKILLS/SHATTERED/sacredFormation_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/sacredFormation_scenario.png"
+      },
+      "effects": {}
+    },
+    "expert": {
+      "description": "Expert Sacred Formation: A formation of at least three eligible stacks gains +1 Attack.",
+      "images": {
+        "small": "SKILLS/SHATTERED/sacredFormation_small.png",
+        "medium": "SKILLS/SHATTERED/sacredFormation_medium.png",
+        "large": "SKILLS/SHATTERED/sacredFormation_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/sacredFormation_scenario.png"
+      },
+      "effects": {}
+    }
+  },
+  "celestialAlignment": {
+    "name": "Celestial Alignment",
+    "specialty": [],
+    "gainChance": {
+      "might": 0,
+      "magic": 0
+    },
+    "offerCooldown": 99,
+    "tags": {
+      "classExclusive": true,
+      "shatteredRealms": true
+    },
+    "basic": {
+      "description": "Basic Celestial Alignment: Slightly improves the faction Alignment state.",
+      "images": {
+        "small": "SKILLS/SHATTERED/celestialAlignment_small.png",
+        "medium": "SKILLS/SHATTERED/celestialAlignment_medium.png",
+        "large": "SKILLS/SHATTERED/celestialAlignment_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/celestialAlignment_scenario.png"
+      },
+      "effects": {}
+    },
+    "advanced": {
+      "description": "Advanced Celestial Alignment: First transition grants a modest next-spell discount.",
+      "images": {
+        "small": "SKILLS/SHATTERED/celestialAlignment_small.png",
+        "medium": "SKILLS/SHATTERED/celestialAlignment_medium.png",
+        "large": "SKILLS/SHATTERED/celestialAlignment_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/celestialAlignment_scenario.png"
+      },
+      "effects": {}
+    },
+    "expert": {
+      "description": "Expert Celestial Alignment: Completed Alignment grants one bounded one-round resistance effect once per battle.",
+      "images": {
+        "small": "SKILLS/SHATTERED/celestialAlignment_small.png",
+        "medium": "SKILLS/SHATTERED/celestialAlignment_medium.png",
+        "large": "SKILLS/SHATTERED/celestialAlignment_large.png",
+        "scenarioBonus": "SKILLS/SHATTERED/celestialAlignment_scenario.png"
+      },
+      "effects": {}
+    }
+  }
+}
