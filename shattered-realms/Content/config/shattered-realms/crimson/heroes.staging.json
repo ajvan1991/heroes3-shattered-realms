@@ -291,9 +291,6 @@
         "level": "basic"
       }
     ],
-    "specialty": {
-      "bonuses": {}
-    },
     "texts": {
       "name": "Ilyr Thorn",
       "biography": "Ilyr believes a commander should know exactly how much blood an army can lose before courage becomes hunger.",
@@ -367,9 +364,6 @@
         "level": "basic"
       }
     ],
-    "specialty": {
-      "bonuses": {}
-    },
     "texts": {
       "name": "Sevrin",
       "biography": "Sevrin measures every ritual twice and considers uncontrolled magic merely another form of waste.",
@@ -408,9 +402,6 @@
         "level": "basic"
       }
     ],
-    "specialty": {
-      "bonuses": {}
-    },
     "texts": {
       "name": "Miraleth",
       "biography": "Miraleth restored fragments of the First Chalice tablets and refuses to translate their final warning.",
@@ -567,9 +558,6 @@
         "level": "basic"
       }
     ],
-    "specialty": {
-      "bonuses": {}
-    },
     "texts": {
       "name": "Saereth",
       "biography": "Saereth joined the seers after discovering that a hunter's mark can be read as clearly as any prophecy.",
@@ -603,9 +591,6 @@
         "level": "basic"
       }
     ],
-    "specialty": {
-      "bonuses": {}
-    },
     "texts": {
       "name": "Lysandra Noct",
       "biography": "Lysandra wears a dark veil because she claims the present is the least interesting thing a seer can see.",
