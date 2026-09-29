@@ -25,9 +25,10 @@ The neutral roster deliberately spans early-game nuisances through rare mythic e
 | T6 | Grootslang | Hoard Sense: combat strength is fixed; adventure reward identity only |
 | T6 | Storm Djinn | Tempest Skin: limited lightning retaliation effect |
 | T7 | Simurgh | Sacred Plumage: once-per-battle allied cleanse/support |
+| T7 | World Serpent Spawn | Coil of Ages: once per round gains a small capped Defense bonus after being struck; recruitable neutral, visually a lesser offspring rather than the mythic serpent itself |
 | Mythic | Forgotten God | multi-phase encounter concept; never a normal recruitable power spike |
 
-> World Serpent is reserved for a scripted/mythic encounter rather than a standard recruitable neutral stack.
+The table now contains **20 standard neutral creature designs** from T1–T7 plus the separate **Forgotten God** mythic encounter concept. The true **World Serpent** remains reserved for a scripted boss encounter; World Serpent Spawn is its distinct recruitable neutral offspring.
 
 ## 30 artifacts
 
