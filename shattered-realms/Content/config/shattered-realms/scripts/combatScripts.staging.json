@@ -46,6 +46,18 @@
         "additionalProperties": false
       },
       "description": "{Crimson Grace}\nThe first qualifying offensive attack in this stack's action can bypass retaliation."
+    },
+    "crimsonBloodied": {
+      "implements": "combatEvent",
+      "script": "shattered-realms/combat/crimsonBloodied",
+      "patches": [],
+      "priority": 10,
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "description": "{Bloodied}\nBelow half health, this stack gains +${val} Attack until it recovers above the threshold."
     }
   }
 }
