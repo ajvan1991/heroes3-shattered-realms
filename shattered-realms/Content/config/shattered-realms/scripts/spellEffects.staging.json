@@ -61,6 +61,27 @@
         },
         "additionalProperties": false
       }
+    },
+    "battleSpellCost": {
+      "implements": "spellEffect",
+      "script": "shattered-realms/spells/battleSpellCost",
+      "patches": [],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "allyDelta": {
+            "type": "integer",
+            "minimum": -5,
+            "maximum": 5
+          },
+          "enemyDelta": {
+            "type": "integer",
+            "minimum": -5,
+            "maximum": 5
+          }
+        },
+        "additionalProperties": false
+      }
     }
   }
 }
