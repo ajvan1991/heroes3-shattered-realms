@@ -59,3 +59,24 @@ otherwise the effect is redesigned.
 
 ## Failure policy
 If a mechanic cannot be made deterministic, serializable and AI-usable on the target VCMI version, preserve the fantasy but simplify the implementation.
+
+
+## Crimson implementation status
+
+### Blood Command
+Native conservative v0.1 mapping is staged:
+- Basic: +1 Attack
+- Advanced: +1 Attack, +1 Defense
+- Expert: +2 Attack, +1 Defense
+
+This intentionally stays below the value of stacking full Offense + Armorer and is easy for AI to value.
+
+### Crimson Divination
+Native support layer is staged with current VCMI identifiers:
+- Basic/Advanced: 110% mana per Knowledge baseline modifier
+- Expert: 120% mana per Knowledge
+- Advanced/Expert: small all-school spell-damage component
+
+The signature Rite sacrifice reduction (8/10% toward a 4% floor) is implemented in the Blood Rite spell-effect configuration rather than pretending a generic native bonus can alter arbitrary scripted costs.
+
+No other class passive receives runtime effects until its faction vertical slice is being implemented and the effect has an engine-safe mapping.
