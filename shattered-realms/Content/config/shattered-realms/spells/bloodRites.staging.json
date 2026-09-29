@@ -1,0 +1,178 @@
+{
+  "riteOpenVein": {
+    "type": "combat",
+    "name": "Rite of the Open Vein",
+    "school": {
+      "fire": true
+    },
+    "level": 2,
+    "power": 0,
+    "defaultGainChance": 0,
+    "gainChance": {
+      "crimsonCourt": 0
+    },
+    "targetType": "CREATURE",
+    "flags": {
+      "positive": true
+    },
+    "graphics": {
+      "iconBook": "SPELLS/CRIMSON/RITE_OPEN_VEIN_BOOK.png",
+      "iconScroll": "SPELLS/CRIMSON/RITE_OPEN_VEIN_SCROLL.png",
+      "iconEffect": "SPELLS/CRIMSON/RITE_OPEN_VEIN_EFFECT.png",
+      "iconImmune": "SPELLS/CRIMSON/RITE_OPEN_VEIN_IMMUNE.png",
+      "iconScenarioBonus": "SPELLS/CRIMSON/RITE_OPEN_VEIN_SCENARIO.png"
+    },
+    "levels": {
+      "none": {
+        "range": "0",
+        "description": "Sacrifice 8% current health (nonlethal) to gain +2 Attack for 2 turns. Once per target per battle.",
+        "cost": 6,
+        "power": 0,
+        "effects": {
+          "rite": {
+            "type": "shattered-realms:bloodRiteUnitEffect",
+            "sacrifice": 8,
+            "stat": "attack",
+            "statValue": 2,
+            "usedMarker": "shattered-realms:riteOpenVeinUsed"
+          }
+        }
+      },
+      "basic": {
+        "range": "0",
+        "description": "Sacrifice 8% current health (nonlethal) to gain +2 Attack for 2 turns. Once per target per battle.",
+        "cost": 6,
+        "power": 0,
+        "effects": {
+          "rite": {
+            "type": "shattered-realms:bloodRiteUnitEffect",
+            "sacrifice": 8,
+            "stat": "attack",
+            "statValue": 2,
+            "usedMarker": "shattered-realms:riteOpenVeinUsed"
+          }
+        }
+      },
+      "advanced": {
+        "range": "0",
+        "description": "Sacrifice 6% current health (nonlethal) to gain +2 Attack for 2 turns. Once per target per battle.",
+        "cost": 5,
+        "power": 0,
+        "effects": {
+          "rite": {
+            "type": "shattered-realms:bloodRiteUnitEffect",
+            "sacrifice": 6,
+            "stat": "attack",
+            "statValue": 2,
+            "usedMarker": "shattered-realms:riteOpenVeinUsed"
+          }
+        }
+      },
+      "expert": {
+        "range": "0",
+        "description": "Sacrifice 4% current health (nonlethal) to gain +2 Attack for 2 turns. Once per target per battle.",
+        "cost": 4,
+        "power": 0,
+        "effects": {
+          "rite": {
+            "type": "shattered-realms:bloodRiteUnitEffect",
+            "sacrifice": 4,
+            "stat": "attack",
+            "statValue": 2,
+            "usedMarker": "shattered-realms:riteOpenVeinUsed"
+          }
+        }
+      }
+    }
+  },
+  "riteScarletShelter": {
+    "type": "combat",
+    "name": "Rite of Scarlet Shelter",
+    "school": {
+      "earth": true
+    },
+    "level": 2,
+    "power": 0,
+    "defaultGainChance": 0,
+    "gainChance": {
+      "crimsonCourt": 0
+    },
+    "targetType": "CREATURE",
+    "flags": {
+      "positive": true
+    },
+    "graphics": {
+      "iconBook": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_BOOK.png",
+      "iconScroll": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_SCROLL.png",
+      "iconEffect": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_EFFECT.png",
+      "iconImmune": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_IMMUNE.png",
+      "iconScenarioBonus": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_SCENARIO.png"
+    },
+    "levels": {
+      "none": {
+        "range": "0",
+        "description": "Sacrifice 10% current health (nonlethal) for +3 Defense and 10% ranged mitigation for 2 turns. Once per target.",
+        "cost": 7,
+        "power": 0,
+        "effects": {
+          "rite": {
+            "type": "shattered-realms:bloodRiteUnitEffect",
+            "sacrifice": 10,
+            "stat": "defence",
+            "statValue": 3,
+            "rangedReduction": 10,
+            "usedMarker": "shattered-realms:riteScarletShelterUsed"
+          }
+        }
+      },
+      "basic": {
+        "range": "0",
+        "description": "Sacrifice 10% current health (nonlethal) for +3 Defense and 10% ranged mitigation for 2 turns. Once per target.",
+        "cost": 7,
+        "power": 0,
+        "effects": {
+          "rite": {
+            "type": "shattered-realms:bloodRiteUnitEffect",
+            "sacrifice": 10,
+            "stat": "defence",
+            "statValue": 3,
+            "rangedReduction": 10,
+            "usedMarker": "shattered-realms:riteScarletShelterUsed"
+          }
+        }
+      },
+      "advanced": {
+        "range": "0",
+        "description": "Sacrifice 7% current health (nonlethal) for +3 Defense and 10% ranged mitigation for 2 turns. Once per target.",
+        "cost": 6,
+        "power": 0,
+        "effects": {
+          "rite": {
+            "type": "shattered-realms:bloodRiteUnitEffect",
+            "sacrifice": 7,
+            "stat": "defence",
+            "statValue": 3,
+            "rangedReduction": 10,
+            "usedMarker": "shattered-realms:riteScarletShelterUsed"
+          }
+        }
+      },
+      "expert": {
+        "range": "0",
+        "description": "Sacrifice 4% current health (nonlethal) for +3 Defense and 10% ranged mitigation for 2 turns. Once per target.",
+        "cost": 5,
+        "power": 0,
+        "effects": {
+          "rite": {
+            "type": "shattered-realms:bloodRiteUnitEffect",
+            "sacrifice": 4,
+            "stat": "defence",
+            "statValue": 3,
+            "rangedReduction": 10,
+            "usedMarker": "shattered-realms:riteScarletShelterUsed"
+          }
+        }
+      }
+    }
+  }
+}
