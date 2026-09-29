@@ -71,3 +71,26 @@
 - [ ] matchup tests against legacy towns
 
 A checkmark means implemented or structurally staged, not necessarily locally proven. Only QA checkmarks establish playable status.
+
+
+## Runtime blockers audit — current
+
+### Engine paths now proven upstream
+- custom unit spellEffect bridge: proven by VCMI spell scripts
+- selective dispel: mirrors current VCMI dispel implementation
+- battle-wide bonus injection: proven by BattleServer:addBattleBonus and VCMI moat script
+- creature caster package: proven by core Ogre Mage configuration
+- server-side HP sacrifice: BattleServer:damageUnit
+- non-resurrecting Bloodwing healing: BattleServer:healUnit with heal/permanent mode
+
+### Still blocking activation
+- real creature DEF/PNG/WAV resources
+- town screen / structure / siege resources
+- hero portraits and map animations
+- local VCMI 1.7.5 schema/load test of staging identifiers
+- verification of dynamic Crimson Archon adjacency refresh
+- verification of temporary-duration enum/turn handling in custom scripts
+- Mortal Anchor anti-heal/rebirth hook
+- final faction/town reference namespace pass
+
+The main mod manifest remains intentionally conservative until resource and local-load blockers are cleared.
