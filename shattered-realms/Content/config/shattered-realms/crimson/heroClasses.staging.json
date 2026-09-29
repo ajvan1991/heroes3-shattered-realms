@@ -3,7 +3,7 @@
     "name": "Bloodlord",
     "faction": "crimsonCourt",
     "affinity": "might",
-    "commander": "core:creature.pikeman",
+    "commander": "bloodstalker",
     "animation": {
       "battle": {
         "female": "SPRITES/CRIMSON/heroes/bloodlord_female_battle.DEF",
@@ -11,7 +11,12 @@
       }
     },
     "mapObject": {
-      "filters": {}
+      "templates": {
+        "default": {
+          "animation": "SPRITES/CRIMSON/heroes/CRIMSON_HERO_MAP.DEF",
+          "editorAnimation": "SPRITES/CRIMSON/heroes/CRIMSON_HERO_EDITOR.DEF"
+        }
+      }
     },
     "primarySkills": {
       "attack": 2,
@@ -40,7 +45,7 @@
       "spellpower": 20,
       "knowledge": 20
     },
-    "defaultTavern": 0,
+    "defaultTavern": 5,
     "tavern": {
       "crimsonCourt": 100
     }
@@ -49,7 +54,7 @@
     "name": "Sanguine Seer",
     "faction": "crimsonCourt",
     "affinity": "magic",
-    "commander": "core:creature.pikeman",
+    "commander": "bloodstalker",
     "animation": {
       "battle": {
         "female": "SPRITES/CRIMSON/heroes/sanguineSeer_female_battle.DEF",
@@ -57,7 +62,12 @@
       }
     },
     "mapObject": {
-      "filters": {}
+      "templates": {
+        "default": {
+          "animation": "SPRITES/CRIMSON/heroes/CRIMSON_HERO_MAP.DEF",
+          "editorAnimation": "SPRITES/CRIMSON/heroes/CRIMSON_HERO_EDITOR.DEF"
+        }
+      }
     },
     "primarySkills": {
       "attack": 1,
@@ -87,7 +97,7 @@
       "spellpower": 30,
       "knowledge": 30
     },
-    "defaultTavern": 0,
+    "defaultTavern": 5,
     "tavern": {
       "crimsonCourt": 100
     }
