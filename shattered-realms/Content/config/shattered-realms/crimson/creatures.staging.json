@@ -349,6 +349,21 @@
       "killed": "SOUNDS/CRIMSON/hemomancer_killed.wav",
       "move": "SOUNDS/CRIMSON/hemomancer_move.wav",
       "wince": "SOUNDS/CRIMSON/hemomancer_wince.wav"
+    },
+    "abilities": {
+      "castsWeakness": {
+        "type": "SPELLCASTER",
+        "subtype": "weakness",
+        "val": 1
+      },
+      "castsCount": {
+        "type": "CASTS",
+        "val": 2
+      },
+      "castLength": {
+        "type": "CREATURE_ENCHANT_POWER",
+        "val": 2
+      }
     }
   },
   "veinOracle": {
@@ -398,6 +413,24 @@
         "subtype": "crimsonBloodied",
         "val": 1,
         "stacking": "shattered-realms:bloodied"
+      },
+      "castsWeakness": {
+        "type": "SPELLCASTER",
+        "subtype": "weakness",
+        "val": 2
+      },
+      "castsStoneSkin": {
+        "type": "SPELLCASTER",
+        "subtype": "stoneSkin",
+        "val": 1
+      },
+      "castsCount": {
+        "type": "CASTS",
+        "val": 3
+      },
+      "castLength": {
+        "type": "CREATURE_ENCHANT_POWER",
+        "val": 3
       }
     }
   },
