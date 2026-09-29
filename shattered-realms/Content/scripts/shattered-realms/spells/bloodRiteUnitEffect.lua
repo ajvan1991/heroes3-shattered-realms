@@ -45,8 +45,9 @@ function Script:apply(mechanics, server, target)
     if self.rangedReduction and self.rangedReduction > 0 then
         server:addUnitBonus(battle, unit, {
             type = "GENERAL_DAMAGE_REDUCTION",
-            subtype = "ONLY_DISTANCE_FIGHT",
+            subtype = "damageTypeRanged",
             val = self.rangedReduction,
+            effectRange = "ONLY_DISTANCE_FIGHT",
             duration = "N_TURNS",
             turns = mechanics:getEffectDuration(),
             sourceType = "SPELL_EFFECT",
