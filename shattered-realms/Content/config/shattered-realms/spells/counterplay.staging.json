@@ -20,7 +20,7 @@
     },
     "targetType": "CREATURE",
     "flags": {
-      "indifferent": true
+      "negative": true
     },
     "graphics": {
       "iconBook": "SPELLS/SHATTERED/severFormation_book.png",
@@ -32,27 +32,79 @@
     "levels": {
       "none": {
         "range": "0",
-        "description": "Sever the Formation — staging description; exact effect pending engine-safe validation.",
+        "description": "Weakens a target's defensive cohesion: -1 Defense and -1 Speed for a short duration.",
         "cost": 12,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "def": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "defence",
+            "val": -1,
+            "duration": "N_TURNS"
+          },
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": -1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "basic": {
         "range": "0",
-        "description": "Sever the Formation — Basic. Exact effect pending engine-safe validation.",
+        "description": "Weakens a target's defensive cohesion: -1 Defense and -1 Speed for a short duration.",
         "cost": 12,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "def": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "defence",
+            "val": -1,
+            "duration": "N_TURNS"
+          },
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": -1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "advanced": {
         "range": "0",
-        "description": "Sever the Formation — Advanced. Exact effect pending engine-safe validation.",
+        "description": "Stronger disruption: -2 Defense and -1 Speed for a short duration.",
         "cost": 13,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "def": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "defence",
+            "val": -2,
+            "duration": "N_TURNS"
+          },
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": -1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "expert": {
         "range": "0",
-        "description": "Sever the Formation — Expert. Exact effect pending engine-safe validation.",
+        "description": "Expert disruption: -2 Defense and -2 Speed for a short duration.",
         "cost": 14,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "def": {
+            "type": "PRIMARY_SKILL",
+            "subtype": "defence",
+            "val": -2,
+            "duration": "N_TURNS"
+          },
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": -2,
+            "duration": "N_TURNS"
+          }
+        }
       }
     }
   },
@@ -134,7 +186,7 @@
     },
     "targetType": "CREATURE",
     "flags": {
-      "indifferent": true
+      "positive": true
     },
     "graphics": {
       "iconBook": "SPELLS/SHATTERED/unboundStep_book.png",
@@ -146,27 +198,55 @@
     "levels": {
       "none": {
         "range": "0",
-        "description": "Unbound Step — staging description; exact effect pending engine-safe validation.",
+        "description": "Grants +1 Speed for a short duration.",
         "cost": 10,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": 1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "basic": {
         "range": "0",
-        "description": "Unbound Step — Basic. Exact effect pending engine-safe validation.",
+        "description": "Grants +1 Speed for a short duration.",
         "cost": 10,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": 1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "advanced": {
         "range": "0",
-        "description": "Unbound Step — Advanced. Exact effect pending engine-safe validation.",
+        "description": "Grants +2 Speed for a short duration.",
         "cost": 11,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": 2,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "expert": {
         "range": "0",
-        "description": "Unbound Step — Expert. Exact effect pending engine-safe validation.",
+        "description": "Grants +2 Speed for a stronger repositioning window.",
         "cost": 12,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": 2,
+            "duration": "N_TURNS"
+          }
+        }
       }
     }
   },
@@ -191,7 +271,7 @@
     },
     "targetType": "CREATURE",
     "flags": {
-      "indifferent": true
+      "negative": true
     },
     "graphics": {
       "iconBook": "SPELLS/SHATTERED/groundingSigil_book.png",
@@ -203,27 +283,55 @@
     "levels": {
       "none": {
         "range": "0",
-        "description": "Grounding Sigil — staging description; exact effect pending engine-safe validation.",
+        "description": "Grounds a fast or mobile target, reducing Speed by 1 for a short duration.",
         "cost": 11,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": -1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "basic": {
         "range": "0",
-        "description": "Grounding Sigil — Basic. Exact effect pending engine-safe validation.",
+        "description": "Grounds a fast or mobile target, reducing Speed by 1 for a short duration.",
         "cost": 11,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": -1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "advanced": {
         "range": "0",
-        "description": "Grounding Sigil — Advanced. Exact effect pending engine-safe validation.",
+        "description": "Reduces Speed by 2 for a short duration.",
         "cost": 12,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": -2,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "expert": {
         "range": "0",
-        "description": "Grounding Sigil — Expert. Exact effect pending engine-safe validation.",
+        "description": "Reduces Speed by 2 for a longer tactical window.",
         "cost": 13,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": -2,
+            "duration": "N_TURNS"
+          }
+        }
       }
     }
   },
@@ -822,13 +930,13 @@
     },
     "level": 4,
     "power": 0,
-    "defaultGainChance": 12,
+    "defaultGainChance": 20,
     "gainChance": {
-      "crimsonCourt": 12,
-      "abyss": 12,
-      "veil": 12,
-      "hollow": 12,
-      "starfall": 12
+      "crimsonCourt": 20,
+      "abyss": 20,
+      "veil": 20,
+      "hollow": 20,
+      "starfall": 20
     },
     "targetType": "NO_TARGET",
     "flags": {
@@ -879,13 +987,13 @@
     },
     "level": 3,
     "power": 0,
-    "defaultGainChance": 12,
+    "defaultGainChance": 20,
     "gainChance": {
-      "crimsonCourt": 12,
-      "abyss": 12,
-      "veil": 12,
-      "hollow": 12,
-      "starfall": 12
+      "crimsonCourt": 20,
+      "abyss": 20,
+      "veil": 20,
+      "hollow": 20,
+      "starfall": 20
     },
     "targetType": "CREATURE",
     "flags": {
@@ -936,13 +1044,13 @@
     },
     "level": 4,
     "power": 0,
-    "defaultGainChance": 12,
+    "defaultGainChance": 20,
     "gainChance": {
-      "crimsonCourt": 12,
-      "abyss": 12,
-      "veil": 12,
-      "hollow": 12,
-      "starfall": 12
+      "crimsonCourt": 20,
+      "abyss": 20,
+      "veil": 20,
+      "hollow": 20,
+      "starfall": 20
     },
     "targetType": "CREATURE",
     "flags": {
@@ -993,13 +1101,13 @@
     },
     "level": 4,
     "power": 0,
-    "defaultGainChance": 12,
+    "defaultGainChance": 20,
     "gainChance": {
-      "crimsonCourt": 12,
-      "abyss": 12,
-      "veil": 12,
-      "hollow": 12,
-      "starfall": 12
+      "crimsonCourt": 20,
+      "abyss": 20,
+      "veil": 20,
+      "hollow": 20,
+      "starfall": 20
     },
     "targetType": "NO_TARGET",
     "flags": {
