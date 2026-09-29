@@ -19,7 +19,14 @@
         "large": "SKILLS/SHATTERED/bloodCommand_large.png",
         "scenarioBonus": "SKILLS/SHATTERED/bloodCommand_scenario.png"
       },
-      "effects": {}
+      "effects": {
+        "bloodCommandAttack": {
+          "type": "PRIMARY_SKILL",
+          "subtype": "attack",
+          "val": 1,
+          "propagator": "HERO"
+        }
+      }
     },
     "advanced": {
       "description": "Advanced Blood Command: Improves Blood Command's low-health tactical payoff.",
@@ -29,7 +36,20 @@
         "large": "SKILLS/SHATTERED/bloodCommand_large.png",
         "scenarioBonus": "SKILLS/SHATTERED/bloodCommand_scenario.png"
       },
-      "effects": {}
+      "effects": {
+        "bloodCommandAttack": {
+          "type": "PRIMARY_SKILL",
+          "subtype": "attack",
+          "val": 1,
+          "propagator": "HERO"
+        },
+        "bloodCommandDefence": {
+          "type": "PRIMARY_SKILL",
+          "subtype": "defence",
+          "val": 1,
+          "propagator": "HERO"
+        }
+      }
     },
     "expert": {
       "description": "Expert Blood Command: Unlocks the full bounded Blood Command pattern without uncapped stacking.",
@@ -39,7 +59,20 @@
         "large": "SKILLS/SHATTERED/bloodCommand_large.png",
         "scenarioBonus": "SKILLS/SHATTERED/bloodCommand_scenario.png"
       },
-      "effects": {}
+      "effects": {
+        "bloodCommandAttack": {
+          "type": "PRIMARY_SKILL",
+          "subtype": "attack",
+          "val": 2,
+          "propagator": "HERO"
+        },
+        "bloodCommandDefence": {
+          "type": "PRIMARY_SKILL",
+          "subtype": "defence",
+          "val": 1,
+          "propagator": "HERO"
+        }
+      }
     }
   },
   "crimsonDivination": {
@@ -62,7 +95,12 @@
         "large": "SKILLS/SHATTERED/crimsonDivination_large.png",
         "scenarioBonus": "SKILLS/SHATTERED/crimsonDivination_scenario.png"
       },
-      "effects": {}
+      "effects": {
+        "riteDiscipline": {
+          "type": "MANA_PER_KNOWLEDGE",
+          "val": 1
+        }
+      }
     },
     "advanced": {
       "description": "Advanced Crimson Divination: Improves the bounded reduction and first-target protection.",
@@ -72,7 +110,17 @@
         "large": "SKILLS/SHATTERED/crimsonDivination_large.png",
         "scenarioBonus": "SKILLS/SHATTERED/crimsonDivination_scenario.png"
       },
-      "effects": {}
+      "effects": {
+        "riteDiscipline": {
+          "type": "MANA_PER_KNOWLEDGE",
+          "val": 1
+        },
+        "riteFocus": {
+          "type": "SPELL_DAMAGE",
+          "val": 5,
+          "valueType": "PERCENT_TO_ALL"
+        }
+      }
     },
     "expert": {
       "description": "Expert Crimson Divination: Adds the once-per-battle next-spell payoff after a qualifying Rite.",
@@ -82,7 +130,17 @@
         "large": "SKILLS/SHATTERED/crimsonDivination_large.png",
         "scenarioBonus": "SKILLS/SHATTERED/crimsonDivination_scenario.png"
       },
-      "effects": {}
+      "effects": {
+        "riteDiscipline": {
+          "type": "MANA_PER_KNOWLEDGE",
+          "val": 2
+        },
+        "riteFocus": {
+          "type": "SPELL_DAMAGE",
+          "val": 5,
+          "valueType": "PERCENT_TO_ALL"
+        }
+      }
     }
   },
   "dreadDominion": {
