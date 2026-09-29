@@ -129,7 +129,7 @@
     },
     "targetType": "CREATURE",
     "flags": {
-      "indifferent": true
+      "positive": true
     },
     "graphics": {
       "iconBook": "SPELLS/SHATTERED/clearMind_book.png",
@@ -141,27 +141,55 @@
     "levels": {
       "none": {
         "range": "0",
-        "description": "Clear Mind — staging description; exact effect pending engine-safe validation.",
+        "description": "Temporarily protects the target from mind-affecting magic.",
         "cost": 8,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "mind": {
+            "type": "MIND_IMMUNITY",
+            "val": 1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "basic": {
         "range": "0",
-        "description": "Clear Mind — Basic. Exact effect pending engine-safe validation.",
+        "description": "Temporarily protects the target from mind-affecting magic.",
         "cost": 8,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "mind": {
+            "type": "MIND_IMMUNITY",
+            "val": 1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "advanced": {
         "range": "0",
-        "description": "Clear Mind — Advanced. Exact effect pending engine-safe validation.",
+        "description": "Longer protection from mind-affecting magic.",
         "cost": 9,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "mind": {
+            "type": "MIND_IMMUNITY",
+            "val": 1,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "expert": {
         "range": "0",
-        "description": "Clear Mind — Expert. Exact effect pending engine-safe validation.",
+        "description": "Strong temporary protection from mind-affecting magic.",
         "cost": 10,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "mind": {
+            "type": "MIND_IMMUNITY",
+            "val": 1,
+            "duration": "N_TURNS"
+          }
+        }
       }
     }
   },
@@ -356,7 +384,7 @@
     },
     "targetType": "CREATURE",
     "flags": {
-      "indifferent": true
+      "negative": true
     },
     "graphics": {
       "iconBook": "SPELLS/SHATTERED/mortalAnchor_book.png",
@@ -368,27 +396,55 @@
     "levels": {
       "none": {
         "range": "0",
-        "description": "Mortal Anchor — staging description; exact effect pending engine-safe validation.",
+        "description": "Reduces healing and restoration received by 20% for a short duration.",
         "cost": 16,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "heal": {
+            "type": "HEAL_EFFECTIVENESS",
+            "val": -20,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "basic": {
         "range": "0",
-        "description": "Mortal Anchor — Basic. Exact effect pending engine-safe validation.",
+        "description": "Reduces healing and restoration received by 20% for a short duration.",
         "cost": 16,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "heal": {
+            "type": "HEAL_EFFECTIVENESS",
+            "val": -20,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "advanced": {
         "range": "0",
-        "description": "Mortal Anchor — Advanced. Exact effect pending engine-safe validation.",
+        "description": "Reduces healing and restoration received by 30%.",
         "cost": 17,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "heal": {
+            "type": "HEAL_EFFECTIVENESS",
+            "val": -30,
+            "duration": "N_TURNS"
+          }
+        }
       },
       "expert": {
         "range": "0",
-        "description": "Mortal Anchor — Expert. Exact effect pending engine-safe validation.",
+        "description": "Reduces healing and restoration received by 40%.",
         "cost": 18,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "heal": {
+            "type": "HEAL_EFFECTIVENESS",
+            "val": -40,
+            "duration": "N_TURNS"
+          }
+        }
       }
     }
   },
