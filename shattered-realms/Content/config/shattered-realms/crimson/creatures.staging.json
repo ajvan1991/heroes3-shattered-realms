@@ -1,0 +1,647 @@
+{
+  "_developmentNote": "STAGING CONFIG: structurally prepared for VCMI but intentionally NOT referenced by mod.json until the listed original assets exist. Custom Bloodied, lifesteal, Quarry Mark, aura, caster and rebirth bonuses are added only after their exact engine-safe representation is validated.",
+
+  "veinling": {
+    "name": {
+      "singular": "Veinling",
+      "plural": "Veinlings"
+    },
+    "description": "Young court initiates who survived their first Blood Rite. Pain sharpens rather than breaks them.",
+    "faction": "crimsonCourt",
+    "level": 1,
+    "upgrades": [
+      "bloodbound"
+    ],
+    "cost": {
+      "gold": 55
+    },
+    "speed": 5,
+    "hitPoints": 4,
+    "attack": 4,
+    "defense": 4,
+    "damage": {
+      "min": 1,
+      "max": 2
+    },
+    "fightValue": 55,
+    "aiValue": 55,
+    "growth": 14,
+    "special": true,
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/veinling.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/veinling_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/veinling_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/veinling_attack.wav",
+      "defend": "SOUNDS/CRIMSON/veinling_defend.wav",
+      "killed": "SOUNDS/CRIMSON/veinling_killed.wav",
+      "move": "SOUNDS/CRIMSON/veinling_move.wav",
+      "wince": "SOUNDS/CRIMSON/veinling_wince.wav"
+    }
+  },
+  "bloodbound": {
+    "name": {
+      "singular": "Bloodbound",
+      "plural": "Bloodbound"
+    },
+    "description": "Bloodbound initiates bear ritual scars that answer pain with predatory resolve.",
+    "faction": "crimsonCourt",
+    "level": 1,
+    "cost": {
+      "gold": 75
+    },
+    "speed": 6,
+    "hitPoints": 5,
+    "attack": 5,
+    "defense": 5,
+    "damage": {
+      "min": 1,
+      "max": 3
+    },
+    "fightValue": 80,
+    "aiValue": 80,
+    "growth": 14,
+    "special": true,
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/bloodbound.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/bloodbound_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/bloodbound_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/bloodbound_attack.wav",
+      "defend": "SOUNDS/CRIMSON/bloodbound_defend.wav",
+      "killed": "SOUNDS/CRIMSON/bloodbound_killed.wav",
+      "move": "SOUNDS/CRIMSON/bloodbound_move.wav",
+      "wince": "SOUNDS/CRIMSON/bloodbound_wince.wav"
+    }
+  },
+  "thornDancer": {
+    "name": {
+      "singular": "Thorn Dancer",
+      "plural": "Thorn Dancers"
+    },
+    "description": "Duelists trained among living thorn galleries, where a misplaced step is fatal.",
+    "faction": "crimsonCourt",
+    "level": 2,
+    "upgrades": [
+      "crimsonDancer"
+    ],
+    "cost": {
+      "gold": 120
+    },
+    "speed": 6,
+    "hitPoints": 10,
+    "attack": 6,
+    "defense": 5,
+    "damage": {
+      "min": 2,
+      "max": 4
+    },
+    "fightValue": 130,
+    "aiValue": 130,
+    "growth": 9,
+    "special": true,
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/thornDancer.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/thornDancer_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/thornDancer_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/thornDancer_attack.wav",
+      "defend": "SOUNDS/CRIMSON/thornDancer_defend.wav",
+      "killed": "SOUNDS/CRIMSON/thornDancer_killed.wav",
+      "move": "SOUNDS/CRIMSON/thornDancer_move.wav",
+      "wince": "SOUNDS/CRIMSON/thornDancer_wince.wav"
+    }
+  },
+  "crimsonDancer": {
+    "name": {
+      "singular": "Crimson Dancer",
+      "plural": "Crimson Dancers"
+    },
+    "description": "Masters of the Thorn Gallery who turn a passing cut into an art of impossible precision.",
+    "faction": "crimsonCourt",
+    "level": 2,
+    "cost": {
+      "gold": 165
+    },
+    "speed": 7,
+    "hitPoints": 12,
+    "attack": 7,
+    "defense": 6,
+    "damage": {
+      "min": 2,
+      "max": 5
+    },
+    "fightValue": 175,
+    "aiValue": 175,
+    "growth": 9,
+    "special": true,
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/crimsonDancer.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/crimsonDancer_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/crimsonDancer_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/crimsonDancer_attack.wav",
+      "defend": "SOUNDS/CRIMSON/crimsonDancer_defend.wav",
+      "killed": "SOUNDS/CRIMSON/crimsonDancer_killed.wav",
+      "move": "SOUNDS/CRIMSON/crimsonDancer_move.wav",
+      "wince": "SOUNDS/CRIMSON/crimsonDancer_wince.wav"
+    }
+  },
+  "gorewing": {
+    "name": {
+      "singular": "Gorewing",
+      "plural": "Gorewings"
+    },
+    "description": "Nocturnal court predators bound by oath, their wing membranes veined like crimson glass.",
+    "faction": "crimsonCourt",
+    "level": 3,
+    "upgrades": [
+      "bloodwing"
+    ],
+    "cost": {
+      "gold": 220
+    },
+    "speed": 7,
+    "hitPoints": 18,
+    "attack": 7,
+    "defense": 7,
+    "damage": {
+      "min": 3,
+      "max": 6
+    },
+    "fightValue": 230,
+    "aiValue": 230,
+    "growth": 7,
+    "special": true,
+    "abilities": {
+      "canFly": {
+        "type": "FLYING"
+      }
+    },
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/gorewing.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/gorewing_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/gorewing_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/gorewing_attack.wav",
+      "defend": "SOUNDS/CRIMSON/gorewing_defend.wav",
+      "killed": "SOUNDS/CRIMSON/gorewing_killed.wav",
+      "move": "SOUNDS/CRIMSON/gorewing_move.wav",
+      "wince": "SOUNDS/CRIMSON/gorewing_wince.wav"
+    }
+  },
+  "bloodwing": {
+    "name": {
+      "singular": "Bloodwing",
+      "plural": "Bloodwings"
+    },
+    "description": "Ancient Gorewings whose translucent wings drink the moonlight above the Bloodwood.",
+    "faction": "crimsonCourt",
+    "level": 3,
+    "cost": {
+      "gold": 285
+    },
+    "speed": 8,
+    "hitPoints": 22,
+    "attack": 8,
+    "defense": 8,
+    "damage": {
+      "min": 4,
+      "max": 7
+    },
+    "fightValue": 300,
+    "aiValue": 300,
+    "growth": 7,
+    "special": true,
+    "abilities": {
+      "canFly": {
+        "type": "FLYING"
+      }
+    },
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/bloodwing.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/bloodwing_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/bloodwing_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/bloodwing_attack.wav",
+      "defend": "SOUNDS/CRIMSON/bloodwing_defend.wav",
+      "killed": "SOUNDS/CRIMSON/bloodwing_killed.wav",
+      "move": "SOUNDS/CRIMSON/bloodwing_move.wav",
+      "wince": "SOUNDS/CRIMSON/bloodwing_wince.wav"
+    }
+  },
+  "hemomancer": {
+    "name": {
+      "singular": "Hemomancer",
+      "plural": "Hemomancers"
+    },
+    "description": "Blood readers who purchase glimpses of the future with their own vitality.",
+    "faction": "crimsonCourt",
+    "level": 4,
+    "upgrades": [
+      "veinOracle"
+    ],
+    "cost": {
+      "gold": 390
+    },
+    "speed": 6,
+    "hitPoints": 30,
+    "attack": 9,
+    "defense": 8,
+    "damage": {
+      "min": 6,
+      "max": 9
+    },
+    "fightValue": 410,
+    "aiValue": 410,
+    "growth": 4,
+    "special": true,
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/hemomancer.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/hemomancer_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/hemomancer_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/hemomancer_attack.wav",
+      "defend": "SOUNDS/CRIMSON/hemomancer_defend.wav",
+      "killed": "SOUNDS/CRIMSON/hemomancer_killed.wav",
+      "move": "SOUNDS/CRIMSON/hemomancer_move.wav",
+      "wince": "SOUNDS/CRIMSON/hemomancer_wince.wav"
+    }
+  },
+  "veinOracle": {
+    "name": {
+      "singular": "Vein Oracle",
+      "plural": "Vein Oracles"
+    },
+    "description": "Blindfolded seers who claim that closing mortal eyes reveals the currents beneath all living things.",
+    "faction": "crimsonCourt",
+    "level": 4,
+    "cost": {
+      "gold": 500
+    },
+    "speed": 7,
+    "hitPoints": 35,
+    "attack": 10,
+    "defense": 9,
+    "damage": {
+      "min": 7,
+      "max": 10
+    },
+    "fightValue": 530,
+    "aiValue": 530,
+    "growth": 4,
+    "special": true,
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/veinOracle.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/veinOracle_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/veinOracle_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/veinOracle_attack.wav",
+      "defend": "SOUNDS/CRIMSON/veinOracle_defend.wav",
+      "killed": "SOUNDS/CRIMSON/veinOracle_killed.wav",
+      "move": "SOUNDS/CRIMSON/veinOracle_move.wav",
+      "wince": "SOUNDS/CRIMSON/veinOracle_wince.wav"
+    }
+  },
+  "scarletHuntress": {
+    "name": {
+      "singular": "Scarlet Huntress",
+      "plural": "Scarlet Huntresses"
+    },
+    "description": "Noble hunters who mark a quarry with a ritual wound and pursue it without rest.",
+    "faction": "crimsonCourt",
+    "level": 5,
+    "upgrades": [
+      "bloodstalker"
+    ],
+    "cost": {
+      "gold": 650
+    },
+    "speed": 7,
+    "hitPoints": 45,
+    "attack": 11,
+    "defense": 10,
+    "damage": {
+      "min": 9,
+      "max": 13
+    },
+    "fightValue": 690,
+    "aiValue": 690,
+    "growth": 3,
+    "special": true,
+    "abilities": {
+      "shooter": {
+        "type": "SHOOTER"
+      }
+    },
+    "shots": 12,
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/scarletHuntress.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/scarletHuntress_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/scarletHuntress_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/scarletHuntress_attack.wav",
+      "defend": "SOUNDS/CRIMSON/scarletHuntress_defend.wav",
+      "killed": "SOUNDS/CRIMSON/scarletHuntress_killed.wav",
+      "move": "SOUNDS/CRIMSON/scarletHuntress_move.wav",
+      "wince": "SOUNDS/CRIMSON/scarletHuntress_wince.wav"
+    }
+  },
+  "bloodstalker": {
+    "name": {
+      "singular": "Bloodstalker",
+      "plural": "Bloodstalkers"
+    },
+    "description": "Masked hunters whose crimson mark is treated by the court as a sentence rather than a threat.",
+    "faction": "crimsonCourt",
+    "level": 5,
+    "cost": {
+      "gold": 825
+    },
+    "speed": 8,
+    "hitPoints": 55,
+    "attack": 12,
+    "defense": 11,
+    "damage": {
+      "min": 10,
+      "max": 15
+    },
+    "fightValue": 870,
+    "aiValue": 870,
+    "growth": 3,
+    "special": true,
+    "abilities": {
+      "shooter": {
+        "type": "SHOOTER"
+      }
+    },
+    "shots": 16,
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/bloodstalker.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/bloodstalker_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/bloodstalker_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/bloodstalker_attack.wav",
+      "defend": "SOUNDS/CRIMSON/bloodstalker_defend.wav",
+      "killed": "SOUNDS/CRIMSON/bloodstalker_killed.wav",
+      "move": "SOUNDS/CRIMSON/bloodstalker_move.wav",
+      "wince": "SOUNDS/CRIMSON/bloodstalker_wince.wav"
+    }
+  },
+  "sanguineNoble": {
+    "name": {
+      "singular": "Sanguine Noble",
+      "plural": "Sanguine Nobles"
+    },
+    "description": "Ancient aristocrats whose presence binds the court together as surely as blood binds a body.",
+    "faction": "crimsonCourt",
+    "level": 6,
+    "upgrades": [
+      "crimsonArchon"
+    ],
+    "cost": {
+      "gold": 1200
+    },
+    "speed": 8,
+    "hitPoints": 90,
+    "attack": 14,
+    "defense": 14,
+    "damage": {
+      "min": 14,
+      "max": 20
+    },
+    "fightValue": 1300,
+    "aiValue": 1300,
+    "growth": 2,
+    "special": true,
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/sanguineNoble.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/sanguineNoble_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/sanguineNoble_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/sanguineNoble_attack.wav",
+      "defend": "SOUNDS/CRIMSON/sanguineNoble_defend.wav",
+      "killed": "SOUNDS/CRIMSON/sanguineNoble_killed.wav",
+      "move": "SOUNDS/CRIMSON/sanguineNoble_move.wav",
+      "wince": "SOUNDS/CRIMSON/sanguineNoble_wince.wav"
+    }
+  },
+  "crimsonArchon": {
+    "name": {
+      "singular": "Crimson Archon",
+      "plural": "Crimson Archons"
+    },
+    "description": "The oldest martial nobles carry the authority of the Crimson Court onto the battlefield.",
+    "faction": "crimsonCourt",
+    "level": 6,
+    "cost": {
+      "gold": 1550
+    },
+    "speed": 9,
+    "hitPoints": 105,
+    "attack": 16,
+    "defense": 16,
+    "damage": {
+      "min": 16,
+      "max": 23
+    },
+    "fightValue": 1650,
+    "aiValue": 1650,
+    "growth": 2,
+    "special": true,
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/crimsonArchon.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/crimsonArchon_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/crimsonArchon_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/crimsonArchon_attack.wav",
+      "defend": "SOUNDS/CRIMSON/crimsonArchon_defend.wav",
+      "killed": "SOUNDS/CRIMSON/crimsonArchon_killed.wav",
+      "move": "SOUNDS/CRIMSON/crimsonArchon_move.wav",
+      "wince": "SOUNDS/CRIMSON/crimsonArchon_wince.wav"
+    }
+  },
+  "bloodPhoenix": {
+    "name": {
+      "singular": "Blood Phoenix",
+      "plural": "Blood Phoenixes"
+    },
+    "description": "A forbidden miracle formed from crimson leaves, blood-light and featherlike crystal around a ritual heart.",
+    "faction": "crimsonCourt",
+    "level": 7,
+    "upgrades": [
+      "eternalBloodPhoenix"
+    ],
+    "cost": {
+      "gold": 2800,
+      "crystal": 1
+    },
+    "speed": 11,
+    "hitPoints": 170,
+    "attack": 18,
+    "defense": 17,
+    "damage": {
+      "min": 30,
+      "max": 45
+    },
+    "fightValue": 3000,
+    "aiValue": 3000,
+    "growth": 1,
+    "special": true,
+    "abilities": {
+      "canFly": {
+        "type": "FLYING"
+      }
+    },
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/bloodPhoenix.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/bloodPhoenix_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/bloodPhoenix_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/bloodPhoenix_attack.wav",
+      "defend": "SOUNDS/CRIMSON/bloodPhoenix_defend.wav",
+      "killed": "SOUNDS/CRIMSON/bloodPhoenix_killed.wav",
+      "move": "SOUNDS/CRIMSON/bloodPhoenix_move.wav",
+      "wince": "SOUNDS/CRIMSON/bloodPhoenix_wince.wav"
+    }
+  },
+  "eternalBloodPhoenix": {
+    "name": {
+      "singular": "Eternal Blood Phoenix",
+      "plural": "Eternal Blood Phoenixes"
+    },
+    "description": "The perfected ritual heart remembers its form even after the creature around it is destroyed.",
+    "faction": "crimsonCourt",
+    "level": 7,
+    "cost": {
+      "gold": 3600,
+      "crystal": 2
+    },
+    "speed": 12,
+    "hitPoints": 210,
+    "attack": 20,
+    "defense": 19,
+    "damage": {
+      "min": 35,
+      "max": 50
+    },
+    "fightValue": 3900,
+    "aiValue": 3900,
+    "growth": 1,
+    "special": true,
+    "abilities": {
+      "canFly": {
+        "type": "FLYING"
+      }
+    },
+    "graphics": {
+      "animation": "SPRITES/CRIMSON/eternalBloodPhoenix.DEF",
+      "iconLarge": "SPRITES/CRIMSON/icons/eternalBloodPhoenix_large.png",
+      "iconSmall": "SPRITES/CRIMSON/icons/eternalBloodPhoenix_small.png",
+      "animationTime": {
+        "attack": 0.65,
+        "walk": 0.55,
+        "idle": 1
+      },
+      "timeBetweenFidgets": 4
+    },
+    "sound": {
+      "attack": "SOUNDS/CRIMSON/eternalBloodPhoenix_attack.wav",
+      "defend": "SOUNDS/CRIMSON/eternalBloodPhoenix_defend.wav",
+      "killed": "SOUNDS/CRIMSON/eternalBloodPhoenix_killed.wav",
+      "move": "SOUNDS/CRIMSON/eternalBloodPhoenix_move.wav",
+      "wince": "SOUNDS/CRIMSON/eternalBloodPhoenix_wince.wav"
+    }
+  }
+}
