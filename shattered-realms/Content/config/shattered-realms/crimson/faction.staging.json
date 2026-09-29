@@ -941,7 +941,334 @@
           }
         }
       },
-      "structures": {},
+      "structures": {
+        "villageHall": {
+          "animation": "CRIMSON/TOWN/structures/villageHall.DEF",
+          "x": 28,
+          "y": 205,
+          "z": 1,
+          "border": "CRIMSON/TOWN/structures/villageHall_border.png",
+          "area": "CRIMSON/TOWN/structures/villageHall_area.png"
+        },
+        "townHall": {
+          "animation": "CRIMSON/TOWN/structures/townHall.DEF",
+          "x": 28,
+          "y": 180,
+          "z": 1,
+          "border": "CRIMSON/TOWN/structures/townHall_border.png",
+          "area": "CRIMSON/TOWN/structures/townHall_area.png"
+        },
+        "cityHall": {
+          "animation": "CRIMSON/TOWN/structures/cityHall.DEF",
+          "x": 28,
+          "y": 160,
+          "z": 1,
+          "border": "CRIMSON/TOWN/structures/cityHall_border.png",
+          "area": "CRIMSON/TOWN/structures/cityHall_area.png"
+        },
+        "capitol": {
+          "animation": "CRIMSON/TOWN/structures/capitol.DEF",
+          "x": 28,
+          "y": 142,
+          "z": 1,
+          "border": "CRIMSON/TOWN/structures/capitol_border.png",
+          "area": "CRIMSON/TOWN/structures/capitol_area.png"
+        },
+        "tavern": {
+          "animation": "CRIMSON/TOWN/structures/tavern.DEF",
+          "x": 120,
+          "y": 244,
+          "z": 1,
+          "border": "CRIMSON/TOWN/structures/tavern_border.png",
+          "area": "CRIMSON/TOWN/structures/tavern_area.png"
+        },
+        "marketplace": {
+          "animation": "CRIMSON/TOWN/structures/marketplace.DEF",
+          "x": 300,
+          "y": 265,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/marketplace_border.png",
+          "area": "CRIMSON/TOWN/structures/marketplace_area.png"
+        },
+        "resourceSilo": {
+          "animation": "CRIMSON/TOWN/structures/resourceSilo.DEF",
+          "x": 370,
+          "y": 238,
+          "z": 1,
+          "border": "CRIMSON/TOWN/structures/resourceSilo_border.png",
+          "area": "CRIMSON/TOWN/structures/resourceSilo_area.png"
+        },
+        "blacksmith": {
+          "animation": "CRIMSON/TOWN/structures/blacksmith.DEF",
+          "x": 205,
+          "y": 258,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/blacksmith_border.png",
+          "area": "CRIMSON/TOWN/structures/blacksmith_area.png"
+        },
+        "fort": {
+          "animation": "CRIMSON/TOWN/structures/fort.DEF",
+          "x": 560,
+          "y": 80,
+          "z": -5,
+          "border": "CRIMSON/TOWN/structures/fort_border.png",
+          "area": "CRIMSON/TOWN/structures/fort_area.png"
+        },
+        "citadel": {
+          "animation": "CRIMSON/TOWN/structures/citadel.DEF",
+          "x": 535,
+          "y": 65,
+          "z": -5,
+          "border": "CRIMSON/TOWN/structures/citadel_border.png",
+          "area": "CRIMSON/TOWN/structures/citadel_area.png"
+        },
+        "castle": {
+          "animation": "CRIMSON/TOWN/structures/castle.DEF",
+          "x": 510,
+          "y": 45,
+          "z": -5,
+          "border": "CRIMSON/TOWN/structures/castle_border.png",
+          "area": "CRIMSON/TOWN/structures/castle_area.png"
+        },
+        "mageGuild1": {
+          "animation": "CRIMSON/TOWN/structures/mageGuild1.DEF",
+          "x": 690,
+          "y": 175,
+          "z": 1,
+          "border": "CRIMSON/TOWN/structures/mageGuild1_border.png",
+          "area": "CRIMSON/TOWN/structures/mageGuild1_area.png"
+        },
+        "mageGuild2": {
+          "animation": "CRIMSON/TOWN/structures/mageGuild2.DEF",
+          "x": 690,
+          "y": 145,
+          "z": 1,
+          "border": "CRIMSON/TOWN/structures/mageGuild2_border.png",
+          "area": "CRIMSON/TOWN/structures/mageGuild2_area.png"
+        },
+        "mageGuild3": {
+          "animation": "CRIMSON/TOWN/structures/mageGuild3.DEF",
+          "x": 690,
+          "y": 115,
+          "z": 1,
+          "border": "CRIMSON/TOWN/structures/mageGuild3_border.png",
+          "area": "CRIMSON/TOWN/structures/mageGuild3_area.png"
+        },
+        "mageGuild4": {
+          "animation": "CRIMSON/TOWN/structures/mageGuild4.DEF",
+          "x": 690,
+          "y": 85,
+          "z": 1,
+          "border": "CRIMSON/TOWN/structures/mageGuild4_border.png",
+          "area": "CRIMSON/TOWN/structures/mageGuild4_area.png"
+        },
+        "mageGuild5": {
+          "animation": "CRIMSON/TOWN/structures/mageGuild5.DEF",
+          "x": 690,
+          "y": 55,
+          "z": 1,
+          "border": "CRIMSON/TOWN/structures/mageGuild5_border.png",
+          "area": "CRIMSON/TOWN/structures/mageGuild5_area.png"
+        },
+        "veinHouse": {
+          "animation": "CRIMSON/TOWN/structures/veinHouse.DEF",
+          "x": 250,
+          "y": 205,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/veinHouse_border.png",
+          "area": "CRIMSON/TOWN/structures/veinHouse_area.png"
+        },
+        "veinHouseUp": {
+          "animation": "CRIMSON/TOWN/structures/veinHouseUp.DEF",
+          "x": 250,
+          "y": 185,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/veinHouseUp_border.png",
+          "area": "CRIMSON/TOWN/structures/veinHouseUp_area.png",
+          "hidden": true,
+          "builds": "veinHouse"
+        },
+        "thornGallery": {
+          "animation": "CRIMSON/TOWN/structures/thornGallery.DEF",
+          "x": 330,
+          "y": 190,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/thornGallery_border.png",
+          "area": "CRIMSON/TOWN/structures/thornGallery_area.png"
+        },
+        "crimsonGallery": {
+          "animation": "CRIMSON/TOWN/structures/crimsonGallery.DEF",
+          "x": 330,
+          "y": 165,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/crimsonGallery_border.png",
+          "area": "CRIMSON/TOWN/structures/crimsonGallery_area.png",
+          "hidden": true,
+          "builds": "thornGallery"
+        },
+        "gorewingRoost": {
+          "animation": "CRIMSON/TOWN/structures/gorewingRoost.DEF",
+          "x": 425,
+          "y": 105,
+          "z": -1,
+          "border": "CRIMSON/TOWN/structures/gorewingRoost_border.png",
+          "area": "CRIMSON/TOWN/structures/gorewingRoost_area.png"
+        },
+        "bloodwingRoost": {
+          "animation": "CRIMSON/TOWN/structures/bloodwingRoost.DEF",
+          "x": 425,
+          "y": 80,
+          "z": -1,
+          "border": "CRIMSON/TOWN/structures/bloodwingRoost_border.png",
+          "area": "CRIMSON/TOWN/structures/bloodwingRoost_area.png",
+          "hidden": true,
+          "builds": "gorewingRoost"
+        },
+        "hallVeins": {
+          "animation": "CRIMSON/TOWN/structures/hallVeins.DEF",
+          "x": 565,
+          "y": 205,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/hallVeins_border.png",
+          "area": "CRIMSON/TOWN/structures/hallVeins_area.png"
+        },
+        "oracleHall": {
+          "animation": "CRIMSON/TOWN/structures/oracleHall.DEF",
+          "x": 565,
+          "y": 175,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/oracleHall_border.png",
+          "area": "CRIMSON/TOWN/structures/oracleHall_area.png",
+          "hidden": true,
+          "builds": "hallVeins"
+        },
+        "scarletLodge": {
+          "animation": "CRIMSON/TOWN/structures/scarletLodge.DEF",
+          "x": 105,
+          "y": 105,
+          "z": -1,
+          "border": "CRIMSON/TOWN/structures/scarletLodge_border.png",
+          "area": "CRIMSON/TOWN/structures/scarletLodge_area.png"
+        },
+        "bloodstalkerLodge": {
+          "animation": "CRIMSON/TOWN/structures/bloodstalkerLodge.DEF",
+          "x": 105,
+          "y": 80,
+          "z": -1,
+          "border": "CRIMSON/TOWN/structures/bloodstalkerLodge_border.png",
+          "area": "CRIMSON/TOWN/structures/bloodstalkerLodge_area.png",
+          "hidden": true,
+          "builds": "scarletLodge"
+        },
+        "sanguinePalace": {
+          "animation": "CRIMSON/TOWN/structures/sanguinePalace.DEF",
+          "x": 190,
+          "y": 105,
+          "z": -1,
+          "border": "CRIMSON/TOWN/structures/sanguinePalace_border.png",
+          "area": "CRIMSON/TOWN/structures/sanguinePalace_area.png"
+        },
+        "archonPalace": {
+          "animation": "CRIMSON/TOWN/structures/archonPalace.DEF",
+          "x": 190,
+          "y": 78,
+          "z": -1,
+          "border": "CRIMSON/TOWN/structures/archonPalace_border.png",
+          "area": "CRIMSON/TOWN/structures/archonPalace_area.png",
+          "hidden": true,
+          "builds": "sanguinePalace"
+        },
+        "heartAviary": {
+          "animation": "CRIMSON/TOWN/structures/heartAviary.DEF",
+          "x": 350,
+          "y": 20,
+          "z": -2,
+          "border": "CRIMSON/TOWN/structures/heartAviary_border.png",
+          "area": "CRIMSON/TOWN/structures/heartAviary_area.png"
+        },
+        "eternalAviary": {
+          "animation": "CRIMSON/TOWN/structures/eternalAviary.DEF",
+          "x": 350,
+          "y": 5,
+          "z": -2,
+          "border": "CRIMSON/TOWN/structures/eternalAviary_border.png",
+          "area": "CRIMSON/TOWN/structures/eternalAviary_area.png",
+          "hidden": true,
+          "builds": "heartAviary"
+        },
+        "courtVeins": {
+          "animation": "CRIMSON/TOWN/structures/courtVeins.DEF",
+          "x": 475,
+          "y": 210,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/courtVeins_border.png",
+          "area": "CRIMSON/TOWN/structures/courtVeins_area.png"
+        },
+        "scarletConservatory": {
+          "animation": "CRIMSON/TOWN/structures/scarletConservatory.DEF",
+          "x": 400,
+          "y": 230,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/scarletConservatory_border.png",
+          "area": "CRIMSON/TOWN/structures/scarletConservatory_area.png"
+        },
+        "firstChalice": {
+          "animation": "CRIMSON/TOWN/structures/firstChalice.DEF",
+          "x": 610,
+          "y": 245,
+          "z": 1,
+          "border": "CRIMSON/TOWN/structures/firstChalice_border.png",
+          "area": "CRIMSON/TOWN/structures/firstChalice_area.png"
+        },
+        "moonlitMenagerie": {
+          "animation": "CRIMSON/TOWN/structures/moonlitMenagerie.DEF",
+          "x": 80,
+          "y": 190,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/moonlitMenagerie_border.png",
+          "area": "CRIMSON/TOWN/structures/moonlitMenagerie_area.png"
+        },
+        "thornTribunal": {
+          "animation": "CRIMSON/TOWN/structures/thornTribunal.DEF",
+          "x": 520,
+          "y": 120,
+          "z": -2,
+          "border": "CRIMSON/TOWN/structures/thornTribunal_border.png",
+          "area": "CRIMSON/TOWN/structures/thornTribunal_area.png"
+        },
+        "redMoonObservatory": {
+          "animation": "CRIMSON/TOWN/structures/redMoonObservatory.DEF",
+          "x": 640,
+          "y": 100,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/redMoonObservatory_border.png",
+          "area": "CRIMSON/TOWN/structures/redMoonObservatory_area.png"
+        },
+        "hordeThorns": {
+          "animation": "CRIMSON/TOWN/structures/hordeThorns.DEF",
+          "x": 305,
+          "y": 145,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/hordeThorns_border.png",
+          "area": "CRIMSON/TOWN/structures/hordeThorns_area.png"
+        },
+        "hordeHunt": {
+          "animation": "CRIMSON/TOWN/structures/hordeHunt.DEF",
+          "x": 135,
+          "y": 55,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/hordeHunt_border.png",
+          "area": "CRIMSON/TOWN/structures/hordeHunt_area.png"
+        },
+        "grail": {
+          "animation": "CRIMSON/TOWN/structures/grail.DEF",
+          "x": 455,
+          "y": 85,
+          "z": -6,
+          "border": "CRIMSON/TOWN/structures/grail_border.png",
+          "area": "CRIMSON/TOWN/structures/grail_area.png"
+        }
+      },
       "townBackground": "CRIMSON/TOWN/town_background.png",
       "guildSpellPositions": [
         [
