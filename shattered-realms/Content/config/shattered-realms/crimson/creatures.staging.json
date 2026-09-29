@@ -1,5 +1,4 @@
 {
-
   "veinling": {
     "name": {
       "singular": "Veinling",
@@ -172,6 +171,13 @@
       "killed": "SOUNDS/CRIMSON/crimsonDancer_killed.wav",
       "move": "SOUNDS/CRIMSON/crimsonDancer_move.wav",
       "wince": "SOUNDS/CRIMSON/crimsonDancer_wince.wav"
+    },
+    "abilities": {
+      "crimsonGrace": {
+        "type": "COMBAT_EVENT_TRIGGER",
+        "subtype": "crimsonDancerGrace",
+        "val": 1
+      }
     }
   },
   "gorewing": {
@@ -250,6 +256,15 @@
     "abilities": {
       "canFly": {
         "type": "FLYING"
+      },
+      "bloodFeast": {
+        "type": "COMBAT_EVENT_TRIGGER",
+        "subtype": "crimsonBloodwingDrain",
+        "val": 15,
+        "addInfo": {
+          "requireKill": true,
+          "allowCounter": false
+        }
       }
     },
     "graphics": {
@@ -622,6 +637,14 @@
     "abilities": {
       "canFly": {
         "type": "FLYING"
+      },
+      "eternalRebirth": {
+        "type": "COMBAT_EVENT_TRIGGER",
+        "subtype": "crimsonPhoenixRebirth",
+        "val": 20,
+        "addInfo": {
+          "guaranteed": true
+        }
       }
     },
     "graphics": {
