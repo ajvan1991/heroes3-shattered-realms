@@ -1,9 +1,10 @@
 # Hero System — 100 Heroes & Class Passives
 
 ## Global roster rule
-Every Shattered Realms hero class receives **10 unique heroes**.
+Every Shattered Realms faction follows the standard Heroes III town roster: **16 regular heroes** split evenly between its two native classes.
 
-5 factions × 2 classes × 10 heroes = **100 new heroes**.
+5 factions × 16 heroes = **80 regular new heroes** total.
+Each faction therefore has **8 Might-class heroes + 8 Magic-class heroes**.
 
 Every hero requires:
 - unique name and portrait direction
@@ -21,7 +22,7 @@ Specialty families deliberately mirror the readable Heroes III model while addin
 4. **Faction-mechanic specialty** — improves Blood Rites, Corruption, Dream/Nightmare, Oaths or Celestial Alignments within hard limits.
 5. **Economic/logistics specialty** — narrow adventure-map advantage; no runaway resource engines.
 
-Each 10-hero class should normally contain multiple creature specialists plus a mix of the other families.
+Each 8-hero class should contain multiple creature specialists plus a balanced mix of the other specialty families, following the recognizable Heroes III roster pattern.
 
 # Exclusive class passives
 
