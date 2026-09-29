@@ -663,24 +663,10 @@
       "mageGuild": 5,
       "primaryResource": "crystal",
       "moatAbility": "core:spell.moat",
-      "defaultTavern": 0,
+      "defaultTavern": 5,
       "tavern": {
         "bloodlord": 100,
         "sanguineSeer": 100
-      },
-      "guildSpells": {
-        "shattered-realms:spell.clearMind": 15,
-        "shattered-realms:spell.unboundStep": 12,
-        "shattered-realms:spell.mortalAnchor": 8,
-        "shattered-realms:spell.burdenStone": 14,
-        "shattered-realms:spell.brandFrailty": 15,
-        "shattered-realms:spell.flareWaking": 10,
-        "shattered-realms:spell.washAway": 14,
-        "shattered-realms:spell.stillWater": 12,
-        "shattered-realms:spell.leylineConvergence": 5,
-        "shattered-realms:spell.echoFallen": 8,
-        "shattered-realms:spell.fatefulExchange": 5,
-        "shattered-realms:spell.hourSilence": 5
       },
       "tavernVideo": "CRIMSON/TOWN/tavern.webm",
       "guildBackground": "CRIMSON/TOWN/mage_guild_background.png",
@@ -795,11 +781,6 @@
     "puzzleMap": {
       "prefix": "CRIMSON/PUZZLE/CRP",
       "pieces": [
-        {
-          "index": 0,
-          "x": 0,
-          "y": 0
-        },
         {
           "index": 1,
           "x": 0,
@@ -1032,6 +1013,11 @@
         },
         {
           "index": 47,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "index": 48,
           "x": 0,
           "y": 0
         }
