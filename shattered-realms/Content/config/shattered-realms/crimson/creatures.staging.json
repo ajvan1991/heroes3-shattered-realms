@@ -607,6 +607,12 @@
         "subtype": "crimsonBloodied",
         "val": 2,
         "stacking": "shattered-realms:bloodied"
+      },
+      "crimsonPresence": {
+        "type": "COMBAT_EVENT_TRIGGER",
+        "subtype": "crimsonArchonAura",
+        "val": 1,
+        "stacking": "shattered-realms:crimsonPresence"
       }
     }
   },
