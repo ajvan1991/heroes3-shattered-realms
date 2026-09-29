@@ -1,0 +1,517 @@
+{
+  "villageHall": {
+    "name": "Village Hall",
+    "description": "Provides basic town income.",
+    "mode": "auto",
+    "cost": {}
+  },
+  "townHall": {
+    "name": "Town Hall",
+    "description": "Improves town income.",
+    "requires": [
+      "allOf",
+      [
+        "villageHall"
+      ]
+    ],
+    "cost": {
+      "gold": 2500
+    }
+  },
+  "cityHall": {
+    "name": "City Hall",
+    "description": "Greatly improves town income.",
+    "requires": [
+      "allOf",
+      [
+        "townHall"
+      ]
+    ],
+    "cost": {
+      "gold": 5000
+    }
+  },
+  "capitol": {
+    "name": "Capitol",
+    "description": "The seat of Crimson Court wealth and authority.",
+    "requires": [
+      "allOf",
+      [
+        "cityHall"
+      ]
+    ],
+    "cost": {
+      "gold": 10000
+    }
+  },
+  "fort": {
+    "name": "Fort",
+    "description": "Raises defensive walls around the court.",
+    "cost": {
+      "wood": 20,
+      "ore": 20,
+      "gold": 5000
+    }
+  },
+  "citadel": {
+    "name": "Citadel",
+    "description": "Strengthens the court's fortifications and creature growth.",
+    "requires": [
+      "allOf",
+      [
+        "fort"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "ore": 5,
+      "gold": 2500
+    }
+  },
+  "castle": {
+    "name": "Castle",
+    "description": "Completes the Crimson Court fortifications.",
+    "requires": [
+      "allOf",
+      [
+        "citadel"
+      ]
+    ],
+    "cost": {
+      "wood": 10,
+      "ore": 10,
+      "gold": 5000
+    }
+  },
+  "mageGuild1": {
+    "name": "Mage Guild Level 1",
+    "description": "Allows visiting heroes to learn level 1 spells.",
+    "cost": {
+      "wood": 5,
+      "ore": 5,
+      "gold": 2000
+    }
+  },
+  "mageGuild2": {
+    "name": "Mage Guild Level 2",
+    "description": "Adds level 2 spells.",
+    "requires": [
+      "allOf",
+      [
+        "mageGuild1"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "ore": 5,
+      "mercury": 4,
+      "crystal": 4,
+      "gems": 4,
+      "sulfur": 4,
+      "gold": 1000
+    }
+  },
+  "mageGuild3": {
+    "name": "Mage Guild Level 3",
+    "description": "Adds level 3 spells.",
+    "requires": [
+      "allOf",
+      [
+        "mageGuild2"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "ore": 5,
+      "mercury": 6,
+      "crystal": 6,
+      "gems": 6,
+      "sulfur": 6,
+      "gold": 1000
+    }
+  },
+  "mageGuild4": {
+    "name": "Mage Guild Level 4",
+    "description": "Adds level 4 spells.",
+    "requires": [
+      "allOf",
+      [
+        "mageGuild3"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "ore": 5,
+      "mercury": 8,
+      "crystal": 8,
+      "gems": 8,
+      "sulfur": 8,
+      "gold": 1000
+    }
+  },
+  "mageGuild5": {
+    "name": "Mage Guild Level 5",
+    "description": "Adds level 5 spells.",
+    "requires": [
+      "allOf",
+      [
+        "mageGuild4"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "ore": 5,
+      "mercury": 10,
+      "crystal": 10,
+      "gems": 10,
+      "sulfur": 10,
+      "gold": 1000
+    }
+  },
+  "veinHouse": {
+    "name": "Vein House",
+    "description": "Allows recruitment of Veinlings.",
+    "requires": [
+      "allOf",
+      [
+        "fort"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "gold": 400
+    }
+  },
+  "veinHouseUp": {
+    "name": "Consecrated Vein House",
+    "description": "Allows recruitment of Bloodbound.",
+    "upgrades": "veinHouse",
+    "requires": [
+      "allOf",
+      [
+        "veinHouse"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "gold": 900
+    }
+  },
+  "thornGallery": {
+    "name": "Thorn Gallery",
+    "description": "Allows recruitment of Thorn Dancers.",
+    "requires": [
+      "allOf",
+      [
+        "veinHouse"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "ore": 5,
+      "gold": 1000
+    }
+  },
+  "crimsonGallery": {
+    "name": "Crimson Gallery",
+    "description": "Allows recruitment of Crimson Dancers.",
+    "upgrades": "thornGallery",
+    "requires": [
+      "allOf",
+      [
+        "thornGallery"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "crystal": 2,
+      "gold": 1500
+    }
+  },
+  "gorewingRoost": {
+    "name": "Gorewing Roost",
+    "description": "Allows recruitment of Gorewings.",
+    "requires": [
+      "allOf",
+      [
+        "thornGallery"
+      ]
+    ],
+    "cost": {
+      "wood": 10,
+      "ore": 5,
+      "gold": 1800
+    }
+  },
+  "bloodwingRoost": {
+    "name": "Bloodwing Roost",
+    "description": "Allows recruitment of Bloodwings.",
+    "upgrades": "gorewingRoost",
+    "requires": [
+      "allOf",
+      [
+        "gorewingRoost"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "crystal": 3,
+      "gold": 2200
+    }
+  },
+  "hallVeins": {
+    "name": "Hall of Veins",
+    "description": "Allows recruitment of Hemomancers.",
+    "requires": [
+      "allOf",
+      [
+        "gorewingRoost"
+      ],
+      [
+        "mageGuild1"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "ore": 5,
+      "crystal": 4,
+      "gold": 2500
+    }
+  },
+  "oracleHall": {
+    "name": "Oracle Hall",
+    "description": "Allows recruitment of Vein Oracles.",
+    "upgrades": "hallVeins",
+    "requires": [
+      "allOf",
+      [
+        "hallVeins"
+      ]
+    ],
+    "cost": {
+      "crystal": 5,
+      "gems": 3,
+      "gold": 3000
+    }
+  },
+  "scarletLodge": {
+    "name": "Scarlet Lodge",
+    "description": "Allows recruitment of Scarlet Huntresses.",
+    "requires": [
+      "allOf",
+      [
+        "hallVeins"
+      ]
+    ],
+    "cost": {
+      "wood": 10,
+      "ore": 5,
+      "crystal": 5,
+      "gold": 3500
+    }
+  },
+  "bloodstalkerLodge": {
+    "name": "Bloodstalker Lodge",
+    "description": "Allows recruitment of Bloodstalkers.",
+    "upgrades": "scarletLodge",
+    "requires": [
+      "allOf",
+      [
+        "scarletLodge"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "crystal": 5,
+      "gems": 5,
+      "gold": 4500
+    }
+  },
+  "sanguinePalace": {
+    "name": "Sanguine Palace",
+    "description": "Allows recruitment of Sanguine Nobles.",
+    "requires": [
+      "allOf",
+      [
+        "scarletLodge"
+      ],
+      [
+        "cityHall"
+      ],
+      [
+        "mageGuild2"
+      ]
+    ],
+    "cost": {
+      "wood": 10,
+      "ore": 10,
+      "crystal": 10,
+      "gold": 7000
+    }
+  },
+  "archonPalace": {
+    "name": "Crimson Archon Palace",
+    "description": "Allows recruitment of Crimson Archons.",
+    "upgrades": "sanguinePalace",
+    "requires": [
+      "allOf",
+      [
+        "sanguinePalace"
+      ]
+    ],
+    "cost": {
+      "ore": 10,
+      "crystal": 10,
+      "gems": 5,
+      "gold": 9000
+    }
+  },
+  "heartAviary": {
+    "name": "Heart Aviary",
+    "description": "Allows recruitment of Blood Phoenixes.",
+    "requires": [
+      "allOf",
+      [
+        "sanguinePalace"
+      ],
+      [
+        "castle"
+      ],
+      [
+        "mageGuild3"
+      ]
+    ],
+    "cost": {
+      "wood": 10,
+      "ore": 10,
+      "crystal": 15,
+      "gems": 5,
+      "gold": 12000
+    }
+  },
+  "eternalAviary": {
+    "name": "Eternal Heart Aviary",
+    "description": "Allows recruitment of Eternal Blood Phoenixes.",
+    "upgrades": "heartAviary",
+    "requires": [
+      "allOf",
+      [
+        "heartAviary"
+      ]
+    ],
+    "cost": {
+      "crystal": 15,
+      "gems": 10,
+      "gold": 16000
+    }
+  },
+  "courtVeins": {
+    "name": "Court of Veins",
+    "description": "Unlocks the Crimson Court's Blood Rite tradition.",
+    "requires": [
+      "allOf",
+      [
+        "townHall"
+      ],
+      [
+        "mageGuild1"
+      ]
+    ],
+    "cost": {
+      "crystal": 5,
+      "gold": 2500
+    }
+  },
+  "scarletConservatory": {
+    "name": "Scarlet Conservatory",
+    "description": "Cultivates the living thorn gardens that sustain selected court creatures.",
+    "requires": [
+      "allOf",
+      [
+        "citadel"
+      ],
+      [
+        "thornGallery"
+      ]
+    ],
+    "cost": {
+      "wood": 10,
+      "crystal": 5,
+      "gold": 3000
+    }
+  },
+  "firstChalice": {
+    "name": "Hall of the First Chalice",
+    "description": "Preserves the oldest lawful forms of blood magic.",
+    "requires": [
+      "allOf",
+      [
+        "courtVeins"
+      ],
+      [
+        "mageGuild2"
+      ]
+    ],
+    "cost": {
+      "crystal": 5,
+      "gems": 5,
+      "gold": 4000
+    }
+  },
+  "moonlitMenagerie": {
+    "name": "Moonlit Menagerie",
+    "description": "Keeps the court's nocturnal beasts beneath the red moon.",
+    "requires": [
+      "allOf",
+      [
+        "gorewingRoost"
+      ],
+      [
+        "scarletConservatory"
+      ]
+    ],
+    "cost": {
+      "wood": 5,
+      "crystal": 5,
+      "gold": 3500
+    }
+  },
+  "thornTribunal": {
+    "name": "Thorn Tribunal",
+    "description": "A defensive court where every gate and passage is judged.",
+    "requires": [
+      "allOf",
+      [
+        "fort"
+      ]
+    ],
+    "cost": {
+      "ore": 10,
+      "gold": 3000
+    }
+  },
+  "redMoonObservatory": {
+    "name": "Red Moon Observatory",
+    "description": "Strengthens the court's study of blood and celestial magic.",
+    "requires": [
+      "allOf",
+      [
+        "mageGuild3"
+      ],
+      [
+        "firstChalice"
+      ]
+    ],
+    "cost": {
+      "crystal": 10,
+      "gems": 5,
+      "gold": 5000
+    }
+  },
+  "grail": {
+    "name": "Heart of the Red Moon",
+    "description": "The Grail of Crimson Court, awakening the Bloodwood beneath a crimson lunar halo.",
+    "mode": "grail",
+    "cost": {}
+  }
+}
