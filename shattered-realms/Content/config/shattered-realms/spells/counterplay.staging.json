@@ -1278,27 +1278,55 @@
     "levels": {
       "none": {
         "range": "X",
-        "description": "Hour of Silence — symmetrical spell-cost pressure is retained as design, but direct timed hero spell-cost bonuses require a validated battle-wide application path.",
+        "description": "Raises spell costs by 1 mana through a battle-wide tempo field. The field is faction-agnostic and intended to pressure spell-heavy play.",
         "cost": 17,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "field": {
+            "type": "shattered-realms:battleSpellCost",
+            "allyDelta": -1,
+            "enemyDelta": 1
+          }
+        }
       },
       "basic": {
         "range": "X",
-        "description": "Hour of Silence — symmetrical spell-cost pressure is retained as design, but direct timed hero spell-cost bonuses require a validated battle-wide application path.",
+        "description": "Raises spell costs by 1 mana through a battle-wide tempo field. The field is faction-agnostic and intended to pressure spell-heavy play.",
         "cost": 17,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "field": {
+            "type": "shattered-realms:battleSpellCost",
+            "allyDelta": -1,
+            "enemyDelta": 1
+          }
+        }
       },
       "advanced": {
         "range": "X",
-        "description": "Hour of Silence — symmetrical spell-cost pressure is retained as design, but direct timed hero spell-cost bonuses require a validated battle-wide application path.",
+        "description": "Raises spell costs by 2 mana through a battle-wide tempo field. The field is faction-agnostic and intended to pressure spell-heavy play.",
         "cost": 18,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "field": {
+            "type": "shattered-realms:battleSpellCost",
+            "allyDelta": -2,
+            "enemyDelta": 2
+          }
+        }
       },
       "expert": {
         "range": "X",
-        "description": "Hour of Silence — symmetrical spell-cost pressure is retained as design, but direct timed hero spell-cost bonuses require a validated battle-wide application path.",
+        "description": "Raises spell costs by 2 mana through a battle-wide tempo field. The field is faction-agnostic and intended to pressure spell-heavy play.",
         "cost": 19,
-        "power": 0
+        "power": 0,
+        "effects": {
+          "field": {
+            "type": "shattered-realms:battleSpellCost",
+            "allyDelta": -2,
+            "enemyDelta": 2
+          }
+        }
       }
     }
   }
