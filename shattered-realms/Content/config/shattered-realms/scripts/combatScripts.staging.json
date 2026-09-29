@@ -76,6 +76,18 @@
         "additionalProperties": false
       },
       "description": "{Quarry Mark}\nA qualifying attack marks its target for ${turns} turns, reducing Defense by ${val}. Marks do not stack."
+    },
+    "crimsonArchonAura": {
+      "implements": "combatEvent",
+      "script": "shattered-realms/combat/crimsonArchonAura",
+      "patches": [],
+      "priority": 30,
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "description": "{Crimson Presence}\nAdjacent allied stacks gain +${val} Defense while they remain beside the Crimson Archon."
     }
   }
 }
