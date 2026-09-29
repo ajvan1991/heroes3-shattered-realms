@@ -88,6 +88,57 @@
         "additionalProperties": false
       },
       "description": "{Crimson Presence}\nAdjacent allied stacks gain +${val} Defense while they remain beside the Crimson Archon."
+    },
+    "riteOpenVein": {
+      "implements": "combatEvent",
+      "script": "shattered-realms/combat/riteOpenVein",
+      "patches": [],
+      "priority": 0,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "sacrifice": {
+            "type": "integer",
+            "minimum": 4,
+            "maximum": 25
+          },
+          "turns": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "{Rite of the Open Vein}\nSacrifice ${sacrifice}% current health for +${val} Attack for ${turns} turns. Nonlethal; once per target."
+    },
+    "riteScarletShelter": {
+      "implements": "combatEvent",
+      "script": "shattered-realms/combat/riteScarletShelter",
+      "patches": [],
+      "priority": 0,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "sacrifice": {
+            "type": "integer",
+            "minimum": 4,
+            "maximum": 25
+          },
+          "turns": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "rangedReduction": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 30
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "{Rite of Scarlet Shelter}\nSacrifice ${sacrifice}% current health for +${val} Defense and bounded ranged mitigation. Nonlethal; once per target."
     }
   }
 }
