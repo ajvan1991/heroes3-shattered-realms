@@ -43,3 +43,7 @@ Base creatures remain intentionally simpler. Upgrade value comes from modest sta
 - Hemomancer: SPELLCASTER Weakness mastery 1, 2 casts, enchant power 2
 - Vein Oracle: Weakness mastery 2 + Stone Skin mastery 1, 3 shared casts, enchant power 3
 - VCMI Battle AI already evaluates active SPELLCASTER bonuses; final AI quality remains a local-test gate
+
+
+## Crimson Presence refactor
+Crimson Archon no longer depends on the custom movement-refresh aura script for its production staging ability. Current VCMI implements the native `UNIT_ADJACENT` limiter specifically for aura-like effects/synergies, with a creature identifier parameter. The staged Archon ability is now a native +1 Defense bonus limited by adjacency to a Crimson Archon. This removes event-order, movement-refresh and save-state risks from the custom aura implementation. The old Lua aura file may remain as research history but is no longer the staged creature path.
