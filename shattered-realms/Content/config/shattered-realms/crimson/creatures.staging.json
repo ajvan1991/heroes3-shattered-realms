@@ -484,6 +484,15 @@
         "subtype": "crimsonBloodied",
         "val": 1,
         "stacking": "shattered-realms:bloodied"
+      },
+      "quarryMark": {
+        "type": "COMBAT_EVENT_TRIGGER",
+        "subtype": "crimsonQuarryMark",
+        "val": 1,
+        "addInfo": {
+          "turns": 2
+        },
+        "stacking": "shattered-realms:quarryMarkSource"
       }
     },
     "shots": 16,
