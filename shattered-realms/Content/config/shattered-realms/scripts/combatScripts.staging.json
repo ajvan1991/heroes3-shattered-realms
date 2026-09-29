@@ -1,0 +1,51 @@
+{
+  "scripts": {
+    "crimsonPhoenixRebirth": {
+      "implements": "combatEvent",
+      "script": "combat/rebirth",
+      "patches": [],
+      "priority": 0,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "guaranteed": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "{Eternal Rebirth}\nOnce per battle, this stack returns with a bounded share of its starting creatures."
+    },
+    "crimsonBloodwingDrain": {
+      "implements": "combatEvent",
+      "script": "shattered-realms/combat/crimsonBloodwingDrain",
+      "patches": [],
+      "priority": 0,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "requireKill": {
+            "type": "boolean"
+          },
+          "allowCounter": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "{Blood Feast}\nAfter a qualifying killing attack, restores health equal to ${val}% of valid damage dealt."
+    },
+    "crimsonDancerGrace": {
+      "implements": "combatEvent",
+      "script": "shattered-realms/combat/crimsonDancerGrace",
+      "patches": [],
+      "priority": -10,
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "description": "{Crimson Grace}\nThe first qualifying offensive attack in this stack's action can bypass retaliation."
+    }
+  }
+}
