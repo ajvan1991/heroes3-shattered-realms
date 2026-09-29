@@ -12,7 +12,31 @@
     },
     "town": {
       "mapObject": {
-        "filters": {}
+        "filters": {
+          "capitol": [
+            "anyOf",
+            [
+              "capitol"
+            ],
+            [
+              "castle"
+            ]
+          ]
+        },
+        "templates": {
+          "village": {
+            "animation": "CRIMSON/MAP/town_village.DEF",
+            "editorAnimation": "CRIMSON/MAP/town_village_editor.DEF"
+          },
+          "castle": {
+            "animation": "CRIMSON/MAP/town_castle.DEF",
+            "editorAnimation": "CRIMSON/MAP/town_castle_editor.DEF"
+          },
+          "capitol": {
+            "animation": "CRIMSON/MAP/town_capitol.DEF",
+            "editorAnimation": "CRIMSON/MAP/town_capitol_editor.DEF"
+          }
+        }
       },
       "buildingsIcons": "CRIMSON/TOWN/building_icons.DEF",
       "buildings": {
@@ -659,7 +683,7 @@
           "warMachine": "core:artifact.firstAidTent"
         },
         "hordeThorns": {
-          "id": 44,
+          "id": -31,
           "name": "Garden of Red Thorns",
           "description": "Horde building for the town's first designated growth tier (T2). Growth is driven by the town horde index.",
           "requires": [
@@ -669,10 +693,11 @@
             "wood": 5,
             "crystal": 3,
             "gold": 1500
-          }
+          },
+          "upgrades": "thornGallery"
         },
         "hordeHunt": {
-          "id": 45,
+          "id": -34,
           "name": "Scarlet Hunting Grounds",
           "description": "Horde building for the town's second designated growth tier (T5). Growth is driven by the town horde index.",
           "requires": [
@@ -682,7 +707,8 @@
             "wood": 5,
             "crystal": 5,
             "gold": 2500
-          }
+          },
+          "upgrades": "scarletLodge"
         }
       },
       "creatures": [
