@@ -71,7 +71,14 @@
       "ore": 20,
       "gold": 5000
     },
-    "id": 7
+    "id": 7,
+    "fortifications": {
+      "wallsHealth": 2,
+      "citadelHealth": 0,
+      "upperTowerHealth": 0,
+      "lowerTowerHealth": 0,
+      "hasMoat": false
+    }
   },
   "citadel": {
     "name": "Citadel",
@@ -88,7 +95,15 @@
       "gold": 2500
     },
     "id": 8,
-    "upgrades": "fort"
+    "upgrades": "fort",
+    "fortifications": {
+      "wallsHealth": 2,
+      "citadelHealth": 2,
+      "upperTowerHealth": 0,
+      "lowerTowerHealth": 0,
+      "hasMoat": true,
+      "citadelShooter": "bloodstalker"
+    }
   },
   "castle": {
     "name": "Castle",
@@ -105,7 +120,17 @@
       "gold": 5000
     },
     "id": 9,
-    "upgrades": "citadel"
+    "upgrades": "citadel",
+    "fortifications": {
+      "wallsHealth": 3,
+      "citadelHealth": 2,
+      "upperTowerHealth": 2,
+      "lowerTowerHealth": 2,
+      "hasMoat": true,
+      "citadelShooter": "bloodstalker",
+      "upperTowerShooter": "bloodstalker",
+      "lowerTowerShooter": "bloodstalker"
+    }
   },
   "mageGuild1": {
     "name": "Mage Guild Level 1",
@@ -587,7 +612,10 @@
       "wood": 5,
       "gold": 500
     },
-    "id": 14
+    "id": 14,
+    "marketModes": [
+      "resource-resource"
+    ]
   },
   "resourceSilo": {
     "name": "Resource Silo",
@@ -610,6 +638,7 @@
       "wood": 5,
       "gold": 1000
     },
-    "id": 16
+    "id": 16,
+    "warMachine": "core:artifact.firstAidTent"
   }
 }
