@@ -24,3 +24,14 @@ Do not create references to staging-only spells from an activated faction before
 - Validate class identifiers in hero files after heroClass registration.
 - Validate all image/animation/music paths against actual packaged resources.
 - Run local VCMI 1.7.5 load and inspect mod validation log before removing `keepDisabled`.
+
+
+## Secondary-skill identifier correction
+A deeper comparison with current VCMI content/test data showed that core secondary-skill identifiers are resolved canonically as local/global identifiers such as `offence`, `armorer`, `wisdom`, `earthMagic`, etc. The previous `core:offence`-style values in Crimson hero-class and hero staging were normalized.
+
+Updated surfaces:
+- Bloodlord/Sanguine Seer level-up skill-weight maps
+- all Crimson starting secondary skills
+- Thalia Veyn / Caelis / Vespera / Elyss Vane secondary-skill specialties
+
+This removes a likely identifier-resolution failure before activation.
