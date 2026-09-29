@@ -642,7 +642,7 @@
     "warMachine": "core:artifact.firstAidTent"
   },
   "hordeThorns": {
-    "id": 44,
+    "id": -31,
     "name": "Garden of Red Thorns",
     "description": "Horde building for the town's first designated growth tier (T2). Growth is driven by the town horde index.",
     "requires": [
@@ -652,10 +652,11 @@
       "wood": 5,
       "crystal": 3,
       "gold": 1500
-    }
+    },
+    "upgrades": "thornGallery"
   },
   "hordeHunt": {
-    "id": 45,
+    "id": -34,
     "name": "Scarlet Hunting Grounds",
     "description": "Horde building for the town's second designated growth tier (T5). Growth is driven by the town horde index.",
     "requires": [
@@ -665,6 +666,7 @@
       "wood": 5,
       "crystal": 5,
       "gold": 2500
-    }
+    },
+    "upgrades": "scarletLodge"
   }
 }
