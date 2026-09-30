@@ -25,7 +25,19 @@ ap.add_argument("--strict",action="store_true")
 ap.add_argument("--report",default="production/asset-pipeline.latest.json")
 args=ap.parse_args()
 m=load(); assets=m["assets"]; errors=[]
+summary=m.get("summary",{})
+actualPri=Counter(a.get("priority") for a in assets)
+if summary.get("total")!=len(assets): errors.append(f"manifest summary total mismatch: {summary.get('total')} != {len(assets)}")
+for pri in ("A","B","C"):
+    if summary.get(pri)!=actualPri.get(pri,0): errors.append(f"manifest summary {pri} mismatch: {summary.get(pri)} != {actualPri.get(pri,0)}")
 seen=set()
+# VCMI derives puzzle filenames from zero-based vector positions, padded to 00..47.
+expectedPuzzle={f"CRIMSON/PUZZLE/CRP{i:02d}.png" for i in range(48)}
+manifestResources={a.get("resource") for a in assets}
+missingPuzzle=sorted(expectedPuzzle-manifestResources)
+extraPuzzle=sorted(r for r in manifestResources if isinstance(r,str) and r.startswith("CRIMSON/PUZZLE/CRP") and r not in expectedPuzzle)
+if missingPuzzle: errors.append(f"missing derived puzzle manifest entries: {missingPuzzle}")
+if extraPuzzle: errors.append(f"unexpected derived puzzle manifest entries: {extraPuzzle}")
 for a in assets:
     r=a["resource"]
     if r in seen: errors.append(f"duplicate resource: {r}")
