@@ -33,6 +33,27 @@
     "buildingStructureCoverage": {
       "status": "PASS",
       "missing": 0
+    },
+    "combatEventScriptSubtypes": {
+      "status": "PASS",
+      "references": 10,
+      "uniqueRegisteredScripts": 4,
+      "dangling": 0
+    },
+    "heroClassIds": {
+      "status": "PASS",
+      "references": 16,
+      "dangling": 0
+    },
+    "heroCreatureSpecialties": {
+      "status": "PASS",
+      "references": 7,
+      "dangling": 0
+    },
+    "tavernClassLinks": {
+      "status": "PASS",
+      "bloodlord": 100,
+      "sanguineSeer": 100
     }
   },
   "result": "STRUCTURALLY_CLOSED",
