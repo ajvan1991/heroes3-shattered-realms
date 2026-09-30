@@ -31,7 +31,8 @@
       "tactics": 7,
       "logistics": 5,
       "resistance": 4,
-      "wisdom": 2
+      "wisdom": 2,
+      "bloodCommand": 1
     },
     "lowLevelChance": {
       "attack": 40,
@@ -83,7 +84,8 @@
       "earthMagic": 5,
       "waterMagic": 5,
       "fireMagic": 5,
-      "airMagic": 4
+      "airMagic": 4,
+      "crimsonDivination": 1
     },
     "lowLevelChance": {
       "attack": 15,
