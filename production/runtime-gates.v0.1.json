@@ -9,7 +9,8 @@
       "status": "PASS",
       "evidence": [
         "production/crimson-reference-closure.v0.1.json",
-        "tools/validate_crimson_staging.py"
+        "tools/validate_crimson_staging.py",
+        "GitHub Actions Crimson Static QA run #2: staging validator PASS"
       ]
     },
     {
@@ -21,6 +22,10 @@
         "all COMBAT_EVENT_TRIGGER custom subtypes resolve",
         "every registered combatEvent has implements/script/patches/schema/description/priority",
         "referenced Lua source exists"
+      ],
+      "evidence": [
+        "tools/validate_crimson_staging.py",
+        "GitHub Actions Crimson Static QA run #2: combat registration checks PASS"
       ]
     },
     {
@@ -117,5 +122,13 @@
       ]
     }
   ],
-  "rule": "Never report a blocked or pending gate as passed without its required evidence."
+  "rule": "Never report a blocked or pending gate as passed without its required evidence.",
+  "ciEvidence": {
+    "workflow": "Crimson Static QA",
+    "lastVerifiedRun": 2,
+    "lastVerifiedRunId": 36743307419,
+    "headSha": "8048ba7d9b350fdc270b9cf01aaa0b04be793ca0",
+    "conclusion": "success",
+    "scope": "structural/non-strict asset candidate only"
+  }
 }
