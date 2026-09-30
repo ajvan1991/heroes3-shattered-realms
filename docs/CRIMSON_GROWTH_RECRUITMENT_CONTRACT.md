@@ -49,3 +49,18 @@ Local activation test must verify:
 Current VCMI random-town configuration reserves negative IDs -30..-36 for horde buildings tied to dwelling levels 1..7. Crimson now follows that native contract instead of using positive custom IDs 44/45. This is important because the engine's horde semantics are coupled to these special building identities rather than being ordinary special-building slots.
 
 Adventure-map town staging now also contains village/castle/capitol templates and the standard capitol filter. The previous empty mapObject filter was not activation-ready.
+
+
+## Native horde-chain verification
+Current upstream Rampart uses horde indices [1,4] for its T2/T5 growth buildings, exactly matching Crimson's selected tiers. Upstream also represents each horde slot as a base + upgraded pair: the base horde building upgrades the base dwelling, and the upgraded horde building upgrades the upgraded dwelling while requiring the base horde building.
+
+Crimson now follows this pattern:
+- 44 hordeThorns -> thornGallery (T2 base)
+- 45 hordeThornsUp -> crimsonGallery (T2 upgrade), requires hordeThorns
+- 46 hordeHunt -> scarletLodge (T5 base)
+- 47 hordeHuntUp -> bloodstalkerLodge (T5 upgrade), requires hordeHunt
+
+Town structures and hall slots contain both stages. The visual resources remain placeholders until produced.
+
+## Blacksmith verification
+Current upstream faction definitions use unscoped war-machine identifiers such as ballista, ammoCart and firstAidTent. Crimson therefore uses `firstAidTent`, not the previously guessed `core:artifact.firstAidTent` form.
