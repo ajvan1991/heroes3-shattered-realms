@@ -296,10 +296,11 @@
       "biography": "Ilyr believes a commander should know exactly how much blood an army can lose before courage becomes hunger.",
       "specialty": {
         "name": "Blood Command",
-        "description": "Ilyr improves the tactical reliability of Blood Command without raising its permanent ceiling.",
-        "tooltip": "Ilyr improves the tactical reliability of Blood Command without raising its permanent ceiling."
+        "description": "Ilyr improves the tactical reliability of Blood Command without raising its permanent ceiling. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation.",
+        "tooltip": "Ilyr improves the tactical reliability of Blood Command without raising its permanent ceiling. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation."
       }
-    }
+    },
+    "special": true
   },
   "aveline": {
     "class": "sanguineSeer",
@@ -369,11 +370,12 @@
       "biography": "Sevrin measures every ritual twice and considers uncontrolled magic merely another form of waste.",
       "specialty": {
         "name": "Blood Spellcraft",
-        "description": "Sevrin specializes in a signature blood spell selected after the final spell list is locked.",
-        "tooltip": "Sevrin specializes in a signature blood spell selected after the final spell list is locked."
+        "description": "Sevrin specializes in a signature blood spell selected after the final spell list is locked. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation.",
+        "tooltip": "Sevrin specializes in a signature blood spell selected after the final spell list is locked. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation."
       }
     },
-    "spellbook": []
+    "spellbook": [],
+    "special": true
   },
   "miraleth": {
     "class": "sanguineSeer",
@@ -407,11 +409,12 @@
       "biography": "Miraleth restored fragments of the First Chalice tablets and refuses to translate their final warning.",
       "specialty": {
         "name": "Blood Rite",
-        "description": "Miraleth improves a Blood Rite while preserving its minimum sacrifice.",
-        "tooltip": "Miraleth improves a Blood Rite while preserving its minimum sacrifice."
+        "description": "Miraleth improves a Blood Rite while preserving its minimum sacrifice. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation.",
+        "tooltip": "Miraleth improves a Blood Rite while preserving its minimum sacrifice. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation."
       }
     },
-    "spellbook": []
+    "spellbook": [],
+    "special": true
   },
   "caelis": {
     "class": "sanguineSeer",
@@ -563,11 +566,12 @@
       "biography": "Saereth joined the seers after discovering that a hunter's mark can be read as clearly as any prophecy.",
       "specialty": {
         "name": "Quarry Mark",
-        "description": "Saereth improves bounded Quarry Mark utility without multiplicative damage scaling.",
-        "tooltip": "Saereth improves bounded Quarry Mark utility without multiplicative damage scaling."
+        "description": "Saereth improves bounded Quarry Mark utility without multiplicative damage scaling. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation.",
+        "tooltip": "Saereth improves bounded Quarry Mark utility without multiplicative damage scaling. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation."
       }
     },
-    "spellbook": []
+    "spellbook": [],
+    "special": true
   },
   "lysandraNoct": {
     "class": "sanguineSeer",
@@ -596,10 +600,11 @@
       "biography": "Lysandra wears a dark veil because she claims the present is the least interesting thing a seer can see.",
       "specialty": {
         "name": "Crimson Divination",
-        "description": "Lysandra improves Crimson Divination's tactical payoff without removing sacrifice costs.",
-        "tooltip": "Lysandra improves Crimson Divination's tactical payoff without removing sacrifice costs."
+        "description": "Lysandra improves Crimson Divination's tactical payoff without removing sacrifice costs. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation.",
+        "tooltip": "Lysandra improves Crimson Divination's tactical payoff without removing sacrifice costs. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation."
       }
     },
-    "spellbook": []
+    "spellbook": [],
+    "special": true
   }
 }
