@@ -44,6 +44,15 @@
       "exit": "Two tower icons plus complete required CRSG prefix family resolve in siege."
     },
     {
+      "id": "A5",
+      "name": "Puzzle map family",
+      "priority": "A",
+      "selectors": [
+        "CRIMSON/PUZZLE/CRP"
+      ],
+      "exit": "All 48 prefix-derived puzzle pieces CRP00.png through CRP47.png exist, are non-empty, resolve in VCMI, and reveal in the intended order."
+    },
+    {
       "id": "B1",
       "name": "T1/T2 creatures",
       "priority": "B",
