@@ -10,6 +10,7 @@ from collections import Counter,defaultdict
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 MAN=ROOT/"production/asset-manifest.v0.1.json"
+BATCHES=ROOT/"production/asset-batches.v0.1.json"
 CONTENT=ROOT/"shattered-realms/Content"
 VALID={"MISSING","CONCEPT","SOURCE_READY","CONVERTED","VALIDATED_VCMI"}
 
@@ -47,6 +48,17 @@ missingSiege=sorted(expectedSiege-manifestResources)
 extraDerivedSiege=sorted(r for r in manifestResources if isinstance(r,str) and r.startswith("CRIMSON/SIEGE/CRSG") and r not in expectedSiege)
 if missingSiege: errors.append(f"missing derived siege manifest entries: {missingSiege}")
 if extraDerivedSiege: errors.append(f"unexpected derived siege manifest entries: {extraDerivedSiege}")
+# Batch definitions are executable production contracts, not documentation-only labels.
+batchDoc=json.loads(BATCHES.read_text(encoding="utf-8"))
+batches=batchDoc.get("batches",[])
+batchIds=[b.get("id") for b in batches]
+required=batchDoc.get("validation",{}).get("requiredBatchIds",[])
+if len(batchIds)!=len(set(batchIds)): errors.append("duplicate asset batch id")
+if sorted(batchIds)!=sorted(required): errors.append(f"asset batch id contract mismatch: {batchIds} vs {required}")
+for b in batches:
+    for selector in b.get("selectors",[]):
+        if not any(isinstance(r,str) and r.startswith(selector) for r in manifestResources):
+            errors.append(f"batch selector matches no manifest asset: {b.get('id')}:{selector}")
 for a in assets:
     r=a["resource"]
     if r in seen: errors.append(f"duplicate resource: {r}")
