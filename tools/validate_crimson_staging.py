@@ -17,11 +17,12 @@ P={
  "classes":CFG/"crimson/heroClasses.staging.json",
  "heroes":CFG/"crimson/heroes.staging.json",
  "scripts":CFG/"scripts/combatScripts.staging.json",
+ "skills":CFG/"skills/classPassives.staging.json",
  "mod":ROOT/"shattered-realms/mod.json",
 }
 load=lambda p: json.loads(p.read_text(encoding="utf-8"))
 D={k:load(v) for k,v in P.items()}
-fac=D["faction"]["crimsonCourt"]; town=fac["town"]; b=D["buildings"]; cr=D["creatures"]; hc=D["classes"]; he=D["heroes"]; scripts=D["scripts"].get("scripts",{})
+fac=D["faction"]["crimsonCourt"]; town=fac["town"]; b=D["buildings"]; cr=D["creatures"]; hc=D["classes"]; he=D["heroes"]; scripts=D["scripts"].get("scripts",{}); skills=D["skills"]
 errors=[]; checks={}
 
 def reqrefs(v):
@@ -102,7 +103,7 @@ for sid in crimsonSkills:
 ck("crimsonClassPassiveEffects",not emptyCrimson,emptyCrimson)
 
 # Siege prefix is a derived resource contract: VCMI composes filenames from it.
-siege=faction["crimsonCourt"]["town"]["siege"]
+siege=town["siege"]
 prefix=siege.get("imagePrefix")
 ck("siegeImagePrefix",isinstance(prefix,str) and bool(prefix),prefix)
 siegeSuffixes=["BACK","TW21","TW22","TW2C","MAN1","MAN2","MANC","TW11","TW12","TW1C","DRW1","DRW2","DRW3","ARCH","WA61","WA62","WA63","WA41","WA42","WA43","WA31","WA32","WA33","WA11","WA12","WA13","MOAT","MLIP","WA2","WA5","TPWL"]
