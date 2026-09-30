@@ -39,6 +39,15 @@ def ck(name, ok, detail):
 
 ck("townTierCount",7<=len(town.get("creatures",[]))<=8,len(town.get("creatures",[])))
 ck("hallRowCount",len(town.get("hallSlots",[]))==5,len(town.get("hallSlots",[])))
+hallWidths=[len(row) for row in town.get("hallSlots",[])]
+ck("hallRowWidths",all(1<=n<=4 for n in hallWidths),hallWidths)
+pm=fac.get("puzzleMap",{}); pieces=pm.get("pieces",[])
+indices=[x.get("index") for x in pieces]
+ck("puzzleMapPieceCount",len(pieces)==48,len(pieces))
+ck("puzzleMapIndices",sorted(indices)==list(range(1,49)),indices)
+requiredTown={"mapObject","buildingsIcons","buildings","creatures","guildWindow","names","hallBackground","hallSlots","horde","mageGuild","moatAbility","defaultTavern","tavernVideo","guildBackground","musicTheme","siege","structures","townBackground"}
+missingTown=sorted(requiredTown-set(town))
+ck("townRequiredFields",not missingTown,missingTown)
 ck("buildingCount",len(b)==41,len(b))
 ck("creatureCount",len(cr)==14,len(cr))
 ck("heroCount",len(he)==16,len(he))
@@ -80,6 +89,12 @@ for i,h in he.items():
     s=h.get("specialty",{})
     if isinstance(s,dict) and s.get("creature") and s["creature"] not in cr: badspec.append([i,s["creature"]])
 ck("heroClassReferences",not badclass,badclass)
+badCommander=[[i,x.get("commander")] for i,x in hc.items() if x.get("commander") not in cr]
+badFaction=[[i,x.get("faction")] for i,x in hc.items() if x.get("faction")!="crimsonCourt"]
+badAffinity=[[i,x.get("affinity")] for i,x in hc.items() if x.get("affinity") not in {"might","magic"}]
+ck("heroClassCommanders",not badCommander,badCommander)
+ck("heroClassFaction",not badFaction,badFaction)
+ck("heroClassAffinity",not badAffinity,badAffinity)
 ck("heroArmyReferences",not badarmy,badarmy)
 ck("heroCreatureSpecialties",not badspec,badspec)
 
