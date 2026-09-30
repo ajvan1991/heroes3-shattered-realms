@@ -1,0 +1,3169 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": "staging JSON direct media references",
+  "summary": {
+    "total": 451,
+    "A": 136,
+    "B": 242,
+    "C": 73
+  },
+  "assets": [
+    {
+      "resource": "SPRITES/CRIMSON/veinling.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/veinling_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/veinling_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/veinling_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/veinling_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/veinling_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/veinling_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/veinling_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/bloodbound.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/bloodbound_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/bloodbound_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodbound_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodbound_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodbound_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodbound_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodbound_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/thornDancer.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/thornDancer_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/thornDancer_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/thornDancer_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/thornDancer_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/thornDancer_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/thornDancer_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/thornDancer_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/crimsonDancer.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/crimsonDancer_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/crimsonDancer_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/crimsonDancer_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/crimsonDancer_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/crimsonDancer_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/crimsonDancer_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/crimsonDancer_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/gorewing.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/gorewing_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/gorewing_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/gorewing_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/gorewing_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/gorewing_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/gorewing_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/gorewing_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/bloodwing.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/bloodwing_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/bloodwing_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodwing_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodwing_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodwing_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodwing_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodwing_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/hemomancer.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/hemomancer_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/hemomancer_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/hemomancer_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/hemomancer_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/hemomancer_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/hemomancer_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/hemomancer_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/veinOracle.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/veinOracle_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/veinOracle_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/veinOracle_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/veinOracle_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/veinOracle_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/veinOracle_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/veinOracle_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/scarletHuntress.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/scarletHuntress_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/scarletHuntress_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/scarletHuntress_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/scarletHuntress_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/scarletHuntress_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/scarletHuntress_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/scarletHuntress_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/bloodstalker.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/bloodstalker_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/bloodstalker_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodstalker_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodstalker_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodstalker_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodstalker_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodstalker_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/sanguineNoble.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/sanguineNoble_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/sanguineNoble_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/sanguineNoble_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/sanguineNoble_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/sanguineNoble_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/sanguineNoble_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/sanguineNoble_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/crimsonArchon.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/crimsonArchon_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/crimsonArchon_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/crimsonArchon_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/crimsonArchon_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/crimsonArchon_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/crimsonArchon_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/crimsonArchon_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/bloodPhoenix.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/bloodPhoenix_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/bloodPhoenix_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodPhoenix_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodPhoenix_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodPhoenix_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodPhoenix_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/bloodPhoenix_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/eternalBloodPhoenix.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/eternalBloodPhoenix_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/icons/eternalBloodPhoenix_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/eternalBloodPhoenix_attack.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/eternalBloodPhoenix_defend.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/eternalBloodPhoenix_killed.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/eternalBloodPhoenix_move.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SOUNDS/CRIMSON/eternalBloodPhoenix_wince.wav",
+      "type": "WAV",
+      "priority": "C",
+      "source": "crimson/creatures.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/UI/creature_background_120.png",
+      "type": "PNG",
+      "priority": "C",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/UI/creature_background_130.png",
+      "type": "PNG",
+      "priority": "C",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/MAP/town_village.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/MAP/town_village_editor.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/MAP/town_castle.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/MAP/town_castle_editor.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/MAP/town_capitol.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/MAP/town_capitol_editor.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/building_icons.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/mage_guild_window.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/hall_background.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/mage_guild_background.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/MUSIC/crimson_court.ogg",
+      "type": "OGG",
+      "priority": "C",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/SIEGE/tower_large.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/SIEGE/tower_small.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/villageHall.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/villageHall_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/villageHall_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/townHall.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/townHall_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/townHall_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/cityHall.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/cityHall_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/cityHall_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/capitol.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/capitol_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/capitol_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/tavern.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/tavern_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/tavern_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/marketplace.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/marketplace_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/marketplace_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/resourceSilo.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/resourceSilo_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/resourceSilo_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/blacksmith.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/blacksmith_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/blacksmith_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/fort.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/fort_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/fort_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/citadel.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/citadel_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/citadel_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/castle.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/castle_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/castle_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild1.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild1_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild1_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild2.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild2_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild2_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild3.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild3_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild3_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild4.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild4_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild4_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild5.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild5_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/mageGuild5_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/veinHouse.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/veinHouse_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/veinHouse_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/veinHouseUp.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/veinHouseUp_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/veinHouseUp_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/thornGallery.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/thornGallery_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/thornGallery_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/crimsonGallery.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/crimsonGallery_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/crimsonGallery_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/gorewingRoost.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/gorewingRoost_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/gorewingRoost_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/bloodwingRoost.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/bloodwingRoost_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/bloodwingRoost_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hallVeins.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hallVeins_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hallVeins_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/oracleHall.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/oracleHall_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/oracleHall_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/scarletLodge.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/scarletLodge_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/scarletLodge_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/bloodstalkerLodge.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/bloodstalkerLodge_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/bloodstalkerLodge_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/sanguinePalace.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/sanguinePalace_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/sanguinePalace_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/archonPalace.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/archonPalace_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/archonPalace_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/heartAviary.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/heartAviary_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/heartAviary_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/eternalAviary.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/eternalAviary_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/eternalAviary_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/courtVeins.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/courtVeins_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/courtVeins_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/scarletConservatory.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/scarletConservatory_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/scarletConservatory_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/firstChalice.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/firstChalice_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/firstChalice_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/moonlitMenagerie.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/moonlitMenagerie_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/moonlitMenagerie_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/thornTribunal.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/thornTribunal_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/thornTribunal_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/redMoonObservatory.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/redMoonObservatory_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/redMoonObservatory_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hordeThorns.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hordeThorns_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hordeThorns_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hordeHunt.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hordeHunt_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hordeHunt_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/grail.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/grail_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/grail_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hordeThornsUp.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hordeThornsUp_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hordeThornsUp_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hordeHuntUp.DEF",
+      "type": "DEF",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hordeHuntUp_border.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/structures/hordeHuntUp_area.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/TOWN/town_background.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/heroes/bloodlord_female_battle.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/heroClasses.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/heroes/bloodlord_male_battle.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/heroClasses.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/heroes/CRIMSON_HERO_MAP.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/heroClasses.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/heroes/CRIMSON_HERO_EDITOR.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/heroClasses.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/heroes/sanguineSeer_female_battle.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/heroClasses.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPRITES/CRIMSON/heroes/sanguineSeer_male_battle.DEF",
+      "type": "DEF",
+      "priority": "B",
+      "source": "crimson/heroClasses.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/vaelor_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/vaelor_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/vaelor_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/vaelor_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/seris_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/seris_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/seris_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/seris_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/khaeren_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/khaeren_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/khaeren_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/khaeren_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/maelira_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/maelira_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/maelira_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/maelira_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/othrys_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/othrys_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/othrys_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/othrys_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/rhaevan_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/rhaevan_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/rhaevan_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/rhaevan_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/thaliaVeyn_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/thaliaVeyn_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/thaliaVeyn_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/thaliaVeyn_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/ilyrThorn_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/ilyrThorn_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/ilyrThorn_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/ilyrThorn_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/aveline_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/aveline_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/aveline_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/aveline_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/sevrin_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/sevrin_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/sevrin_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/sevrin_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/miraleth_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/miraleth_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/miraleth_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/miraleth_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/caelis_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/caelis_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/caelis_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/caelis_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/vespera_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/vespera_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/vespera_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/vespera_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/elyssVane_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/elyssVane_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/elyssVane_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/elyssVane_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/saereth_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/saereth_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/saereth_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/saereth_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/lysandraNoct_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/lysandraNoct_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/lysandraNoct_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "HEROES/CRIMSON/specialties/lysandraNoct_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "crimson/heroes.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/bloodCommand_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/bloodCommand_medium.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/bloodCommand_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/bloodCommand_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/crimsonDivination_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/crimsonDivination_medium.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/crimsonDivination_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/crimsonDivination_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/dreadDominion_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/dreadDominion_medium.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/dreadDominion_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/dreadDominion_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/deepCorruption_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/deepCorruption_medium.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/deepCorruption_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/deepCorruption_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/dreamstep_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/dreamstep_medium.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/dreamstep_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/dreamstep_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/oneiromancy_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/oneiromancy_medium.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/oneiromancy_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/oneiromancy_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/brokenVow_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/brokenVow_medium.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/brokenVow_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/brokenVow_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/lastTestament_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/lastTestament_medium.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/lastTestament_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/lastTestament_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/sacredFormation_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/sacredFormation_medium.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/sacredFormation_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/sacredFormation_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/celestialAlignment_small.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/celestialAlignment_medium.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/celestialAlignment_large.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SKILLS/SHATTERED/celestialAlignment_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "skills/classPassives.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/CRIMSON/RITE_OPEN_VEIN_BOOK.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/bloodRites.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/CRIMSON/RITE_OPEN_VEIN_SCROLL.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/bloodRites.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/CRIMSON/RITE_OPEN_VEIN_EFFECT.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/bloodRites.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/CRIMSON/RITE_OPEN_VEIN_IMMUNE.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/bloodRites.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/CRIMSON/RITE_OPEN_VEIN_SCENARIO.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/bloodRites.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_BOOK.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/bloodRites.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_SCROLL.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/bloodRites.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_EFFECT.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/bloodRites.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_IMMUNE.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/bloodRites.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_SCENARIO.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/bloodRites.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/severFormation_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/severFormation_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/severFormation_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/severFormation_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/severFormation_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/clearMind_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/clearMind_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/clearMind_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/clearMind_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/clearMind_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/unboundStep_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/unboundStep_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/unboundStep_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/unboundStep_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/unboundStep_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/groundingSigil_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/groundingSigil_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/groundingSigil_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/groundingSigil_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/groundingSigil_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/mortalAnchor_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/mortalAnchor_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/mortalAnchor_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/mortalAnchor_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/mortalAnchor_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/burdenStone_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/burdenStone_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/burdenStone_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/burdenStone_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/burdenStone_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/brandFrailty_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/brandFrailty_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/brandFrailty_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/brandFrailty_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/brandFrailty_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/scorchOath_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/scorchOath_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/scorchOath_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/scorchOath_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/scorchOath_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/flareWaking_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/flareWaking_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/flareWaking_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/flareWaking_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/flareWaking_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/quietBlood_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/quietBlood_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/quietBlood_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/quietBlood_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/quietBlood_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/washAway_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/washAway_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/washAway_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/washAway_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/washAway_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/stillWater_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/stillWater_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/stillWater_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/stillWater_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/stillWater_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/leylineConvergence_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/leylineConvergence_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/leylineConvergence_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/leylineConvergence_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/leylineConvergence_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/echoFallen_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/echoFallen_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/echoFallen_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/echoFallen_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/echoFallen_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/fatefulExchange_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/fatefulExchange_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/fatefulExchange_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/fatefulExchange_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/fatefulExchange_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/hourSilence_book.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/hourSilence_scroll.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/hourSilence_effect.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/hourSilence_immune.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    },
+    {
+      "resource": "SPELLS/SHATTERED/hourSilence_scenario.png",
+      "type": "PNG",
+      "priority": "B",
+      "source": "spells/counterplay.staging.json",
+      "status": "MISSING"
+    }
+  ]
+}
