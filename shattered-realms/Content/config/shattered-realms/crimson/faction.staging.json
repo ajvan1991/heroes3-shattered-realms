@@ -680,10 +680,10 @@
             "gold": 1000
           },
           "id": 16,
-          "warMachine": "core:artifact.firstAidTent"
+          "warMachine": "firstAidTent"
         },
         "hordeThorns": {
-          "id": -31,
+          "id": 44,
           "name": "Garden of Red Thorns",
           "description": "Horde building for the town's first designated growth tier (T2). Growth is driven by the town horde index.",
           "requires": [
@@ -697,7 +697,7 @@
           "upgrades": "thornGallery"
         },
         "hordeHunt": {
-          "id": -34,
+          "id": 46,
           "name": "Scarlet Hunting Grounds",
           "description": "Horde building for the town's second designated growth tier (T5). Growth is driven by the town horde index.",
           "requires": [
@@ -709,6 +709,32 @@
             "gold": 2500
           },
           "upgrades": "scarletLodge"
+        },
+        "hordeThornsUp": {
+          "id": 45,
+          "name": "Garden of Red Thorns — Crimson Bloom",
+          "description": "Upgraded horde building for the town's T2 growth tier.",
+          "requires": [
+            "hordeThorns"
+          ],
+          "cost": {
+            "crystal": 3,
+            "gold": 1000
+          },
+          "upgrades": "crimsonGallery"
+        },
+        "hordeHuntUp": {
+          "id": 47,
+          "name": "Scarlet Hunting Grounds — Bloodstalker Range",
+          "description": "Upgraded horde building for the town's T5 growth tier.",
+          "requires": [
+            "hordeHunt"
+          ],
+          "cost": {
+            "crystal": 4,
+            "gold": 1500
+          },
+          "upgrades": "bloodstalkerLodge"
         }
       },
       "creatures": [
@@ -843,8 +869,7 @@
           ],
           [
             "hordeThorns",
-            "hordeHunt",
-            "grail"
+            "hordeThornsUp"
           ]
         ]
       ],
@@ -1276,7 +1301,8 @@
           "y": 145,
           "z": 0,
           "border": "CRIMSON/TOWN/structures/hordeThorns_border.png",
-          "area": "CRIMSON/TOWN/structures/hordeThorns_area.png"
+          "area": "CRIMSON/TOWN/structures/hordeThorns_area.png",
+          "hidden": true
         },
         "hordeHunt": {
           "animation": "CRIMSON/TOWN/structures/hordeHunt.DEF",
@@ -1284,7 +1310,8 @@
           "y": 55,
           "z": 0,
           "border": "CRIMSON/TOWN/structures/hordeHunt_border.png",
-          "area": "CRIMSON/TOWN/structures/hordeHunt_area.png"
+          "area": "CRIMSON/TOWN/structures/hordeHunt_area.png",
+          "hidden": true
         },
         "grail": {
           "animation": "CRIMSON/TOWN/structures/grail.DEF",
@@ -1293,6 +1320,26 @@
           "z": -6,
           "border": "CRIMSON/TOWN/structures/grail_border.png",
           "area": "CRIMSON/TOWN/structures/grail_area.png"
+        },
+        "hordeThornsUp": {
+          "animation": "CRIMSON/TOWN/structures/hordeThornsUp.DEF",
+          "x": 305,
+          "y": 145,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/hordeThornsUp_border.png",
+          "area": "CRIMSON/TOWN/structures/hordeThornsUp_area.png",
+          "hidden": true,
+          "builds": "hordeThorns"
+        },
+        "hordeHuntUp": {
+          "animation": "CRIMSON/TOWN/structures/hordeHuntUp.DEF",
+          "x": 135,
+          "y": 55,
+          "z": 0,
+          "border": "CRIMSON/TOWN/structures/hordeHuntUp_border.png",
+          "area": "CRIMSON/TOWN/structures/hordeHuntUp_area.png",
+          "hidden": true,
+          "builds": "hordeHunt"
         }
       },
       "townBackground": "CRIMSON/TOWN/town_background.png",
