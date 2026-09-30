@@ -97,6 +97,16 @@
       "prunedHallSlots": 9,
       "matchingStructures": 22,
       "status": "CLOSED"
+    },
+    "masterReferenceClosure": {
+      "buildings": 41,
+      "creatures": 14,
+      "heroes": 16,
+      "townTiers": 7,
+      "hallRows": 5,
+      "structures": 41,
+      "danglingReferences": 0,
+      "status": "PASS"
     }
   },
   "compatibility": {
@@ -117,5 +127,14 @@
       }
     },
     "engineSourceFinding": "CTownHandler resizes town creature vector to configured creature tier count, but faction schema requires 7-8 entries; reduced 2-tier faction is invalid before runtime."
+  },
+  "strategy": {
+    "candidateFactionShape": "FULL_7_TIER_DATA_MODEL",
+    "validationWave1": [
+      "T1",
+      "T2"
+    ],
+    "masterReferenceClosureSnapshot": "production/crimson-reference-closure.v0.1.json",
+    "reason": "VCMI faction schema requires 7-8 creature tiers and exactly 5 Hall rows; master Crimson is already structurally closed across all seven tiers."
   }
 }
