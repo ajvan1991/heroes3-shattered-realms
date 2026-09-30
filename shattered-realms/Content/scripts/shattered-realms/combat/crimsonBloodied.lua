@@ -29,6 +29,7 @@ end
 
 function Script:onBattleStart(server,battle,unit) update(server,battle,unit,self.val) end
 function Script:onAfterAttacked(server,battle,unit) update(server,battle,unit,self.val) end
+function Script:onSpellHit(server,battle,unit) update(server,battle,unit,self.val) end
 function Script:onActionFinished(server,battle,unit) update(server,battle,unit,self.val) end
 function Script:onRoundStart(server,battle,unit) update(server,battle,unit,self.val) end
 return Script
