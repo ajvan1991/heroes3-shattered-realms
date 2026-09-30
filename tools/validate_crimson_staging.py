@@ -88,6 +88,19 @@ for sid,s in scripts.items():
     if not scriptfile.is_file(): badscriptdefs.append([sid,"lua",str(scriptfile.relative_to(ROOT))])
 ck("combatScriptDefinitions",not badscriptdefs,badscriptdefs)
 
+# Crimson class-passive activation contract: only the two Crimson passives belong
+# in the first candidate; future-faction empty passives must not be accidentally
+# treated as implemented Crimson runtime mechanics.
+crimsonSkills={"bloodCommand","crimsonDivination"}
+missingCrimsonSkills=sorted(crimsonSkills-set(skills))
+ck("crimsonClassPassiveDefinitions",not missingCrimsonSkills,missingCrimsonSkills)
+emptyCrimson=[]
+for sid in crimsonSkills:
+    s=skills.get(sid,{})
+    for tier in ("basic","advanced","expert"):
+        if not s.get(tier,{}).get("effects"): emptyCrimson.append([sid,tier])
+ck("crimsonClassPassiveEffects",not emptyCrimson,emptyCrimson)
+
 # Production manifest must remain inert until activation is explicitly approved.
 game_keys={"factions","heroClasses","heroes","skills","creatures","artifacts","objects","spells","terrains","roads","rivers","battlefields","obstacles","mapLayers","templates","scripts"}
 active=sorted(game_keys & set(D["mod"]))
