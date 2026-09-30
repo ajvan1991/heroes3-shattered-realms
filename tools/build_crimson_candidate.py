@@ -16,7 +16,6 @@ FILES={
  "heroClasses":CFG/"crimson/heroClasses.staging.json",
  "heroes":CFG/"crimson/heroes.staging.json",
  "creatures":CFG/"crimson/creatures.staging.json",
- "skills":CFG/"skills/classPassives.staging.json",
 }
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
 def dump(p,o): p.parent.mkdir(parents=True,exist_ok=True); p.write_text(json.dumps(o,indent=2)+"\n",encoding="utf-8")
@@ -34,6 +33,13 @@ if OUT.exists(): shutil.rmtree(OUT)
 # Stable production-style names; never register *.staging.json.
 for category,src in FILES.items():
     dump(OUT/f"Content/config/{category}.json",load(src))
+
+# Candidate skill surface is deliberately Crimson-only. Future faction passives remain
+# in shared staging but must not leak into the first activation candidate.
+allSkills=load(CFG/"skills/classPassives.staging.json")
+crimsonSkillIds=("bloodCommand","crimsonDivination")
+candidateSkills={k:allSkills[k] for k in crimsonSkillIds}
+dump(OUT/"Content/config/skills.json",candidateSkills)
 
 # Combat scripts are copied as source data because creature event triggers need them.
 reg=load(CFG/"scripts/combatScripts.staging.json")
@@ -96,7 +102,8 @@ for r in derivedSiege:
 
 
 lua=list((OUT/"Content/scripts/shattered-realms").rglob("*.lua"))
-report={"candidate":str(OUT.relative_to(ROOT)),"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"derivedSiegeReferences":len(derivedSiege),"missingDerivedSiege":len(missingDerived),"missingDerived":missingDerived,"copiedLuaFiles":len(lua),"copiedMediaFiles":len(copied),"copiedDerivedSiegeFiles":len(copiedDerived),"runtimeReady":not outputMissing and not missingDerived}
+skillIds=sorted(load(OUT/"Content/config/skills.json").keys())
+report={"candidate":str(OUT.relative_to(ROOT)),"registeredSkills":skillIds,"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"derivedSiegeReferences":len(derivedSiege),"missingDerivedSiege":len(missingDerived),"missingDerived":missingDerived,"copiedLuaFiles":len(lua),"copiedMediaFiles":len(copied),"copiedDerivedSiegeFiles":len(copiedDerived),"runtimeReady":not outputMissing and not missingDerived}
 dump(OUT/"candidate-report.json",report)
 if (missing or missingDerived) and not args.allow_missing_assets:
     print(f"FAIL: {len(missing)} direct media and {len(missingDerived)} derived siege resources are missing. Use --allow-missing-assets only for structural inspection.")
