@@ -36,6 +36,7 @@ for category,src in FILES.items():
 
 # Combat scripts are copied as source data because creature event triggers need them.
 reg=load(CFG/"scripts/combatScripts.staging.json")
+# VCMI mod schema exposes `scripts` as a first-class content registration category.
 dump(OUT/"Content/config/combatScripts.json",reg)
 script_src=SRC/"Content/scripts/shattered-realms"
 if script_src.exists(): shutil.copytree(script_src,OUT/"Content/scripts/shattered-realms")
@@ -48,6 +49,7 @@ base.update({
  "heroClasses":["config/heroClasses.json"],
  "heroes":["config/heroes.json"],
  "creatures":["config/creatures.json"],
+ "scripts":["config/combatScripts.json"],
 })
 dump(OUT/"mod.json",base)
 
