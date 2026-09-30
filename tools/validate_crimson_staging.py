@@ -80,6 +80,35 @@ hall=[x for row in town.get("hallSlots",[]) for slot in row for x in slot]
 ck("hallReferences",all(x in b for x in hall),[x for x in hall if x not in b])
 tiers=[x for tier in town.get("creatures",[]) for x in tier]
 ck("townCreatureReferences",all(x in cr for x in tiers),[x for x in tiers if x not in cr])
+tierShape=[]; upgradeErrors=[]
+for n,tier in enumerate(town.get("creatures",[]),1):
+ if len(tier)!=2: tierShape.append([n,len(tier)])
+ else:
+  base,up=tier
+  if cr.get(base,{}).get("level")!=n or cr.get(up,{}).get("level")!=n: upgradeErrors.append([n,"level",base,up])
+  if cr.get(base,{}).get("upgrades")!=[up]: upgradeErrors.append([n,"upgrade",base,cr.get(base,{}).get("upgrades"),up])
+  if cr.get(up,{}).get("upgrades"): upgradeErrors.append([n,"upgrade-has-upgrades",up])
+ck("townCreaturePairShape",not tierShape,tierShape)
+ck("townCreatureUpgradeChains",not upgradeErrors,upgradeErrors)
+
+creatureNumeric=[]
+for cid,x in cr.items():
+ dmg=x.get("damage",{}); cost=x.get("cost",{})
+ if not (1<=x.get("level",0)<=7): creatureNumeric.append([cid,"level",x.get("level")])
+ for key in ("speed","hitPoints","attack","defense","fightValue","aiValue","growth"):
+  if not isinstance(x.get(key),(int,float)) or x.get(key)<=0: creatureNumeric.append([cid,key,x.get(key)])
+ if not isinstance(dmg.get("min"),(int,float)) or not isinstance(dmg.get("max"),(int,float)) or dmg.get("min",0)<=0 or dmg.get("max",0)<dmg.get("min",0): creatureNumeric.append([cid,"damage",dmg])
+ if not isinstance(cost,dict) or not cost or any(not isinstance(v,(int,float)) or v<=0 for v in cost.values()): creatureNumeric.append([cid,"cost",cost])
+ck("creatureNumericContracts",not creatureNumeric,creatureNumeric)
+
+shooterErrors=[]
+for cid,x in cr.items():
+ abilities=x.get("abilities",{}) or {}
+ isShooter=any(isinstance(a,dict) and a.get("type")=="SHOOTER" for a in abilities.values())
+ shots=x.get("shots")
+ if isShooter and (not isinstance(shots,int) or shots<=0): shooterErrors.append([cid,"shooter-without-shots",shots])
+ if not isShooter and shots is not None: shooterErrors.append([cid,"shots-without-shooter",shots])
+ck("creatureShooterContracts",not shooterErrors,shooterErrors)
 
 badclass=[]; badarmy=[]; badspec=[]
 for i,h in he.items():
@@ -118,6 +147,19 @@ if "bloodCommand" in hc.get("sanguineSeer",{}).get("secondarySkills",{}): crossE
 ck("classPassiveCrossClassBan",not crossExclusive,crossExclusive)
 ck("heroArmyReferences",not badarmy,badarmy)
 ck("heroCreatureSpecialties",not badspec,badspec)
+heroShape=[]
+classCounts={k:0 for k in hc}
+for hid,h in he.items():
+ if h.get("class") in classCounts: classCounts[h["class"]]+=1
+ army=h.get("army",[])
+ if not (1<=len(army)<=3): heroShape.append([hid,"army-size",len(army)])
+ for a in army:
+  if not isinstance(a.get("min"),int) or not isinstance(a.get("max"),int) or a.get("min",0)<=0 or a.get("max",0)<a.get("min",0): heroShape.append([hid,"army-range",a])
+ skillsList=h.get("skills",[])
+ if len({x.get("skill") for x in skillsList})!=len(skillsList): heroShape.append([hid,"duplicate-skill"])
+ if h.get("class")=="sanguineSeer" and "spellbook" not in h: heroShape.append([hid,"missing-spellbook"])
+ck("heroRuntimeShape",not heroShape,heroShape)
+ck("heroClassRosterBalance",classCounts=={"bloodlord":8,"sanguineSeer":8},classCounts)
 
 badscript=[]
 for i,c in cr.items():
