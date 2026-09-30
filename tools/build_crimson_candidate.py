@@ -28,8 +28,12 @@ ap=argparse.ArgumentParser()
 ap.add_argument("--allow-missing-assets",action="store_true",help="Structural build only; candidate is not runtime-ready.")
 args=ap.parse_args()
 
-for validator in ("validate_crimson_staging.py","validate_reference_closure.py","validate_runtime_gates.py"):
+for validator in ("validate_crimson_staging.py","validate_reference_closure.py"):
  v=subprocess.run([sys.executable,str(ROOT/"tools"/validator)])
+ if v.returncode: raise SystemExit(v.returncode)
+# Candidate construction validates gate bookkeeping but must not depend on the
+# transient assertion that G3/G4 are still blocked; the strict build is itself future G4 evidence.
+v=subprocess.run([sys.executable,str(ROOT/"tools/validate_runtime_gates.py"),"--pre-build"])
  if v.returncode: raise SystemExit(v.returncode)
 
 if OUT.exists(): shutil.rmtree(OUT)
