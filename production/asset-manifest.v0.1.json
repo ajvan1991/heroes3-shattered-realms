@@ -3,9 +3,9 @@
   "generatedFrom": "staging JSON direct media references + VCMI prefix-derived siege/puzzle resources",
   "summary": {
     "total": 530,
-    "A": 215,
+    "A": 217,
     "B": 242,
-    "C": 73
+    "C": 71
   },
   "assets": [
     {
@@ -907,7 +907,7 @@
     {
       "resource": "CRIMSON/UI/creature_background_120.png",
       "type": "PNG",
-      "priority": "C",
+      "priority": "A",
       "source": "crimson/faction.staging.json",
       "status": "MISSING",
       "bootSlice": false
@@ -915,7 +915,7 @@
     {
       "resource": "CRIMSON/UI/creature_background_130.png",
       "type": "PNG",
-      "priority": "C",
+      "priority": "A",
       "source": "crimson/faction.staging.json",
       "status": "MISSING",
       "bootSlice": false
