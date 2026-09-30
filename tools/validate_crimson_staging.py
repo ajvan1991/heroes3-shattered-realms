@@ -161,6 +161,31 @@ for hid,h in he.items():
 ck("heroRuntimeShape",not heroShape,heroShape)
 ck("heroClassRosterBalance",classCounts=={"bloodlord":8,"sanguineSeer":8},classCounts)
 
+# Specialty shortcuts must point to something the hero can actually use/grow.
+specialtySkillErrors=[]
+for hid,h in he.items():
+    sec=h.get("specialty",{}).get("secondary")
+    if sec:
+        allowed=hc.get(h.get("class"),{}).get("secondarySkills",{})
+        if sec not in allowed or allowed.get(sec,0)<=0:
+            specialtySkillErrors.append([hid,sec,"not-positive-in-class-table"])
+ck("heroSecondarySpecialtyClassAvailability",not specialtySkillErrors,specialtySkillErrors)
+
+# Keep the v0.1 roster from silently collapsing into accidental duplicate native
+# specialties. Duplicates are allowed only when explicitly recorded here.
+expectedDuplicateSecondary={
+    "offence":{"ilyrThorn","thaliaVeyn"},
+    "intelligence":{"caelis","miraleth"},
+    "mysticism":{"elyssVane","saereth"},
+    "sorcery":{"lysandraNoct","vespera"},
+}
+actualSecondary={}
+for hid,h in he.items():
+    sec=h.get("specialty",{}).get("secondary")
+    if sec: actualSecondary.setdefault(sec,set()).add(hid)
+actualDuplicates={k:v for k,v in actualSecondary.items() if len(v)>1}
+ck("heroSecondarySpecialtyDuplicateContract",actualDuplicates==expectedDuplicateSecondary,{k:sorted(v) for k,v in actualDuplicates.items()})
+
 badscript=[]
 for i,c in cr.items():
     for a in (c.get("abilities") or {}).values():
