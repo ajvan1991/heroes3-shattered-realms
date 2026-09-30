@@ -24,7 +24,7 @@ Asset QA is non-strict only with respect to files that are honestly still marked
 Current manifest contract: 530 jobs = 451 direct references + 31 derived siege resources + 48 derived puzzle resources. Current priority snapshot is A 217 / B 242 / C 71, with 241 boot-slice jobs.
 
 ## Candidate integrity
-The builder consumes staging, reference-closure and runtime-gate validators before packaging. Registered Lua sources must exist and be copied. The independent verifier reconstructs media references, siege/puzzle families, runtime readiness, manifest hashes/file inventory and registered Lua materialization rather than trusting the builder report.
+The builder consumes staging, reference-closure and runtime-gate validators before packaging. The candidate merges the staged combat-event and spell-effect registries into one production-style `config/scripts.json`. Its v0.1 script surface is exact: four Crimson `combatEvent` scripts plus `bloodRiteUnitEffect` and `selectiveDispel` as `spellEffect` scripts. Registered Lua sources must exist, be non-empty and be copied; duplicate script IDs across registries are fatal. The independent verifier checks the exact six-script IDs, their `implements` kinds, media references, siege/puzzle families, runtime readiness, manifest hashes/file inventory and registered Lua materialization rather than trusting the builder report.
 
 No placeholder or zero-byte asset may be used to satisfy a gate.
 
