@@ -63,11 +63,17 @@ batchIds=[b.get("id") for b in batches]
 required=batchDoc.get("validation",{}).get("requiredBatchIds",[])
 if len(batchIds)!=len(set(batchIds)): errors.append("duplicate asset batch id")
 if sorted(batchIds)!=sorted(required): errors.append(f"asset batch id contract mismatch: {batchIds} vs {required}")
+derived=batchDoc.get("validation",{}).get("derivedFamilies",{})
+expectedDerived={"siege":{"count":31,"prefix":"CRIMSON/SIEGE/CRSG"},"puzzle":{"count":48,"prefix":"CRIMSON/PUZZLE/CRP"}}
+if derived!=expectedDerived: errors.append(f"derived-family contract mismatch: {derived} != {expectedDerived}")
 for b in batches:
     for selector in b.get("selectors",[]):
         if not any(isinstance(r,str) and r.startswith(selector) for r in manifestResources):
             errors.append(f"batch selector matches no manifest asset: {b.get('id')}:{selector}")
 batchById={b.get("id"):b for b in batches}
+for b in batches:
+    if b.get("priority") not in VALID_PRI: errors.append(f"invalid batch priority {b.get('priority')}: {b.get('id')}")
+    if not isinstance(b.get("exit"),str) or not b.get("exit").strip(): errors.append(f"missing batch exit contract: {b.get('id')}")
 if args.batch and args.batch not in batchById:
     errors.append(f"unknown asset batch: {args.batch}; expected one of {sorted(batchById)}")
 for a in assets:
