@@ -100,5 +100,29 @@
       "exit": "Track loads, loops acceptably, and does not error in town screen."
     }
   ],
-  "releaseRule": "Only VALIDATED_VCMI is release-ready."
+  "releaseRule": "Only VALIDATED_VCMI is release-ready.",
+  "validation": {
+    "requiredBatchIds": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "selectorPolicy": "Every selector must match at least one manifest resource. A resource may belong to multiple batches.",
+    "derivedFamilies": {
+      "siege": {
+        "count": 31,
+        "prefix": "CRIMSON/SIEGE/CRSG"
+      },
+      "puzzle": {
+        "count": 48,
+        "prefix": "CRIMSON/PUZZLE/CRP"
+      }
+    }
+  }
 }
