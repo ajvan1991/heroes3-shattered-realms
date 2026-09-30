@@ -68,7 +68,8 @@
         "independent post-build verifier passes",
         "candidate report exact missing-resource lists agree with independent verifier"
       ],
-      "verifyCommand": "py tools\\verify_crimson_candidate.py"
+      "verifyCommand": "py tools\\verify_crimson_candidate.py",
+      "blocker": "Depends on G3: strict candidate cannot be runtime-ready until all required direct, siege-derived, and puzzle-derived media are physically present and validated."
     },
     {
       "id": "G5",
