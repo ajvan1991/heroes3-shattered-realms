@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Verify generated Crimson candidate packaging without launching VCMI."""
 from __future__ import annotations
-import json,sys
+import hashlib,json,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; C=ROOT/"build/crimson-v01-candidate"
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
@@ -30,6 +30,16 @@ def walk(v):
 for p in (C/"Content/config").glob("*.json"): walk(load(p))
 actualMissing=sorted(r for r in actualRefs if not (C/"Content"/r).is_file() or (C/"Content"/r).stat().st_size==0)
 report=load(C/"candidate-report.json")
+manifest=load(C/"candidate-manifest.json")
+manifestBad=[]
+for x in manifest.get("files",[]):
+ p=C/x["path"]
+ if not p.is_file(): manifestBad.append([x["path"],"missing"]); continue
+ h=hashlib.sha256(p.read_bytes()).hexdigest()
+ if p.stat().st_size!=x["bytes"] or h!=x["sha256"]: manifestBad.append([x["path"],"hash-or-size"])
+ck(not manifestBad,f"candidate manifest mismatch: {manifestBad}")
+ck(manifest.get("fileCount")==len(manifest.get("files",[])),"candidate manifest fileCount mismatch")
+ck(report.get("manifestFiles")==manifest.get("fileCount"),"candidate report manifest count mismatch")
 ck(report.get("directMediaReferences")==len(actualRefs),"candidate report direct-media count mismatch")
 ck(report.get("missingDirectMedia")==len(actualMissing),"candidate report missing-media count mismatch")
 ck(report.get("registeredSkills")==["bloodCommand","crimsonDivination"],"candidate report skill list mismatch")
