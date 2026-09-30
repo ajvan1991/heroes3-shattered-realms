@@ -7,18 +7,14 @@ VCMI's current combat-event system is the preferred implementation layer for sta
 ### crimsonBloodwingDrain
 Bearer: Bloodwing
 Event: onAfterAttack
-Rule: restore 15% of valid living-target damage only when the action produced at least one kill. Hard cap by damage actually dealt.
+Rule: restore 15% of effective pre-hit health damage when the action produced at least one kill. Damage is clamped by `healthBeforeAttack`, so lethal hits count but overkill does not. Normal heal only; no resurrection.
 
-### crimsonPhoenixRebirth
-Bearer: Eternal Blood Phoenix
-Event: onDeath
-Rule: once per battle, restore a conservative percentage of initial stack count.
-Implementation: prefer a dedicated configuration of VCMI's built-in rebirth combat script rather than custom code.
-Rite interaction: Returning Embers modifies the one existing rebirth result; never grants another charge.
+### Eternal Blood Phoenix rebirth
+No custom Crimson script is registered. The creature directly uses VCMI's built-in `COMBAT_EVENT_TRIGGER` subtype `rebirth` with `val: 20` and `guaranteed: true`. Returning Embers, if implemented later, must modify the existing result and never grant a second rebirth charge.
 
 ### crimsonDancerGrace
 Bearer: Crimson Dancer
-Events: onBeforeAttack / onActionFinished
+Event: onBeforeAttack
 Rule: first eligible offensive melee attack in the stack's own action ignores retaliation. Counterattacks and additional attacks do not create extra charges.
 
 ### crimsonQuarryMark
@@ -29,7 +25,7 @@ Rule: apply one non-stacking mark with bounded duration. Follow-up benefit is mo
 ### crimsonBloodied
 Bearer: eligible Crimson creatures
 Events: onActionFinished / onRoundStart, or native HP-based limiter if one is verified
-Rule: below 50% current stack health relative to its current maximum, grant the bounded Attack benefit; remove it when threshold is no longer met.
+Rule: below 50% HP of the surviving stack (`getCount() * getMaxHealth()`), grant the bounded Attack benefit; remove it when survivors heal back to at least half. Casualties alone do not trigger Bloodied.
 
 ### lastTestament
 Source: Pale Oracle class passive
