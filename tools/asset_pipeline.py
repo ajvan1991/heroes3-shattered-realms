@@ -105,10 +105,9 @@ for a in assets:
 
 unowned=sorted(r for r in manifestResources if isinstance(r,str) and not resourceOwners.get(r))
 multiOwned=sorted([r,sorted(set(resourceOwners.get(r,[])))] for r in manifestResources if isinstance(r,str) and len(set(resourceOwners.get(r,[])))>1)
-# Overlap is legal by policy, but must remain visible in the report. Every boot-slice
-# job, however, needs at least one executable production batch owner.
+# Production ownership is exclusive: overlap can hide accidental broad selectors and\n# make batch completion ambiguous. Every job must have exactly one executable owner.
 unownedBoot=sorted(a["resource"] for a in assets if a.get("bootSlice") and not resourceOwners.get(a.get("resource")))
-if unownedBoot: errors.append(f"boot-slice assets without production batch: {unownedBoot}")
+if multiOwned: errors.append(f"manifest assets with multiple production batches: {multiOwned}")\nif unownedBoot: errors.append(f"boot-slice assets without production batch: {unownedBoot}")
 # The production plan is now complete, not merely a boot-slice planner: every
 # deterministic manifest job must have at least one executable batch owner.
 if unowned: errors.append(f"manifest assets without production batch: {unowned}")
