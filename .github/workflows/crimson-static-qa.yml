@@ -45,7 +45,7 @@ jobs:
       - name: Validate every production batch selector
         shell: bash
         run: |
-          for batch in A1 A2 A3 A4 A5 B1 B2 C1 C2; do
+          for batch in A1 A2 A3 A4 A5 B1 B2 B3 B4 B5 B6 B7 C1 C2 C3; do
             python tools/asset_pipeline.py --batch "$batch" --report "production/asset-pipeline-$batch.latest.json"
           done
       - name: Assert asset contract invariants
