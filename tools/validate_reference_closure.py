@@ -45,5 +45,13 @@ errors=[]
 if snapshot!=expected.get("snapshot"): errors.append(["snapshot",snapshot,expected.get("snapshot")])
 if checks!=expected.get("checks"): errors.append(["checks",checks,expected.get("checks")])
 if any(v["status"]!="PASS" for v in checks.values()): errors.append(["closure","one-or-more checks failed"])
+if expected.get("result")!="STRUCTURALLY_CLOSED": errors.append(["snapshot-result",expected.get("result")])
+requiredLimitations={
+ "Does not validate referenced media files.",
+ "Does not prove VCMI 1.7.5 runtime behavior.",
+ "Does not activate staging.",
+ "Does not validate custom Lua semantics beyond separate audits."
+}
+if set(expected.get("limitations",[]))!=requiredLimitations: errors.append(["limitations",expected.get("limitations")])
 print(json.dumps({"pass":not errors,"snapshot":snapshot,"checks":checks,"errors":errors},indent=2))
 sys.exit(1 if errors else 0)
