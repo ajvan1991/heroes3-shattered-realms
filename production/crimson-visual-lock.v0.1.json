@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "status": "CONCEPT_LOCK",
+  "authority": "Design reference; runtime manifests and VCMI validation remain authoritative.",
+  "identity": {
+    "faction": "Crimson Court",
+    "people": "Blood Elves",
+    "avoid": [
+      "Inferno/demons",
+      "generic undead",
+      "sci-fi",
+      "excessive gore"
+    ],
+    "materials": [
+      "obsidian stone",
+      "black marble",
+      "blood-red crystal",
+      "dark metal",
+      "silver detail"
+    ],
+    "lighting": [
+      "red moon",
+      "restrained crimson emissive accents"
+    ],
+    "environment": [
+      "Bloodwood",
+      "crimson thorn gardens",
+      "black stone terraces"
+    ]
+  },
+  "silhouettes": {
+    "town": "vertical gothic aristocratic spires with readable terrace hierarchy",
+    "t1": "lean fast initiates",
+    "t2": "elegant mobile duelists with sweeping thorn-ribbon arcs",
+    "heroes": "regal elongated Blood Elf proportions, strong portrait faces"
+  },
+  "productionRules": [
+    "Town background must remain readable at 800x374.",
+    "Building upgrades preserve lineage and footprint readability.",
+    "Creature upgrades preserve base silhouette family.",
+    "Generated board text is never gameplay data.",
+    "Concept boards do not advance runtime asset status.",
+    "Runtime assets require exact-path files plus local VCMI validation."
+  ],
+  "firstWave": [
+    "townBackground",
+    "veinling",
+    "bloodbound",
+    "thornDancer",
+    "crimsonDancer",
+    "vaelor",
+    "aveline"
+  ]
+}
