@@ -80,3 +80,16 @@ Native support layer is staged with current VCMI identifiers:
 The signature Rite sacrifice reduction (8/10% toward a 4% floor) is implemented in the Blood Rite spell-effect configuration rather than pretending a generic native bonus can alter arbitrary scripted costs.
 
 No other class passive receives runtime effects until its faction vertical slice is being implemented and the effect has an engine-safe mapping.
+
+
+## Crimson Divination semantic correction
+Current upstream `config/skills.json` establishes the exact baseline semantics:
+- Intelligence uses `MANA_PER_KNOWLEDGE_PERCENTAGE` with `PERCENT_TO_BASE` and values 25/50/100 for Basic/Advanced/Expert.
+- Sorcery uses `SPELL_DAMAGE`, subtype `any`, `BASE_NUMBER`, values 5/10/15.
+
+The previous Crimson Divination 110/110/120 mana values were therefore not a conservative +10/+10/+20 bonus; they represented values on the same additive percentage scale as Intelligence and were far too large for the intended class passive. The v0.1 mapping is now:
+- Basic: +10% mana-per-Knowledge;
+- Advanced: +15% mana-per-Knowledge, +5% spell damage;
+- Expert: +20% mana-per-Knowledge, +10% spell damage.
+
+This is deliberately below a full Expert Intelligence + Expert Sorcery package and follows the class-passive power-budget rule.
