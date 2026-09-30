@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "generatedFrom": "staging JSON direct media references",
   "summary": {
-    "total": 451,
-    "A": 136,
+    "total": 482,
+    "A": 167,
     "B": 242,
     "C": 73
   },
@@ -3164,6 +3164,257 @@
       "priority": "B",
       "source": "spells/counterplay.staging.json",
       "status": "MISSING"
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGBACK.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGTW21.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGTW22.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGTW2C.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGMAN1.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGMAN2.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGMANC.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGTW11.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGTW12.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGTW1C.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGDRW1.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGDRW2.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGDRW3.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGARCH.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA61.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA62.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA63.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA41.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA42.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA43.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA31.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA32.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA33.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA11.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA12.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA13.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGMOAT.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGMLIP.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA2.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGWA5.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
+    },
+    {
+      "resource": "CRIMSON/SIEGE/CRSGTPWL.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived",
+      "status": "MISSING",
+      "derived": true
     }
+  ],
+  "notes": [
+    "31 required siege resources derived from imagePrefix were added after upstream Faction_Format audit; optional DRWC is intentionally not counted."
   ]
 }
