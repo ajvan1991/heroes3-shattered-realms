@@ -16,7 +16,7 @@ def ck(ok,msg):
  if not ok: errors.append(msg)
 if not C.is_dir(): raise SystemExit("Candidate missing; run build_crimson_candidate.py first.")
 mod=load(C/"mod.json")
-expected={"factions":"config/factions.json","heroClasses":"config/heroClasses.json","heroes":"config/heroes.json","creatures":"config/creatures.json","skills":"config/skills.json","scripts":"config/combatScripts.json"}
+expected={"factions":"config/factions.json","heroClasses":"config/heroClasses.json","heroes":"config/heroes.json","creatures":"config/creatures.json","skills":"config/skills.json","scripts":"config/scripts.json"}
 for k,v in expected.items(): ck(mod.get(k)==[v],f"registration {k}: expected {[v]!r}, got {mod.get(k)!r}")
 for k,v in expected.items():
  p=C/"Content"/v
@@ -29,9 +29,13 @@ ck(not unsafeRegs,f"unsafe registration paths: {unsafeRegs}")
 ck(not any(".staging." in str(x) for v in mod.values() for x in (v if isinstance(v,list) else [v])),"mod.json contains staging registration")
 skills=load(C/"Content/config/skills.json")
 ck(set(skills)=={"bloodCommand","crimsonDivination"},f"candidate skill surface leaked: {sorted(skills)}")
-scripts=load(C/"Content/config/combatScripts.json").get("scripts",{})
+scripts=load(C/"Content/config/scripts.json").get("scripts",{})
 registeredLua=[]
+expectedScriptKinds={"crimsonBloodwingDrain":"combatEvent","crimsonDancerGrace":"combatEvent","crimsonBloodied":"combatEvent","crimsonQuarryMark":"combatEvent","bloodRiteUnitEffect":"spellEffect","selectiveDispel":"spellEffect"}
+ck(set(scripts)==set(expectedScriptKinds),f"candidate script registry surface mismatch: {sorted(scripts)}")
 for sid,s in scripts.items():
+ ck(s.get("implements")==expectedScriptKinds.get(sid),f"script kind mismatch for {sid}: {s.get('implements')}")
+
  sp=str(s.get("script",""))
  ck(safe_rel(sp),f"unsafe Lua script path for {sid}: {sp}")
  if safe_rel(sp):
