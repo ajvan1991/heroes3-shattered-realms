@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedFrom": "staging JSON direct media references",
+  "generatedFrom": "staging JSON direct media references + VCMI prefix-derived siege/puzzle resources",
   "summary": {
-    "total": 482,
-    "A": 167,
+    "total": 530,
+    "A": 215,
     "B": 242,
     "C": 73
   },
@@ -3605,6 +3605,438 @@
       "status": "MISSING",
       "derived": true,
       "bootSlice": true
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP00.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP01.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP02.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP03.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP04.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP05.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP06.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP07.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP08.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP09.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP10.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP11.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP12.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP13.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP14.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP15.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP16.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP17.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP18.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP19.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP20.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP21.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP22.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP23.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP24.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP25.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP26.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP27.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP28.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP29.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP30.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP31.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP32.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP33.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP34.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP35.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP36.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP37.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP38.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP39.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP40.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP41.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP42.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP43.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP44.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP45.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP46.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
+    },
+    {
+      "resource": "CRIMSON/PUZZLE/CRP47.png",
+      "type": "PNG",
+      "priority": "A",
+      "source": "crimson/faction.staging.json:imagePrefix-derived puzzle map",
+      "status": "MISSING",
+      "bootSlice": true,
+      "derived": "puzzleMap.prefix"
     }
   ],
   "notes": [
