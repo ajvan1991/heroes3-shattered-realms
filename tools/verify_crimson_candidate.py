@@ -54,10 +54,23 @@ ck(not unsafeMediaRefs,f"unsafe media references: {sorted(set(unsafeMediaRefs))}
 actualMissing=sorted(r for r in actualRefs if not (C/"Content"/r).is_file() or (C/"Content"/r).stat().st_size==0)
 report=load(C/"candidate-report.json")
 manifest=load(C/"candidate-manifest.json")
+# Report shape is part of the integrity contract: bool is not accepted as an int.
+intFields=("directMediaReferences","missingDirectMedia","derivedSiegeReferences","missingDerivedSiege","derivedPuzzleReferences","missingDerivedPuzzle","registeredLuaScripts","copiedRegisteredLuaScripts","copiedLuaFiles","manifestFiles","copiedMediaFiles","copiedDerivedSiegeFiles","copiedDerivedPuzzleFiles")
+for field in intFields: ck(type(report.get(field)) is int and report.get(field)>=0,f"candidate report {field} must be a non-negative integer")
+ck(type(report.get("runtimeReady")) is bool,"candidate report runtimeReady must be boolean")
+for field in ("missing","missingDerived","missingPuzzle","registeredSkills"):
+ ck(isinstance(report.get(field),list),f"candidate report {field} must be a list")
+ck(type(manifest.get("format")) is int and manifest.get("format")==1,"candidate manifest format must be integer 1")
+ck(isinstance(manifest.get("files"),list),"candidate manifest files must be a list")
+ck(type(manifest.get("fileCount")) is int and manifest.get("fileCount")>=0,"candidate manifest fileCount must be non-negative integer")
+ck(type(manifest.get("totalBytes")) is int and manifest.get("totalBytes")>=0,"candidate manifest totalBytes must be non-negative integer")
 # Reject path traversal / absolute paths before trusting package inventory.
 unsafeManifest=[]
 for x in manifest.get("files",[]):
+ if not isinstance(x,dict): unsafeManifest.append(x); continue
  if not safe_rel(str(x.get("path",""))): unsafeManifest.append(x.get("path"))
+ ck(type(x.get("bytes")) is int and x.get("bytes")>0,f"manifest bytes must be positive integer: {x.get('path')}")
+ ck(isinstance(x.get("sha256"),str) and re.fullmatch(r"[0-9a-f]{64}",x.get("sha256","")) is not None,f"manifest sha256 invalid: {x.get('path')}")
 ck(not unsafeManifest,f"unsafe candidate manifest paths: {unsafeManifest}")
 manifestBad=[]
 for x in manifest.get("files",[]):
@@ -67,6 +80,7 @@ for x in manifest.get("files",[]):
  if p.stat().st_size!=x["bytes"] or h!=x["sha256"]: manifestBad.append([x["path"],"hash-or-size"])
 ck(not manifestBad,f"candidate manifest mismatch: {manifestBad}")
 ck(manifest.get("fileCount")==len(manifest.get("files",[])),"candidate manifest fileCount mismatch")
+ck(manifest.get("totalBytes")==sum(x.get("bytes",0) for x in manifest.get("files",[]) if isinstance(x,dict) and type(x.get("bytes")) is int),"candidate manifest totalBytes mismatch")
 ck(report.get("manifestFiles")==manifest.get("fileCount"),"candidate report manifest count mismatch")
 actualFiles=sorted(p.relative_to(C).as_posix() for p in C.rglob("*") if p.is_file() and p.name not in {"candidate-report.json","candidate-manifest.json"})
 manifestFiles=sorted(str(x.get("path","")) for x in manifest.get("files",[]))
@@ -97,6 +111,12 @@ ck(len(derivedPuzzle)==len(set(derivedPuzzle))==48,"derived puzzle family duplic
 ck(report.get("derivedPuzzleReferences")==48,"candidate report puzzle reference count mismatch")
 ck(report.get("missingDerivedPuzzle")==len(actualMissingPuzzle),"candidate report puzzle missing count mismatch")
 ck(report.get("missingPuzzle")==actualMissingPuzzle,"candidate report puzzle missing list mismatch")
+actualCopiedDirect=len(actualRefs)-len(actualMissing)
+actualCopiedSiege=len(derivedSiege)-len(actualMissingSiege)
+actualCopiedPuzzle=len(derivedPuzzle)-len(actualMissingPuzzle)
+ck(report.get("copiedMediaFiles")==actualCopiedDirect,f"candidate report copied direct-media count mismatch: {report.get('copiedMediaFiles')} != {actualCopiedDirect}")
+ck(report.get("copiedDerivedSiegeFiles")==actualCopiedSiege,f"candidate report copied siege count mismatch: {report.get('copiedDerivedSiegeFiles')} != {actualCopiedSiege}")
+ck(report.get("copiedDerivedPuzzleFiles")==actualCopiedPuzzle,f"candidate report copied puzzle count mismatch: {report.get('copiedDerivedPuzzleFiles')} != {actualCopiedPuzzle}")
 computedRuntimeReady=not actualMissing and not actualMissingSiege and not actualMissingPuzzle
 ck(report.get("runtimeReady") is computedRuntimeReady,f"runtimeReady mismatch: report={report.get('runtimeReady')} computed={computedRuntimeReady}")
 if report.get("runtimeReady"):
