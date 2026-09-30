@@ -10,7 +10,8 @@
       "evidence": [
         "production/crimson-reference-closure.v0.1.json",
         "tools/validate_crimson_staging.py",
-        "GitHub Actions Crimson Static QA run #2: staging validator PASS"
+        "GitHub Actions Crimson Static QA run #2: staging validator PASS",
+        "GitHub Actions Crimson Static QA run #16: full structural pipeline PASS"
       ]
     },
     {
@@ -36,13 +37,15 @@
       "blocker": "Original referenced media files are not yet materialized.",
       "evidence": [
         "production/asset-manifest.v0.1.json",
-        "tools/asset_pipeline.py"
+        "tools/asset_pipeline.py",
+        "GitHub Actions Crimson Static QA run #16: all 9 batch contracts PASS (non-strict; media still absent)"
       ],
       "criteria": [
         "all direct quoted media references physically exist and are non-empty",
         "all 31 imagePrefix-derived siege resources physically exist and are non-empty",
         "all 48 puzzle-prefix resources CRP00..CRP47 physically exist and are non-empty",
-        "candidate builder materializes direct, siege-derived, and puzzle-derived media into isolated output"
+        "candidate builder materializes direct, siege-derived, and puzzle-derived media into isolated output",
+        "all manifest jobs declare explicit boolean bootSlice membership and valid A/B/C priority"
       ]
     },
     {
@@ -62,7 +65,8 @@
         "candidate output contains complete 31-resource derived siege family",
         "candidate output contains complete 48-resource derived puzzle family",
         "candidate-manifest SHA-256 inventory verifies",
-        "independent post-build verifier passes"
+        "independent post-build verifier passes",
+        "candidate report exact missing-resource lists agree with independent verifier"
       ],
       "verifyCommand": "py tools\\verify_crimson_candidate.py"
     },
@@ -125,10 +129,10 @@
   "rule": "Never report a blocked or pending gate as passed without its required evidence.",
   "ciEvidence": {
     "workflow": "Crimson Static QA",
-    "lastVerifiedRun": 2,
-    "lastVerifiedRunId": 36743307419,
-    "headSha": "8048ba7d9b350fdc270b9cf01aaa0b04be793ca0",
+    "lastVerifiedRun": 16,
+    "lastVerifiedRunId": 36746487304,
+    "headSha": "3223a871a682706b1e475a6b9b6387bed3ee204b",
     "conclusion": "success",
-    "scope": "structural/non-strict asset candidate only"
+    "scope": "structural/non-strict asset candidate; all 9 production batches; exact candidate missing-list and derived-family integrity"
   }
 }
