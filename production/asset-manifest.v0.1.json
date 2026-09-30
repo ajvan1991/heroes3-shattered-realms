@@ -37,35 +37,40 @@
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/veinling_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/veinling_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/veinling_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/veinling_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/bloodbound.DEF",
@@ -96,35 +101,40 @@
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodbound_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodbound_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodbound_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodbound_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/thornDancer.DEF",
@@ -155,35 +165,40 @@
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/thornDancer_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/thornDancer_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/thornDancer_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/thornDancer_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/crimsonDancer.DEF",
@@ -214,609 +229,696 @@
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/crimsonDancer_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/crimsonDancer_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/crimsonDancer_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/crimsonDancer_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/gorewing.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/gorewing_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/gorewing_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/gorewing_attack.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/gorewing_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/gorewing_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/gorewing_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/gorewing_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/bloodwing.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/bloodwing_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/bloodwing_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodwing_attack.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodwing_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodwing_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodwing_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodwing_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/hemomancer.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/hemomancer_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/hemomancer_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/hemomancer_attack.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/hemomancer_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/hemomancer_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/hemomancer_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/hemomancer_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/veinOracle.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/veinOracle_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/veinOracle_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/veinOracle_attack.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/veinOracle_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/veinOracle_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/veinOracle_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/veinOracle_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/scarletHuntress.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/scarletHuntress_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/scarletHuntress_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/scarletHuntress_attack.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/scarletHuntress_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/scarletHuntress_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/scarletHuntress_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/scarletHuntress_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/bloodstalker.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/bloodstalker_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/bloodstalker_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodstalker_attack.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodstalker_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodstalker_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodstalker_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodstalker_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/sanguineNoble.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/sanguineNoble_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/sanguineNoble_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/sanguineNoble_attack.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/sanguineNoble_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/sanguineNoble_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/sanguineNoble_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/sanguineNoble_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/crimsonArchon.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/crimsonArchon_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/crimsonArchon_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/crimsonArchon_attack.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/crimsonArchon_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/crimsonArchon_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/crimsonArchon_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/crimsonArchon_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/bloodPhoenix.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/bloodPhoenix_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/bloodPhoenix_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodPhoenix_attack.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodPhoenix_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodPhoenix_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodPhoenix_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodPhoenix_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/eternalBloodPhoenix.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/eternalBloodPhoenix_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPRITES/CRIMSON/icons/eternalBloodPhoenix_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/eternalBloodPhoenix_attack.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/eternalBloodPhoenix_defend.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/eternalBloodPhoenix_killed.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/eternalBloodPhoenix_move.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SOUNDS/CRIMSON/eternalBloodPhoenix_wince.wav",
       "type": "WAV",
       "priority": "C",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "CRIMSON/UI/creature_background_120.png",
       "type": "PNG",
       "priority": "C",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "CRIMSON/UI/creature_background_130.png",
       "type": "PNG",
       "priority": "C",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "CRIMSON/MAP/town_village.DEF",
@@ -903,7 +1005,8 @@
       "type": "OGG",
       "priority": "C",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "CRIMSON/SIEGE/tower_large.png",
@@ -1998,196 +2101,224 @@
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/seris_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/seris_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/seris_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/khaeren_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/khaeren_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/khaeren_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/khaeren_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/maelira_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/maelira_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/maelira_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/maelira_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/othrys_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/othrys_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/othrys_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/othrys_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/rhaevan_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/rhaevan_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/rhaevan_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/rhaevan_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/thaliaVeyn_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/thaliaVeyn_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/thaliaVeyn_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/thaliaVeyn_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/ilyrThorn_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/ilyrThorn_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/ilyrThorn_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/ilyrThorn_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/aveline_large.png",
@@ -2226,1106 +2357,1264 @@
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/sevrin_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/sevrin_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/sevrin_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/miraleth_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/miraleth_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/miraleth_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/miraleth_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/caelis_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/caelis_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/caelis_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/caelis_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/vespera_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/vespera_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/vespera_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/vespera_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/elyssVane_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/elyssVane_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/elyssVane_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/elyssVane_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/saereth_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/saereth_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/saereth_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/saereth_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/lysandraNoct_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/lysandraNoct_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/lysandraNoct_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "HEROES/CRIMSON/specialties/lysandraNoct_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/bloodCommand_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/bloodCommand_medium.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/bloodCommand_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/bloodCommand_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/crimsonDivination_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/crimsonDivination_medium.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/crimsonDivination_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/crimsonDivination_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/dreadDominion_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/dreadDominion_medium.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/dreadDominion_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/dreadDominion_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/deepCorruption_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/deepCorruption_medium.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/deepCorruption_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/deepCorruption_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/dreamstep_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/dreamstep_medium.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/dreamstep_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/dreamstep_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/oneiromancy_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/oneiromancy_medium.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/oneiromancy_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/oneiromancy_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/brokenVow_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/brokenVow_medium.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/brokenVow_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/brokenVow_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/lastTestament_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/lastTestament_medium.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/lastTestament_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/lastTestament_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/sacredFormation_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/sacredFormation_medium.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/sacredFormation_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/sacredFormation_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/celestialAlignment_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/celestialAlignment_medium.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/celestialAlignment_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SKILLS/SHATTERED/celestialAlignment_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "skills/classPassives.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/CRIMSON/RITE_OPEN_VEIN_BOOK.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/bloodRites.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/CRIMSON/RITE_OPEN_VEIN_SCROLL.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/bloodRites.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/CRIMSON/RITE_OPEN_VEIN_EFFECT.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/bloodRites.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/CRIMSON/RITE_OPEN_VEIN_IMMUNE.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/bloodRites.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/CRIMSON/RITE_OPEN_VEIN_SCENARIO.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/bloodRites.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_BOOK.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/bloodRites.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_SCROLL.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/bloodRites.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_EFFECT.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/bloodRites.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_IMMUNE.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/bloodRites.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/CRIMSON/RITE_SCARLET_SHELTER_SCENARIO.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/bloodRites.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/severFormation_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/severFormation_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/severFormation_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/severFormation_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/severFormation_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/clearMind_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/clearMind_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/clearMind_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/clearMind_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/clearMind_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/unboundStep_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/unboundStep_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/unboundStep_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/unboundStep_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/unboundStep_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/groundingSigil_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/groundingSigil_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/groundingSigil_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/groundingSigil_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/groundingSigil_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/mortalAnchor_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/mortalAnchor_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/mortalAnchor_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/mortalAnchor_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/mortalAnchor_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/burdenStone_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/burdenStone_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/burdenStone_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/burdenStone_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/burdenStone_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/brandFrailty_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/brandFrailty_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/brandFrailty_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/brandFrailty_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/brandFrailty_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/scorchOath_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/scorchOath_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/scorchOath_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/scorchOath_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/scorchOath_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/flareWaking_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/flareWaking_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/flareWaking_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/flareWaking_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/flareWaking_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/quietBlood_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/quietBlood_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/quietBlood_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/quietBlood_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/quietBlood_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/washAway_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/washAway_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/washAway_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/washAway_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/washAway_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/stillWater_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/stillWater_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/stillWater_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/stillWater_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/stillWater_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/leylineConvergence_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/leylineConvergence_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/leylineConvergence_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/leylineConvergence_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/leylineConvergence_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/echoFallen_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/echoFallen_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/echoFallen_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/echoFallen_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/echoFallen_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/fatefulExchange_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/fatefulExchange_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/fatefulExchange_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/fatefulExchange_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/fatefulExchange_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/hourSilence_book.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/hourSilence_scroll.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/hourSilence_effect.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/hourSilence_immune.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "SPELLS/SHATTERED/hourSilence_scenario.png",
       "type": "PNG",
       "priority": "B",
       "source": "spells/counterplay.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": false
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGBACK.png",
