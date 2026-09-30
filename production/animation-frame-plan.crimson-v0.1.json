@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "source": "VCMI Animation_Format.md creature animation groups",
+  "policy": "Frame counts are Shattered Realms production targets, not VCMI schema requirements. They may be tuned after local timing tests.",
+  "summary": {
+    "creatures": 4,
+    "requiredGroupsPerCreature": 10,
+    "totalGroups": 40,
+    "targetFrames": 192
+  },
+  "frameTargets": {
+    "0": 6,
+    "2": 6,
+    "3": 3,
+    "4": 3,
+    "5": 6,
+    "7": 3,
+    "8": 3,
+    "11": 6,
+    "12": 6,
+    "13": 6
+  },
+  "jobs": [
+    {
+      "creature": "veinling",
+      "group": 0,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/veinling/g00/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "veinling",
+      "group": 2,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/veinling/g02/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "veinling",
+      "group": 3,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/veinling/g03/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "veinling",
+      "group": 4,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/veinling/g04/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "veinling",
+      "group": 5,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/veinling/g05/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "veinling",
+      "group": 7,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/veinling/g07/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "veinling",
+      "group": 8,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/veinling/g08/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "veinling",
+      "group": 11,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/veinling/g11/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "veinling",
+      "group": 12,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/veinling/g12/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "veinling",
+      "group": 13,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/veinling/g13/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "bloodbound",
+      "group": 0,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/bloodbound/g00/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "bloodbound",
+      "group": 2,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/bloodbound/g02/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "bloodbound",
+      "group": 3,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/bloodbound/g03/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "bloodbound",
+      "group": 4,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/bloodbound/g04/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "bloodbound",
+      "group": 5,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/bloodbound/g05/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "bloodbound",
+      "group": 7,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/bloodbound/g07/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "bloodbound",
+      "group": 8,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/bloodbound/g08/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "bloodbound",
+      "group": 11,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/bloodbound/g11/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "bloodbound",
+      "group": 12,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/bloodbound/g12/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "bloodbound",
+      "group": 13,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/bloodbound/g13/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "thornDancer",
+      "group": 0,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/thornDancer/g00/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "thornDancer",
+      "group": 2,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/thornDancer/g02/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "thornDancer",
+      "group": 3,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/thornDancer/g03/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "thornDancer",
+      "group": 4,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/thornDancer/g04/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "thornDancer",
+      "group": 5,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/thornDancer/g05/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "thornDancer",
+      "group": 7,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/thornDancer/g07/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "thornDancer",
+      "group": 8,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/thornDancer/g08/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "thornDancer",
+      "group": 11,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/thornDancer/g11/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "thornDancer",
+      "group": 12,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/thornDancer/g12/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "thornDancer",
+      "group": 13,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/thornDancer/g13/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "crimsonDancer",
+      "group": 0,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/crimsonDancer/g00/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "crimsonDancer",
+      "group": 2,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/crimsonDancer/g02/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "crimsonDancer",
+      "group": 3,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/crimsonDancer/g03/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "crimsonDancer",
+      "group": 4,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/crimsonDancer/g04/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "crimsonDancer",
+      "group": 5,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/crimsonDancer/g05/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "crimsonDancer",
+      "group": 7,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/crimsonDancer/g07/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "crimsonDancer",
+      "group": 8,
+      "targetFrames": 3,
+      "directory": "SPRITES/CRIMSON/frames/crimsonDancer/g08/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "crimsonDancer",
+      "group": 11,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/crimsonDancer/g11/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "crimsonDancer",
+      "group": 12,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/crimsonDancer/g12/",
+      "status": "MISSING"
+    },
+    {
+      "creature": "crimsonDancer",
+      "group": 13,
+      "targetFrames": 6,
+      "directory": "SPRITES/CRIMSON/frames/crimsonDancer/g13/",
+      "status": "MISSING"
+    }
+  ]
+}
