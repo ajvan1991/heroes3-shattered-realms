@@ -1,21 +1,5 @@
 {
   "scripts": {
-    "crimsonPhoenixRebirth": {
-      "implements": "combatEvent",
-      "script": "combat/rebirth",
-      "patches": [],
-      "priority": 0,
-      "schema": {
-        "type": "object",
-        "properties": {
-          "guaranteed": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "description": "{Eternal Rebirth}\nOnce per battle, this stack returns with a bounded share of its starting creatures."
-    },
     "crimsonBloodwingDrain": {
       "implements": "combatEvent",
       "script": "shattered-realms/combat/crimsonBloodwingDrain",
