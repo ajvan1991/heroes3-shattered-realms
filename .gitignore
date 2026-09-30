@@ -1,0 +1,13 @@
+# Generated activation candidates and local validation output
+build/
+__pycache__/
+*.pyc
+
+# Local/generated latest reports (canonical contracts live separately)
+production/*.latest.json
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
