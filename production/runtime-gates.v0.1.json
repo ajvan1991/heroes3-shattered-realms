@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "target": "VCMI 1.7.5 local Crimson v0.1 candidate",
+  "gates": [
+    {
+      "id": "G1",
+      "name": "Static entity closure",
+      "automated": true,
+      "status": "PASS",
+      "evidence": [
+        "production/crimson-reference-closure.v0.1.json",
+        "tools/validate_crimson_staging.py"
+      ]
+    },
+    {
+      "id": "G2",
+      "name": "Combat script registration closure",
+      "automated": true,
+      "status": "PASS",
+      "criteria": [
+        "all COMBAT_EVENT_TRIGGER custom subtypes resolve",
+        "every registered combatEvent has implements/script/patches/schema/description/priority",
+        "referenced Lua source exists"
+      ]
+    },
+    {
+      "id": "G3",
+      "name": "Direct media preflight",
+      "automated": true,
+      "status": "BLOCKED",
+      "blocker": "Original referenced media files are not yet materialized.",
+      "evidence": [
+        "production/asset-manifest.v0.1.json",
+        "tools/asset_pipeline.py"
+      ]
+    },
+    {
+      "id": "G4",
+      "name": "Strict isolated candidate build",
+      "automated": true,
+      "status": "BLOCKED",
+      "dependsOn": [
+        "G3"
+      ],
+      "command": "py tools\\build_crimson_candidate.py"
+    },
+    {
+      "id": "G5",
+      "name": "VCMI schema and identifier boot",
+      "automated": false,
+      "status": "PENDING",
+      "dependsOn": [
+        "G4"
+      ]
+    },
+    {
+      "id": "G6",
+      "name": "Town UI and building interaction",
+      "automated": false,
+      "status": "PENDING",
+      "dependsOn": [
+        "G5"
+      ]
+    },
+    {
+      "id": "G7",
+      "name": "Recruitment and T1/T2 combat",
+      "automated": false,
+      "status": "PENDING",
+      "dependsOn": [
+        "G6"
+      ]
+    },
+    {
+      "id": "G8",
+      "name": "Siege",
+      "automated": false,
+      "status": "PENDING",
+      "dependsOn": [
+        "G6"
+      ]
+    },
+    {
+      "id": "G9",
+      "name": "Save/reload and week rollover",
+      "automated": false,
+      "status": "PENDING",
+      "dependsOn": [
+        "G7"
+      ]
+    },
+    {
+      "id": "G10",
+      "name": "Widen to T3-T7",
+      "automated": false,
+      "status": "PENDING",
+      "dependsOn": [
+        "G7",
+        "G9"
+      ]
+    }
+  ],
+  "rule": "Never report a blocked or pending gate as passed without its required evidence."
+}
