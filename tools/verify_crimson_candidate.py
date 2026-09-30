@@ -16,7 +16,7 @@ def ck(ok,msg):
  if not ok: errors.append(msg)
 if not C.is_dir(): raise SystemExit("Candidate missing; run build_crimson_candidate.py first.")
 mod=load(C/"mod.json")
-expected={"factions":"config/factions.json","heroClasses":"config/heroClasses.json","heroes":"config/heroes.json","creatures":"config/creatures.json","skills":"config/skills.json","scripts":"config/scripts.json"}
+expected={"factions":"config/factions.json","heroClasses":"config/heroClasses.json","heroes":"config/heroes.json","creatures":"config/creatures.json","spells":"config/spells.json","skills":"config/skills.json","scripts":"config/scripts.json"}
 for k,v in expected.items(): ck(mod.get(k)==[v],f"registration {k}: expected {[v]!r}, got {mod.get(k)!r}")
 for k,v in expected.items():
  p=C/"Content"/v
@@ -28,6 +28,11 @@ for k,v in expected.items():
 ck(not unsafeRegs,f"unsafe registration paths: {unsafeRegs}")
 ck(not any(".staging." in str(x) for v in mod.values() for x in (v if isinstance(v,list) else [v])),"mod.json contains staging registration")
 skills=load(C/"Content/config/skills.json")
+spells=load(C/"Content/config/spells.json")
+contract=load(ROOT/"production/crimson-spell-contract.v0.1.json")["counterplay"]
+expectedSpells=set(contract["activeNative"])|set(contract["activeCustomBridge"])
+ck(set(spells)==expectedSpells,f"candidate spell surface mismatch: actual={sorted(spells)} expected={sorted(expectedSpells)}")
+ck(not (set(spells)&set(contract["reservedDisabled"])),f"reserved spells leaked into candidate: {sorted(set(spells)&set(contract['reservedDisabled']))}")
 ck(set(skills)=={"bloodCommand","crimsonDivination"},f"candidate skill surface leaked: {sorted(skills)}")
 scripts=load(C/"Content/config/scripts.json").get("scripts",{})
 registeredLua=[]
@@ -65,7 +70,7 @@ manifest=load(C/"candidate-manifest.json")
 intFields=("directMediaReferences","missingDirectMedia","derivedSiegeReferences","missingDerivedSiege","derivedPuzzleReferences","missingDerivedPuzzle","registeredLuaScripts","copiedRegisteredLuaScripts","copiedLuaFiles","manifestFiles","copiedMediaFiles","copiedDerivedSiegeFiles","copiedDerivedPuzzleFiles")
 for field in intFields: ck(type(report.get(field)) is int and report.get(field)>=0,f"candidate report {field} must be a non-negative integer")
 ck(type(report.get("runtimeReady")) is bool,"candidate report runtimeReady must be boolean")
-for field in ("missing","missingDerived","missingPuzzle","registeredSkills"):
+for field in ("missing","missingDerived","missingPuzzle","registeredSkills","registeredSpells"):
  ck(isinstance(report.get(field),list),f"candidate report {field} must be a list")
 ck(type(manifest.get("format")) is int and manifest.get("format")==1,"candidate manifest format must be integer 1")
 ck(isinstance(manifest.get("files"),list),"candidate manifest files must be a list")
@@ -97,6 +102,7 @@ ck(report.get("directMediaReferences")==len(actualRefs),"candidate report direct
 ck(report.get("missingDirectMedia")==len(actualMissing),"candidate report missing-media count mismatch")
 ck(report.get("missing")==actualMissing,"candidate report direct missing list mismatch")
 ck(report.get("registeredSkills")==["bloodCommand","crimsonDivination"],"candidate report skill list mismatch")
+ck(report.get("registeredSpells")==sorted(expectedSpells),"candidate report spell list mismatch")
 ck(report.get("registeredLuaScripts")==len(registeredLua),"candidate report registered Lua count mismatch")
 ck(report.get("copiedRegisteredLuaScripts")==len(registeredLua),"candidate report registered Lua copy count mismatch")
 ck(report.get("copiedLuaFiles")==len(actualLuaFiles)==len(registeredLua),"candidate report Lua surface count mismatch")
@@ -134,6 +140,6 @@ if report.get("runtimeReady"):
  ck(report.get("copiedDerivedSiegeFiles")==report.get("derivedSiegeReferences")==31,"runtimeReady siege copy mismatch")
  ck(report.get("missingDerivedPuzzle")==0,"runtimeReady with missing puzzle-map pieces")
  ck(report.get("copiedDerivedPuzzleFiles")==report.get("derivedPuzzleReferences")==48,"runtimeReady puzzle copy mismatch")
-out={"pass":not errors,"errors":errors,"runtimeReady":report.get("runtimeReady",False),"registeredSkills":sorted(skills),"registeredScripts":sorted(scripts)}
+out={"pass":not errors,"errors":errors,"runtimeReady":report.get("runtimeReady",False),"registeredSkills":sorted(skills),"registeredSpells":sorted(spells),"registeredScripts":sorted(scripts)}
 print(json.dumps(out,indent=2))
 sys.exit(0 if not errors else 1)
