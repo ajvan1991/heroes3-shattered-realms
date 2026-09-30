@@ -102,6 +102,89 @@
         "CRIMSON/MUSIC/crimson_court.ogg"
       ],
       "exit": "Track loads, loops acceptably, and does not error in town screen."
+    },
+    {
+      "id": "B3",
+      "name": "Remaining T3-T7 creatures",
+      "priority": "B",
+      "selectors": [
+        "SPRITES/CRIMSON/gorewing",
+        "SPRITES/CRIMSON/bloodwing",
+        "SPRITES/CRIMSON/hemomancer",
+        "SPRITES/CRIMSON/veinOracle",
+        "SPRITES/CRIMSON/scarletHuntress",
+        "SPRITES/CRIMSON/bloodstalker",
+        "SPRITES/CRIMSON/sanguineNoble",
+        "SPRITES/CRIMSON/crimsonArchon",
+        "SPRITES/CRIMSON/bloodPhoenix",
+        "SPRITES/CRIMSON/eternalBloodPhoenix",
+        "SPRITES/CRIMSON/icons/gorewing",
+        "SPRITES/CRIMSON/icons/bloodwing",
+        "SPRITES/CRIMSON/icons/hemomancer",
+        "SPRITES/CRIMSON/icons/veinOracle",
+        "SPRITES/CRIMSON/icons/scarletHuntress",
+        "SPRITES/CRIMSON/icons/bloodstalker",
+        "SPRITES/CRIMSON/icons/sanguineNoble",
+        "SPRITES/CRIMSON/icons/crimsonArchon",
+        "SPRITES/CRIMSON/icons/bloodPhoenix",
+        "SPRITES/CRIMSON/icons/eternalBloodPhoenix"
+      ],
+      "exit": "T3-T7 base/upgrade battle animations and creature icons exist, are non-empty, and resolve in VCMI."
+    },
+    {
+      "id": "B4",
+      "name": "Remaining Crimson heroes",
+      "priority": "B",
+      "selectors": [
+        "HEROES/CRIMSON/"
+      ],
+      "exit": "All 16 Crimson hero portrait pairs and specialty icon pairs exist and resolve; B2 smoke-test assets may overlap."
+    },
+    {
+      "id": "B5",
+      "name": "Class passive skill art",
+      "priority": "B",
+      "selectors": [
+        "SKILLS/SHATTERED/bloodCommand_",
+        "SKILLS/SHATTERED/crimsonDivination_"
+      ],
+      "exit": "Blood Command and Crimson Divination icon families exist and resolve at every registered UI size."
+    },
+    {
+      "id": "B6",
+      "name": "Crimson Blood Rite spell art",
+      "priority": "B",
+      "selectors": [
+        "SPELLS/CRIMSON/"
+      ],
+      "exit": "All registered Crimson Blood Rite spell icon resources exist and resolve."
+    },
+    {
+      "id": "B7",
+      "name": "Universal spell art",
+      "priority": "B",
+      "selectors": [
+        "SPELLS/SHATTERED/"
+      ],
+      "exit": "All staged universal counterplay spell icon resources exist and resolve."
+    },
+    {
+      "id": "C3",
+      "name": "Remaining T3-T7 audio",
+      "priority": "C",
+      "selectors": [
+        "SOUNDS/CRIMSON/gorewing_",
+        "SOUNDS/CRIMSON/bloodwing_",
+        "SOUNDS/CRIMSON/hemomancer_",
+        "SOUNDS/CRIMSON/veinOracle_",
+        "SOUNDS/CRIMSON/scarletHuntress_",
+        "SOUNDS/CRIMSON/bloodstalker_",
+        "SOUNDS/CRIMSON/sanguineNoble_",
+        "SOUNDS/CRIMSON/crimsonArchon_",
+        "SOUNDS/CRIMSON/bloodPhoenix_",
+        "SOUNDS/CRIMSON/eternalBloodPhoenix_"
+      ],
+      "exit": "Attack/defend/killed/move/wince audio resolves for every T3-T7 base/upgrade creature."
     }
   ],
   "releaseRule": "Only VALIDATED_VCMI is release-ready.",
@@ -115,7 +198,13 @@
       "B1",
       "B2",
       "C1",
-      "C2"
+      "C2",
+      "B3",
+      "B4",
+      "B5",
+      "B6",
+      "B7",
+      "C3"
     ],
     "selectorPolicy": "Every selector must match at least one manifest resource. A resource may belong to multiple batches.",
     "derivedFamilies": {
