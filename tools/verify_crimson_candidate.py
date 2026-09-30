@@ -18,7 +18,20 @@ ck(set(skills)=={"bloodCommand","crimsonDivination"},f"candidate skill surface l
 scripts=load(C/"Content/config/combatScripts.json").get("scripts",{})
 for sid,s in scripts.items():
  p=C/"Content/scripts"/(s["script"]+".lua"); ck(p.is_file() and p.stat().st_size>0,f"missing Lua source for {sid}: {p}")
+# Re-scan generated config independently so report counters cannot hide omissions.
+exts=(".png",".def",".wav",".ogg",".pcx",".bmp",".webm",".mp3")
+actualRefs=set()
+def walk(v):
+ if isinstance(v,str) and v.lower().endswith(exts): actualRefs.add(v)
+ elif isinstance(v,dict):
+  for x in v.values(): walk(x)
+ elif isinstance(v,list):
+  for x in v: walk(x)
+for p in (C/"Content/config").glob("*.json"): walk(load(p))
+actualMissing=sorted(r for r in actualRefs if not (C/"Content"/r).is_file() or (C/"Content"/r).stat().st_size==0)
 report=load(C/"candidate-report.json")
+ck(report.get("directMediaReferences")==len(actualRefs),"candidate report direct-media count mismatch")
+ck(report.get("missingDirectMedia")==len(actualMissing),"candidate report missing-media count mismatch")
 ck(report.get("registeredSkills")==["bloodCommand","crimsonDivination"],"candidate report skill list mismatch")
 if report.get("runtimeReady"):
  ck(report.get("missingDirectMedia")==0,"runtimeReady with missing direct media")
