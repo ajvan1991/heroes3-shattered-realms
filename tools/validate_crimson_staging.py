@@ -169,6 +169,32 @@ for i,c in cr.items():
             if sub!="rebirth" and sub not in scripts: badscript.append([i,sub])
 ck("combatScriptReferences",not badscript,badscript)
 
+abilityContracts=[]
+for cid,x in cr.items():
+ abilities=x.get("abilities",{}) or {}
+ for aid,a in abilities.items():
+  if not isinstance(a,dict) or not isinstance(a.get("type"),str): abilityContracts.append([cid,aid,"type"])
+  if isinstance(a,dict) and a.get("type")=="COMBAT_EVENT_TRIGGER":
+   if not isinstance(a.get("subtype"),str) or not a.get("subtype"): abilityContracts.append([cid,aid,"subtype"])
+   if not isinstance(a.get("val"),(int,float)): abilityContracts.append([cid,aid,"val"])
+ck("creatureAbilityShape",not abilityContracts,abilityContracts)
+
+# Explicit regression gates for the four custom Crimson combat mechanics plus native rebirth.
+expectedTriggers={
+ "bloodbound":{"crimsonBloodied"},
+ "crimsonDancer":{"crimsonDancerGrace","crimsonBloodied"},
+ "bloodwing":{"crimsonBloodwingDrain","crimsonBloodied"},
+ "veinOracle":{"crimsonBloodied"},
+ "bloodstalker":{"crimsonBloodied","crimsonQuarryMark"},
+ "crimsonArchon":{"crimsonBloodied"},
+ "eternalBloodPhoenix":{"rebirth","crimsonBloodied"},
+}
+triggerMismatch=[]
+for cid,expected in expectedTriggers.items():
+ actual={a.get("subtype") for a in (cr.get(cid,{}).get("abilities",{}) or {}).values() if isinstance(a,dict) and a.get("type")=="COMBAT_EVENT_TRIGGER"}
+ if actual!=expected: triggerMismatch.append([cid,sorted(expected),sorted(actual)])
+ck("crimsonTriggerRegression",not triggerMismatch,triggerMismatch)
+
 # Validate the subset of VCMI script.json that is critical for combat-event registration.
 badscriptdefs=[]
 for sid,s in scripts.items():
