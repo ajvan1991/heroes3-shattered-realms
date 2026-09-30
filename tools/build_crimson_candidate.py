@@ -16,6 +16,7 @@ FILES={
  "heroClasses":CFG/"crimson/heroClasses.staging.json",
  "heroes":CFG/"crimson/heroes.staging.json",
  "creatures":CFG/"crimson/creatures.staging.json",
+ "skills":CFG/"skills/classPassives.staging.json",
 }
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
 def dump(p,o): p.parent.mkdir(parents=True,exist_ok=True); p.write_text(json.dumps(o,indent=2)+"\n",encoding="utf-8")
@@ -50,11 +51,14 @@ base.update({
  "heroClasses":["config/heroClasses.json"],
  "heroes":["config/heroes.json"],
  "creatures":["config/creatures.json"],
+ "skills":["config/skills.json"],
  "scripts":["config/combatScripts.json"],
 })
 dump(OUT/"mod.json",base)
 
 # Asset preflight: direct quoted media paths from candidate JSON.
+# Materialize every source-owned media resource into the isolated candidate; a strict
+# build is only runtime-ready when the output itself contains every direct reference.
 exts=(".png",".def",".wav",".ogg",".pcx",".bmp",".webm",".mp3")
 refs=set()
 for p in (OUT/"Content/config").glob("*.json"):
@@ -65,13 +69,20 @@ for p in (OUT/"Content/config").glob("*.json"):
         elif isinstance(v,list):
             for x in v: walk(x)
     walk(load(p))
-missing=[]
+missing=[]; copied=[]
 for r in sorted(refs):
-    # VCMI resource lookup is richer than filesystem lookup; this is a conservative local preflight.
-    if not any((SRC/"Content"/r).exists() for _ in [0]): missing.append(r)
+    src=SRC/"Content"/r
+    if not src.is_file() or src.stat().st_size==0:
+        missing.append(r); continue
+    dst=OUT/"Content"/r
+    dst.parent.mkdir(parents=True,exist_ok=True)
+    shutil.copy2(src,dst); copied.append(r)
+# Fail closed against the generated output, not merely the source tree.
+outputMissing=[r for r in sorted(refs) if not (OUT/"Content"/r).is_file() or (OUT/"Content"/r).stat().st_size==0]
+if outputMissing != missing: raise SystemExit("FAIL: candidate media materialization mismatch")
 
 lua=list((OUT/"Content/scripts/shattered-realms").rglob("*.lua"))
-report={"candidate":str(OUT.relative_to(ROOT)),"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"copiedLuaFiles":len(lua),"runtimeReady":not missing}
+report={"candidate":str(OUT.relative_to(ROOT)),"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"copiedLuaFiles":len(lua),"copiedMediaFiles":len(copied),"runtimeReady":not outputMissing}
 dump(OUT/"candidate-report.json",report)
 if missing and not args.allow_missing_assets:
     print(f"FAIL: {len(missing)} direct media resources are missing. Use --allow-missing-assets only for structural inspection.")
