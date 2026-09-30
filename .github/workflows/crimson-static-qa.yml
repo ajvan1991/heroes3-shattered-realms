@@ -59,6 +59,7 @@ jobs:
           assert r["manifestAssets"] == 530, r
           assert r["batchCoverage"]["unownedResources"] == 0, r["batchCoverage"]
           assert r["batchCoverage"]["unownedBootSlice"] == 0, r["batchCoverage"]
+          assert r["batchCoverage"]["multiOwnedResources"] == 0, r["batchCoverage"]
           assert r["batchCoverage"]["priorityMismatches"] == 0, r["batchCoverage"]
           assert r["manifestErrors"] == [], r["manifestErrors"]
           print("Asset contract invariants PASS")
