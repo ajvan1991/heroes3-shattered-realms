@@ -4,7 +4,7 @@
 Generated output is intentionally ignored as release truth until local VCMI validation.
 """
 from __future__ import annotations
-import argparse, hashlib, json, shutil, subprocess, sys
+import argparse, hashlib, json, re, shutil, subprocess, sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -18,6 +18,10 @@ FILES={
  "creatures":CFG/"crimson/creatures.staging.json",
 }
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
+def safe_rel(v):
+ if not isinstance(v,str) or not v or "\\x00" in v or "\\\\" in v: return False
+ if v.startswith("/") or v.startswith("//") or re.match(r"^[A-Za-z]:",v): return False
+ return all(part not in {"","..","."} for part in v.split("/"))
 def dump(p,o): p.parent.mkdir(parents=True,exist_ok=True); p.write_text(json.dumps(o,indent=2)+"\n",encoding="utf-8")
 
 ap=argparse.ArgumentParser()
@@ -77,6 +81,7 @@ for p in (OUT/"Content/config").glob("*.json"):
     walk(load(p))
 missing=[]; copied=[]
 for r in sorted(refs):
+    if not safe_rel(r): raise SystemExit(f"FAIL: unsafe media reference: {r!r}")
     src=SRC/"Content"/r
     if not src.is_file() or src.stat().st_size==0:
         missing.append(r); continue
@@ -91,22 +96,26 @@ if outputMissing != missing: raise SystemExit("FAIL: candidate media materializa
 # invisible to direct quoted-media scanning. Materialize the full VCMI-required family.
 faction=load(OUT/"Content/config/factions.json")["crimsonCourt"]
 prefix=faction["town"]["siege"]["imagePrefix"]
+if not safe_rel(prefix): raise SystemExit(f"FAIL: unsafe siege imagePrefix: {prefix!r}")
 siegeSuffixes=["BACK","TW21","TW22","TW2C","MAN1","MAN2","MANC","TW11","TW12","TW1C","DRW1","DRW2","DRW3","ARCH","WA61","WA62","WA63","WA41","WA42","WA43","WA31","WA32","WA33","WA11","WA12","WA13","MOAT","MLIP","WA2","WA5","TPWL"]
 derivedSiege=[prefix+s+".png" for s in siegeSuffixes]
 
 # Puzzle-map pieces are also prefix-derived by VCMI: <prefix><index>.png.
 puzzle=faction["puzzleMap"]; puzzlePrefix=puzzle["prefix"]
+if not safe_rel(puzzlePrefix): raise SystemExit(f"FAIL: unsafe puzzle prefix: {puzzlePrefix!r}")
 # CTownHandler uses the zero-based vector position, padded to two digits (00..47),
 # while piece.index controls uncover order only.
 derivedPuzzle=[puzzlePrefix+f"{i:02d}.png" for i in range(48)]
 missingDerived=[]; copiedDerived=[]
 for r in derivedSiege:
+    if not safe_rel(r): raise SystemExit(f"FAIL: unsafe derived siege resource: {r!r}")
     src=SRC/"Content"/r
     if not src.is_file() or src.stat().st_size==0:
         missingDerived.append(r); continue
     dst=OUT/"Content"/r; dst.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(src,dst); copiedDerived.append(r)
 missingPuzzle=[]; copiedPuzzle=[]
 for r in derivedPuzzle:
+    if not safe_rel(r): raise SystemExit(f"FAIL: unsafe derived puzzle resource: {r!r}")
     src=SRC/"Content"/r
     if not src.is_file() or src.stat().st_size==0:
         missingPuzzle.append(r); continue
