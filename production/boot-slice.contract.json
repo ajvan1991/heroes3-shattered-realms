@@ -43,7 +43,7 @@
       "blacksmith",
       "veinHouse",
       "thornGallery",
-      "bloodboundHouse",
+      "veinHouseUp",
       "crimsonGallery",
       "hordeThorns",
       "hordeThornsUp"
@@ -82,5 +82,9 @@
     "masterModJsonMustRemainUnchanged": true,
     "stagingFilesRemainSourceOfTruth": true,
     "requiresLocalVcmiValidation": true
+  },
+  "audit": {
+    "correctedMasterBuildingId": "bloodboundHouse -> veinHouseUp",
+    "masterBuildingCountExpected": 41
   }
 }
