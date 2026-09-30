@@ -48,14 +48,12 @@ jobs:
         run: python tools/build_crimson_candidate.py --allow-missing-assets
       - name: Verify structural candidate
         run: python tools/verify_crimson_candidate.py
-      - name: Upload QA evidence
+      - name: Publish QA evidence summary
         if: always()
-        uses: actions/upload-artifact@v5
-        with:
-          name: crimson-static-qa-${{ github.run_number }}
-          if-no-files-found: warn
-          retention-days: 14
-          path: |
-            production/crimson-static-validation.latest.json
-            build/crimson-v0.1-candidate/candidate-report.json
-            build/crimson-v0.1-candidate/candidate-manifest.json
+        shell: bash
+        run: |
+          echo "## Crimson Static QA #${{ github.run_number }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- staging report: production/crimson-static-validation.latest.json" >> "$GITHUB_STEP_SUMMARY"
+          echo "- runtime gates: production/runtime-gates.v0.1.json" >> "$GITHUB_STEP_SUMMARY"
+          echo "- candidate report: build/crimson-v0.1-candidate/candidate-report.json" >> "$GITHUB_STEP_SUMMARY"
+          echo "- candidate manifest: build/crimson-v0.1-candidate/candidate-manifest.json" >> "$GITHUB_STEP_SUMMARY"
