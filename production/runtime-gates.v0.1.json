@@ -11,7 +11,8 @@
         "production/crimson-reference-closure.v0.1.json",
         "tools/validate_crimson_staging.py",
         "GitHub Actions Crimson Static QA run #2: staging validator PASS",
-        "GitHub Actions Crimson Static QA run #16: full structural pipeline PASS"
+        "GitHub Actions Crimson Static QA run #16: full structural pipeline PASS",
+        "GitHub Actions Crimson Static QA run #23: staging + executable reference-closure validation PASS"
       ]
     },
     {
@@ -130,10 +131,10 @@
   "rule": "Never report a blocked or pending gate as passed without its required evidence.",
   "ciEvidence": {
     "workflow": "Crimson Static QA",
-    "lastVerifiedRun": 16,
-    "lastVerifiedRunId": 36746487304,
-    "headSha": "3223a871a682706b1e475a6b9b6387bed3ee204b",
+    "lastVerifiedRun": 23,
+    "lastVerifiedRunId": 36748061845,
+    "headSha": "6831b5542c1f257fec683f2727e88fc36f46fab7",
     "conclusion": "success",
-    "scope": "structural/non-strict asset candidate; all 9 production batches; exact candidate missing-list and derived-family integrity"
+    "scope": "structural/non-strict candidate; runtime-gate truth; executable reference closure; all 9 production batches; exact candidate integrity"
   }
 }
