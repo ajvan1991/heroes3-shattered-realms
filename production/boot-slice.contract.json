@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "name": "crimson-t1-t2",
+  "purpose": "First local VCMI 1.7.5 runtime candidate contract; does not activate master staging.",
+  "entities": {
+    "factions": [
+      "crimsonCourt"
+    ],
+    "heroClasses": [
+      "bloodlord",
+      "sanguineSeer"
+    ],
+    "heroes": [
+      "vaelor",
+      "aveline"
+    ],
+    "creatures": [
+      "veinling",
+      "bloodbound",
+      "thornDancer",
+      "crimsonDancer"
+    ],
+    "combatScripts": [
+      "crimsonBloodied",
+      "crimsonDancerGrace"
+    ],
+    "buildings": [
+      "mageGuild1",
+      "mageGuild2",
+      "mageGuild3",
+      "mageGuild4",
+      "mageGuild5",
+      "tavern",
+      "fort",
+      "citadel",
+      "castle",
+      "villageHall",
+      "townHall",
+      "cityHall",
+      "capitol",
+      "marketplace",
+      "resourceSilo",
+      "blacksmith",
+      "veinHouse",
+      "thornGallery",
+      "bloodboundHouse",
+      "crimsonGallery",
+      "hordeThorns",
+      "hordeThornsUp"
+    ]
+  },
+  "externalOrDeferredReferences": [
+    {
+      "source": "aveline.specialty.creature",
+      "target": "hemomancer",
+      "policy": "candidate override or data-only dependency; never mutate master hero"
+    },
+    {
+      "source": "faction full creature tiers T3-T7",
+      "policy": "candidate faction must reduce/replace these references consistently; do not leave dangling master tier IDs"
+    },
+    {
+      "source": "master town structures outside boot buildings",
+      "policy": "candidate must expose only structures/buildings actually carried into candidate or provide valid resources"
+    }
+  ],
+  "requiredAssertions": [
+    "all combatEvent subtypes resolve through scripts registry",
+    "all hero starting-army creature IDs resolve",
+    "all candidate dwelling upgrade IDs resolve",
+    "all Hall slot IDs resolve",
+    "all candidate media references resolve to real files",
+    "VCMI boots without schema or identifier errors",
+    "town opens and T1/T2 recruit/upgrade works",
+    "T2 Horde chain affects intended growth",
+    "Vaelor Tavern/start army works",
+    "Sanguine Seer spellbook path works",
+    "normal battle and siege exit cleanly",
+    "save/reload and week rollover succeed"
+  ],
+  "activation": {
+    "masterModJsonMustRemainUnchanged": true,
+    "stagingFilesRemainSourceOfTruth": true,
+    "requiresLocalVcmiValidation": true
+  }
+}
