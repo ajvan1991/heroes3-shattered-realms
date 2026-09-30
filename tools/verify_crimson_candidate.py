@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Verify generated Crimson candidate packaging without launching VCMI."""
 from __future__ import annotations
-import hashlib,json,sys
+import hashlib,json,re,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; C=ROOT/"build/crimson-v01-candidate"
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
 errors=[]
 def safe_rel(v):
- p=Path(v); return bool(v) and not p.is_absolute() and ".." not in p.parts and "\x00" not in v
+ if not isinstance(v,str) or not v or "\x00" in v or "\\" in v: return False
+ # Resource/config paths are canonical POSIX-relative paths even when QA runs on Linux.
+ if v.startswith("/") or v.startswith("//") or re.match(r"^[A-Za-z]:",v): return False
+ parts=v.split("/")
+ return all(part not in {"","..","."} for part in parts)
 def ck(ok,msg):
  if not ok: errors.append(msg)
 if not C.is_dir(): raise SystemExit("Candidate missing; run build_crimson_candidate.py first.")
@@ -20,8 +24,7 @@ for k,v in expected.items():
 # Production-style registration paths must stay relative and inside Content.
 unsafeRegs=[]
 for k,v in expected.items():
- rp=Path(v)
- if rp.is_absolute() or ".." in rp.parts: unsafeRegs.append([k,v])
+ if not safe_rel(v): unsafeRegs.append([k,v])
 ck(not unsafeRegs,f"unsafe registration paths: {unsafeRegs}")
 ck(not any(".staging." in str(x) for v in mod.values() for x in (v if isinstance(v,list) else [v])),"mod.json contains staging registration")
 skills=load(C/"Content/config/skills.json")
@@ -51,8 +54,7 @@ manifest=load(C/"candidate-manifest.json")
 # Reject path traversal / absolute paths before trusting package inventory.
 unsafeManifest=[]
 for x in manifest.get("files",[]):
- rel=Path(str(x.get("path","")))
- if rel.is_absolute() or ".." in rel.parts or not x.get("path"): unsafeManifest.append(x.get("path"))
+ if not safe_rel(str(x.get("path",""))): unsafeManifest.append(x.get("path"))
 ck(not unsafeManifest,f"unsafe candidate manifest paths: {unsafeManifest}")
 manifestBad=[]
 for x in manifest.get("files",[]):
@@ -86,6 +88,8 @@ ck(report.get("missingDerived")==actualMissingSiege,"candidate report siege miss
 ck(report.get("derivedPuzzleReferences")==48,"candidate report puzzle reference count mismatch")
 ck(report.get("missingDerivedPuzzle")==len(actualMissingPuzzle),"candidate report puzzle missing count mismatch")
 ck(report.get("missingPuzzle")==actualMissingPuzzle,"candidate report puzzle missing list mismatch")
+computedRuntimeReady=not actualMissing and not actualMissingSiege and not actualMissingPuzzle
+ck(report.get("runtimeReady") is computedRuntimeReady,f"runtimeReady mismatch: report={report.get('runtimeReady')} computed={computedRuntimeReady}")
 if report.get("runtimeReady"):
  ck(report.get("missingDirectMedia")==0,"runtimeReady with missing direct media")
  ck(report.get("missingDerivedSiege")==0,"runtimeReady with missing derived siege")
