@@ -92,6 +92,6 @@ A checkmark means implemented or structurally staged, not necessarily locally pr
 - verification of temporary-duration enum/turn handling in custom scripts
 - Mortal Anchor is RESERVED/disabled until a verified anti-heal/rebirth hook exists
 - final faction/town reference namespace pass
-- five narrative-only custom-specialty heroes are reserved from the v0.1 Tavern until engine-backed specialty implementations exist
+- all 16 regular heroes now use native creature/secondary-skill specialty shortcuts; local Tavern-spawn validation remains
 
 The main mod manifest remains intentionally conservative until resource and local-load blockers are cleared.
