@@ -101,6 +101,13 @@ for sid in crimsonSkills:
         if not s.get(tier,{}).get("effects"): emptyCrimson.append([sid,tier])
 ck("crimsonClassPassiveEffects",not emptyCrimson,emptyCrimson)
 
+# Siege prefix is a derived resource contract: VCMI composes filenames from it.
+siege=faction["crimsonCourt"]["town"]["siege"]
+prefix=siege.get("imagePrefix")
+ck("siegeImagePrefix",isinstance(prefix,str) and bool(prefix),prefix)
+siegeSuffixes=["BACK","TW21","TW22","TW2C","MAN1","MAN2","MANC","TW11","TW12","TW1C","DRW1","DRW2","DRW3","ARCH","WA61","WA62","WA63","WA41","WA42","WA43","WA31","WA32","WA33","WA11","WA12","WA13","MOAT","MLIP","WA2","WA5","TPWL"]
+ck("siegeDerivedFamilyCount",len(siegeSuffixes)==31,len(siegeSuffixes))
+
 # Production manifest must remain inert until activation is explicitly approved.
 game_keys={"factions","heroClasses","heroes","skills","creatures","artifacts","objects","spells","terrains","roads","rivers","battlefields","obstacles","mapLayers","templates","scripts"}
 active=sorted(game_keys & set(D["mod"]))
