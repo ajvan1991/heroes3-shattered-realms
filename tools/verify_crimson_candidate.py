@@ -6,6 +6,8 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; C=ROOT/"build/crimson-v01-candidate"
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
 errors=[]
+def safe_rel(v):
+ p=Path(v); return bool(v) and not p.is_absolute() and ".." not in p.parts and "\\x00" not in v
 def ck(ok,msg):
  if not ok: errors.append(msg)
 if not C.is_dir(): raise SystemExit("Candidate missing; run build_crimson_candidate.py first.")
@@ -26,17 +28,23 @@ skills=load(C/"Content/config/skills.json")
 ck(set(skills)=={"bloodCommand","crimsonDivination"},f"candidate skill surface leaked: {sorted(skills)}")
 scripts=load(C/"Content/config/combatScripts.json").get("scripts",{})
 for sid,s in scripts.items():
- p=C/"Content/scripts"/(s["script"]+".lua"); ck(p.is_file() and p.stat().st_size>0,f"missing Lua source for {sid}: {p}")
+ sp=str(s.get("script",""))
+ ck(safe_rel(sp),f"unsafe Lua script path for {sid}: {sp}")
+ if safe_rel(sp):
+  p=C/"Content/scripts"/(sp+".lua"); ck(p.is_file() and p.stat().st_size>0,f"missing Lua source for {sid}: {p}")
 # Re-scan generated config independently so report counters cannot hide omissions.
 exts=(".png",".def",".wav",".ogg",".pcx",".bmp",".webm",".mp3")
-actualRefs=set()
+actualRefs=set(); unsafeMediaRefs=[]
 def walk(v):
- if isinstance(v,str) and v.lower().endswith(exts): actualRefs.add(v)
+ if isinstance(v,str) and v.lower().endswith(exts):
+  actualRefs.add(v)
+  if not safe_rel(v): unsafeMediaRefs.append(v)
  elif isinstance(v,dict):
   for x in v.values(): walk(x)
  elif isinstance(v,list):
   for x in v: walk(x)
 for p in (C/"Content/config").glob("*.json"): walk(load(p))
+ck(not unsafeMediaRefs,f"unsafe media references: {sorted(set(unsafeMediaRefs))}")
 actualMissing=sorted(r for r in actualRefs if not (C/"Content"/r).is_file() or (C/"Content"/r).stat().st_size==0)
 report=load(C/"candidate-report.json")
 manifest=load(C/"candidate-manifest.json")
