@@ -75,6 +75,19 @@ for i,c in cr.items():
             if sub!="rebirth" and sub not in scripts: badscript.append([i,sub])
 ck("combatScriptReferences",not badscript,badscript)
 
+# Validate the subset of VCMI script.json that is critical for combat-event registration.
+badscriptdefs=[]
+for sid,s in scripts.items():
+    if s.get("implements")!="combatEvent": badscriptdefs.append([sid,"implements"])
+    if not isinstance(s.get("script"),str) or not s.get("script"): badscriptdefs.append([sid,"script"])
+    if not isinstance(s.get("patches"),list): badscriptdefs.append([sid,"patches"])
+    if not isinstance(s.get("schema"),dict): badscriptdefs.append([sid,"schema"])
+    if not isinstance(s.get("description"),str) or not s.get("description"): badscriptdefs.append([sid,"description"])
+    if not isinstance(s.get("priority"),(int,float)): badscriptdefs.append([sid,"priority"])
+    scriptfile=ROOT/"shattered-realms/Content/scripts"/(str(s.get("script",""))+".lua")
+    if not scriptfile.is_file(): badscriptdefs.append([sid,"lua",str(scriptfile.relative_to(ROOT))])
+ck("combatScriptDefinitions",not badscriptdefs,badscriptdefs)
+
 # Production manifest must remain inert until activation is explicitly approved.
 game_keys={"factions","heroClasses","heroes","skills","creatures","artifacts","objects","spells","terrains","roads","rivers","battlefields","obstacles","mapLayers","templates","scripts"}
 active=sorted(game_keys & set(D["mod"]))
