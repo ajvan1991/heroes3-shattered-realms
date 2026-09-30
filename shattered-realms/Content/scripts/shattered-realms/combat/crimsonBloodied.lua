@@ -7,10 +7,12 @@ local FILTER = { stacking = "shattered-realms:bloodiedActive" }
 local function update(server, battle, unit, val)
     if not unit or not unit:isAlive() then return end
     local available = unit:getAvailableHealth()
-    local total = unit:getTotalHealth()
-    if total <= 0 then return end
+    local maxCurrentStackHealth = unit:getCount() * unit:getMaxHealth()
+    if maxCurrentStackHealth <= 0 then return end
 
-    local shouldBeActive = available * 100 < total * 50
+    -- Bloodied measures wounds in the surviving stack, not casualties against
+    -- the original battle-start stack. Dead creatures alone must not trigger it.
+    local shouldBeActive = available * 100 < maxCurrentStackHealth * 50
     local active = unit:hasBonuses(FILTER)
     local current = active and unit:getBonuses(FILTER) or nil
 
