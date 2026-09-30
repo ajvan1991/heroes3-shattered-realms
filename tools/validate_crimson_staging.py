@@ -301,6 +301,19 @@ for family,doc in (("bloodRites",rites),("counterplay",counterplay)):
      if ref not in effectIds: customEffectErrors.append([family,sid,lvl,eid,ref])
 ck("customSpellEffectReferences",not customEffectErrors,customEffectErrors)
 
+# Spell-effect registry entries must themselves be executable and their Lua sources
+# must exist. This mirrors the combat-script closure instead of trusting a name match.
+spellEffectDefs=spellEffects.get("scripts",{}) if isinstance(spellEffects,dict) else {}
+badSpellEffectDefs=[]
+for sid,s in spellEffectDefs.items():
+ if s.get("implements")!="spellEffect": badSpellEffectDefs.append([sid,"implements",s.get("implements")])
+ if not isinstance(s.get("script"),str) or not s.get("script"): badSpellEffectDefs.append([sid,"script"])
+ if not isinstance(s.get("patches"),list): badSpellEffectDefs.append([sid,"patches"])
+ if not isinstance(s.get("schema"),dict): badSpellEffectDefs.append([sid,"schema"])
+ scriptfile=ROOT/"shattered-realms/Content/scripts"/(str(s.get("script",""))+".lua")
+ if not scriptfile.is_file() or scriptfile.stat().st_size<=0: badSpellEffectDefs.append([sid,"lua",str(scriptfile.relative_to(ROOT))])
+ck("spellEffectDefinitions",not badSpellEffectDefs,badSpellEffectDefs)
+
 # Siege prefix is a derived resource contract: VCMI composes filenames from it.
 siege=town["siege"]
 prefix=siege.get("imagePrefix")
