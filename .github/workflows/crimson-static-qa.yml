@@ -36,6 +36,12 @@ jobs:
         run: python tools/validate_crimson_staging.py
       - name: Validate asset production contracts
         run: python tools/asset_pipeline.py
+      - name: Validate every production batch selector
+        shell: bash
+        run: |
+          for batch in A1 A2 A3 A4 A5 B1 B2 C1 C2; do
+            python tools/asset_pipeline.py --batch "$batch" --report "production/asset-pipeline-$batch.latest.json"
+          done
       - name: Build structural candidate
         run: python tools/build_crimson_candidate.py --allow-missing-assets
       - name: Verify structural candidate
