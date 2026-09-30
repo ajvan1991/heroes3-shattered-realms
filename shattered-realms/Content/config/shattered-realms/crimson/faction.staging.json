@@ -797,14 +797,12 @@
             "castle"
           ],
           [
-            "tavern"
+            "tavern",
+            "blacksmith"
           ],
           [
             "marketplace",
             "resourceSilo"
-          ],
-          [
-            "blacksmith"
           ]
         ],
         [
