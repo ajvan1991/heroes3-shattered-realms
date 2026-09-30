@@ -17,17 +17,22 @@
     },
     {
       "id": "G2",
-      "name": "Combat script registration closure",
+      "name": "Runtime script registration closure",
       "automated": true,
       "status": "PASS",
       "criteria": [
         "all COMBAT_EVENT_TRIGGER custom subtypes resolve",
         "every registered combatEvent has implements/script/patches/schema/description/priority",
-        "referenced Lua source exists"
+        "every registered spellEffect has implements/script/patches/schema",
+        "all custom spell-effect references resolve",
+        "every registered runtime script has a real non-empty Lua source",
+        "isolated candidate packages exactly the registered runtime-script surface"
       ],
       "evidence": [
         "tools/validate_crimson_staging.py",
-        "GitHub Actions Crimson Static QA run #2: combat registration checks PASS"
+        "GitHub Actions Crimson Static QA run #2: combat registration checks PASS",
+        "GitHub Actions Crimson Static QA run #56: combat + spell-effect staging closure PASS",
+        "GitHub Actions Crimson Static QA run #58: isolated candidate exact six-script surface and Lua materialization PASS"
       ]
     },
     {
@@ -133,10 +138,10 @@
   "rule": "Never report a blocked or pending gate as passed without its required evidence.",
   "ciEvidence": {
     "workflow": "Crimson Static QA",
-    "lastVerifiedRun": 52,
-    "lastVerifiedRunId": 36767229620,
-    "headSha": "d3eb89ac8822031db84dfbbc0083c5ef6d5a3ae4",
+    "lastVerifiedRun": 58,
+    "lastVerifiedRunId": 36769752426,
+    "headSha": "f87e1f6a8d476709133a729c0b9b3f2cee89c192",
     "conclusion": "success",
-    "scope": "structural/non-strict candidate; full + pre-build runtime-gate validation; executable reference closure; all 16 production batches; 530/530 production ownership; boot-slice ownership; priority consistency; exact candidate and registered-Lua integrity"
+    "scope": "structural/non-strict candidate; full + pre-build runtime-gate validation; executable reference closure; all 16 production batches; 530/530 production ownership; exact six-script combatEvent+spellEffect registry and Lua materialization; candidate integrity"
   }
 }
