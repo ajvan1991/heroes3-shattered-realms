@@ -40,12 +40,14 @@
             "type": "PRIMARY_SKILL",
             "subtype": "defence",
             "val": -1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           },
           "speed": {
             "type": "STACKS_SPEED",
             "val": -1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -59,12 +61,14 @@
             "type": "PRIMARY_SKILL",
             "subtype": "defence",
             "val": -1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           },
           "speed": {
             "type": "STACKS_SPEED",
             "val": -1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -78,12 +82,14 @@
             "type": "PRIMARY_SKILL",
             "subtype": "defence",
             "val": -2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           },
           "speed": {
             "type": "STACKS_SPEED",
             "val": -1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -97,12 +103,14 @@
             "type": "PRIMARY_SKILL",
             "subtype": "defence",
             "val": -2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           },
           "speed": {
             "type": "STACKS_SPEED",
             "val": -2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       }
@@ -233,7 +241,8 @@
           "speed": {
             "type": "STACKS_SPEED",
             "val": 1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -246,7 +255,8 @@
           "speed": {
             "type": "STACKS_SPEED",
             "val": 1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -259,7 +269,8 @@
           "speed": {
             "type": "STACKS_SPEED",
             "val": 2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -272,7 +283,8 @@
           "speed": {
             "type": "STACKS_SPEED",
             "val": 2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       }
@@ -318,7 +330,8 @@
           "speed": {
             "type": "STACKS_SPEED",
             "val": -1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -331,7 +344,8 @@
           "speed": {
             "type": "STACKS_SPEED",
             "val": -1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -344,7 +358,8 @@
           "speed": {
             "type": "STACKS_SPEED",
             "val": -2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -357,7 +372,8 @@
           "speed": {
             "type": "STACKS_SPEED",
             "val": -2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       }
@@ -461,7 +477,8 @@
             "type": "PRIMARY_SKILL",
             "subtype": "attack",
             "val": -2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -475,7 +492,8 @@
             "type": "PRIMARY_SKILL",
             "subtype": "attack",
             "val": -2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -489,7 +507,8 @@
             "type": "PRIMARY_SKILL",
             "subtype": "attack",
             "val": -3,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -503,7 +522,8 @@
             "type": "PRIMARY_SKILL",
             "subtype": "attack",
             "val": -4,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       }
@@ -550,7 +570,8 @@
             "type": "PRIMARY_SKILL",
             "subtype": "defence",
             "val": -2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -564,7 +585,8 @@
             "type": "PRIMARY_SKILL",
             "subtype": "defence",
             "val": -2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -578,7 +600,8 @@
             "type": "PRIMARY_SKILL",
             "subtype": "defence",
             "val": -3,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -592,7 +615,8 @@
             "type": "PRIMARY_SKILL",
             "subtype": "defence",
             "val": -4,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       }
@@ -723,7 +747,8 @@
           "morale": {
             "type": "MORALE",
             "val": 1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -736,12 +761,14 @@
           "morale": {
             "type": "MORALE",
             "val": 1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           },
           "speed": {
             "type": "STACKS_SPEED",
             "val": 1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -754,12 +781,14 @@
           "morale": {
             "type": "MORALE",
             "val": 2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           },
           "speed": {
             "type": "STACKS_SPEED",
             "val": 1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -772,12 +801,14 @@
           "morale": {
             "type": "MORALE",
             "val": 2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           },
           "speed": {
             "type": "STACKS_SPEED",
             "val": 2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       }
@@ -824,7 +855,8 @@
             "type": "PRIMARY_SKILL",
             "subtype": "attack",
             "val": -1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -838,7 +870,8 @@
             "type": "PRIMARY_SKILL",
             "subtype": "attack",
             "val": -1,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -852,7 +885,8 @@
             "type": "PRIMARY_SKILL",
             "subtype": "attack",
             "val": -2,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -866,7 +900,8 @@
             "type": "PRIMARY_SKILL",
             "subtype": "attack",
             "val": -3,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       }
@@ -998,7 +1033,8 @@
             "type": "GENERAL_DAMAGE_REDUCTION",
             "subtype": "damageTypeAll",
             "val": 10,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -1012,7 +1048,8 @@
             "type": "GENERAL_DAMAGE_REDUCTION",
             "subtype": "damageTypeAll",
             "val": 10,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -1026,7 +1063,8 @@
             "type": "GENERAL_DAMAGE_REDUCTION",
             "subtype": "damageTypeAll",
             "val": 15,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       },
@@ -1040,7 +1078,8 @@
             "type": "GENERAL_DAMAGE_REDUCTION",
             "subtype": "damageTypeAll",
             "val": 20,
-            "duration": "N_TURNS"
+            "duration": "N_TURNS",
+            "valueType": "BASE_NUMBER"
           }
         }
       }
