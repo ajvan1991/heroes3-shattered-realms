@@ -18,11 +18,14 @@ P={
  "heroes":CFG/"crimson/heroes.staging.json",
  "scripts":CFG/"scripts/combatScripts.staging.json",
  "skills":CFG/"skills/classPassives.staging.json",
+ "bloodRites":CFG/"spells/bloodRites.staging.json",
+ "counterplay":CFG/"spells/counterplay.staging.json",
+ "spellEffects":CFG/"scripts/spellEffects.staging.json",
  "mod":ROOT/"shattered-realms/mod.json",
 }
 load=lambda p: json.loads(p.read_text(encoding="utf-8"))
 D={k:load(v) for k,v in P.items()}
-fac=D["faction"]["crimsonCourt"]; town=fac["town"]; b=D["buildings"]; cr=D["creatures"]; hc=D["classes"]; he=D["heroes"]; scripts=D["scripts"].get("scripts",{}); skills=D["skills"]
+fac=D["faction"]["crimsonCourt"]; town=fac["town"]; b=D["buildings"]; cr=D["creatures"]; hc=D["classes"]; he=D["heroes"]; scripts=D["scripts"].get("scripts",{}); skills=D["skills"]; rites=D["bloodRites"]; counterplay=D["counterplay"]; spellEffects=D["spellEffects"]
 errors=[]; checks={}
 
 def reqrefs(v):
@@ -254,6 +257,49 @@ for sid in crimsonSkills:
     if skills.get(sid,{}).get("offerCooldown",0)!=0:
         passiveCooldown.append([sid,skills.get(sid,{}).get("offerCooldown")])
 ck("crimsonClassPassiveOfferCooldown",not passiveCooldown,passiveCooldown)
+
+# Future-faction passive definitions are design staging only. Keep them inert and
+# explicitly non-random until their faction runtime contracts exist.
+futureSkills=set(skills)-crimsonSkills
+futurePassiveErrors=[]
+for sid in sorted(futureSkills):
+ s=skills.get(sid,{})
+ if s.get("gainChance")!={"might":0,"magic":0}: futurePassiveErrors.append([sid,"gainChance",s.get("gainChance")])
+ for tier in ("basic","advanced","expert"):
+  if s.get(tier,{}).get("effects"): futurePassiveErrors.append([sid,tier,"effects-not-empty"])
+ck("futureClassPassivesRemainInert",not futurePassiveErrors,futurePassiveErrors)
+
+# Spell staging must not silently enable reserved mechanics. Blood Rites are
+# candidate-local and generation-disabled; universal counterplay spells are either
+# deliberately available to all five factions or deliberately reserved everywhere.
+spellStageErrors=[]
+for sid,s in rites.items():
+ if s.get("defaultGainChance")!=0: spellStageErrors.append([sid,"blood-rite-defaultGainChance",s.get("defaultGainChance")])
+ if any(v!=0 for v in (s.get("gainChance") or {}).values()): spellStageErrors.append([sid,"blood-rite-gainChance",s.get("gainChance")])
+for sid,s in counterplay.items():
+ gc=s.get("gainChance") or {}; dg=s.get("defaultGainChance")
+ vals=[gc.get(fid) for fid in ("crimsonCourt","abyss","veil","hollow","starfall")]
+ if dg==0:
+  if any(v!=0 for v in vals): spellStageErrors.append([sid,"reserved-spell-enabled",gc])
+ elif dg>0:
+  if any(v!=dg for v in vals): spellStageErrors.append([sid,"universal-gainChance-not-equal",dg,gc])
+ else: spellStageErrors.append([sid,"invalid-defaultGainChance",dg])
+ck("spellGenerationContract",not spellStageErrors,spellStageErrors)
+
+# Custom spell-effect references must resolve to the staged spell-effect registry.
+effectIds=set()
+if isinstance(spellEffects,dict):
+ effectIds=set(spellEffects.get("effects",spellEffects).keys())
+customEffectErrors=[]
+for family,doc in (("bloodRites",rites),("counterplay",counterplay)):
+ for sid,s in doc.items():
+  for lvl,lvlDoc in (s.get("levels") or {}).items():
+   for eid,e in (lvlDoc.get("effects") or {}).items():
+    typ=e.get("type") if isinstance(e,dict) else None
+    if isinstance(typ,str) and typ.startswith("shattered-realms:"):
+     ref=typ.split(":",1)[1]
+     if ref not in effectIds: customEffectErrors.append([family,sid,lvl,eid,ref])
+ck("customSpellEffectReferences",not customEffectErrors,customEffectErrors)
 
 # Siege prefix is a derived resource contract: VCMI composes filenames from it.
 siege=town["siege"]
