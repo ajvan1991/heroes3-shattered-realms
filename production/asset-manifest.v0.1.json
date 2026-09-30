@@ -4040,11 +4040,12 @@
     }
   ],
   "notes": [
-    "31 required siege resources derived from imagePrefix were added after upstream Faction_Format audit; optional DRWC is intentionally not counted."
+    "31 required siege resources derived from imagePrefix were added after upstream Faction_Format audit; optional DRWC is intentionally not counted.",
+    "48 puzzle resources CRP00..CRP47 are derived from puzzleMap.prefix and are explicit Priority A boot-slice production jobs."
   ],
   "bootSlice": {
     "name": "crimson-t1-t2",
-    "directAndDerivedAssetJobs": 193,
-    "note": "Candidate marker only; final candidate must still omit references to non-included entities rather than relying on missing assets."
+    "directAndDerivedAssetJobs": 241,
+    "note": "Machine-counted boot-slice production jobs. Structural candidate may still include full 7-tier faction data required by VCMI schema; runtime readiness requires every referenced candidate asset."
   }
 }
