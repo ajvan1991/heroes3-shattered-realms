@@ -81,10 +81,24 @@ for r in sorted(refs):
 outputMissing=[r for r in sorted(refs) if not (OUT/"Content"/r).is_file() or (OUT/"Content"/r).stat().st_size==0]
 if outputMissing != missing: raise SystemExit("FAIL: candidate media materialization mismatch")
 
+# Siege assets are convention-derived from faction town.siege.imagePrefix and therefore
+# invisible to direct quoted-media scanning. Materialize the full VCMI-required family.
+faction=load(OUT/"Content/config/factions.json")["crimsonCourt"]
+prefix=faction["town"]["siege"]["imagePrefix"]
+siegeSuffixes=["BACK","TW21","TW22","TW2C","MAN1","MAN2","MANC","TW11","TW12","TW1C","DRW1","DRW2","DRW3","ARCH","WA61","WA62","WA63","WA41","WA42","WA43","WA31","WA32","WA33","WA11","WA12","WA13","MOAT","MLIP","WA2","WA5","TPWL"]
+derivedSiege=[prefix+s+".png" for s in siegeSuffixes]
+missingDerived=[]; copiedDerived=[]
+for r in derivedSiege:
+    src=SRC/"Content"/r
+    if not src.is_file() or src.stat().st_size==0:
+        missingDerived.append(r); continue
+    dst=OUT/"Content"/r; dst.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(src,dst); copiedDerived.append(r)
+
+
 lua=list((OUT/"Content/scripts/shattered-realms").rglob("*.lua"))
-report={"candidate":str(OUT.relative_to(ROOT)),"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"copiedLuaFiles":len(lua),"copiedMediaFiles":len(copied),"runtimeReady":not outputMissing}
+report={"candidate":str(OUT.relative_to(ROOT)),"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"derivedSiegeReferences":len(derivedSiege),"missingDerivedSiege":len(missingDerived),"missingDerived":missingDerived,"copiedLuaFiles":len(lua),"copiedMediaFiles":len(copied),"copiedDerivedSiegeFiles":len(copiedDerived),"runtimeReady":not outputMissing and not missingDerived}
 dump(OUT/"candidate-report.json",report)
-if missing and not args.allow_missing_assets:
-    print(f"FAIL: {len(missing)} direct media resources are missing. Use --allow-missing-assets only for structural inspection.")
+if (missing or missingDerived) and not args.allow_missing_assets:
+    print(f"FAIL: {len(missing)} direct media and {len(missingDerived)} derived siege resources are missing. Use --allow-missing-assets only for structural inspection.")
     raise SystemExit(2)
-print(json.dumps({k:v for k,v in report.items() if k!="missing"},indent=2))
+print(json.dumps({k:v for k,v in report.items() if k not in ("missing","missingDerived")},indent=2))
