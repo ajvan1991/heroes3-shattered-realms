@@ -12,7 +12,8 @@
         "CRIMSON/TOWN/mage_guild_window.png",
         "CRIMSON/TOWN/mage_guild_background.png",
         "CRIMSON/UI/creature_background_120.png",
-        "CRIMSON/UI/creature_background_130.png"
+        "CRIMSON/UI/creature_background_130.png",
+        "CRIMSON/TOWN/building_icons.DEF"
       ],
       "exit": "All six resources exist, render at required dimensions, and pass VCMI resource lookup."
     },
@@ -74,9 +75,12 @@
       "priority": "B",
       "selectors": [
         "HEROES/CRIMSON/vaelor",
-        "HEROES/CRIMSON/aveline"
+        "HEROES/CRIMSON/aveline",
+        "HEROES/CRIMSON/specialties/vaelor",
+        "HEROES/CRIMSON/specialties/aveline",
+        "SPRITES/CRIMSON/heroes/"
       ],
-      "exit": "Portrait and specialty art for Vaelor/Aveline resolves; class battle/map visuals are also present."
+      "exit": "Portrait, specialty, class battle, map/editor hero visuals for the Vaelor/Aveline smoke path all exist and resolve in VCMI."
     },
     {
       "id": "C1",
