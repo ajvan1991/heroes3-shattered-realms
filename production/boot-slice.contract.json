@@ -93,10 +93,29 @@
       "closedBuildings": 22,
       "addedByClosure": [],
       "danglingBuildingReferences": [],
-      "prunedHallRows": 4,
+      "prunedHallRows": 5,
       "prunedHallSlots": 9,
       "matchingStructures": 22,
       "status": "CLOSED"
     }
+  },
+  "compatibility": {
+    "factionSchema": {
+      "creatureTierEntries": {
+        "min": 7,
+        "max": 8,
+        "decision": "KEEP_7_IN_CANDIDATE"
+      },
+      "hallRows": {
+        "min": 5,
+        "max": 5,
+        "decision": "KEEP_5_ROWS"
+      },
+      "hordeEntries": {
+        "max": 2,
+        "loaderPadsMissingToMinusOne": true
+      }
+    },
+    "engineSourceFinding": "CTownHandler resizes town creature vector to configured creature tier count, but faction schema requires 7-8 entries; reduced 2-tier faction is invalid before runtime."
   }
 }
