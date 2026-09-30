@@ -45,7 +45,7 @@ jobs:
       - name: Validate every production batch selector
         shell: bash
         run: |
-          for batch in A1 A2 A3 A4 A5 B1 B2 B3 B4 B5 B6 B7 C1 C2 C3; do
+          for batch in A1 A2 A3 A4 A5 B1 B2 B3 B4 B5 B6 B7 B8 C1 C2 C3; do
             python tools/asset_pipeline.py --batch "$batch" --report "production/asset-pipeline-$batch.latest.json"
           done
       - name: Assert asset contract invariants
@@ -57,6 +57,7 @@ jobs:
           p=Path("production/asset-pipeline.latest.json")
           r=json.loads(p.read_text())
           assert r["manifestAssets"] == 530, r
+          assert r["batchCoverage"]["unownedResources"] == 0, r["batchCoverage"]
           assert r["batchCoverage"]["unownedBootSlice"] == 0, r["batchCoverage"]
           assert r["batchCoverage"]["priorityMismatches"] == 0, r["batchCoverage"]
           assert r["manifestErrors"] == [], r["manifestErrors"]
