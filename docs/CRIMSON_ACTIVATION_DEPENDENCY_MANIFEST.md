@@ -47,6 +47,7 @@ Core-compatible town slots:
 - 26 Grail
 - 30..36 base dwellings T1..T7
 - 37..43 upgraded dwellings T1..T7
+- 44..47 T2/T5 horde base+upgrade chains
 
 Crimson special buildings use 50..55 to avoid collisions with standard town slots.
 
@@ -58,8 +59,18 @@ The staging town now has the normal economic semantics needed for an actual town
 - Capitol 4000 gold/day
 - Grail 5000 gold/day
 - Resource Silo +1 wood/+1 ore per day
+- Blacksmith uses verified native `firstAidTent` identifier
+- T2/T5 horde chains follow upstream base+upgrade dwelling linkage
 
 Marketplace, Blacksmith and Tavern are explicitly present so City Hall and normal town gameplay do not depend on missing buildings.
+
+## Current runtime safety state
+- all 16 regular Crimson heroes use engine-backed creature/secondary-skill specialty shortcuts
+- Eternal Blood Phoenix uses native `COMBAT_EVENT_TRIGGER` subtype `rebirth`
+- Crimson Archon aura uses native `UNIT_ADJACENT`
+- Blood Feast lethal-hit accounting and Bloodied surviving-stack threshold were corrected against current combat-event/Unit API docs
+- Crimson moat uses verified `core:spell.castleMoat`
+- Mortal Anchor and other unverified reserved spells remain disabled (`gainChance: 0`)
 
 ## Phase 3 — visual town layer
 Only after gameplay entities resolve:
