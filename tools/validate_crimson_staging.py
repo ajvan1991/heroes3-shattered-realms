@@ -289,7 +289,7 @@ ck("spellGenerationContract",not spellStageErrors,spellStageErrors)
 # Custom spell-effect references must resolve to the staged spell-effect registry.
 effectIds=set()
 if isinstance(spellEffects,dict):
- effectIds=set(spellEffects.get("effects",spellEffects).keys())
+ effectIds=set(spellEffects.get("scripts",spellEffects.get("effects",spellEffects)).keys())
 customEffectErrors=[]
 for family,doc in (("bloodRites",rites),("counterplay",counterplay)):
  for sid,s in doc.items():
