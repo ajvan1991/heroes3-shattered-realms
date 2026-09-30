@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Fail closed if runtime-gate bookkeeping becomes internally inconsistent."""
 from __future__ import annotations
-import json,sys
+import argparse,json,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+ap=argparse.ArgumentParser()
+ap.add_argument("--pre-build",action="store_true",help="Validate gate-document structure/evidence shape without enforcing transient current-state locks.")
+args=ap.parse_args()
 doc=json.loads((ROOT/"production/runtime-gates.v0.1.json").read_text(encoding="utf-8"))
 gates=doc.get("gates",[]); errors=[]
 ids=[g.get("id") for g in gates]
@@ -23,11 +26,14 @@ for g in gates:
  if g.get("status")=="PASS":
   for dep in g.get("dependsOn",[]):
    if by[dep].get("status")!="PASS": errors.append(f"{g['id']} PASS depends on {dep}={by[dep].get('status')}")
-# Current v0.1 truth: media prevents strict candidate/runtime gates.
-if by.get("G3",{}).get("status")!="BLOCKED": errors.append("G3 must remain BLOCKED until real media evidence exists")
-if by.get("G4",{}).get("status")!="BLOCKED": errors.append("G4 must remain BLOCKED until strict candidate succeeds")
-for gid in ("G5","G6","G7","G8","G9","G10"):
- if by.get(gid,{}).get("status")!="PENDING": errors.append(f"{gid} must remain PENDING until local VCMI evidence is recorded")
+# Default/full mode enforces the currently committed runtime truth. Pre-build mode
+# deliberately omits only these transient locks so a future strict build can run before
+# G3/G4 evidence is promoted; all structural/dependency/evidence rules still apply.
+if not args.pre_build:
+ if by.get("G3",{}).get("status")!="BLOCKED": errors.append("G3 must remain BLOCKED until real media evidence exists")
+ if by.get("G4",{}).get("status")!="BLOCKED": errors.append("G4 must remain BLOCKED until strict candidate succeeds")
+ for gid in ("G5","G6","G7","G8","G9","G10"):
+  if by.get(gid,{}).get("status")!="PENDING": errors.append(f"{gid} must remain PENDING until local VCMI evidence is recorded")
 ci=doc.get("ciEvidence",{})
 if ci.get("conclusion")!="success" or not isinstance(ci.get("lastVerifiedRun"),int): errors.append("invalid CI evidence summary")
 if not isinstance(ci.get("lastVerifiedRunId"),int) or ci.get("lastVerifiedRunId",0)<=0: errors.append("invalid CI run id")
@@ -37,5 +43,5 @@ if ci.get("lastVerifiedRun",0)<23: errors.append("CI evidence regressed behind e
 scope=str(ci.get("scope",""))
 for token in ("structural","reference closure","production batches","candidate"):
  if token not in scope: errors.append(f"CI evidence scope missing contract token: {token}")
-out={"pass":not errors,"gateStatuses":{g["id"]:g["status"] for g in gates},"errors":errors}
+out={"pass":not errors,"mode":"pre-build" if args.pre_build else "full","gateStatuses":{g["id"]:g["status"] for g in gates},"errors":errors}
 print(json.dumps(out,indent=2));sys.exit(1 if errors else 0)
