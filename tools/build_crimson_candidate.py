@@ -16,6 +16,7 @@ FILES={
  "heroClasses":CFG/"crimson/heroClasses.staging.json",
  "heroes":CFG/"crimson/heroes.staging.json",
  "creatures":CFG/"crimson/creatures.staging.json",
+ "spells":CFG/"spells/counterplay.staging.json",
 }
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
 def safe_rel(v):
@@ -41,7 +42,21 @@ if OUT.exists(): shutil.rmtree(OUT)
 
 # Stable production-style names; never register *.staging.json.
 for category,src in FILES.items():
-    dump(OUT/f"Content/config/{category}.json",load(src))
+    data=load(src)
+    if category=="spells": data={k:data[k] for k in sorted(candidateSpellIds)}
+    dump(OUT/f"Content/config/{category}.json",data)
+
+# Candidate spell surface includes only universal spells intentionally active in v0.1.
+# Reserved spells remain in staging but cannot leak into the activation package.
+allSpells=load(CFG/"spells/counterplay.staging.json")
+spellContract=load(ROOT/"production/crimson-spell-contract.v0.1.json")
+cp=spellContract["counterplay"]
+candidateSpellIds=set(cp["activeNative"])|set(cp["activeCustomBridge"])
+missingSpells=sorted(candidateSpellIds-set(allSpells))
+if missingSpells: raise SystemExit(f"FAIL: missing required active v0.1 spells: {missingSpells}")
+leakedReserved=sorted(candidateSpellIds & set(cp["reservedDisabled"]))
+if leakedReserved: raise SystemExit(f"FAIL: reserved spells selected for candidate: {leakedReserved}")
+FILES["spells"]=CFG/"spells/counterplay.staging.json"
 
 # Candidate skill surface is deliberately Crimson-only. Future faction passives remain
 # in shared staging but must not leak into the first activation candidate.
@@ -87,6 +102,7 @@ base.update({
  "heroClasses":["config/heroClasses.json"],
  "heroes":["config/heroes.json"],
  "creatures":["config/creatures.json"],
+ "spells":["config/spells.json"],
  "skills":["config/skills.json"],
  "scripts":["config/scripts.json"],
 })
@@ -170,7 +186,8 @@ for p in sorted(x for x in OUT.rglob("*") if x.is_file() and x.name not in {"can
  inventory.append({"path":p.relative_to(OUT).as_posix(),"bytes":p.stat().st_size,"sha256":sha256(p)})
 dump(OUT/"candidate-manifest.json",{"format":1,"files":inventory,"fileCount":len(inventory),"totalBytes":sum(x["bytes"] for x in inventory)})
 skillIds=sorted(load(OUT/"Content/config/skills.json").keys())
-report={"candidate":str(OUT.relative_to(ROOT)),"registeredSkills":skillIds,"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"derivedSiegeReferences":len(derivedSiege),"missingDerivedSiege":len(missingDerived),"missingDerived":missingDerived,"derivedPuzzleReferences":len(derivedPuzzle),"missingDerivedPuzzle":len(missingPuzzle),"missingPuzzle":missingPuzzle,"registeredLuaScripts":len(registeredScriptPaths),"copiedRegisteredLuaScripts":len(copiedRegisteredLua),"copiedLuaFiles":len(lua),"manifestFiles":len(inventory),"copiedMediaFiles":len(copied),"copiedDerivedSiegeFiles":len(copiedDerived),"copiedDerivedPuzzleFiles":len(copiedPuzzle),"runtimeReady":not outputMissing and not missingDerived and not missingPuzzle}
+spellIds=sorted(load(OUT/"Content/config/spells.json").keys())
+report={"candidate":str(OUT.relative_to(ROOT)),"registeredSkills":skillIds,"registeredSpells":spellIds,"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"derivedSiegeReferences":len(derivedSiege),"missingDerivedSiege":len(missingDerived),"missingDerived":missingDerived,"derivedPuzzleReferences":len(derivedPuzzle),"missingDerivedPuzzle":len(missingPuzzle),"missingPuzzle":missingPuzzle,"registeredLuaScripts":len(registeredScriptPaths),"copiedRegisteredLuaScripts":len(copiedRegisteredLua),"copiedLuaFiles":len(lua),"manifestFiles":len(inventory),"copiedMediaFiles":len(copied),"copiedDerivedSiegeFiles":len(copiedDerived),"copiedDerivedPuzzleFiles":len(copiedPuzzle),"runtimeReady":not outputMissing and not missingDerived and not missingPuzzle}
 dump(OUT/"candidate-report.json",report)
 if (missing or missingDerived or missingPuzzle) and not args.allow_missing_assets:
     print(f"FAIL: {len(missing)} direct media and {len(missingDerived)} derived siege and {len(missingPuzzle)} puzzle resources are missing. Use --allow-missing-assets only for structural inspection.")
