@@ -32,3 +32,7 @@ This closes the earlier false-positive risk where strict preflight could see sou
 
 ## Remaining derived resources
 Resources implied by conventions rather than direct quoted JSON paths (notably the siege `imagePrefix` family) remain governed by the asset manifest/runtime gate and must be added to candidate materialization before siege acceptance can pass.
+
+
+## Puzzle-map filename contract
+Upstream `CTownHandler::loadPuzzle` constructs puzzle filenames from the **zero-based vector position**, formatted as two digits: `<prefix>00` through `<prefix>47`. The JSON `piece.index` field controls reveal order; it is not the filename number. For Crimson prefix `CRIMSON/PUZZLE/CRP`, the candidate therefore requires `CRP00.png ... CRP47.png`.
