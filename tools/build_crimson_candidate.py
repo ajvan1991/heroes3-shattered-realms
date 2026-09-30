@@ -4,7 +4,7 @@
 Generated output is intentionally ignored as release truth until local VCMI validation.
 """
 from __future__ import annotations
-import argparse, json, shutil, subprocess, sys
+import argparse, hashlib, json, shutil, subprocess, sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -112,8 +112,19 @@ for r in derivedPuzzle:
 
 
 lua=list((OUT/"Content/scripts/shattered-realms").rglob("*.lua"))
+
+# Deterministic package inventory for reproducibility and later local-test evidence.
+def sha256(p):
+ h=hashlib.sha256()
+ with p.open("rb") as fh:
+  for chunk in iter(lambda:fh.read(1024*1024),b""): h.update(chunk)
+ return h.hexdigest()
+inventory=[]
+for p in sorted(x for x in OUT.rglob("*") if x.is_file() and x.name not in {"candidate-report.json","candidate-manifest.json"}):
+ inventory.append({"path":p.relative_to(OUT).as_posix(),"bytes":p.stat().st_size,"sha256":sha256(p)})
+dump(OUT/"candidate-manifest.json",{"format":1,"files":inventory,"fileCount":len(inventory),"totalBytes":sum(x["bytes"] for x in inventory)})
 skillIds=sorted(load(OUT/"Content/config/skills.json").keys())
-report={"candidate":str(OUT.relative_to(ROOT)),"registeredSkills":skillIds,"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"derivedSiegeReferences":len(derivedSiege),"missingDerivedSiege":len(missingDerived),"missingDerived":missingDerived,"derivedPuzzleReferences":len(derivedPuzzle),"missingDerivedPuzzle":len(missingPuzzle),"missingPuzzle":missingPuzzle,"copiedLuaFiles":len(lua),"copiedMediaFiles":len(copied),"copiedDerivedSiegeFiles":len(copiedDerived),"copiedDerivedPuzzleFiles":len(copiedPuzzle),"runtimeReady":not outputMissing and not missingDerived and not missingPuzzle}
+report={"candidate":str(OUT.relative_to(ROOT)),"registeredSkills":skillIds,"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"derivedSiegeReferences":len(derivedSiege),"missingDerivedSiege":len(missingDerived),"missingDerived":missingDerived,"derivedPuzzleReferences":len(derivedPuzzle),"missingDerivedPuzzle":len(missingPuzzle),"missingPuzzle":missingPuzzle,"copiedLuaFiles":len(lua),"manifestFiles":len(inventory),"copiedMediaFiles":len(copied),"copiedDerivedSiegeFiles":len(copiedDerived),"copiedDerivedPuzzleFiles":len(copiedPuzzle),"runtimeReady":not outputMissing and not missingDerived and not missingPuzzle}
 dump(OUT/"candidate-report.json",report)
 if (missing or missingDerived or missingPuzzle) and not args.allow_missing_assets:
     print(f"FAIL: {len(missing)} direct media and {len(missingDerived)} derived siege and {len(missingPuzzle)} puzzle resources are missing. Use --allow-missing-assets only for structural inspection.")
