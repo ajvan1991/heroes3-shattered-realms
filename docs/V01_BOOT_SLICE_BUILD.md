@@ -38,3 +38,13 @@ Local mod content is registered through explicit arrays in `mod.json` such as `f
 
 ## Before local runtime
 The candidate is not ready to copy into VCMI until strict build succeeds. Upstream VCMI's current `mod.json` schema explicitly provides a `scripts` content category, and `script.json` defines `combatEvent` scripts with required `description` and `priority`; the candidate generator now registers the Crimson combat script registry through that category. Local VCMI 1.7.5 still remains the final compatibility test. A structurally generated candidate is not proof of engine compatibility.
+
+
+## Post-build verifier
+After any structural or strict candidate build, run:
+
+`py tools\verify_crimson_candidate.py`
+
+This independently checks the generated registration tree, rejects staging-path leakage, requires the candidate skill surface to contain only Blood Command and Crimson Divination, verifies registered Lua sources, and cross-checks runtimeReady against direct and derived siege media counts.
+
+The shared skill staging file may contain future faction design data; the generated Crimson candidate intentionally prunes it to the two Crimson passives.
