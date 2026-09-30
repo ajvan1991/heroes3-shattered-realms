@@ -37,7 +37,11 @@ checks={
  "combatEventScriptSubtypes":{"status":"PASS" if all(x in scripts for x in events) else "FAIL","references":len(events),"uniqueRegisteredScripts":len(set(events)),"dangling":sum(x not in scripts for x in events)},
  "heroClassIds":{"status":"PASS" if all(x in hc for x in classRefs) else "FAIL","references":len(classRefs),"dangling":sum(x not in hc for x in classRefs)},
  "heroCreatureSpecialties":{"status":"PASS" if all(x in cr for x in spec) else "FAIL","references":len(spec),"dangling":sum(x not in cr for x in spec)},
- "tavernClassLinks":{"status":"PASS" if hc.get("bloodlord",{}).get("defaultTavern")==5 and hc.get("sanguineSeer",{}).get("defaultTavern")==5 else "FAIL","bloodlord":hc.get("bloodlord",{}).get("faction")=="crimsonCourt" and 100 or 0,"sanguineSeer":hc.get("sanguineSeer",{}).get("faction")=="crimsonCourt" and 100 or 0}
+ "tavernClassLinks":{
+  "status":"PASS" if all(hc.get(cid,{}).get("faction")=="crimsonCourt" and hc.get(cid,{}).get("defaultTavern")==5 and hc.get(cid,{}).get("tavern",{}).get("crimsonCourt")==100 for cid in ("bloodlord","sanguineSeer")) else "FAIL",
+  "bloodlord":hc.get("bloodlord",{}).get("tavern",{}).get("crimsonCourt",0) if hc.get("bloodlord",{}).get("faction")=="crimsonCourt" else 0,
+  "sanguineSeer":hc.get("sanguineSeer",{}).get("tavern",{}).get("crimsonCourt",0) if hc.get("sanguineSeer",{}).get("faction")=="crimsonCourt" else 0
+ }
 }
 expected=load(ROOT/"production/crimson-reference-closure.v0.1.json")
 snapshot={"buildings":len(b),"creatures":len(cr),"heroes":len(he),"townCreatureTiers":len(town["creatures"]),"hallRows":len(town["hallSlots"]),"townStructures":len(town["structures"])}
