@@ -39,7 +39,8 @@
       "evidence": [
         "production/asset-manifest.v0.1.json",
         "tools/asset_pipeline.py",
-        "GitHub Actions Crimson Static QA run #16: all 9 batch contracts PASS (non-strict; media still absent)"
+        "GitHub Actions Crimson Static QA run #16: all 9 batch contracts PASS (non-strict; media still absent)",
+        "GitHub Actions Crimson Static QA run #37: 530-job asset contract PASS; boot-slice ownership and asset/batch priority consistency PASS (non-strict; media still absent)"
       ],
       "criteria": [
         "all direct quoted media references physically exist and are non-empty",
@@ -131,10 +132,10 @@
   "rule": "Never report a blocked or pending gate as passed without its required evidence.",
   "ciEvidence": {
     "workflow": "Crimson Static QA",
-    "lastVerifiedRun": 23,
-    "lastVerifiedRunId": 36748061845,
-    "headSha": "6831b5542c1f257fec683f2727e88fc36f46fab7",
+    "lastVerifiedRun": 37,
+    "lastVerifiedRunId": 36764074717,
+    "headSha": "c229446e4c1e8c7f022e110cfe366acb883279c9",
     "conclusion": "success",
-    "scope": "structural/non-strict candidate; runtime-gate truth; executable reference closure; all 9 production batches; exact candidate integrity"
+    "scope": "structural/non-strict candidate; runtime-gate truth; executable reference closure; all 9 production batches; boot-slice ownership and priority consistency; exact candidate integrity"
   }
 }
