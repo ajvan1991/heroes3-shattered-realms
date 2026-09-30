@@ -70,3 +70,10 @@ Aveline's T4 creature specialty remains the only intentional out-of-slice gamepl
 
 ## Expansion gate
 T3 is added only after this slice boots and survives the assertions above. The master staging files remain the full 14-creature / 16-hero design source throughout.
+
+
+## Asset contract clarification
+
+The machine-readable master manifest currently contains **530** jobs. Exactly **241** are explicitly marked `bootSlice: true`; the remaining **289** are explicitly false. This flag describes the production bootstrap asset wave and must not be confused with the four-creature T1/T2 mechanical smoke subset described above. The structural candidate may intentionally carry broader full-roster configuration while runtime readiness still requires every media reference actually packaged by that candidate to exist and validate.
+
+No asset becomes runtime-ready merely because it belongs to the boot slice. Status must progress through the production pipeline and only `VALIDATED_VCMI` is release evidence.
