@@ -76,7 +76,7 @@ for i,c in cr.items():
 ck("combatScriptReferences",not badscript,badscript)
 
 # Production manifest must remain inert until activation is explicitly approved.
-game_keys={"factions","heroClasses","heroes","skills","creatures","artifacts","objects","spells","terrains","roads","rivers","battlefields","obstacles","mapLayers","templates"}
+game_keys={"factions","heroClasses","heroes","skills","creatures","artifacts","objects","spells","terrains","roads","rivers","battlefields","obstacles","mapLayers","templates","scripts"}
 active=sorted(game_keys & set(D["mod"]))
 ck("productionModInert",not active,active)
 
