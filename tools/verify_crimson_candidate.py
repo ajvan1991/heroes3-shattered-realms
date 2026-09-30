@@ -30,11 +30,14 @@ ck(not any(".staging." in str(x) for v in mod.values() for x in (v if isinstance
 skills=load(C/"Content/config/skills.json")
 ck(set(skills)=={"bloodCommand","crimsonDivination"},f"candidate skill surface leaked: {sorted(skills)}")
 scripts=load(C/"Content/config/combatScripts.json").get("scripts",{})
+registeredLua=[]
 for sid,s in scripts.items():
  sp=str(s.get("script",""))
  ck(safe_rel(sp),f"unsafe Lua script path for {sid}: {sp}")
  if safe_rel(sp):
+  registeredLua.append(sp)
   p=C/"Content/scripts"/(sp+".lua"); ck(p.is_file() and p.stat().st_size>0,f"missing Lua source for {sid}: {p}")
+ck(len(registeredLua)==len(set(registeredLua)),f"duplicate registered Lua paths: {registeredLua}")
 # Re-scan generated config independently so report counters cannot hide omissions.
 exts=(".png",".def",".wav",".ogg",".pcx",".bmp",".webm",".mp3")
 actualRefs=set(); unsafeMediaRefs=[]
@@ -73,6 +76,8 @@ ck(report.get("directMediaReferences")==len(actualRefs),"candidate report direct
 ck(report.get("missingDirectMedia")==len(actualMissing),"candidate report missing-media count mismatch")
 ck(report.get("missing")==actualMissing,"candidate report direct missing list mismatch")
 ck(report.get("registeredSkills")==["bloodCommand","crimsonDivination"],"candidate report skill list mismatch")
+ck(report.get("registeredLuaScripts")==len(registeredLua),"candidate report registered Lua count mismatch")
+ck(report.get("copiedRegisteredLuaScripts")==len(registeredLua),"candidate report registered Lua copy count mismatch")
 # Prefix-derived resources are independently reconstructed from generated faction data.
 fac=load(C/"Content/config/factions.json")["crimsonCourt"]
 siegePrefix=fac["town"]["siege"]["imagePrefix"]
