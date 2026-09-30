@@ -95,4 +95,4 @@ Before adding these staging configs to mod.json:
 9. AI can recruit, build and fight with the town;
 10. RMG can place the faction without fatal errors.
 
-Until these gates pass, keepDisabled remains intentional.
+Until these gates pass, `keepDisabled` remains intentional. More importantly, production `mod.json` currently contains no gameplay content arrays, so all `*.staging.json` entity files are disconnected and inert. `keepDisabled` only controls automatic enabling on install; staging isolation comes from the absence of content registration. Activation must use a reviewed production candidate set rather than pointing the manifest directly at every staging file.
