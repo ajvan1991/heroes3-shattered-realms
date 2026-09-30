@@ -109,6 +109,9 @@ multiOwned=sorted([r,sorted(set(resourceOwners.get(r,[])))] for r in manifestRes
 # job, however, needs at least one executable production batch owner.
 unownedBoot=sorted(a["resource"] for a in assets if a.get("bootSlice") and not resourceOwners.get(a.get("resource")))
 if unownedBoot: errors.append(f"boot-slice assets without production batch: {unownedBoot}")
+# The production plan is now complete, not merely a boot-slice planner: every
+# deterministic manifest job must have at least one executable batch owner.
+if unowned: errors.append(f"manifest assets without production batch: {unowned}")
 priorityMismatch=[]
 for a in assets:
  owners=set(resourceOwners.get(a.get("resource"),[]))
