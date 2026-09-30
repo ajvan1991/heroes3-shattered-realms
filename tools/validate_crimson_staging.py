@@ -95,6 +95,16 @@ badAffinity=[[i,x.get("affinity")] for i,x in hc.items() if x.get("affinity") no
 ck("heroClassCommanders",not badCommander,badCommander)
 ck("heroClassFaction",not badFaction,badFaction)
 ck("heroClassAffinity",not badAffinity,badAffinity)
+
+# Crimson class-passive contract: each hero class must actually start with its exclusive
+# passive. gainChance=0 only prevents random level-up offers; it does not grant the skill.
+exclusiveByClass={"bloodlord":"bloodCommand","sanguineSeer":"crimsonDivination"}
+missingExclusive=[]
+for heroId,h in he.items():
+ expected=exclusiveByClass.get(h.get("class"))
+ if expected and not any(x.get("skill")==expected for x in h.get("skills",[])):
+  missingExclusive.append([heroId,expected])
+ck("heroExclusiveClassPassives",not missingExclusive,missingExclusive)
 ck("heroArmyReferences",not badarmy,badarmy)
 ck("heroCreatureSpecialties",not badspec,badspec)
 
