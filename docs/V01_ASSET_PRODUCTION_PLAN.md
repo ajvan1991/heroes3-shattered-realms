@@ -33,7 +33,7 @@ The machine-readable plan currently has **16 executable batches**, and every one
 - **B5–B8:** Crimson class-passive art, Blood Rite art, universal spell art, and the staged future-faction class-passive icon families.
 - **C1–C3:** T1/T2 audio, town music, and remaining T3–T7 audio.
 
-Batch overlap is permitted only as an explicit production convenience (for example B2 smoke-test heroes are also part of B4 full-roster coverage). Asset priority must match every owning batch. CI rejects any unowned manifest job.
+Production ownership is **exclusive**: every one of the 530 manifest jobs must resolve to exactly one batch. B2 owns the Vaelor/Aveline smoke-test hero resources; B4 explicitly owns the other 14 Crimson hero portrait/specialty families. Asset priority must match its owning batch. CI rejects unowned or multi-owned jobs.
 
 ## Asset acceptance rule
 An item moves from MISSING only when the repository contains a structurally valid file at the exact referenced path. Concept art, a prompt, or a differently named source image does not satisfy a runtime asset job.
