@@ -38,6 +38,9 @@ for sid,s in scripts.items():
   registeredLua.append(sp)
   p=C/"Content/scripts"/(sp+".lua"); ck(p.is_file() and p.stat().st_size>0,f"missing Lua source for {sid}: {p}")
 ck(len(registeredLua)==len(set(registeredLua)),f"duplicate registered Lua paths: {registeredLua}")
+actualLuaFiles=sorted(p.relative_to(C/"Content/scripts").as_posix() for p in (C/"Content/scripts").rglob("*.lua")) if (C/"Content/scripts").is_dir() else []
+expectedLuaFiles=sorted(sp+".lua" for sp in registeredLua)
+ck(actualLuaFiles==expectedLuaFiles,f"candidate contains unregistered/missing Lua: actual={actualLuaFiles} expected={expectedLuaFiles}")
 # Re-scan generated config independently so report counters cannot hide omissions.
 exts=(".png",".def",".wav",".ogg",".pcx",".bmp",".webm",".mp3")
 actualRefs=set(); unsafeMediaRefs=[]
@@ -92,6 +95,7 @@ ck(report.get("missing")==actualMissing,"candidate report direct missing list mi
 ck(report.get("registeredSkills")==["bloodCommand","crimsonDivination"],"candidate report skill list mismatch")
 ck(report.get("registeredLuaScripts")==len(registeredLua),"candidate report registered Lua count mismatch")
 ck(report.get("copiedRegisteredLuaScripts")==len(registeredLua),"candidate report registered Lua copy count mismatch")
+ck(report.get("copiedLuaFiles")==len(actualLuaFiles)==len(registeredLua),"candidate report Lua surface count mismatch")
 # Prefix-derived resources are independently reconstructed from generated faction data.
 fac=load(C/"Content/config/factions.json")["crimsonCourt"]
 siegePrefix=fac["town"]["siege"]["imagePrefix"]
