@@ -9,7 +9,7 @@ function Script:onAfterAttack(server, battle, unit, other, payload)
 
     for _, entry in ipairs(payload.targets or {}) do
         local target = entry.unit
-        if target and target:isAlive() and target:getSide() ~= unit:getSide() then
+        if target and target:isAlive() and target:getSide() ~= unit:getSide() and (entry.damage or 0) > 0 then
             server:addUnitBonus(battle, target, {
                 type = "PRIMARY_SKILL",
                 subtype = "defence",
