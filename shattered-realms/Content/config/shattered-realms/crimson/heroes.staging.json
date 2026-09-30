@@ -295,12 +295,14 @@
       "name": "Ilyr Thorn",
       "biography": "Ilyr believes a commander should know exactly how much blood an army can lose before courage becomes hunger.",
       "specialty": {
-        "name": "Blood Command",
-        "description": "Ilyr improves the tactical reliability of Blood Command without raising its permanent ceiling. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation.",
-        "tooltip": "Ilyr improves the tactical reliability of Blood Command without raising its permanent ceiling. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation."
+        "name": "Offense",
+        "description": "Ilyr specializes in Offense, representing his disciplined Blood Command doctrine.",
+        "tooltip": "Ilyr specializes in Offense, representing his disciplined Blood Command doctrine."
       }
     },
-    "special": true
+    "specialty": {
+      "secondary": "offence"
+    }
   },
   "aveline": {
     "class": "sanguineSeer",
@@ -369,13 +371,15 @@
       "name": "Sevrin",
       "biography": "Sevrin measures every ritual twice and considers uncontrolled magic merely another form of waste.",
       "specialty": {
-        "name": "Blood Spellcraft",
-        "description": "Sevrin specializes in a signature blood spell selected after the final spell list is locked. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation.",
-        "tooltip": "Sevrin specializes in a signature blood spell selected after the final spell list is locked. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation."
+        "name": "Wisdom",
+        "description": "Sevrin specializes in Wisdom, reflecting his exacting command of ritual spellcraft.",
+        "tooltip": "Sevrin specializes in Wisdom, reflecting his exacting command of ritual spellcraft."
       }
     },
     "spellbook": [],
-    "special": true
+    "specialty": {
+      "secondary": "wisdom"
+    }
   },
   "miraleth": {
     "class": "sanguineSeer",
@@ -408,13 +412,15 @@
       "name": "Miraleth",
       "biography": "Miraleth restored fragments of the First Chalice tablets and refuses to translate their final warning.",
       "specialty": {
-        "name": "Blood Rite",
-        "description": "Miraleth improves a Blood Rite while preserving its minimum sacrifice. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation.",
-        "tooltip": "Miraleth improves a Blood Rite while preserving its minimum sacrifice. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation."
+        "name": "Intelligence",
+        "description": "Miraleth specializes in Intelligence, drawing deeper reserves from her study of the First Chalice.",
+        "tooltip": "Miraleth specializes in Intelligence, drawing deeper reserves from her study of the First Chalice."
       }
     },
     "spellbook": [],
-    "special": true
+    "specialty": {
+      "secondary": "intelligence"
+    }
   },
   "caelis": {
     "class": "sanguineSeer",
@@ -565,13 +571,15 @@
       "name": "Saereth",
       "biography": "Saereth joined the seers after discovering that a hunter's mark can be read as clearly as any prophecy.",
       "specialty": {
-        "name": "Quarry Mark",
-        "description": "Saereth improves bounded Quarry Mark utility without multiplicative damage scaling. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation.",
-        "tooltip": "Saereth improves bounded Quarry Mark utility without multiplicative damage scaling. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation."
+        "name": "Mysticism",
+        "description": "Saereth specializes in Mysticism, reading the pulse of a hunt as clearly as an omen.",
+        "tooltip": "Saereth specializes in Mysticism, reading the pulse of a hunt as clearly as an omen."
       }
     },
     "spellbook": [],
-    "special": true
+    "specialty": {
+      "secondary": "mysticism"
+    }
   },
   "lysandraNoct": {
     "class": "sanguineSeer",
@@ -599,12 +607,14 @@
       "name": "Lysandra Noct",
       "biography": "Lysandra wears a dark veil because she claims the present is the least interesting thing a seer can see.",
       "specialty": {
-        "name": "Crimson Divination",
-        "description": "Lysandra improves Crimson Divination's tactical payoff without removing sacrifice costs. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation.",
-        "tooltip": "Lysandra improves Crimson Divination's tactical payoff without removing sacrifice costs. This hero is reserved from the regular v0.1 Tavern pool until the specialty has an engine-backed implementation."
+        "name": "Sorcery",
+        "description": "Lysandra specializes in Sorcery, turning Crimson Divination into more forceful battle magic.",
+        "tooltip": "Lysandra specializes in Sorcery, turning Crimson Divination into more forceful battle magic."
       }
     },
     "spellbook": [],
-    "special": true
+    "specialty": {
+      "secondary": "sorcery"
+    }
   }
 }
