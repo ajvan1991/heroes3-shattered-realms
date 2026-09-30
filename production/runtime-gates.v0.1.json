@@ -25,7 +25,7 @@
     },
     {
       "id": "G3",
-      "name": "Direct media preflight",
+      "name": "Complete candidate media preflight",
       "automated": true,
       "status": "BLOCKED",
       "blocker": "Original referenced media files are not yet materialized.",
@@ -36,7 +36,8 @@
       "criteria": [
         "all direct quoted media references physically exist and are non-empty",
         "all 31 imagePrefix-derived siege resources physically exist and are non-empty",
-        "candidate builder materializes both direct and derived media into isolated output"
+        "all 48 puzzle-prefix resources CRP00..CRP47 physically exist and are non-empty",
+        "candidate builder materializes direct, siege-derived, and puzzle-derived media into isolated output"
       ]
     },
     {
@@ -51,10 +52,14 @@
       "criteria": [
         "static validator passes",
         "candidate registers factions/heroClasses/heroes/creatures/skills/scripts",
-        "candidate contains Lua sources",
+        "candidate contains registered Lua sources",
         "candidate output contains every direct media reference",
-        "candidate output contains complete 31-resource derived siege family"
-      ]
+        "candidate output contains complete 31-resource derived siege family",
+        "candidate output contains complete 48-resource derived puzzle family",
+        "candidate-manifest SHA-256 inventory verifies",
+        "independent post-build verifier passes"
+      ],
+      "verifyCommand": "py tools\\verify_crimson_candidate.py"
     },
     {
       "id": "G5",
