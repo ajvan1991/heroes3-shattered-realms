@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "scope": "Crimson master staging structural references",
+  "snapshot": {
+    "buildings": 41,
+    "creatures": 14,
+    "heroes": 16,
+    "townCreatureTiers": 7,
+    "hallRows": 5,
+    "townStructures": 41
+  },
+  "checks": {
+    "buildingRequires": {
+      "status": "PASS",
+      "dangling": 0
+    },
+    "buildingUpgrades": {
+      "status": "PASS",
+      "dangling": 0
+    },
+    "townCreatureIds": {
+      "status": "PASS",
+      "dangling": 0
+    },
+    "heroArmyCreatureIds": {
+      "status": "PASS",
+      "dangling": 0
+    },
+    "hallBuildingIds": {
+      "status": "PASS",
+      "dangling": 0
+    },
+    "buildingStructureCoverage": {
+      "status": "PASS",
+      "missing": 0
+    }
+  },
+  "result": "STRUCTURALLY_CLOSED",
+  "limitations": [
+    "Does not validate referenced media files.",
+    "Does not prove VCMI 1.7.5 runtime behavior.",
+    "Does not activate staging.",
+    "Does not validate custom Lua semantics beyond separate audits."
+  ]
+}
