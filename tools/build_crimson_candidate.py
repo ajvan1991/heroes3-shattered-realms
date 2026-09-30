@@ -28,8 +28,9 @@ ap=argparse.ArgumentParser()
 ap.add_argument("--allow-missing-assets",action="store_true",help="Structural build only; candidate is not runtime-ready.")
 args=ap.parse_args()
 
-v=subprocess.run([sys.executable,str(ROOT/"tools/validate_crimson_staging.py")])
-if v.returncode: raise SystemExit(v.returncode)
+for validator in ("validate_crimson_staging.py","validate_reference_closure.py","validate_runtime_gates.py"):
+ v=subprocess.run([sys.executable,str(ROOT/"tools"/validator)])
+ if v.returncode: raise SystemExit(v.returncode)
 
 if OUT.exists(): shutil.rmtree(OUT)
 (OUT/"Content/config").mkdir(parents=True)
@@ -42,6 +43,8 @@ for category,src in FILES.items():
 # in shared staging but must not leak into the first activation candidate.
 allSkills=load(CFG/"skills/classPassives.staging.json")
 crimsonSkillIds=("bloodCommand","crimsonDivination")
+missingSkills=[k for k in crimsonSkillIds if k not in allSkills]
+if missingSkills: raise SystemExit(f"FAIL: missing required Crimson skills: {missingSkills}")
 candidateSkills={k:allSkills[k] for k in crimsonSkillIds}
 dump(OUT/"Content/config/skills.json",candidateSkills)
 
@@ -51,6 +54,13 @@ reg=load(CFG/"scripts/combatScripts.staging.json")
 dump(OUT/"Content/config/combatScripts.json",reg)
 script_src=SRC/"Content/scripts/shattered-realms"
 if not script_src.is_dir(): raise SystemExit("FAIL: Crimson script source directory is missing")
+registeredScriptPaths=[]
+for sid,s in reg.get("scripts",{}).items():
+ sp=s.get("script")
+ if not safe_rel(sp): raise SystemExit(f"FAIL: unsafe registered Lua script path for {sid}: {sp!r}")
+ src=SRC/"Content/scripts"/(sp+".lua")
+ if not src.is_file() or src.stat().st_size==0: raise SystemExit(f"FAIL: missing registered Lua source for {sid}: {sp}.lua")
+ registeredScriptPaths.append(sp)
 shutil.copytree(script_src,OUT/"Content/scripts/shattered-realms")
 
 base=load(SRC/"mod.json")
@@ -123,6 +133,11 @@ for r in derivedPuzzle:
 
 
 lua=list((OUT/"Content/scripts/shattered-realms").rglob("*.lua"))
+copiedRegisteredLua=[]
+for sp in registeredScriptPaths:
+ p=OUT/"Content/scripts"/(sp+".lua")
+ if not p.is_file() or p.stat().st_size==0: raise SystemExit(f"FAIL: registered Lua not materialized: {sp}.lua")
+ copiedRegisteredLua.append(sp)
 
 # Deterministic package inventory for reproducibility and later local-test evidence.
 def sha256(p):
@@ -135,7 +150,7 @@ for p in sorted(x for x in OUT.rglob("*") if x.is_file() and x.name not in {"can
  inventory.append({"path":p.relative_to(OUT).as_posix(),"bytes":p.stat().st_size,"sha256":sha256(p)})
 dump(OUT/"candidate-manifest.json",{"format":1,"files":inventory,"fileCount":len(inventory),"totalBytes":sum(x["bytes"] for x in inventory)})
 skillIds=sorted(load(OUT/"Content/config/skills.json").keys())
-report={"candidate":str(OUT.relative_to(ROOT)),"registeredSkills":skillIds,"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"derivedSiegeReferences":len(derivedSiege),"missingDerivedSiege":len(missingDerived),"missingDerived":missingDerived,"derivedPuzzleReferences":len(derivedPuzzle),"missingDerivedPuzzle":len(missingPuzzle),"missingPuzzle":missingPuzzle,"copiedLuaFiles":len(lua),"manifestFiles":len(inventory),"copiedMediaFiles":len(copied),"copiedDerivedSiegeFiles":len(copiedDerived),"copiedDerivedPuzzleFiles":len(copiedPuzzle),"runtimeReady":not outputMissing and not missingDerived and not missingPuzzle}
+report={"candidate":str(OUT.relative_to(ROOT)),"registeredSkills":skillIds,"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"derivedSiegeReferences":len(derivedSiege),"missingDerivedSiege":len(missingDerived),"missingDerived":missingDerived,"derivedPuzzleReferences":len(derivedPuzzle),"missingDerivedPuzzle":len(missingPuzzle),"missingPuzzle":missingPuzzle,"registeredLuaScripts":len(registeredScriptPaths),"copiedRegisteredLuaScripts":len(copiedRegisteredLua),"copiedLuaFiles":len(lua),"manifestFiles":len(inventory),"copiedMediaFiles":len(copied),"copiedDerivedSiegeFiles":len(copiedDerived),"copiedDerivedPuzzleFiles":len(copiedPuzzle),"runtimeReady":not outputMissing and not missingDerived and not missingPuzzle}
 dump(OUT/"candidate-report.json",report)
 if (missing or missingDerived or missingPuzzle) and not args.allow_missing_assets:
     print(f"FAIL: {len(missing)} direct media and {len(missingDerived)} derived siege and {len(missingPuzzle)} puzzle resources are missing. Use --allow-missing-assets only for structural inspection.")
