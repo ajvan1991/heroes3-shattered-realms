@@ -31,6 +31,12 @@ for p in (C/"Content/config").glob("*.json"): walk(load(p))
 actualMissing=sorted(r for r in actualRefs if not (C/"Content"/r).is_file() or (C/"Content"/r).stat().st_size==0)
 report=load(C/"candidate-report.json")
 manifest=load(C/"candidate-manifest.json")
+# Reject path traversal / absolute paths before trusting package inventory.
+unsafeManifest=[]
+for x in manifest.get("files",[]):
+ rel=Path(str(x.get("path","")))
+ if rel.is_absolute() or ".." in rel.parts or not x.get("path"): unsafeManifest.append(x.get("path"))
+ck(not unsafeManifest,f"unsafe candidate manifest paths: {unsafeManifest}")
 manifestBad=[]
 for x in manifest.get("files",[]):
  p=C/x["path"]
@@ -40,6 +46,9 @@ for x in manifest.get("files",[]):
 ck(not manifestBad,f"candidate manifest mismatch: {manifestBad}")
 ck(manifest.get("fileCount")==len(manifest.get("files",[])),"candidate manifest fileCount mismatch")
 ck(report.get("manifestFiles")==manifest.get("fileCount"),"candidate report manifest count mismatch")
+actualFiles=sorted(p.relative_to(C).as_posix() for p in C.rglob("*") if p.is_file() and p.name not in {"candidate-report.json","candidate-manifest.json"})
+manifestFiles=sorted(str(x.get("path","")) for x in manifest.get("files",[]))
+ck(actualFiles==manifestFiles,f"candidate manifest inventory mismatch: actual={len(actualFiles)} manifest={len(manifestFiles)}")
 ck(report.get("directMediaReferences")==len(actualRefs),"candidate report direct-media count mismatch")
 ck(report.get("missingDirectMedia")==len(actualMissing),"candidate report missing-media count mismatch")
 ck(report.get("registeredSkills")==["bloodCommand","crimsonDivination"],"candidate report skill list mismatch")
