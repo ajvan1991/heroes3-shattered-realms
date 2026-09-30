@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "creatures": {
+    "veinling": {
+      "role": "T1 melee",
+      "requiredGroups": [
+        2,
+        0,
+        3,
+        4,
+        5,
+        7,
+        8,
+        11,
+        12,
+        13
+      ],
+      "optionalGroups": [
+        1,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    "bloodbound": {
+      "role": "T1 upgrade melee",
+      "requiredGroups": [
+        2,
+        0,
+        3,
+        4,
+        5,
+        7,
+        8,
+        11,
+        12,
+        13
+      ],
+      "optionalGroups": [
+        1,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    "thornDancer": {
+      "role": "T2 melee",
+      "requiredGroups": [
+        2,
+        0,
+        3,
+        4,
+        5,
+        7,
+        8,
+        11,
+        12,
+        13
+      ],
+      "optionalGroups": [
+        1,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    "crimsonDancer": {
+      "role": "T2 melee / Crimson Grace",
+      "requiredGroups": [
+        2,
+        0,
+        3,
+        4,
+        5,
+        7,
+        8,
+        11,
+        12,
+        13
+      ],
+      "optionalGroups": [
+        1,
+        20,
+        21,
+        22,
+        23,
+        24,
+        17,
+        18,
+        19
+      ]
+    }
+  },
+  "groupLegend": {
+    "0": "movement",
+    "1": "fidget",
+    "2": "idle",
+    "3": "hit",
+    "4": "defend",
+    "5": "death",
+    "7": "turn left",
+    "8": "turn right",
+    "11": "melee up",
+    "12": "melee front",
+    "13": "melee down",
+    "20": "movement start",
+    "21": "movement end",
+    "24": "resurrection",
+    "17-19": "special attack",
+    "22-23": "dead"
+  },
+  "acceptance": [
+    "Transparent/correct palette edges with no bright matte fringe.",
+    "Unit footprint and baseline remain stable across frames.",
+    "Attack contact timing matches animationTime closely enough for VCMI battle readability.",
+    "Death ends in persistent corpse-compatible pose.",
+    "Left/right turning does not teleport the unit baseline.",
+    "Upgrade pair remains visually related.",
+    "Converted resource opens in VCMI 1.7.5 without missing animation-group errors."
+  ],
+  "statusRule": "Only after conversion may status become CONVERTED; only after local VCMI acceptance may it become VALIDATED_VCMI."
+}
