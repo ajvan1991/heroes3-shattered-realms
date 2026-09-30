@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "policy": "No placeholder/fake assets. Status may advance to SOURCE_READY or later only when a non-empty resource file exists.",
+  "batches": [
+    {
+      "id": "A1",
+      "name": "Town shell",
+      "priority": "A",
+      "selectors": [
+        "CRIMSON/TOWN/town_background.png",
+        "CRIMSON/TOWN/hall_background.png",
+        "CRIMSON/TOWN/mage_guild_window.png",
+        "CRIMSON/TOWN/mage_guild_background.png",
+        "CRIMSON/UI/creature_background_120.png",
+        "CRIMSON/UI/creature_background_130.png"
+      ],
+      "exit": "All six resources exist, render at required dimensions, and pass VCMI resource lookup."
+    },
+    {
+      "id": "A2",
+      "name": "Adventure town shell",
+      "priority": "A",
+      "selectors": [
+        "CRIMSON/MAP/"
+      ],
+      "exit": "Village/castle/capitol and editor animation resources exist and map object opens without missing-resource errors."
+    },
+    {
+      "id": "A3",
+      "name": "Core town structures",
+      "priority": "A",
+      "selectors": [
+        "CRIMSON/TOWN/structures/"
+      ],
+      "exit": "All registered building animation/border/area resources resolve; selection masks match visible structures."
+    },
+    {
+      "id": "A4",
+      "name": "Siege shell",
+      "priority": "A",
+      "selectors": [
+        "CRIMSON/SIEGE/"
+      ],
+      "exit": "Two tower icons plus complete required CRSG prefix family resolve in siege."
+    },
+    {
+      "id": "B1",
+      "name": "T1/T2 creatures",
+      "priority": "B",
+      "selectors": [
+        "SPRITES/CRIMSON/veinling",
+        "SPRITES/CRIMSON/bloodbound",
+        "SPRITES/CRIMSON/thornDancer",
+        "SPRITES/CRIMSON/crimsonDancer",
+        "SPRITES/CRIMSON/icons/veinling",
+        "SPRITES/CRIMSON/icons/bloodbound",
+        "SPRITES/CRIMSON/icons/thornDancer",
+        "SPRITES/CRIMSON/icons/crimsonDancer"
+      ],
+      "exit": "Four battle animation resources and eight icons exist and animate/render in VCMI."
+    },
+    {
+      "id": "B2",
+      "name": "Smoke-test heroes",
+      "priority": "B",
+      "selectors": [
+        "HEROES/CRIMSON/vaelor",
+        "HEROES/CRIMSON/aveline"
+      ],
+      "exit": "Portrait and specialty art for Vaelor/Aveline resolves; class battle/map visuals are also present."
+    },
+    {
+      "id": "C1",
+      "name": "T1/T2 audio",
+      "priority": "C",
+      "selectors": [
+        "SOUNDS/CRIMSON/veinling_",
+        "SOUNDS/CRIMSON/bloodbound_",
+        "SOUNDS/CRIMSON/thornDancer_",
+        "SOUNDS/CRIMSON/crimsonDancer_"
+      ],
+      "exit": "Attack/defend/killed/move/wince audio resolves for all four creatures."
+    },
+    {
+      "id": "C2",
+      "name": "Town music",
+      "priority": "C",
+      "selectors": [
+        "CRIMSON/MUSIC/crimson_court.ogg"
+      ],
+      "exit": "Track loads, loops acceptably, and does not error in town screen."
+    }
+  ],
+  "releaseRule": "Only VALIDATED_VCMI is release-ready."
+}
