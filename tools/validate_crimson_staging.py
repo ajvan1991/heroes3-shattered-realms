@@ -21,11 +21,12 @@ P={
  "bloodRites":CFG/"spells/bloodRites.staging.json",
  "counterplay":CFG/"spells/counterplay.staging.json",
  "spellEffects":CFG/"scripts/spellEffects.staging.json",
+ "spellContract":ROOT/"production/crimson-spell-contract.v0.1.json",
  "mod":ROOT/"shattered-realms/mod.json",
 }
 load=lambda p: json.loads(p.read_text(encoding="utf-8"))
 D={k:load(v) for k,v in P.items()}
-fac=D["faction"]["crimsonCourt"]; town=fac["town"]; b=D["buildings"]; cr=D["creatures"]; hc=D["classes"]; he=D["heroes"]; scripts=D["scripts"].get("scripts",{}); skills=D["skills"]; rites=D["bloodRites"]; counterplay=D["counterplay"]; spellEffects=D["spellEffects"]
+fac=D["faction"]["crimsonCourt"]; town=fac["town"]; b=D["buildings"]; cr=D["creatures"]; hc=D["classes"]; he=D["heroes"]; scripts=D["scripts"].get("scripts",{}); skills=D["skills"]; rites=D["bloodRites"]; counterplay=D["counterplay"]; spellEffects=D["spellEffects"]; spellContract=D["spellContract"]
 errors=[]; checks={}
 
 def reqrefs(v):
@@ -285,6 +286,31 @@ for sid,s in counterplay.items():
   if any(v!=dg for v in vals): spellStageErrors.append([sid,"universal-gainChance-not-equal",dg,gc])
  else: spellStageErrors.append([sid,"invalid-defaultGainChance",dg])
 ck("spellGenerationContract",not spellStageErrors,spellStageErrors)
+
+# Lock the exact v0.1 spell surface so generation status cannot drift silently.
+sc=spellContract
+cp=sc.get("counterplay",{})
+br=sc.get("bloodRites",{})
+expectedNative=set(cp.get("activeNative",[])); expectedCustom=set(cp.get("activeCustomBridge",[])); expectedReserved=set(cp.get("reservedDisabled",[]))
+actualActive={sid for sid,s in counterplay.items() if s.get("defaultGainChance",0)>0}
+actualReserved={sid for sid,s in counterplay.items() if s.get("defaultGainChance")==0}
+customIds=set()
+for sid,s in counterplay.items():
+ for lvlDoc in (s.get("levels") or {}).values():
+  for e in (lvlDoc.get("effects") or {}).values():
+   if isinstance(e,dict) and e.get("type")==f"shattered-realms:{cp.get('customEffect')}": customIds.add(sid)
+spellSnapshotErrors=[]
+if actualActive != expectedNative|expectedCustom: spellSnapshotErrors.append(["active",sorted(actualActive),sorted(expectedNative|expectedCustom)])
+if actualReserved != expectedReserved: spellSnapshotErrors.append(["reserved",sorted(actualReserved),sorted(expectedReserved)])
+if customIds != expectedCustom: spellSnapshotErrors.append(["customBridge",sorted(customIds),sorted(expectedCustom)])
+if set(counterplay) != expectedNative|expectedCustom|expectedReserved: spellSnapshotErrors.append(["counterplayMembership",sorted(counterplay)])
+if set(rites) != set(br.get("ids",[])): spellSnapshotErrors.append(["bloodRiteMembership",sorted(rites),sorted(br.get("ids",[]))])
+for sid in actualActive:
+ s=counterplay[sid]
+ if s.get("defaultGainChance")!=cp.get("activeDefaultGainChance"): spellSnapshotErrors.append([sid,"activeChance",s.get("defaultGainChance")])
+for sid in actualReserved:
+ if counterplay[sid].get("defaultGainChance")!=cp.get("reservedDefaultGainChance"): spellSnapshotErrors.append([sid,"reservedChance"])
+ck("spellActivationSnapshot",not spellSnapshotErrors,spellSnapshotErrors)
 
 # Custom spell-effect references must resolve to the staged spell-effect registry.
 effectIds=set()
