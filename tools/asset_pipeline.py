@@ -30,6 +30,9 @@ actualPri=Counter(a.get("priority") for a in assets)
 if summary.get("total")!=len(assets): errors.append(f"manifest summary total mismatch: {summary.get('total')} != {len(assets)}")
 for pri in ("A","B","C"):
     if summary.get(pri)!=actualPri.get(pri,0): errors.append(f"manifest summary {pri} mismatch: {summary.get(pri)} != {actualPri.get(pri,0)}")
+bootCount=sum(1 for a in assets if a.get("bootSlice"))
+declaredBoot=m.get("bootSlice",{}).get("directAndDerivedAssetJobs")
+if declaredBoot!=bootCount: errors.append(f"boot-slice count mismatch: {declaredBoot} != {bootCount}")
 seen=set()
 # VCMI derives puzzle filenames from zero-based vector positions, padded to 00..47.
 expectedPuzzle={f"CRIMSON/PUZZLE/CRP{i:02d}.png" for i in range(48)}
@@ -38,6 +41,12 @@ missingPuzzle=sorted(expectedPuzzle-manifestResources)
 extraPuzzle=sorted(r for r in manifestResources if isinstance(r,str) and r.startswith("CRIMSON/PUZZLE/CRP") and r not in expectedPuzzle)
 if missingPuzzle: errors.append(f"missing derived puzzle manifest entries: {missingPuzzle}")
 if extraPuzzle: errors.append(f"unexpected derived puzzle manifest entries: {extraPuzzle}")
+siegeSuffixes={"BACK","TW21","TW22","TW2C","MAN1","MAN2","MANC","TW11","TW12","TW1C","DRW1","DRW2","DRW3","ARCH","WA61","WA62","WA63","WA41","WA42","WA43","WA31","WA32","WA33","WA11","WA12","WA13","MOAT","MLIP","WA2","WA5","TPWL"}
+expectedSiege={f"CRIMSON/SIEGE/CRSG{s}.png" for s in siegeSuffixes}
+missingSiege=sorted(expectedSiege-manifestResources)
+extraDerivedSiege=sorted(r for r in manifestResources if isinstance(r,str) and r.startswith("CRIMSON/SIEGE/CRSG") and r not in expectedSiege)
+if missingSiege: errors.append(f"missing derived siege manifest entries: {missingSiege}")
+if extraDerivedSiege: errors.append(f"unexpected derived siege manifest entries: {extraDerivedSiege}")
 for a in assets:
     r=a["resource"]
     if r in seen: errors.append(f"duplicate resource: {r}")
