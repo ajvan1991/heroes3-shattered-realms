@@ -96,7 +96,9 @@ derivedSiege=[prefix+s+".png" for s in siegeSuffixes]
 
 # Puzzle-map pieces are also prefix-derived by VCMI: <prefix><index>.png.
 puzzle=faction["puzzleMap"]; puzzlePrefix=puzzle["prefix"]
-# CTownHandler uses the zero-based vector position, padded to two digits (00..47),\n# while piece.index controls uncover order only.\nderivedPuzzle=[puzzlePrefix+f"{i:02d}.png" for i in range(48)]
+# CTownHandler uses the zero-based vector position, padded to two digits (00..47),
+# while piece.index controls uncover order only.
+derivedPuzzle=[puzzlePrefix+f"{i:02d}.png" for i in range(48)]
 missingDerived=[]; copiedDerived=[]
 for r in derivedSiege:
     src=SRC/"Content"/r
