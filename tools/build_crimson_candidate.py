@@ -61,7 +61,13 @@ for sid,s in reg.get("scripts",{}).items():
  src=SRC/"Content/scripts"/(sp+".lua")
  if not src.is_file() or src.stat().st_size==0: raise SystemExit(f"FAIL: missing registered Lua source for {sid}: {sp}.lua")
  registeredScriptPaths.append(sp)
-shutil.copytree(script_src,OUT/"Content/scripts/shattered-realms")
+# Package only scripts that are actually registered. Prototype/unregistered Lua stays
+# in source staging and cannot silently expand the activation candidate surface.
+for sp in sorted(set(registeredScriptPaths)):
+ src=SRC/"Content/scripts"/(sp+".lua")
+ dst=OUT/"Content/scripts"/(sp+".lua")
+ dst.parent.mkdir(parents=True,exist_ok=True)
+ shutil.copy2(src,dst)
 
 base=load(SRC/"mod.json")
 base.update({
@@ -132,7 +138,11 @@ for r in derivedPuzzle:
     dst=OUT/"Content"/r; dst.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(src,dst); copiedPuzzle.append(r)
 
 
-lua=list((OUT/"Content/scripts/shattered-realms").rglob("*.lua"))
+lua=list((OUT/"Content/scripts").rglob("*.lua"))
+expectedLuaFiles={Path(sp+".lua").as_posix() for sp in registeredScriptPaths}
+actualLuaFiles={p.relative_to(OUT/"Content/scripts").as_posix() for p in lua}
+if actualLuaFiles != expectedLuaFiles:
+ raise SystemExit(f"FAIL: candidate Lua surface mismatch: actual={sorted(actualLuaFiles)} expected={sorted(expectedLuaFiles)}")
 copiedRegisteredLua=[]
 for sp in registeredScriptPaths:
  p=OUT/"Content/scripts"/(sp+".lua")
