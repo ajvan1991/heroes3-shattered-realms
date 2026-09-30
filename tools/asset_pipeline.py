@@ -66,10 +66,13 @@ if sorted(batchIds)!=sorted(required): errors.append(f"asset batch id contract m
 derived=batchDoc.get("validation",{}).get("derivedFamilies",{})
 expectedDerived={"siege":{"count":31,"prefix":"CRIMSON/SIEGE/CRSG"},"puzzle":{"count":48,"prefix":"CRIMSON/PUZZLE/CRP"}}
 if derived!=expectedDerived: errors.append(f"derived-family contract mismatch: {derived} != {expectedDerived}")
+resourceOwners={}
 for b in batches:
     for selector in b.get("selectors",[]):
-        if not any(isinstance(r,str) and r.startswith(selector) for r in manifestResources):
+        matches=sorted(r for r in manifestResources if isinstance(r,str) and r.startswith(selector))
+        if not matches:
             errors.append(f"batch selector matches no manifest asset: {b.get('id')}:{selector}")
+        for r in matches: resourceOwners.setdefault(r,[]).append(b.get("id"))
 batchById={b.get("id"):b for b in batches}
 for b in batches:
     if b.get("priority") not in VALID_PRI: errors.append(f"invalid batch priority {b.get('priority')}: {b.get('id')}")
@@ -100,6 +103,13 @@ for a in assets:
     if a.get("status") in {"SOURCE_READY","CONVERTED","VALIDATED_VCMI"} and not exists(r):
         errors.append(f"status claims file but resource is absent/empty: {r}")
 
+unowned=sorted(r for r in manifestResources if isinstance(r,str) and not resourceOwners.get(r))
+multiOwned=sorted([r,sorted(set(resourceOwners.get(r,[])))] for r in manifestResources if isinstance(r,str) and len(set(resourceOwners.get(r,[])))>1)
+# Overlap is legal by policy, but must remain visible in the report. Every boot-slice
+# job, however, needs at least one executable production batch owner.
+unownedBoot=sorted(a["resource"] for a in assets if a.get("bootSlice") and not resourceOwners.get(a.get("resource")))
+if unownedBoot: errors.append(f"boot-slice assets without production batch: {unownedBoot}")
+
 def in_batch(a):
     if not args.batch or args.batch not in batchById: return not args.batch
     return any(a["resource"].startswith(s) for s in batchById[args.batch].get("selectors",[]))
@@ -110,10 +120,11 @@ missing=[a["resource"] for a in sel if not exists(a["resource"])]
 report={
  "scope":{"bootSlice":args.boot_slice,"priority":args.priority,"batch":args.batch},
  "manifestAssets":len(assets),"selected":len(sel),
+ "batchCoverage":{"ownedResources":len(manifestResources)-len(unowned),"unownedResources":len(unowned),"unownedBootSlice":len(unownedBoot),"multiOwnedResources":len(multiOwned)},
  "byPriority":dict(sorted(by_pri.items())),"byStatus":dict(sorted(by_status.items())),"byType":dict(sorted(by_type.items())),
  "physicalFilesPresent":len(sel)-len(missing),"physicalFilesMissing":len(missing),
  "manifestErrors":errors,"strictPass":not errors and not missing,
- "nextMissing":missing[:100]
+ "nextMissing":missing[:100],"unownedSample":unowned[:100],"multiOwnedSample":multiOwned[:100]
 }
 out=ROOT/args.report;out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
 print(json.dumps({k:v for k,v in report.items() if k!="nextMissing"},indent=2))
