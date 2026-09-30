@@ -85,6 +85,8 @@
   },
   "audit": {
     "correctedMasterBuildingId": "bloodboundHouse -> veinHouseUp",
-    "masterBuildingCountExpected": 41
+    "masterBuildingCountExpected": 41,
+    "buildingIdsValidatedAgainstMaster": true,
+    "missingBuildingIds": []
   }
 }
