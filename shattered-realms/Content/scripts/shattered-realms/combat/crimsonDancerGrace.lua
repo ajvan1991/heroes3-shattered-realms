@@ -10,6 +10,7 @@ function Script:onBeforeAttack(server, battle, unit, other, payload)
     if not unit or not unit:isAlive() then return end
     if payload.isCounter then return end
     if (payload.attackIndex or 0) ~= 0 then return end
+    if not payload.targets or #payload.targets == 0 then return end
 
     server:addUnitBonus(battle, unit, {
         type = "BLOCKS_RETALIATION",
