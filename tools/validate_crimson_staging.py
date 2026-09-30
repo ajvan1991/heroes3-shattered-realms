@@ -221,6 +221,15 @@ for sid in crimsonSkills:
         if not s.get(tier,{}).get("effects"): emptyCrimson.append([sid,tier])
 ck("crimsonClassPassiveEffects",not emptyCrimson,emptyCrimson)
 
+# VCMI counts a starting skill as newly gained for offerCooldown. These two
+# passives start on every Crimson hero, so cooldown must stay zero or normal
+# Basic -> Advanced -> Expert progression can be withheld for many levels.
+passiveCooldown=[]
+for sid in crimsonSkills:
+    if skills.get(sid,{}).get("offerCooldown",0)!=0:
+        passiveCooldown.append([sid,skills.get(sid,{}).get("offerCooldown")])
+ck("crimsonClassPassiveOfferCooldown",not passiveCooldown,passiveCooldown)
+
 # Siege prefix is a derived resource contract: VCMI composes filenames from it.
 siege=town["siege"]
 prefix=siege.get("imagePrefix")
