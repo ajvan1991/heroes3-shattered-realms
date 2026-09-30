@@ -63,8 +63,8 @@
       "min": 1,
       "max": 3
     },
-    "fightValue": 80,
-    "aiValue": 80,
+    "fightValue": 75,
+    "aiValue": 75,
     "growth": 14,
     "special": true,
     "graphics": {
@@ -116,8 +116,8 @@
       "min": 2,
       "max": 4
     },
-    "fightValue": 130,
-    "aiValue": 130,
+    "fightValue": 120,
+    "aiValue": 120,
     "growth": 9,
     "special": true,
     "graphics": {
@@ -158,8 +158,8 @@
       "min": 2,
       "max": 5
     },
-    "fightValue": 175,
-    "aiValue": 175,
+    "fightValue": 165,
+    "aiValue": 165,
     "growth": 9,
     "special": true,
     "graphics": {
@@ -216,8 +216,8 @@
       "min": 3,
       "max": 6
     },
-    "fightValue": 230,
-    "aiValue": 230,
+    "fightValue": 220,
+    "aiValue": 220,
     "growth": 7,
     "special": true,
     "abilities": {
@@ -263,8 +263,8 @@
       "min": 4,
       "max": 7
     },
-    "fightValue": 300,
-    "aiValue": 300,
+    "fightValue": 285,
+    "aiValue": 285,
     "growth": 7,
     "special": true,
     "abilities": {
@@ -328,8 +328,8 @@
       "min": 6,
       "max": 9
     },
-    "fightValue": 410,
-    "aiValue": 410,
+    "fightValue": 390,
+    "aiValue": 390,
     "growth": 4,
     "special": true,
     "graphics": {
@@ -386,8 +386,8 @@
       "min": 7,
       "max": 10
     },
-    "fightValue": 530,
-    "aiValue": 530,
+    "fightValue": 500,
+    "aiValue": 500,
     "growth": 4,
     "special": true,
     "graphics": {
@@ -459,8 +459,8 @@
       "min": 9,
       "max": 13
     },
-    "fightValue": 690,
-    "aiValue": 690,
+    "fightValue": 650,
+    "aiValue": 650,
     "growth": 3,
     "special": true,
     "abilities": {
@@ -507,8 +507,8 @@
       "min": 10,
       "max": 15
     },
-    "fightValue": 870,
-    "aiValue": 870,
+    "fightValue": 825,
+    "aiValue": 825,
     "growth": 3,
     "special": true,
     "abilities": {
@@ -573,8 +573,8 @@
       "min": 14,
       "max": 20
     },
-    "fightValue": 1300,
-    "aiValue": 1300,
+    "fightValue": 1200,
+    "aiValue": 1200,
     "growth": 2,
     "special": true,
     "graphics": {
@@ -615,8 +615,8 @@
       "min": 16,
       "max": 23
     },
-    "fightValue": 1650,
-    "aiValue": 1650,
+    "fightValue": 1550,
+    "aiValue": 1550,
     "growth": 2,
     "special": true,
     "graphics": {
@@ -681,8 +681,8 @@
       "min": 30,
       "max": 45
     },
-    "fightValue": 3000,
-    "aiValue": 3000,
+    "fightValue": 2800,
+    "aiValue": 2800,
     "growth": 1,
     "special": true,
     "abilities": {
@@ -729,8 +729,8 @@
       "min": 35,
       "max": 50
     },
-    "fightValue": 3900,
-    "aiValue": 3900,
+    "fightValue": 3600,
+    "aiValue": 3600,
     "growth": 1,
     "special": true,
     "abilities": {
