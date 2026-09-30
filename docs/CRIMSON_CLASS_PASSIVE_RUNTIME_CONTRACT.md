@@ -34,3 +34,12 @@ Before G5/G7 can pass, verify:
 6. Save/reload preserves passive level and effects.
 
 This contract is intentionally explicit because class exclusivity is a Shattered Realms design rule, not an automatic VCMI hero-class feature.
+
+
+## offerCooldown correction
+
+Upstream VCMI documents and implements `offerCooldown` as a number of following level-ups during which a gained or upgraded skill is withheld from being offered again unless no alternative upgrade exists. Skills present on the starting hero count as gained at the starting level. Because every Crimson hero explicitly starts with the class passive, a value of 99 would effectively suppress ordinary Basic -> Advanced -> Expert progression. The active Crimson passives therefore use `offerCooldown: 0`, and the static validator rejects a regression away from zero.
+
+## Blood Command v0.1 truth-in-UI
+
+The current v0.1 implementation is deliberately native and bounded: Basic grants +1 Attack; Advanced grants +1 Attack/+1 Defense; Expert grants +2 Attack/+1 Defense. Earlier descriptions referring to conditional low-health or blood-shed behavior overstated the implemented mechanic and have been replaced with exact runtime descriptions. A conditional Blood Command can be revisited only when it has an implemented and tested combat-event contract.
