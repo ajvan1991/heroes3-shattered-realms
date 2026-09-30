@@ -136,9 +136,36 @@
       "name": "Remaining Crimson heroes",
       "priority": "B",
       "selectors": [
-        "HEROES/CRIMSON/"
+        "HEROES/CRIMSON/seris_",
+        "HEROES/CRIMSON/specialties/seris_",
+        "HEROES/CRIMSON/khaeren_",
+        "HEROES/CRIMSON/specialties/khaeren_",
+        "HEROES/CRIMSON/maelira_",
+        "HEROES/CRIMSON/specialties/maelira_",
+        "HEROES/CRIMSON/othrys_",
+        "HEROES/CRIMSON/specialties/othrys_",
+        "HEROES/CRIMSON/rhaevan_",
+        "HEROES/CRIMSON/specialties/rhaevan_",
+        "HEROES/CRIMSON/thaliaVeyn_",
+        "HEROES/CRIMSON/specialties/thaliaVeyn_",
+        "HEROES/CRIMSON/ilyrThorn_",
+        "HEROES/CRIMSON/specialties/ilyrThorn_",
+        "HEROES/CRIMSON/sevrin_",
+        "HEROES/CRIMSON/specialties/sevrin_",
+        "HEROES/CRIMSON/miraleth_",
+        "HEROES/CRIMSON/specialties/miraleth_",
+        "HEROES/CRIMSON/caelis_",
+        "HEROES/CRIMSON/specialties/caelis_",
+        "HEROES/CRIMSON/vespera_",
+        "HEROES/CRIMSON/specialties/vespera_",
+        "HEROES/CRIMSON/elyssVane_",
+        "HEROES/CRIMSON/specialties/elyssVane_",
+        "HEROES/CRIMSON/saereth_",
+        "HEROES/CRIMSON/specialties/saereth_",
+        "HEROES/CRIMSON/lysandraNoct_",
+        "HEROES/CRIMSON/specialties/lysandraNoct_"
       ],
-      "exit": "All 16 Crimson hero portrait pairs and specialty icon pairs exist and resolve; B2 smoke-test assets may overlap."
+      "exit": "The 14 non-smoke-test Crimson heroes have portrait and specialty icon pairs that exist and resolve; Vaelor/Aveline remain exclusively owned by B2."
     },
     {
       "id": "B5",
@@ -223,7 +250,7 @@
       "C3",
       "B8"
     ],
-    "selectorPolicy": "Every selector must match at least one manifest resource. A resource may belong to multiple batches.",
+    "selectorPolicy": "Every selector must match at least one manifest resource. Every manifest resource must have exactly one production batch owner.",
     "derivedFamilies": {
       "siege": {
         "count": 31,
