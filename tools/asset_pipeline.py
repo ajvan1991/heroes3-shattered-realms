@@ -6,13 +6,20 @@ production batches and verifies status claims against files that actually exist.
 """
 from __future__ import annotations
 import argparse,json,sys
-from collections import Counter,defaultdict
+from collections import Counter
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 MAN=ROOT/"production/asset-manifest.v0.1.json"
 BATCHES=ROOT/"production/asset-batches.v0.1.json"
 CONTENT=ROOT/"shattered-realms/Content"
 VALID={"MISSING","CONCEPT","SOURCE_READY","CONVERTED","VALIDATED_VCMI"}
+VALID_PRI={"A","B","C"}
+EXT_TYPE={".png":"PNG",".def":"DEF",".wav":"WAV",".ogg":"OGG",".pcx":"PCX",".bmp":"BMP",".webm":"WEBM",".mp3":"MP3"}
+
+def safe_resource(resource):
+    if not isinstance(resource,str) or not resource: return False
+    p=Path(resource)
+    return not p.is_absolute() and ".." not in p.parts and "\\x00" not in resource
 
 def load(): return json.loads(MAN.read_text(encoding="utf-8"))
 def exists(resource):
@@ -60,10 +67,19 @@ for b in batches:
         if not any(isinstance(r,str) and r.startswith(selector) for r in manifestResources):
             errors.append(f"batch selector matches no manifest asset: {b.get('id')}:{selector}")
 for a in assets:
-    r=a["resource"]
+    r=a.get("resource")
+    if not safe_resource(r):
+        errors.append(f"unsafe/invalid resource path: {r!r}")
+        continue
     if r in seen: errors.append(f"duplicate resource: {r}")
     seen.add(r)
+    if a.get("priority") not in VALID_PRI: errors.append(f"invalid priority {a.get('priority')}: {r}")
+    if not isinstance(a.get("bootSlice"),bool): errors.append(f"bootSlice must be boolean: {r}")
     if a.get("status") not in VALID: errors.append(f"invalid status {a.get('status')}: {r}")
+    ext=Path(r).suffix.lower(); expectedType=EXT_TYPE.get(ext)
+    if expectedType and str(a.get("type","")).upper()!=expectedType:
+        errors.append(f"type/extension mismatch {a.get('type')} vs {expectedType}: {r}")
+    if not expectedType: errors.append(f"unsupported asset extension {ext}: {r}")
     if a.get("status") in {"SOURCE_READY","CONVERTED","VALIDATED_VCMI"} and not exists(r):
         errors.append(f"status claims file but resource is absent/empty: {r}")
 
