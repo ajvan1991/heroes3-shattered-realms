@@ -109,6 +109,13 @@ multiOwned=sorted([r,sorted(set(resourceOwners.get(r,[])))] for r in manifestRes
 # job, however, needs at least one executable production batch owner.
 unownedBoot=sorted(a["resource"] for a in assets if a.get("bootSlice") and not resourceOwners.get(a.get("resource")))
 if unownedBoot: errors.append(f"boot-slice assets without production batch: {unownedBoot}")
+priorityMismatch=[]
+for a in assets:
+ owners=set(resourceOwners.get(a.get("resource"),[]))
+ for bid in owners:
+  bp=batchById.get(bid,{}).get("priority")
+  if bp!=a.get("priority"): priorityMismatch.append([a.get("resource"),a.get("priority"),bid,bp])
+if priorityMismatch: errors.append(f"asset/batch priority mismatch: {priorityMismatch}")
 
 def in_batch(a):
     if not args.batch or args.batch not in batchById: return not args.batch
@@ -120,7 +127,7 @@ missing=[a["resource"] for a in sel if not exists(a["resource"])]
 report={
  "scope":{"bootSlice":args.boot_slice,"priority":args.priority,"batch":args.batch},
  "manifestAssets":len(assets),"selected":len(sel),
- "batchCoverage":{"ownedResources":len(manifestResources)-len(unowned),"unownedResources":len(unowned),"unownedBootSlice":len(unownedBoot),"multiOwnedResources":len(multiOwned)},
+ "batchCoverage":{"ownedResources":len(manifestResources)-len(unowned),"unownedResources":len(unowned),"unownedBootSlice":len(unownedBoot),"multiOwnedResources":len(multiOwned),"priorityMismatches":len(priorityMismatch)},
  "byPriority":dict(sorted(by_pri.items())),"byStatus":dict(sorted(by_status.items())),"byType":dict(sorted(by_type.items())),
  "physicalFilesPresent":len(sel)-len(missing),"physicalFilesMissing":len(missing),
  "manifestErrors":errors,"strictPass":not errors and not missing,
