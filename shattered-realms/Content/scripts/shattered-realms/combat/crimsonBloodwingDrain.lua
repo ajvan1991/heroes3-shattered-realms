@@ -7,7 +7,9 @@ local function qualifyingDamage(payload)
     local killedAny = false
     for _, target in ipairs(payload.targets or {}) do
         if target.unit and target.unit:isLiving() then
-            total = total + (target.damage or 0)
+            local before = target.healthBeforeAttack or 0
+            local dealt = math.min(target.damage or 0, before)
+            total = total + dealt
             if (target.killed or 0) > 0 then killedAny = true end
         end
     end
