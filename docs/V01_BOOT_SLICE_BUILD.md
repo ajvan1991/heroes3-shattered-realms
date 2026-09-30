@@ -29,6 +29,7 @@ The generated candidate uses stable names:
 - `config/heroClasses.json`
 - `config/heroes.json`
 - `config/creatures.json`
+- `config/combatScripts.json` via the VCMI `scripts` content category
 
 It never registers a `*.staging.json` file and never edits `shattered-realms/mod.json`.
 
@@ -36,4 +37,4 @@ It never registers a `*.staging.json` file and never edits `shattered-realms/mod
 Local mod content is registered through explicit arrays in `mod.json` such as `factions`, `heroClasses`, `heroes`, `creatures`, `skills`, and `spells`. Keeping these arrays out of the production manifest is therefore the current isolation boundary.
 
 ## Before local runtime
-The candidate is not ready to copy into VCMI until strict build succeeds and the required script registration mechanism for custom combat scripts has been validated in the target VCMI version. A structurally generated candidate is not proof of engine compatibility.
+The candidate is not ready to copy into VCMI until strict build succeeds. Upstream VCMI's current `mod.json` schema explicitly provides a `scripts` content category, and `script.json` defines `combatEvent` scripts with required `description` and `priority`; the candidate generator now registers the Crimson combat script registry through that category. Local VCMI 1.7.5 still remains the final compatibility test. A structurally generated candidate is not proof of engine compatibility.
