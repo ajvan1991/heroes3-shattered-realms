@@ -6,13 +6,13 @@
       "might": 0,
       "magic": 0
     },
-    "offerCooldown": 99,
+    "offerCooldown": 0,
     "tags": {
       "classExclusive": true,
       "shatteredRealms": true
     },
     "basic": {
-      "description": "Basic Blood Command: Crimson creatures fight harder as blood is shed; the class mechanic remains capped and conditional.",
+      "description": "Basic Blood Command: +1 Attack.",
       "images": {
         "small": "SKILLS/SHATTERED/bloodCommand_small.png",
         "medium": "SKILLS/SHATTERED/bloodCommand_medium.png",
@@ -29,7 +29,7 @@
       }
     },
     "advanced": {
-      "description": "Advanced Blood Command: Improves Blood Command's low-health tactical payoff.",
+      "description": "Advanced Blood Command: +1 Attack and +1 Defense.",
       "images": {
         "small": "SKILLS/SHATTERED/bloodCommand_small.png",
         "medium": "SKILLS/SHATTERED/bloodCommand_medium.png",
@@ -52,7 +52,7 @@
       }
     },
     "expert": {
-      "description": "Expert Blood Command: Unlocks the full bounded Blood Command pattern without uncapped stacking.",
+      "description": "Expert Blood Command: +2 Attack and +1 Defense.",
       "images": {
         "small": "SKILLS/SHATTERED/bloodCommand_small.png",
         "medium": "SKILLS/SHATTERED/bloodCommand_medium.png",
@@ -82,7 +82,7 @@
       "might": 0,
       "magic": 0
     },
-    "offerCooldown": 99,
+    "offerCooldown": 0,
     "tags": {
       "classExclusive": true,
       "shatteredRealms": true
