@@ -879,7 +879,7 @@
       ],
       "mageGuild": 5,
       "primaryResource": "crystal",
-      "moatAbility": "core:spell.moat",
+      "moatAbility": "core:spell.castleMoat",
       "defaultTavern": 5,
       "tavern": {
         "bloodlord": 100,
