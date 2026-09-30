@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "styleLock": {
+    "identity": "Blood Elf aristocracy; never Inferno/demons",
+    "palette": [
+      "obsidian black",
+      "black marble",
+      "deep burgundy",
+      "blood-red crystal",
+      "pale stone"
+    ],
+    "lighting": "red moon, restrained crimson rim light",
+    "render": "Heroes III-inspired hand-painted dark fantasy, readable silhouettes, game-asset production reference",
+    "negative": [
+      "modern UI inside asset",
+      "sci-fi",
+      "fire demon",
+      "horned demon",
+      "photoreal gore",
+      "text",
+      "watermark"
+    ]
+  },
+  "jobs": [
+    {
+      "id": "townBackground",
+      "resource": "CRIMSON/TOWN/town_background.png",
+      "target": "800x374",
+      "prompt": "Crimson Court Blood Elf town at night beneath a vast red moon; black-marble palace terraces, obsidian towers, blood-red crystal windows, living crimson thorn gardens and Bloodwood, bridge and ceremonial court in foreground, clear buildable midground silhouettes, distant spires; elegant ancient aristocracy, not demonic; composition designed for a Heroes III town screen with readable building zones."
+    },
+    {
+      "id": "veinling",
+      "resources": [
+        "SPRITES/CRIMSON/veinling.DEF",
+        "SPRITES/CRIMSON/icons/veinling_large.png",
+        "SPRITES/CRIMSON/icons/veinling_small.png"
+      ],
+      "prompt": "Tier-1 Veinling, young Blood Elf court initiate, lean pale figure, dark fitted ceremonial leather, small crimson crystal accents, ritual scar motifs without gore, short blade, wary predatory stance; simple readable silhouette suitable for tiny turn-based strategy battle sprite."
+    },
+    {
+      "id": "bloodbound",
+      "resources": [
+        "SPRITES/CRIMSON/bloodbound.DEF",
+        "SPRITES/CRIMSON/icons/bloodbound_large.png",
+        "SPRITES/CRIMSON/icons/bloodbound_small.png"
+      ],
+      "prompt": "Bloodbound upgrade of Veinling, disciplined Blood Elf initiate, same lineage and proportions but stronger dark segmented armour, crimson oath bindings and crystal clasp, sharper blade, controlled aggressive stance; visibly upgraded while preserving base-unit silhouette."
+    },
+    {
+      "id": "thornDancer",
+      "resources": [
+        "SPRITES/CRIMSON/thornDancer.DEF",
+        "SPRITES/CRIMSON/icons/thornDancer_large.png",
+        "SPRITES/CRIMSON/icons/thornDancer_small.png"
+      ],
+      "prompt": "Tier-2 Thorn Dancer, agile Blood Elf duelist, elegant pale aristocrat, black-and-burgundy light armour, curved thorn-blade and living crimson thorn ribbon motif, dancer-like combat stance, long readable limbs and weapon arc; dangerous elegance, not bulky."
+    },
+    {
+      "id": "crimsonDancer",
+      "resources": [
+        "SPRITES/CRIMSON/crimsonDancer.DEF",
+        "SPRITES/CRIMSON/icons/crimsonDancer_large.png",
+        "SPRITES/CRIMSON/icons/crimsonDancer_small.png"
+      ],
+      "prompt": "Crimson Dancer upgrade, master Blood Elf thorn duelist, ceremonial black armour with refined blood-red crystal filigree, stronger thorn-ribbon weapon arc, poised lethal dance stance; upgrade reads as precision and prestige rather than heavier armour."
+    },
+    {
+      "id": "vaelor",
+      "resources": [
+        "HEROES/CRIMSON/vaelor_large.png",
+        "HEROES/CRIMSON/vaelor_small.png"
+      ],
+      "prompt": "Vaelor, Bloodlord hero portrait, severe male Blood Elf martial aristocrat, pale skin, dark hair, restrained black plate and burgundy cloak, small blood-red crystal insignia, intelligent commanding expression, ancient court background, strong face silhouette at small UI scale."
+    },
+    {
+      "id": "aveline",
+      "resources": [
+        "HEROES/CRIMSON/aveline_large.png",
+        "HEROES/CRIMSON/aveline_small.png"
+      ],
+      "prompt": "Aveline, Sanguine Seer hero portrait, female Blood Elf arcane aristocrat, pale complexion, silver-white hair, dark ceremonial robes and armour, restrained crimson crystal divination ornaments, calm unsettling gaze, red-moon court background, readable face at small UI scale."
+    }
+  ],
+  "animationRule": "Creature concept art is only a source. DEF/animation completion requires production of required VCMI animation groups and conversion; a single generated sheet never counts as CONVERTED.",
+  "statusRule": "Prompt entries do not change asset-manifest status."
+}
