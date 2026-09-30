@@ -18,6 +18,14 @@
 - scripted event abilities: COMBAT_EVENT_TRIGGER
 - Phoenix resurrection: built-in combat/rebirth script
 - authoritative healing/damage/bonus mutation: BattleServer
+- Crimson Archon adjacency: native UNIT_ADJACENT limiter
+- siege moat baseline: verified core:spell.castleMoat
+
+## Recently hardened
+- Blood Feast now counts lethal hits through pre-hit health and clamps overkill
+- Bloodied now measures wounds in the surviving stack rather than counting dead creatures toward the threshold
+- all 16 regular heroes have engine-backed specialties and are Tavern-eligible at the data level
+- T2/T5 horde base+upgrade chains and firstAidTent Blacksmith identifier match upstream town patterns
 
 ## Still gated
 - final validation of every custom Lua call on local VCMI 1.7.5
