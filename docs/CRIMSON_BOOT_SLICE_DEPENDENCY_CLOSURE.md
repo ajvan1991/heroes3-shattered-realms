@@ -8,7 +8,7 @@ The candidate building set was traversed recursively through every master `requi
 - additional buildings pulled in by closure: 0
 - dangling building references: 0
 - matching town-screen structures: 22
-- pruned Hall layout: 4 non-empty rows / 9 slots
+- pruned Hall content: 9 non-empty slots, but candidate must preserve exactly **5 Hall rows**; empty content is represented inside the required five-row shape rather than deleting a row
 
 The originally selected boot set is therefore already dependency-closed.
 
@@ -26,7 +26,9 @@ A reduced faction file must be generated from master data by:
 
 Master faction staging is never destructively reduced.
 
-## Important VCMI compatibility note
-The master Crimson town follows the normal seven-tier faction model. A two-tier faction representation may not be a valid production faction shape for every VCMI subsystem even if its references are closed. Therefore the first generated candidate must be treated as an experiment. If VCMI 1.7.5 requires seven creature tier entries, the safer candidate will keep seven data tiers while restricting the test surface/assets rather than fabricating an unsupported two-tier town format.
+## VCMI schema decision — resolved
+Current upstream `faction.json` explicitly requires `town.creatures` to contain **7 to 8 tier entries** and `hallSlots` to contain **exactly 5 rows**. Therefore a literal two-tier faction candidate and a four-row pruned Hall are invalid schema shapes.
+
+The candidate will keep all seven Crimson creature tier entries at the faction-data level. T1/T2 remains the first **test and asset-production surface**, not a destructive reduction of the faction's tier vector. Likewise Hall pruning may remove building IDs/slots but must preserve a valid five-row container.
 
 No activation is performed by this audit.
