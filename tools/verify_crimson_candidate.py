@@ -76,15 +76,19 @@ ck(report.get("registeredSkills")==["bloodCommand","crimsonDivination"],"candida
 # Prefix-derived resources are independently reconstructed from generated faction data.
 fac=load(C/"Content/config/factions.json")["crimsonCourt"]
 siegePrefix=fac["town"]["siege"]["imagePrefix"]
+ck(safe_rel(siegePrefix),f"unsafe siege imagePrefix: {siegePrefix}")
 suffixes=["BACK","TW21","TW22","TW2C","MAN1","MAN2","MANC","TW11","TW12","TW1C","DRW1","DRW2","DRW3","ARCH","WA61","WA62","WA63","WA41","WA42","WA43","WA31","WA32","WA33","WA11","WA12","WA13","MOAT","MLIP","WA2","WA5","TPWL"]
 derivedSiege=[siegePrefix+s+".png" for s in suffixes]
 puzzlePrefix=fac["puzzleMap"]["prefix"]
+ck(safe_rel(puzzlePrefix),f"unsafe puzzle prefix: {puzzlePrefix}")
 derivedPuzzle=[puzzlePrefix+f"{i:02d}.png" for i in range(48)]
 actualMissingSiege=[r for r in derivedSiege if not (C/"Content"/r).is_file() or (C/"Content"/r).stat().st_size==0]
 actualMissingPuzzle=[r for r in derivedPuzzle if not (C/"Content"/r).is_file() or (C/"Content"/r).stat().st_size==0]
+ck(len(derivedSiege)==len(set(derivedSiege))==31,"derived siege family duplicate/count mismatch")
 ck(report.get("derivedSiegeReferences")==31,"candidate report siege reference count mismatch")
 ck(report.get("missingDerivedSiege")==len(actualMissingSiege),"candidate report siege missing count mismatch")
 ck(report.get("missingDerived")==actualMissingSiege,"candidate report siege missing list mismatch")
+ck(len(derivedPuzzle)==len(set(derivedPuzzle))==48,"derived puzzle family duplicate/count mismatch")
 ck(report.get("derivedPuzzleReferences")==48,"candidate report puzzle reference count mismatch")
 ck(report.get("missingDerivedPuzzle")==len(actualMissingPuzzle),"candidate report puzzle missing count mismatch")
 ck(report.get("missingPuzzle")==actualMissingPuzzle,"candidate report puzzle missing list mismatch")
