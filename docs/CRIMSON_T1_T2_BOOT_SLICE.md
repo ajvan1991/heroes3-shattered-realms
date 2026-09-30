@@ -49,6 +49,11 @@ Required economic/GUI shell:
 - Fort / Citadel / Castle
 - Mage Guild I-V structures
 
+## Dependency audit correction
+The combat-script registry is wrapped by a top-level `scripts` object. The T1/T2 subtypes `crimsonBloodied` and `crimsonDancerGrace` are both present there; an earlier ad-hoc root-key check would incorrectly report them missing. Candidate generation must always unwrap registry containers according to the VCMI content schema.
+
+Aveline's T4 creature specialty remains the only intentional out-of-slice gameplay entity reference in the two-hero smoke set. Master data is not changed for this.
+
 ## Runtime assertions
 1. Vein House recruits Veinling.
 2. upgraded T1 dwelling recruits Bloodbound.
