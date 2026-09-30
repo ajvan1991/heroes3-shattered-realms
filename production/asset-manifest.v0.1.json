@@ -13,21 +13,24 @@
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/icons/veinling_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/icons/veinling_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SOUNDS/CRIMSON/veinling_attack.wav",
@@ -69,21 +72,24 @@
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/icons/bloodbound_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/icons/bloodbound_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SOUNDS/CRIMSON/bloodbound_attack.wav",
@@ -125,21 +131,24 @@
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/icons/thornDancer_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/icons/thornDancer_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SOUNDS/CRIMSON/thornDancer_attack.wav",
@@ -181,21 +190,24 @@
       "type": "DEF",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/icons/crimsonDancer_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/icons/crimsonDancer_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/creatures.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SOUNDS/CRIMSON/crimsonDancer_attack.wav",
@@ -811,70 +823,80 @@
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/MAP/town_village_editor.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/MAP/town_castle.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/MAP/town_castle_editor.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/MAP/town_capitol.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/MAP/town_capitol_editor.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/building_icons.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/mage_guild_window.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/hall_background.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/mage_guild_background.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/MUSIC/crimson_court.ogg",
@@ -888,952 +910,1088 @@
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/tower_small.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/villageHall.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/villageHall_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/villageHall_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/townHall.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/townHall_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/townHall_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/cityHall.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/cityHall_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/cityHall_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/capitol.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/capitol_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/capitol_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/tavern.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/tavern_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/tavern_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/marketplace.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/marketplace_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/marketplace_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/resourceSilo.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/resourceSilo_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/resourceSilo_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/blacksmith.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/blacksmith_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/blacksmith_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/fort.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/fort_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/fort_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/citadel.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/citadel_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/citadel_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/castle.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/castle_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/castle_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild1.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild1_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild1_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild2.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild2_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild2_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild3.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild3_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild3_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild4.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild4_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild4_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild5.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild5_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/mageGuild5_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/veinHouse.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/veinHouse_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/veinHouse_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/veinHouseUp.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/veinHouseUp_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/veinHouseUp_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/thornGallery.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/thornGallery_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/thornGallery_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/crimsonGallery.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/crimsonGallery_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/crimsonGallery_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/gorewingRoost.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/gorewingRoost_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/gorewingRoost_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/bloodwingRoost.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/bloodwingRoost_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/bloodwingRoost_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hallVeins.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hallVeins_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hallVeins_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/oracleHall.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/oracleHall_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/oracleHall_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/scarletLodge.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/scarletLodge_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/scarletLodge_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/bloodstalkerLodge.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/bloodstalkerLodge_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/bloodstalkerLodge_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/sanguinePalace.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/sanguinePalace_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/sanguinePalace_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/archonPalace.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/archonPalace_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/archonPalace_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/heartAviary.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/heartAviary_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/heartAviary_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/eternalAviary.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/eternalAviary_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/eternalAviary_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/courtVeins.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/courtVeins_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/courtVeins_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/scarletConservatory.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/scarletConservatory_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/scarletConservatory_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/firstChalice.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/firstChalice_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/firstChalice_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/moonlitMenagerie.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/moonlitMenagerie_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/moonlitMenagerie_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/thornTribunal.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/thornTribunal_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/thornTribunal_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/redMoonObservatory.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/redMoonObservatory_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/redMoonObservatory_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hordeThorns.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hordeThorns_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hordeThorns_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hordeHunt.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hordeHunt_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hordeHunt_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/grail.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/grail_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/grail_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hordeThornsUp.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hordeThornsUp_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hordeThornsUp_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hordeHuntUp.DEF",
       "type": "DEF",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hordeHuntUp_border.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/structures/hordeHuntUp_area.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/TOWN/town_background.png",
       "type": "PNG",
       "priority": "A",
       "source": "crimson/faction.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/heroes/bloodlord_female_battle.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/heroClasses.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/heroes/bloodlord_male_battle.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/heroClasses.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/heroes/CRIMSON_HERO_MAP.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/heroClasses.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/heroes/CRIMSON_HERO_EDITOR.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/heroClasses.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/heroes/sanguineSeer_female_battle.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/heroClasses.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "SPRITES/CRIMSON/heroes/sanguineSeer_male_battle.DEF",
       "type": "DEF",
       "priority": "B",
       "source": "crimson/heroClasses.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "HEROES/CRIMSON/vaelor_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "HEROES/CRIMSON/vaelor_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "HEROES/CRIMSON/specialties/vaelor_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "HEROES/CRIMSON/specialties/vaelor_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "HEROES/CRIMSON/seris_large.png",
@@ -2036,28 +2194,32 @@
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "HEROES/CRIMSON/aveline_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "HEROES/CRIMSON/specialties/aveline_large.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "HEROES/CRIMSON/specialties/aveline_small.png",
       "type": "PNG",
       "priority": "B",
       "source": "crimson/heroes.staging.json",
-      "status": "MISSING"
+      "status": "MISSING",
+      "bootSlice": true
     },
     {
       "resource": "HEROES/CRIMSON/sevrin_large.png",
@@ -3171,7 +3333,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGTW21.png",
@@ -3179,7 +3342,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGTW22.png",
@@ -3187,7 +3351,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGTW2C.png",
@@ -3195,7 +3360,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGMAN1.png",
@@ -3203,7 +3369,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGMAN2.png",
@@ -3211,7 +3378,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGMANC.png",
@@ -3219,7 +3387,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGTW11.png",
@@ -3227,7 +3396,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGTW12.png",
@@ -3235,7 +3405,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGTW1C.png",
@@ -3243,7 +3414,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGDRW1.png",
@@ -3251,7 +3423,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGDRW2.png",
@@ -3259,7 +3432,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGDRW3.png",
@@ -3267,7 +3441,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGARCH.png",
@@ -3275,7 +3450,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA61.png",
@@ -3283,7 +3459,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA62.png",
@@ -3291,7 +3468,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA63.png",
@@ -3299,7 +3477,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA41.png",
@@ -3307,7 +3486,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA42.png",
@@ -3315,7 +3495,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA43.png",
@@ -3323,7 +3504,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA31.png",
@@ -3331,7 +3513,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA32.png",
@@ -3339,7 +3522,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA33.png",
@@ -3347,7 +3531,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA11.png",
@@ -3355,7 +3540,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA12.png",
@@ -3363,7 +3549,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA13.png",
@@ -3371,7 +3558,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGMOAT.png",
@@ -3379,7 +3567,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGMLIP.png",
@@ -3387,7 +3576,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA2.png",
@@ -3395,7 +3585,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGWA5.png",
@@ -3403,7 +3594,8 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     },
     {
       "resource": "CRIMSON/SIEGE/CRSGTPWL.png",
@@ -3411,10 +3603,16 @@
       "priority": "A",
       "source": "crimson/faction.staging.json:imagePrefix-derived",
       "status": "MISSING",
-      "derived": true
+      "derived": true,
+      "bootSlice": true
     }
   ],
   "notes": [
     "31 required siege resources derived from imagePrefix were added after upstream Faction_Format audit; optional DRWC is intentionally not counted."
-  ]
+  ],
+  "bootSlice": {
+    "name": "crimson-t1-t2",
+    "directAndDerivedAssetJobs": 193,
+    "note": "Candidate marker only; final candidate must still omit references to non-included entities rather than relying on missing assets."
+  }
 }
