@@ -5,7 +5,7 @@ This tool never fabricates placeholder art. It turns the manifest into determini
 production batches and verifies status claims against files that actually exist.
 """
 from __future__ import annotations
-import argparse,json,sys
+import argparse,json,re,sys
 from collections import Counter
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -17,9 +17,9 @@ VALID_PRI={"A","B","C"}
 EXT_TYPE={".png":"PNG",".def":"DEF",".wav":"WAV",".ogg":"OGG",".pcx":"PCX",".bmp":"BMP",".webm":"WEBM",".mp3":"MP3"}
 
 def safe_resource(resource):
-    if not isinstance(resource,str) or not resource: return False
-    p=Path(resource)
-    return not p.is_absolute() and ".." not in p.parts and "\\x00" not in resource
+    if not isinstance(resource,str) or not resource or "\x00" in resource or "\\" in resource: return False
+    if resource.startswith("/") or resource.startswith("//") or re.match(r"^[A-Za-z]:",resource): return False
+    return all(part not in {"","..","."} for part in resource.split("/"))
 
 def load(): return json.loads(MAN.read_text(encoding="utf-8"))
 def exists(resource):
@@ -76,6 +76,13 @@ for b in batches:
     if not isinstance(b.get("exit"),str) or not b.get("exit").strip(): errors.append(f"missing batch exit contract: {b.get('id')}")
 if args.batch and args.batch not in batchById:
     errors.append(f"unknown asset batch: {args.batch}; expected one of {sorted(batchById)}")
+for b in batches:
+    selectors=b.get("selectors")
+    if not isinstance(selectors,list) or not selectors: errors.append(f"batch has no selectors: {b.get('id')}")
+    elif len(selectors)!=len(set(selectors)): errors.append(f"duplicate selectors in batch: {b.get('id')}")
+    for selector in selectors or []:
+        if not safe_resource(selector.rstrip("/") if selector.endswith("/") else selector):
+            errors.append(f"unsafe batch selector: {b.get('id')}:{selector}")
 for a in assets:
     r=a.get("resource")
     if not safe_resource(r):
@@ -97,6 +104,7 @@ def in_batch(a):
     if not args.batch or args.batch not in batchById: return not args.batch
     return any(a["resource"].startswith(s) for s in batchById[args.batch].get("selectors",[]))
 sel=[a for a in assets if (not args.boot_slice or a.get("bootSlice")) and (not args.priority or a.get("priority")==args.priority) and in_batch(a)]
+if args.batch in batchById and not sel: errors.append(f"batch resolves to zero selected assets: {args.batch}")
 by_status=Counter(a["status"] for a in sel); by_type=Counter(a["type"] for a in sel); by_pri=Counter(a["priority"] for a in sel)
 missing=[a["resource"] for a in sel if not exists(a["resource"])]
 report={
