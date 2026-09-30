@@ -390,13 +390,13 @@
     },
     "level": 4,
     "power": 0,
-    "defaultGainChance": 20,
+    "defaultGainChance": 0,
     "gainChance": {
-      "crimsonCourt": 20,
-      "abyss": 20,
-      "veil": 20,
-      "hollow": 20,
-      "starfall": 20
+      "crimsonCourt": 0,
+      "abyss": 0,
+      "veil": 0,
+      "hollow": 0,
+      "starfall": 0
     },
     "targetType": "CREATURE",
     "flags": {
@@ -412,25 +412,25 @@
     "levels": {
       "none": {
         "range": "0",
-        "description": "Mortal Anchor — healing/resurrection suppression requires a validated VCMI hook; universal sustain-counter design retained but runtime effect remains gated.",
+        "description": "Mortal Anchor — reserved until a verified healing/resurrection counter effect is available; unavailable in normal spell generation for v0.1.",
         "cost": 16,
         "power": 0
       },
       "basic": {
         "range": "0",
-        "description": "Mortal Anchor — healing/resurrection suppression requires a validated VCMI hook; universal sustain-counter design retained but runtime effect remains gated.",
+        "description": "Mortal Anchor — reserved until a verified healing/resurrection counter effect is available; unavailable in normal spell generation for v0.1.",
         "cost": 16,
         "power": 0
       },
       "advanced": {
         "range": "0",
-        "description": "Mortal Anchor — healing/resurrection suppression requires a validated VCMI hook; universal sustain-counter design retained but runtime effect remains gated.",
+        "description": "Mortal Anchor — reserved until a verified healing/resurrection counter effect is available; unavailable in normal spell generation for v0.1.",
         "cost": 17,
         "power": 0
       },
       "expert": {
         "range": "0",
-        "description": "Mortal Anchor — healing/resurrection suppression requires a validated VCMI hook; universal sustain-counter design retained but runtime effect remains gated.",
+        "description": "Mortal Anchor — reserved until a verified healing/resurrection counter effect is available; unavailable in normal spell generation for v0.1.",
         "cost": 18,
         "power": 0
       }
