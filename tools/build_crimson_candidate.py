@@ -39,7 +39,8 @@ reg=load(CFG/"scripts/combatScripts.staging.json")
 # VCMI mod schema exposes `scripts` as a first-class content registration category.
 dump(OUT/"Content/config/combatScripts.json",reg)
 script_src=SRC/"Content/scripts/shattered-realms"
-if script_src.exists(): shutil.copytree(script_src,OUT/"Content/scripts/shattered-realms")
+if not script_src.is_dir(): raise SystemExit("FAIL: Crimson script source directory is missing")
+shutil.copytree(script_src,OUT/"Content/scripts/shattered-realms")
 
 base=load(SRC/"mod.json")
 base.update({
@@ -69,7 +70,8 @@ for r in sorted(refs):
     # VCMI resource lookup is richer than filesystem lookup; this is a conservative local preflight.
     if not any((SRC/"Content"/r).exists() for _ in [0]): missing.append(r)
 
-report={"candidate":str(OUT.relative_to(ROOT)),"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"runtimeReady":not missing}
+lua=list((OUT/"Content/scripts/shattered-realms").rglob("*.lua"))
+report={"candidate":str(OUT.relative_to(ROOT)),"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"copiedLuaFiles":len(lua),"runtimeReady":not missing}
 dump(OUT/"candidate-report.json",report)
 if missing and not args.allow_missing_assets:
     print(f"FAIL: {len(missing)} direct media resources are missing. Use --allow-missing-assets only for structural inspection.")
