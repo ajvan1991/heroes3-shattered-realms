@@ -13,7 +13,7 @@
 - [x] twelve town names
 - [ ] exact VCMI core identifiers revalidated on target 1.7.5 before activation
 - [ ] building numeric IDs / dwelling semantics validated where required
-- [ ] map-object templates for village/fort/capitol
+- [x] map-object templates for village/castle/capitol staged (resource files still missing)
 - [ ] structures coordinates after final town art
 - [ ] siege coordinates after final siege art
 - [ ] puzzle-piece coordinates after final puzzle art
@@ -90,7 +90,8 @@ A checkmark means implemented or structurally staged, not necessarily locally pr
 - local VCMI 1.7.5 schema/load test of staging identifiers
 - verification of dynamic Crimson Archon adjacency refresh
 - verification of temporary-duration enum/turn handling in custom scripts
-- Mortal Anchor anti-heal/rebirth hook
+- Mortal Anchor is RESERVED/disabled until a verified anti-heal/rebirth hook exists
 - final faction/town reference namespace pass
+- five narrative-only custom-specialty heroes are reserved from the v0.1 Tavern until engine-backed specialty implementations exist
 
 The main mod manifest remains intentionally conservative until resource and local-load blockers are cleared.
