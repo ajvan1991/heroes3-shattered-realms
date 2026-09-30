@@ -40,12 +40,6 @@ if v.returncode: raise SystemExit(v.returncode)
 if OUT.exists(): shutil.rmtree(OUT)
 (OUT/"Content/config").mkdir(parents=True)
 
-# Stable production-style names; never register *.staging.json.
-for category,src in FILES.items():
-    data=load(src)
-    if category=="spells": data={k:data[k] for k in sorted(candidateSpellIds)}
-    dump(OUT/f"Content/config/{category}.json",data)
-
 # Candidate spell surface includes only universal spells intentionally active in v0.1.
 # Reserved spells remain in staging but cannot leak into the activation package.
 allSpells=load(CFG/"spells/counterplay.staging.json")
@@ -57,6 +51,13 @@ if missingSpells: raise SystemExit(f"FAIL: missing required active v0.1 spells: 
 leakedReserved=sorted(candidateSpellIds & set(cp["reservedDisabled"]))
 if leakedReserved: raise SystemExit(f"FAIL: reserved spells selected for candidate: {leakedReserved}")
 FILES["spells"]=CFG/"spells/counterplay.staging.json"
+
+
+# Stable production-style names; never register *.staging.json.
+for category,src in FILES.items():
+    data=load(src)
+    if category=="spells": data={k:data[k] for k in sorted(candidateSpellIds)}
+    dump(OUT/f"Content/config/{category}.json",data)
 
 # Candidate skill surface is deliberately Crimson-only. Future faction passives remain
 # in shared staging but must not leak into the first activation candidate.
