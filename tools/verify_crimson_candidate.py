@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]; C=ROOT/"build/crimson-v01-candidate"
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
 errors=[]
 def safe_rel(v):
- p=Path(v); return bool(v) and not p.is_absolute() and ".." not in p.parts and "\\x00" not in v
+ p=Path(v); return bool(v) and not p.is_absolute() and ".." not in p.parts and "\x00" not in v
 def ck(ok,msg):
  if not ok: errors.append(msg)
 if not C.is_dir(): raise SystemExit("Candidate missing; run build_crimson_candidate.py first.")
