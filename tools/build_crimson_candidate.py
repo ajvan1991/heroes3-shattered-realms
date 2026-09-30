@@ -52,10 +52,16 @@ if missingSkills: raise SystemExit(f"FAIL: missing required Crimson skills: {mis
 candidateSkills={k:allSkills[k] for k in crimsonSkillIds}
 dump(OUT/"Content/config/skills.json",candidateSkills)
 
-# Combat scripts are copied as source data because creature event triggers need them.
-reg=load(CFG/"scripts/combatScripts.staging.json")
-# VCMI mod schema exposes `scripts` as a first-class content registration category.
-dump(OUT/"Content/config/combatScripts.json",reg)
+# Candidate script registry is the exact union of executable combat-event and
+# spell-effect scripts used by the Crimson v0.1 surface.
+combatReg=load(CFG/"scripts/combatScripts.staging.json")
+spellReg=load(CFG/"scripts/spellEffects.staging.json")
+combatScripts=combatReg.get("scripts",{})
+spellScripts=spellReg.get("scripts",{})
+duplicateScriptIds=sorted(set(combatScripts)&set(spellScripts))
+if duplicateScriptIds: raise SystemExit(f"FAIL: duplicate script IDs across registries: {duplicateScriptIds}")
+reg={"scripts":{**combatScripts,**spellScripts}}
+dump(OUT/"Content/config/scripts.json",reg)
 script_src=SRC/"Content/scripts/shattered-realms"
 if not script_src.is_dir(): raise SystemExit("FAIL: Crimson script source directory is missing")
 registeredScriptPaths=[]
@@ -82,7 +88,7 @@ base.update({
  "heroes":["config/heroes.json"],
  "creatures":["config/creatures.json"],
  "skills":["config/skills.json"],
- "scripts":["config/combatScripts.json"],
+ "scripts":["config/scripts.json"],
 })
 dump(OUT/"mod.json",base)
 
