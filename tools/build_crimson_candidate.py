@@ -34,7 +34,7 @@ for validator in ("validate_crimson_staging.py","validate_reference_closure.py")
 # Candidate construction validates gate bookkeeping but must not depend on the
 # transient assertion that G3/G4 are still blocked; the strict build is itself future G4 evidence.
 v=subprocess.run([sys.executable,str(ROOT/"tools/validate_runtime_gates.py"),"--pre-build"])
- if v.returncode: raise SystemExit(v.returncode)
+if v.returncode: raise SystemExit(v.returncode)
 
 if OUT.exists(): shutil.rmtree(OUT)
 (OUT/"Content/config").mkdir(parents=True)
