@@ -52,6 +52,21 @@ for i,x in b.items():
     if r and r not in b: dang.append([i,"upgrades",r])
 ck("buildingGraph",not dang,dang)
 
+# Upgrade edges must be acyclic; otherwise town construction can become impossible.
+cycles=[]
+for start in b:
+    seen=[]; cur=start
+    while cur in b and b[cur].get("upgrades"):
+        if cur in seen:
+            cycles.append(seen[seen.index(cur):]+[cur]); break
+        seen.append(cur); cur=b[cur]["upgrades"]
+ck("buildingUpgradeCycles",not cycles,cycles)
+
+# Numeric building IDs are part of the town contract and must remain unique.
+ids=[x.get("id") for x in b.values()]
+dupeIds=sorted({x for x in ids if ids.count(x)>1})
+ck("buildingIds",all(isinstance(x,int) for x in ids) and not dupeIds,{"duplicates":dupeIds,"count":len(ids)})
+
 hall=[x for row in town.get("hallSlots",[]) for slot in row for x in slot]
 ck("hallReferences",all(x in b for x in hall),[x for x in hall if x not in b])
 tiers=[x for tier in town.get("creatures",[]) for x in tier]
