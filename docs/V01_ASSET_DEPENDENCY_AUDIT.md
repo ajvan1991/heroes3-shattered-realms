@@ -81,3 +81,12 @@ Create a machine-readable asset manifest grouped by entity and priority, then bu
 - saving/reloading.
 
 Only after that boot slice works should the activation candidate expand toward all 14 creatures and 16 heroes.
+
+
+## Prefix-derived closure update
+
+The production manifest now includes the full convention-derived resource surface used by the Crimson candidate. In addition to the 451 directly quoted media references, the package requires the 31 mandatory siege-prefix images and the 48 puzzle-prefix images `CRP00.png` through `CRP47.png`. These derived entries are explicit production jobs rather than hidden builder-only requirements.
+
+The current machine-readable manifest contains **530 asset jobs** total: **215 Priority A**, **242 Priority B**, and **73 Priority C**. This is the production-job count after adding the 48 puzzle pieces; it should not be confused with the original 451 direct-reference count.
+
+`tools/asset_pipeline.py` now rejects a stale summary and rejects any missing or unexpected member of the exact 48-piece puzzle family.
