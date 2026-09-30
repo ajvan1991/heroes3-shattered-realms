@@ -29,6 +29,7 @@ def exists(resource):
 ap=argparse.ArgumentParser()
 ap.add_argument("--boot-slice",action="store_true")
 ap.add_argument("--priority",choices=["A","B","C"])
+ap.add_argument("--batch",help="Select one production batch ID from asset-batches.v0.1.json")
 ap.add_argument("--strict",action="store_true")
 ap.add_argument("--report",default="production/asset-pipeline.latest.json")
 args=ap.parse_args()
@@ -66,6 +67,9 @@ for b in batches:
     for selector in b.get("selectors",[]):
         if not any(isinstance(r,str) and r.startswith(selector) for r in manifestResources):
             errors.append(f"batch selector matches no manifest asset: {b.get('id')}:{selector}")
+batchById={b.get("id"):b for b in batches}
+if args.batch and args.batch not in batchById:
+    errors.append(f"unknown asset batch: {args.batch}; expected one of {sorted(batchById)}")
 for a in assets:
     r=a.get("resource")
     if not safe_resource(r):
@@ -83,11 +87,14 @@ for a in assets:
     if a.get("status") in {"SOURCE_READY","CONVERTED","VALIDATED_VCMI"} and not exists(r):
         errors.append(f"status claims file but resource is absent/empty: {r}")
 
-sel=[a for a in assets if (not args.boot_slice or a.get("bootSlice")) and (not args.priority or a.get("priority")==args.priority)]
+def in_batch(a):
+    if not args.batch or args.batch not in batchById: return not args.batch
+    return any(a["resource"].startswith(s) for s in batchById[args.batch].get("selectors",[]))
+sel=[a for a in assets if (not args.boot_slice or a.get("bootSlice")) and (not args.priority or a.get("priority")==args.priority) and in_batch(a)]
 by_status=Counter(a["status"] for a in sel); by_type=Counter(a["type"] for a in sel); by_pri=Counter(a["priority"] for a in sel)
 missing=[a["resource"] for a in sel if not exists(a["resource"])]
 report={
- "scope":{"bootSlice":args.boot_slice,"priority":args.priority},
+ "scope":{"bootSlice":args.boot_slice,"priority":args.priority,"batch":args.batch},
  "manifestAssets":len(assets),"selected":len(sel),
  "byPriority":dict(sorted(by_pri.items())),"byStatus":dict(sorted(by_status.items())),"byType":dict(sorted(by_type.items())),
  "physicalFilesPresent":len(sel)-len(missing),"physicalFilesMissing":len(missing),
