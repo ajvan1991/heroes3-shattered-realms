@@ -93,19 +93,29 @@ faction=load(OUT/"Content/config/factions.json")["crimsonCourt"]
 prefix=faction["town"]["siege"]["imagePrefix"]
 siegeSuffixes=["BACK","TW21","TW22","TW2C","MAN1","MAN2","MANC","TW11","TW12","TW1C","DRW1","DRW2","DRW3","ARCH","WA61","WA62","WA63","WA41","WA42","WA43","WA31","WA32","WA33","WA11","WA12","WA13","MOAT","MLIP","WA2","WA5","TPWL"]
 derivedSiege=[prefix+s+".png" for s in siegeSuffixes]
+
+# Puzzle-map pieces are also prefix-derived by VCMI: <prefix><index>.png.
+puzzle=faction["puzzleMap"]; puzzlePrefix=puzzle["prefix"]
+derivedPuzzle=[puzzlePrefix+str(i)+".png" for i in range(1,49)]
 missingDerived=[]; copiedDerived=[]
 for r in derivedSiege:
     src=SRC/"Content"/r
     if not src.is_file() or src.stat().st_size==0:
         missingDerived.append(r); continue
     dst=OUT/"Content"/r; dst.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(src,dst); copiedDerived.append(r)
+missingPuzzle=[]; copiedPuzzle=[]
+for r in derivedPuzzle:
+    src=SRC/"Content"/r
+    if not src.is_file() or src.stat().st_size==0:
+        missingPuzzle.append(r); continue
+    dst=OUT/"Content"/r; dst.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(src,dst); copiedPuzzle.append(r)
 
 
 lua=list((OUT/"Content/scripts/shattered-realms").rglob("*.lua"))
 skillIds=sorted(load(OUT/"Content/config/skills.json").keys())
-report={"candidate":str(OUT.relative_to(ROOT)),"registeredSkills":skillIds,"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"derivedSiegeReferences":len(derivedSiege),"missingDerivedSiege":len(missingDerived),"missingDerived":missingDerived,"copiedLuaFiles":len(lua),"copiedMediaFiles":len(copied),"copiedDerivedSiegeFiles":len(copiedDerived),"runtimeReady":not outputMissing and not missingDerived}
+report={"candidate":str(OUT.relative_to(ROOT)),"registeredSkills":skillIds,"directMediaReferences":len(refs),"missingDirectMedia":len(missing),"missing":missing,"derivedSiegeReferences":len(derivedSiege),"missingDerivedSiege":len(missingDerived),"missingDerived":missingDerived,"derivedPuzzleReferences":len(derivedPuzzle),"missingDerivedPuzzle":len(missingPuzzle),"missingPuzzle":missingPuzzle,"copiedLuaFiles":len(lua),"copiedMediaFiles":len(copied),"copiedDerivedSiegeFiles":len(copiedDerived),"copiedDerivedPuzzleFiles":len(copiedPuzzle),"runtimeReady":not outputMissing and not missingDerived and not missingPuzzle}
 dump(OUT/"candidate-report.json",report)
-if (missing or missingDerived) and not args.allow_missing_assets:
-    print(f"FAIL: {len(missing)} direct media and {len(missingDerived)} derived siege resources are missing. Use --allow-missing-assets only for structural inspection.")
+if (missing or missingDerived or missingPuzzle) and not args.allow_missing_assets:
+    print(f"FAIL: {len(missing)} direct media and {len(missingDerived)} derived siege and {len(missingPuzzle)} puzzle resources are missing. Use --allow-missing-assets only for structural inspection.")
     raise SystemExit(2)
-print(json.dumps({k:v for k,v in report.items() if k not in ("missing","missingDerived")},indent=2))
+print(json.dumps({k:v for k,v in report.items() if k not in ("missing","missingDerived","missingPuzzle")},indent=2))
