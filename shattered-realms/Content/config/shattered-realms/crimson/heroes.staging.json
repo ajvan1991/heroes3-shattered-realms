@@ -24,6 +24,10 @@
       {
         "skill": "offence",
         "level": "basic"
+      },
+      {
+        "skill": "bloodCommand",
+        "level": "basic"
       }
     ],
     "specialty": {
@@ -58,6 +62,10 @@
     "skills": [
       {
         "skill": "offence",
+        "level": "basic"
+      },
+      {
+        "skill": "bloodCommand",
         "level": "basic"
       }
     ],
@@ -99,6 +107,10 @@
       {
         "skill": "offence",
         "level": "basic"
+      },
+      {
+        "skill": "bloodCommand",
+        "level": "basic"
       }
     ],
     "specialty": {
@@ -139,6 +151,10 @@
       {
         "skill": "offence",
         "level": "basic"
+      },
+      {
+        "skill": "bloodCommand",
+        "level": "basic"
       }
     ],
     "specialty": {
@@ -173,6 +189,10 @@
     "skills": [
       {
         "skill": "offence",
+        "level": "basic"
+      },
+      {
+        "skill": "bloodCommand",
         "level": "basic"
       }
     ],
@@ -214,6 +234,10 @@
       {
         "skill": "offence",
         "level": "basic"
+      },
+      {
+        "skill": "bloodCommand",
+        "level": "basic"
       }
     ],
     "specialty": {
@@ -254,6 +278,10 @@
       {
         "skill": "offence",
         "level": "basic"
+      },
+      {
+        "skill": "bloodCommand",
+        "level": "basic"
       }
     ],
     "specialty": {
@@ -288,6 +316,10 @@
     "skills": [
       {
         "skill": "offence",
+        "level": "basic"
+      },
+      {
+        "skill": "bloodCommand",
         "level": "basic"
       }
     ],
@@ -329,6 +361,10 @@
       {
         "skill": "wisdom",
         "level": "basic"
+      },
+      {
+        "skill": "crimsonDivination",
+        "level": "basic"
       }
     ],
     "specialty": {
@@ -364,6 +400,10 @@
     "skills": [
       {
         "skill": "wisdom",
+        "level": "basic"
+      },
+      {
+        "skill": "crimsonDivination",
         "level": "basic"
       }
     ],
@@ -406,6 +446,10 @@
       {
         "skill": "wisdom",
         "level": "basic"
+      },
+      {
+        "skill": "crimsonDivination",
+        "level": "basic"
       }
     ],
     "texts": {
@@ -447,6 +491,10 @@
       {
         "skill": "wisdom",
         "level": "basic"
+      },
+      {
+        "skill": "crimsonDivination",
+        "level": "basic"
       }
     ],
     "specialty": {
@@ -482,6 +530,10 @@
     "skills": [
       {
         "skill": "wisdom",
+        "level": "basic"
+      },
+      {
+        "skill": "crimsonDivination",
         "level": "basic"
       }
     ],
@@ -524,6 +576,10 @@
       {
         "skill": "wisdom",
         "level": "basic"
+      },
+      {
+        "skill": "crimsonDivination",
+        "level": "basic"
       }
     ],
     "specialty": {
@@ -565,6 +621,10 @@
       {
         "skill": "wisdom",
         "level": "basic"
+      },
+      {
+        "skill": "crimsonDivination",
+        "level": "basic"
       }
     ],
     "texts": {
@@ -600,6 +660,10 @@
     "skills": [
       {
         "skill": "wisdom",
+        "level": "basic"
+      },
+      {
+        "skill": "crimsonDivination",
         "level": "basic"
       }
     ],
