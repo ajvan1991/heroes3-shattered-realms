@@ -31,6 +31,6 @@ This file is a development snapshot, not a claim of a playable release.
 
 
 ## Hero availability safety
-Five heroes with authored custom specialties are temporarily excluded from the regular Tavern pool until those specialties have engine-backed implementations: Ilyr Thorn, Sevrin, Miraleth, Saereth and Lysandra Noct. The other eleven use standard creature or secondary-skill specialty shortcuts supported by the current hero schema. Empty spellbook arrays on Sanguine Seers are valid VCMI and intentionally grant a spellbook.
+All sixteen regular Crimson heroes now have engine-backed creature or secondary-skill specialties and are eligible for the regular Tavern pool. Empty spellbook arrays on Sanguine Seers are valid VCMI and intentionally grant a spellbook.
 
 Archon adjacency now uses the native UNIT_ADJACENT limiter. Creature caster spell weights are explicit rather than relying on omitted defaults.
