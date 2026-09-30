@@ -25,9 +25,9 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Compile QA tooling
@@ -42,7 +42,7 @@ jobs:
         run: python tools/verify_crimson_candidate.py
       - name: Upload QA evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: crimson-static-qa-${{ github.run_number }}
           if-no-files-found: warn
