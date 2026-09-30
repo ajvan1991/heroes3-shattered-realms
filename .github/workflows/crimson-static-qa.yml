@@ -1,0 +1,42 @@
+name: Crimson Static QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "shattered-realms/**"
+      - "tools/**"
+      - "production/**"
+      - ".github/workflows/crimson-static-qa.yml"
+  pull_request:
+    paths:
+      - "shattered-realms/**"
+      - "tools/**"
+      - "production/**"
+      - ".github/workflows/crimson-static-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile QA tooling
+        run: python -m compileall -q tools
+      - name: Validate Crimson staging
+        run: python tools/validate_crimson_staging.py
+      - name: Validate asset production contracts
+        run: python tools/asset_pipeline.py
+      - name: Build structural candidate
+        run: python tools/build_crimson_candidate.py --allow-missing-assets
+      - name: Verify structural candidate
+        run: python tools/verify_crimson_candidate.py
