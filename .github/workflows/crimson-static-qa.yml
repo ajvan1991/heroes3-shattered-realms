@@ -46,6 +46,20 @@ jobs:
           for batch in A1 A2 A3 A4 A5 B1 B2 C1 C2; do
             python tools/asset_pipeline.py --batch "$batch" --report "production/asset-pipeline-$batch.latest.json"
           done
+      - name: Assert asset contract invariants
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("production/asset-pipeline.latest.json")
+          r=json.loads(p.read_text())
+          assert r["manifestAssets"] == 530, r
+          assert r["batchCoverage"]["unownedBootSlice"] == 0, r["batchCoverage"]
+          assert r["batchCoverage"]["priorityMismatches"] == 0, r["batchCoverage"]
+          assert r["manifestErrors"] == [], r["manifestErrors"]
+          print("Asset contract invariants PASS")
+          PY
       - name: Build structural candidate
         run: python tools/build_crimson_candidate.py --allow-missing-assets
       - name: Verify structural candidate
