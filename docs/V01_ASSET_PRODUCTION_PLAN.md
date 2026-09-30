@@ -3,12 +3,15 @@
 Source of truth for the machine-readable queue: `production/asset-manifest.v0.1.json`.
 
 ## Queue snapshot
-Direct staging references currently produce 451 unique media jobs:
-- Priority A: 136
-- Priority B: 242
-- Priority C: 73
+The current production manifest contains **530 deterministic asset jobs**:
+- Priority A: **215**
+- Priority B: **242**
+- Priority C: **73**
+- Boot-slice membership: **241 true / 289 false**
 
-The manifest records resource path, file type, source staging config, priority and current status.
+The 530 jobs are the closed production surface: **451 direct staging media references + 31 mandatory siege-prefix resources + 48 puzzle-prefix resources**. The historical 451 figure remains useful only when discussing direct quoted references; it is not the current production queue size.
+
+Every job now records explicit resource path, file type, source, priority, status and boolean boot-slice membership.
 
 ## Priority meaning
 ### A — town/bootstrap
@@ -25,12 +28,13 @@ Creature sound suite and music. These remain mandatory for the finished faction 
 2. **Core town structures** — Village/Town/City/Capitol, Tavern, Marketplace, Silo, Blacksmith, Fort/Citadel/Castle, Mage Guild I–V.
 3. **T1/T2 vertical slice** — Veinling/Bloodbound and Thorn/Crimson Dancer, their dwellings and Horde chain.
 4. **Hero smoke-test pair** — one Bloodlord and one Sanguine Seer with valid portraits and class animation resources.
-5. **Siege shell** — tower icons and complete image-prefix family required by VCMI.
-6. **Remaining T3–T7** — creatures and dwellings in tier order.
-7. **Remaining 14 heroes**.
-8. **Validated spell/skill art**.
-9. **Audio/music**.
-10. **Polish/final replacement pass**.
+5. **Siege shell** — tower icons and the exact 31-image prefix-derived family required by VCMI.
+6. **Puzzle family** — all 48 zero-based `CRP00.png`…`CRP47.png` resources.
+7. **Remaining T3–T7** — creatures and dwellings in tier order.
+8. **Remaining 14 heroes**.
+9. **Validated spell/skill art**.
+10. **Audio/music**.
+11. **Polish/final replacement pass**.
 
 ## Asset acceptance rule
 An item moves from MISSING only when the repository contains a structurally valid file at the exact referenced path. Concept art, a prompt, or a differently named source image does not satisfy a runtime asset job.
