@@ -87,6 +87,16 @@
     "correctedMasterBuildingId": "bloodboundHouse -> veinHouseUp",
     "masterBuildingCountExpected": 41,
     "buildingIdsValidatedAgainstMaster": true,
-    "missingBuildingIds": []
+    "missingBuildingIds": [],
+    "dependencyClosure": {
+      "initialBuildings": 22,
+      "closedBuildings": 22,
+      "addedByClosure": [],
+      "danglingBuildingReferences": [],
+      "prunedHallRows": 4,
+      "prunedHallSlots": 9,
+      "matchingStructures": 22,
+      "status": "CLOSED"
+    }
   }
 }
