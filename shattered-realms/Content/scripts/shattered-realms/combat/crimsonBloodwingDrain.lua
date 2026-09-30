@@ -6,7 +6,7 @@ local function qualifyingDamage(payload)
     local total = 0
     local killedAny = false
     for _, target in ipairs(payload.targets or {}) do
-        if target.unit and target.unit:isLiving() then
+        if target.unit and (target.healthBeforeAttack or 0) > 0 then
             local before = target.healthBeforeAttack or 0
             local dealt = math.min(target.damage or 0, before)
             total = total + dealt
