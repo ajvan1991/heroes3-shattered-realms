@@ -25,6 +25,8 @@ if report.get("runtimeReady"):
  ck(report.get("missingDerivedSiege")==0,"runtimeReady with missing derived siege")
  ck(report.get("copiedMediaFiles")==report.get("directMediaReferences"),"runtimeReady direct media copy mismatch")
  ck(report.get("copiedDerivedSiegeFiles")==report.get("derivedSiegeReferences")==31,"runtimeReady siege copy mismatch")
+ ck(report.get("missingDerivedPuzzle")==0,"runtimeReady with missing puzzle-map pieces")
+ ck(report.get("copiedDerivedPuzzleFiles")==report.get("derivedPuzzleReferences")==48,"runtimeReady puzzle copy mismatch")
 out={"pass":not errors,"errors":errors,"runtimeReady":report.get("runtimeReady",False),"registeredSkills":sorted(skills),"registeredScripts":sorted(scripts)}
 print(json.dumps(out,indent=2))
 sys.exit(0 if not errors else 1)
