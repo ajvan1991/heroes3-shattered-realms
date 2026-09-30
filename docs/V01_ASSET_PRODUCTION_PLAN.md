@@ -4,10 +4,12 @@ Source of truth for the machine-readable queue: `production/asset-manifest.v0.1.
 
 ## Queue snapshot
 The current production manifest contains **530 deterministic asset jobs**:
-- Priority A: **215**
+- Priority A: **217**
 - Priority B: **242**
-- Priority C: **73**
+- Priority C: **71**
 - Boot-slice membership: **241 true / 289 false**
+
+Two shared creature UI backgrounds are Priority A because the town/bootstrap shell directly requires them; this keeps their manifest priority aligned with executable batch A1.
 
 The 530 jobs are the closed production surface: **451 direct staging media references + 31 mandatory siege-prefix resources + 48 puzzle-prefix resources**. The historical 451 figure remains useful only when discussing direct quoted references; it is not the current production queue size.
 
