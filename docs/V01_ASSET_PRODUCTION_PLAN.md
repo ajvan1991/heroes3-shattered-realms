@@ -26,17 +26,14 @@ Creature visual resources, hero portraits/animations, skill icons and spell icon
 Creature sound suite and music. These remain mandatory for the finished faction but do not block early schema/identifier experiments if VCMI permits the candidate to omit the corresponding optional references.
 
 ## Production batches
-1. **Town shell** — backgrounds, building-icons resource, Mage Guild window/background, map-town templates.
-2. **Core town structures** — Village/Town/City/Capitol, Tavern, Marketplace, Silo, Blacksmith, Fort/Citadel/Castle, Mage Guild I–V.
-3. **T1/T2 vertical slice** — Veinling/Bloodbound and Thorn/Crimson Dancer, their dwellings and Horde chain.
-4. **Hero smoke-test pair** — one Bloodlord and one Sanguine Seer with valid portraits and class animation resources.
-5. **Siege shell** — tower icons and the exact 31-image prefix-derived family required by VCMI.
-6. **Puzzle family** — all 48 zero-based `CRP00.png`…`CRP47.png` resources.
-7. **Remaining T3–T7** — creatures and dwellings in tier order.
-8. **Remaining 14 heroes**.
-9. **Validated spell/skill art**.
-10. **Audio/music**.
-11. **Polish/final replacement pass**.
+The machine-readable plan currently has **16 executable batches**, and every one of the 530 manifest jobs has at least one owner:
+- **A1–A5:** town shell, adventure-town shell, town structures, siege family and 48-piece puzzle family.
+- **B1–B2:** T1/T2 creature smoke slice and Vaelor/Aveline hero smoke path.
+- **B3–B4:** remaining T3–T7 creature visuals and the complete 16-hero Crimson portrait/specialty set.
+- **B5–B8:** Crimson class-passive art, Blood Rite art, universal spell art, and the staged future-faction class-passive icon families.
+- **C1–C3:** T1/T2 audio, town music, and remaining T3–T7 audio.
+
+Batch overlap is permitted only as an explicit production convenience (for example B2 smoke-test heroes are also part of B4 full-roster coverage). Asset priority must match every owning batch. CI rejects any unowned manifest job.
 
 ## Asset acceptance rule
 An item moves from MISSING only when the repository contains a structurally valid file at the exact referenced path. Concept art, a prompt, or a differently named source image does not satisfy a runtime asset job.
