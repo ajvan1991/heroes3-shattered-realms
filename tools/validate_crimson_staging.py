@@ -105,6 +105,17 @@ for heroId,h in he.items():
  if expected and not any(x.get("skill")==expected for x in h.get("skills",[])):
   missingExclusive.append([heroId,expected])
 ck("heroExclusiveClassPassives",not missingExclusive,missingExclusive)
+badExclusiveChance=[]
+for classId,skillId in exclusiveByClass.items():
+ chance=hc.get(classId,{}).get("secondarySkills",{}).get(skillId)
+ if not isinstance(chance,(int,float)) or chance<=0: badExclusiveChance.append([classId,skillId,chance])
+ck("classPassiveUpgradeChance",not badExclusiveChance,badExclusiveChance)
+
+# Keep the exclusive passive absent from the opposite class table.
+crossExclusive=[]
+if "crimsonDivination" in hc.get("bloodlord",{}).get("secondarySkills",{}): crossExclusive.append(["bloodlord","crimsonDivination"])
+if "bloodCommand" in hc.get("sanguineSeer",{}).get("secondarySkills",{}): crossExclusive.append(["sanguineSeer","bloodCommand"])
+ck("classPassiveCrossClassBan",not crossExclusive,crossExclusive)
 ck("heroArmyReferences",not badarmy,badarmy)
 ck("heroCreatureSpecialties",not badspec,badspec)
 
