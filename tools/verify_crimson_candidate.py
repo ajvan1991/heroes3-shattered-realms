@@ -65,9 +65,11 @@ ck(manifest.get("fileCount")==len(manifest.get("files",[])),"candidate manifest 
 ck(report.get("manifestFiles")==manifest.get("fileCount"),"candidate report manifest count mismatch")
 actualFiles=sorted(p.relative_to(C).as_posix() for p in C.rglob("*") if p.is_file() and p.name not in {"candidate-report.json","candidate-manifest.json"})
 manifestFiles=sorted(str(x.get("path","")) for x in manifest.get("files",[]))
+ck(len(manifestFiles)==len(set(manifestFiles)),"candidate manifest contains duplicate paths")
 ck(actualFiles==manifestFiles,f"candidate manifest inventory mismatch: actual={len(actualFiles)} manifest={len(manifestFiles)}")
 ck(report.get("directMediaReferences")==len(actualRefs),"candidate report direct-media count mismatch")
 ck(report.get("missingDirectMedia")==len(actualMissing),"candidate report missing-media count mismatch")
+ck(report.get("missing")==actualMissing,"candidate report direct missing list mismatch")
 ck(report.get("registeredSkills")==["bloodCommand","crimsonDivination"],"candidate report skill list mismatch")
 # Prefix-derived resources are independently reconstructed from generated faction data.
 fac=load(C/"Content/config/factions.json")["crimsonCourt"]
@@ -80,8 +82,10 @@ actualMissingSiege=[r for r in derivedSiege if not (C/"Content"/r).is_file() or 
 actualMissingPuzzle=[r for r in derivedPuzzle if not (C/"Content"/r).is_file() or (C/"Content"/r).stat().st_size==0]
 ck(report.get("derivedSiegeReferences")==31,"candidate report siege reference count mismatch")
 ck(report.get("missingDerivedSiege")==len(actualMissingSiege),"candidate report siege missing count mismatch")
+ck(report.get("missingDerived")==actualMissingSiege,"candidate report siege missing list mismatch")
 ck(report.get("derivedPuzzleReferences")==48,"candidate report puzzle reference count mismatch")
 ck(report.get("missingDerivedPuzzle")==len(actualMissingPuzzle),"candidate report puzzle missing count mismatch")
+ck(report.get("missingPuzzle")==actualMissingPuzzle,"candidate report puzzle missing list mismatch")
 if report.get("runtimeReady"):
  ck(report.get("missingDirectMedia")==0,"runtimeReady with missing direct media")
  ck(report.get("missingDerivedSiege")==0,"runtimeReady with missing derived siege")
