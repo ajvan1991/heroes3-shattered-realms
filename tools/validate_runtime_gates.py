@@ -30,5 +30,12 @@ for gid in ("G5","G6","G7","G8","G9","G10"):
  if by.get(gid,{}).get("status")!="PENDING": errors.append(f"{gid} must remain PENDING until local VCMI evidence is recorded")
 ci=doc.get("ciEvidence",{})
 if ci.get("conclusion")!="success" or not isinstance(ci.get("lastVerifiedRun"),int): errors.append("invalid CI evidence summary")
+if not isinstance(ci.get("lastVerifiedRunId"),int) or ci.get("lastVerifiedRunId",0)<=0: errors.append("invalid CI run id")
+sha=ci.get("headSha","")
+if not isinstance(sha,str) or len(sha)!=40 or any(ch not in "0123456789abcdef" for ch in sha): errors.append("invalid CI head SHA")
+if ci.get("lastVerifiedRun",0)<23: errors.append("CI evidence regressed behind executable reference-closure baseline run 23")
+scope=str(ci.get("scope",""))
+for token in ("structural","reference closure","production batches","candidate"):
+ if token not in scope: errors.append(f"CI evidence scope missing contract token: {token}")
 out={"pass":not errors,"gateStatuses":{g["id"]:g["status"] for g in gates},"errors":errors}
 print(json.dumps(out,indent=2));sys.exit(1 if errors else 0)
