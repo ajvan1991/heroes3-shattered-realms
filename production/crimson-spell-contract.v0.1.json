@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "target": "Crimson v0.1 spell staging contract",
+  "counterplay": {
+    "activeNative": [
+      "severFormation",
+      "clearMind",
+      "unboundStep",
+      "groundingSigil",
+      "burdenStone",
+      "brandFrailty",
+      "flareWaking",
+      "quietBlood",
+      "stillWater"
+    ],
+    "activeCustomBridge": [
+      "scorchOath",
+      "washAway",
+      "fatefulExchange"
+    ],
+    "reservedDisabled": [
+      "mortalAnchor",
+      "leylineConvergence",
+      "echoFallen",
+      "hourSilence"
+    ],
+    "activeDefaultGainChance": 20,
+    "reservedDefaultGainChance": 0,
+    "requiredFactionChances": [
+      "crimsonCourt",
+      "abyss",
+      "veil",
+      "hollow",
+      "starfall"
+    ],
+    "customEffect": "selectiveDispel"
+  },
+  "bloodRites": {
+    "ids": [
+      "riteOpenVein",
+      "riteScarletShelter"
+    ],
+    "defaultGainChance": 0,
+    "crimsonCourtGainChance": 0,
+    "customEffect": "bloodRiteUnitEffect"
+  },
+  "rule": "Any change to activation, generation chance, custom-effect routing, or membership must intentionally update this snapshot and pass staging QA."
+}
