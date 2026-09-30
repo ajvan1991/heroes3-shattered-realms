@@ -185,6 +185,22 @@
         "SOUNDS/CRIMSON/eternalBloodPhoenix_"
       ],
       "exit": "Attack/defend/killed/move/wince audio resolves for every T3-T7 base/upgrade creature."
+    },
+    {
+      "id": "B8",
+      "name": "Future faction class-passive skill art",
+      "priority": "B",
+      "selectors": [
+        "SKILLS/SHATTERED/brokenVow_",
+        "SKILLS/SHATTERED/celestialAlignment_",
+        "SKILLS/SHATTERED/deepCorruption_",
+        "SKILLS/SHATTERED/dreadDominion_",
+        "SKILLS/SHATTERED/dreamstep_",
+        "SKILLS/SHATTERED/lastTestament_",
+        "SKILLS/SHATTERED/oneiromancy_",
+        "SKILLS/SHATTERED/sacredFormation_"
+      ],
+      "exit": "All staged Abyss, Veil, Hollow, and Starfall class-passive icon families exist at every registered UI size and resolve before those factions activate."
     }
   ],
   "releaseRule": "Only VALIDATED_VCMI is release-ready.",
@@ -204,7 +220,8 @@
       "B5",
       "B6",
       "B7",
-      "C3"
+      "C3",
+      "B8"
     ],
     "selectorPolicy": "Every selector must match at least one manifest resource. A resource may belong to multiple batches.",
     "derivedFamilies": {
