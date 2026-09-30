@@ -12,6 +12,15 @@ if not C.is_dir(): raise SystemExit("Candidate missing; run build_crimson_candid
 mod=load(C/"mod.json")
 expected={"factions":"config/factions.json","heroClasses":"config/heroClasses.json","heroes":"config/heroes.json","creatures":"config/creatures.json","skills":"config/skills.json","scripts":"config/combatScripts.json"}
 for k,v in expected.items(): ck(mod.get(k)==[v],f"registration {k}: expected {[v]!r}, got {mod.get(k)!r}")
+for k,v in expected.items():
+ p=C/"Content"/v
+ ck(p.is_file() and p.stat().st_size>0,f"registered config missing/empty for {k}: {v}")
+# Production-style registration paths must stay relative and inside Content.
+unsafeRegs=[]
+for k,v in expected.items():
+ rp=Path(v)
+ if rp.is_absolute() or ".." in rp.parts: unsafeRegs.append([k,v])
+ck(not unsafeRegs,f"unsafe registration paths: {unsafeRegs}")
 ck(not any(".staging." in str(x) for v in mod.values() for x in (v if isinstance(v,list) else [v])),"mod.json contains staging registration")
 skills=load(C/"Content/config/skills.json")
 ck(set(skills)=={"bloodCommand","crimsonDivination"},f"candidate skill surface leaked: {sorted(skills)}")
