@@ -61,3 +61,22 @@ fightValue and aiValue are resynchronized to the current design baseline for all
 12. Archon aura affects only intended adjacent allied stacks and disappears immediately when adjacency ends;
 13. save/load does not duplicate transient bonuses;
 14. AI can use both creature casters and does not hang on scripted abilities.
+
+
+## Deep combat-event audit — verified against upstream Combat Event Scripts / Unit / BattleServer
+
+Two concrete semantic bugs were found and fixed:
+
+1. **Blood Feast lethal-target handling.** `onAfterAttack` runs after damage and a lethal target can already be dead. The old script required `target.unit:isLiving()`, which describes creature biology (living vs undead/golem) and was also the wrong gate for post-hit lethal handling. Blood Feast now qualifies an attack entry by positive `healthBeforeAttack`, clamps damage to that pre-hit health, and uses `killed > 0` for the kill requirement. This lets a lethal hit actually trigger the intended heal while still preventing overkill from inflating healing.
+
+2. **Bloodied threshold semantics.** VCMI documents `getTotalHealth()` as health across all creatures in the stack, including dead. Comparing current health to that value made casualties alone push a stack below 50%, even when every survivor was at full HP. Bloodied now compares `getAvailableHealth()` with `getCount() * getMaxHealth()`, so the ability measures wounds in the surviving stack. Exactly 50% remains inactive because the rule is strictly below half.
+
+Confirmed API contracts:
+- `onAfterAttack` executes after damage and may execute after lethal resolution;
+- payload target entries provide damage, killed, healthBeforeAttack and may lose their unit reference if removed;
+- `healUnit(..., HealLevel.heal, HealPower.permanent)` is a normal non-resurrection heal path;
+- `addUnitBonus(..., false)` updates an existing same-source bonus in place;
+- `removeUnitBonuses` accepts the BonusList returned by `getBonuses`;
+- `onActionFinished` runs once after the complete action including retaliation/additional attacks.
+
+Crimson Grace and Quarry Mark remain locally gated until their exact duration/retaliation timing is exercised in VCMI 1.7.5. Their event signatures themselves match the documented combat-event API.
