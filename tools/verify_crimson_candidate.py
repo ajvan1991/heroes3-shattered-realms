@@ -33,6 +33,12 @@ contract=load(ROOT/"production/crimson-spell-contract.v0.1.json")["counterplay"]
 expectedSpells=set(contract["activeNative"])|set(contract["activeCustomBridge"])
 ck(set(spells)==expectedSpells,f"candidate spell surface mismatch: actual={sorted(spells)} expected={sorted(expectedSpells)}")
 ck(not (set(spells)&set(contract["reservedDisabled"])),f"reserved spells leaked into candidate: {sorted(set(spells)&set(contract['reservedDisabled']))}")
+native=set(contract["activeNative"]); custom=set(contract["activeCustomBridge"]); customType="shattered-realms:"+contract["customEffect"]
+for sid,s in spells.items():
+ for lvl,lvlDoc in (s.get("levels") or {}).items():
+  types=[e.get("type") for e in (lvlDoc.get("effects") or {}).values() if isinstance(e,dict)]
+  if sid in native: ck(not any(isinstance(t,str) and t.startswith("shattered-realms:") for t in types),f"native spell {sid}/{lvl} contains custom effect: {types}")
+  if sid in custom: ck(customType in types,f"custom bridge spell {sid}/{lvl} missing {customType}: {types}")
 ck(set(skills)=={"bloodCommand","crimsonDivination"},f"candidate skill surface leaked: {sorted(skills)}")
 scripts=load(C/"Content/config/scripts.json").get("scripts",{})
 registeredLua=[]
