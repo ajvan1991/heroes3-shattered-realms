@@ -357,6 +357,20 @@ for sid in sorted(actualActive):
   if not isinstance(d.get("effects"),dict) or not d.get("effects"): spellShapeErrors.append([sid,lvl,"effects"])
 ck("activeSpellRecordShape",not spellShapeErrors,spellShapeErrors)
 
+# Lock user-visible spell identity: level, school assignment and polarity are
+# balance-facing API and must change only through an intentional snapshot update.
+spellIdentityErrors=[]
+shapeContract=cp.get("activeShape",{})
+if set(shapeContract)!=actualActive: spellIdentityErrors.append(["membership",sorted(shapeContract),sorted(actualActive)])
+for sid in sorted(actualActive):
+ s=counterplay[sid]; exp=shapeContract.get(sid,{})
+ schools=sorted(k for k,v in (s.get("school") or {}).items() if v is True)
+ flags=sorted(k for k,v in (s.get("flags") or {}).items() if v is True)
+ if s.get("level")!=exp.get("level"): spellIdentityErrors.append([sid,"level",s.get("level"),exp.get("level")])
+ if schools!=sorted(exp.get("schools",[])): spellIdentityErrors.append([sid,"schools",schools,exp.get("schools")])
+ if flags!=[exp.get("flag")]: spellIdentityErrors.append([sid,"polarity",flags,exp.get("flag")])
+ck("activeSpellIdentitySnapshot",not spellIdentityErrors,spellIdentityErrors)
+
 # Custom spell-effect references must resolve to the staged spell-effect registry.
 effectIds=set()
 if isinstance(spellEffects,dict):
