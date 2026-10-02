@@ -33,6 +33,15 @@ contract=load(ROOT/"production/crimson-spell-contract.v0.1.json")["counterplay"]
 expectedSpells=set(contract["activeNative"])|set(contract["activeCustomBridge"])
 ck(set(spells)==expectedSpells,f"candidate spell surface mismatch: actual={sorted(spells)} expected={sorted(expectedSpells)}")
 ck(not (set(spells)&set(contract["reservedDisabled"])),f"reserved spells leaked into candidate: {sorted(set(spells)&set(contract['reservedDisabled']))}")
+shape=contract.get("activeShape",{})
+ck(set(shape)==set(spells),f"candidate spell identity snapshot membership mismatch")
+for sid,s in spells.items():
+ exp=shape[sid]
+ schools=sorted(k for k,v in (s.get("school") or {}).items() if v is True)
+ flags=sorted(k for k,v in (s.get("flags") or {}).items() if v is True)
+ ck(s.get("level")==exp.get("level"),f"candidate spell level mismatch {sid}")
+ ck(schools==sorted(exp.get("schools",[])),f"candidate spell school mismatch {sid}: {schools}")
+ ck(flags==[exp.get("flag")],f"candidate spell polarity mismatch {sid}: {flags}")
 native=set(contract["activeNative"]); custom=set(contract["activeCustomBridge"]); customType="shattered-realms:"+contract["customEffect"]
 for sid,s in spells.items():
  for lvl,lvlDoc in (s.get("levels") or {}).items():
