@@ -312,6 +312,20 @@ for sid in actualReserved:
  if counterplay[sid].get("defaultGainChance")!=cp.get("reservedDefaultGainChance"): spellSnapshotErrors.append([sid,"reservedChance"])
 ck("spellActivationSnapshot",not spellSnapshotErrors,spellSnapshotErrors)
 
+# Spell text must remain truthful to the implementation class recorded by the
+# activation snapshot. Native spells may not contain custom Shattered effects;
+# bridge spells must contain the declared custom effect on every mastery level.
+spellEffectClassErrors=[]
+for sid in sorted(expectedNative):
+ for lvl,lvlDoc in (counterplay.get(sid,{}).get("levels") or {}).items():
+  custom=[e.get("type") for e in (lvlDoc.get("effects") or {}).values() if isinstance(e,dict) and isinstance(e.get("type"),str) and e.get("type").startswith("shattered-realms:")]
+  if custom: spellEffectClassErrors.append([sid,lvl,"native-has-custom",custom])
+for sid in sorted(expectedCustom):
+ for lvl,lvlDoc in (counterplay.get(sid,{}).get("levels") or {}).items():
+  types=[e.get("type") for e in (lvlDoc.get("effects") or {}).values() if isinstance(e,dict)]
+  if f"shattered-realms:{cp.get('customEffect')}" not in types: spellEffectClassErrors.append([sid,lvl,"bridge-effect-missing",types])
+ck("spellImplementationClassContract",not spellEffectClassErrors,spellEffectClassErrors)
+
 # Custom spell-effect references must resolve to the staged spell-effect registry.
 effectIds=set()
 if isinstance(spellEffects,dict):
