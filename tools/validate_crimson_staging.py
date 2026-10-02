@@ -326,6 +326,31 @@ for sid in sorted(expectedCustom):
   if f"shattered-realms:{cp.get('customEffect')}" not in types: spellEffectClassErrors.append([sid,lvl,"bridge-effect-missing",types])
 ck("spellImplementationClassContract",not spellEffectClassErrors,spellEffectClassErrors)
 
+# Active universal spells must be complete VCMI spell records, not merely IDs with
+# generation chances. Lock mastery coverage, one school, graphics, target/flags and
+# non-empty executable effects at every mastery.
+spellShapeErrors=[]
+requiredLevels={"none","basic","advanced","expert"}
+requiredGraphics={"iconBook","iconScroll","iconEffect","iconImmune","iconScenarioBonus"}
+for sid in sorted(actualActive):
+ s=counterplay[sid]
+ levels=s.get("levels") or {}
+ if set(levels)!=requiredLevels: spellShapeErrors.append([sid,"levels",sorted(levels)])
+ schools=[k for k,v in (s.get("school") or {}).items() if v is True]
+ if len(schools)!=1: spellShapeErrors.append([sid,"school",schools])
+ if s.get("type")!="combat": spellShapeErrors.append([sid,"type",s.get("type")])
+ if s.get("targetType")!="CREATURE": spellShapeErrors.append([sid,"targetType",s.get("targetType")])
+ flags=s.get("flags") or {}
+ if sum(v is True for v in flags.values())!=1: spellShapeErrors.append([sid,"flags",flags])
+ graphics=s.get("graphics") or {}
+ if not requiredGraphics.issubset(graphics) or any(not isinstance(graphics.get(k),str) or not graphics.get(k) for k in requiredGraphics): spellShapeErrors.append([sid,"graphics"])
+ for lvl in requiredLevels:
+  d=levels.get(lvl,{})
+  if not isinstance(d.get("cost"),int) or d.get("cost")<0: spellShapeErrors.append([sid,lvl,"cost",d.get("cost")])
+  if not isinstance(d.get("description"),str) or not d.get("description").strip(): spellShapeErrors.append([sid,lvl,"description"])
+  if not isinstance(d.get("effects"),dict) or not d.get("effects"): spellShapeErrors.append([sid,lvl,"effects"])
+ck("activeSpellRecordShape",not spellShapeErrors,spellShapeErrors)
+
 # Custom spell-effect references must resolve to the staged spell-effect registry.
 effectIds=set()
 if isinstance(spellEffects,dict):
