@@ -33,7 +33,16 @@
       "hollow",
       "starfall"
     ],
-    "customEffect": "selectiveDispel"
+    "customEffect": "selectiveDispel",
+    "schoolContract": {
+      "minimumActiveSchools": 1,
+      "multiSchoolExceptions": {
+        "fatefulExchange": [
+          "fire",
+          "water"
+        ]
+      }
+    }
   },
   "bloodRites": {
     "ids": [
