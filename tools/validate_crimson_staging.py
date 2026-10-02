@@ -337,7 +337,7 @@ for sid in sorted(actualActive):
  levels=s.get("levels") or {}
  if set(levels)!=requiredLevels: spellShapeErrors.append([sid,"levels",sorted(levels)])
  schools=[k for k,v in (s.get("school") or {}).items() if v is True]
- if len(schools)!=1: spellShapeErrors.append([sid,"school",schools])
+ if len(schools)<1: spellShapeErrors.append([sid,"school",schools])
  if s.get("type")!="combat": spellShapeErrors.append([sid,"type",s.get("type")])
  if s.get("targetType")!="CREATURE": spellShapeErrors.append([sid,"targetType",s.get("targetType")])
  flags=s.get("flags") or {}
