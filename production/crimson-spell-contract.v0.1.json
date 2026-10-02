@@ -42,6 +42,93 @@
           "water"
         ]
       }
+    },
+    "activeShape": {
+      "severFormation": {
+        "level": 3,
+        "schools": [
+          "air"
+        ],
+        "flag": "negative"
+      },
+      "clearMind": {
+        "level": 2,
+        "schools": [
+          "air"
+        ],
+        "flag": "positive"
+      },
+      "unboundStep": {
+        "level": 3,
+        "schools": [
+          "air"
+        ],
+        "flag": "positive"
+      },
+      "groundingSigil": {
+        "level": 3,
+        "schools": [
+          "earth"
+        ],
+        "flag": "negative"
+      },
+      "burdenStone": {
+        "level": 2,
+        "schools": [
+          "earth"
+        ],
+        "flag": "negative"
+      },
+      "brandFrailty": {
+        "level": 3,
+        "schools": [
+          "fire"
+        ],
+        "flag": "negative"
+      },
+      "scorchOath": {
+        "level": 3,
+        "schools": [
+          "fire"
+        ],
+        "flag": "negative"
+      },
+      "flareWaking": {
+        "level": 2,
+        "schools": [
+          "fire"
+        ],
+        "flag": "positive"
+      },
+      "quietBlood": {
+        "level": 3,
+        "schools": [
+          "water"
+        ],
+        "flag": "negative"
+      },
+      "washAway": {
+        "level": 3,
+        "schools": [
+          "water"
+        ],
+        "flag": "positive"
+      },
+      "stillWater": {
+        "level": 4,
+        "schools": [
+          "water"
+        ],
+        "flag": "positive"
+      },
+      "fatefulExchange": {
+        "level": 4,
+        "schools": [
+          "fire",
+          "water"
+        ],
+        "flag": "indifferent"
+      }
     }
   },
   "bloodRites": {
