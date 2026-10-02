@@ -337,7 +337,13 @@ for sid in sorted(actualActive):
  levels=s.get("levels") or {}
  if set(levels)!=requiredLevels: spellShapeErrors.append([sid,"levels",sorted(levels)])
  schools=[k for k,v in (s.get("school") or {}).items() if v is True]
- if len(schools)<1: spellShapeErrors.append([sid,"school",schools])
+ schoolContract=cp.get("schoolContract",{})
+ minSchools=schoolContract.get("minimumActiveSchools",1)
+ exceptions=schoolContract.get("multiSchoolExceptions",{})
+ expectedSchools=exceptions.get(sid)
+ if len(schools)<minSchools: spellShapeErrors.append([sid,"school",schools])
+ elif expectedSchools is not None and sorted(schools)!=sorted(expectedSchools): spellShapeErrors.append([sid,"schoolException",schools,expectedSchools])
+ elif expectedSchools is None and len(schools)!=1: spellShapeErrors.append([sid,"unexpectedMultiSchool",schools])
  if s.get("type")!="combat": spellShapeErrors.append([sid,"type",s.get("type")])
  if s.get("targetType")!="CREATURE": spellShapeErrors.append([sid,"targetType",s.get("targetType")])
  flags=s.get("flags") or {}
