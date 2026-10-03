@@ -615,6 +615,33 @@ for sid,exp in riteExpected.items():
  if s.get("power")!=0: riteShapeErrors.append([sid,"top-level-power",s.get("power")])
 ck("bloodRitePresentationAndProgression",not riteShapeErrors,riteShapeErrors)
 
+# Blood Rite custom-effect bridge must remain schema-compatible with every
+# staged mastery payload; marker strings are also the once-per-battle lock.
+riteBridgeErrors=[]
+bridge=(spellEffects.get("scripts") or {}).get("bloodRiteUnitEffect",{})
+schema=bridge.get("schema") or {}; props=schema.get("properties") or {}; required=set(schema.get("required") or [])
+expectedRequired={"sacrifice","stat","statValue","usedMarker","turns"}
+if bridge.get("implements")!="spellEffect" or bridge.get("script")!="shattered-realms/spells/bloodRiteUnitEffect": riteBridgeErrors.append(["bridge-identity",bridge.get("implements"),bridge.get("script")])
+if required!=expectedRequired or schema.get("additionalProperties") is not False: riteBridgeErrors.append(["bridge-schema-shape",sorted(required),schema.get("additionalProperties")])
+markers=set()
+for sid in sorted(riteExpected):
+ for mastery in masteries:
+  eff=((rites[sid].get("levels") or {}).get(mastery,{}).get("effects") or {}).get("rite",{})
+  payload={k:v for k,v in eff.items() if k!="type"}
+  for key in required:
+   if key not in payload: riteBridgeErrors.append([sid,mastery,"missing-required",key])
+  for key in payload:
+   if key not in props: riteBridgeErrors.append([sid,mastery,"unknown-property",key])
+  if payload.get("stat") not in ("attack","defence"): riteBridgeErrors.append([sid,mastery,"stat",payload.get("stat")])
+  if not (4<=payload.get("sacrifice",-1)<=25): riteBridgeErrors.append([sid,mastery,"sacrifice-schema",payload.get("sacrifice")])
+  if not (1<=payload.get("statValue",-1)<=5): riteBridgeErrors.append([sid,mastery,"statValue-schema",payload.get("statValue")])
+  if not (1<=payload.get("turns",-1)<=5): riteBridgeErrors.append([sid,mastery,"turns-schema",payload.get("turns")])
+  rr=payload.get("rangedReduction")
+  if rr is not None and not (0<=rr<=30): riteBridgeErrors.append([sid,mastery,"rangedReduction-schema",rr])
+  markers.add(payload.get("usedMarker"))
+if markers!={"shattered-realms:riteOpenVeinUsed","shattered-realms:riteScarletShelterUsed"}: riteBridgeErrors.append(["marker-set",sorted(str(x) for x in markers)])
+ck("bloodRiteEffectBridgeSchema",not riteBridgeErrors,riteBridgeErrors)
+
 # Lock the exact v0.1 spell surface so generation status cannot drift silently.
 sc=spellContract
 cp=sc.get("counterplay",{})
