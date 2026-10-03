@@ -19,7 +19,8 @@
         "GitHub Actions Crimson Static QA run #76: explicit multi-school exception contract PASS",
         "GitHub Actions Crimson Static QA run #78: active spell identity snapshot PASS",
         "GitHub Actions Crimson Static QA run #79: independent candidate spell identity verification PASS",
-        "GitHub Actions Crimson Static QA run #82: spell mastery progression + full QA chain PASS"
+        "GitHub Actions Crimson Static QA run #82: spell mastery progression + full QA chain PASS",
+        "GitHub Actions Crimson Static QA run #85: seven-chain creature upgrade progression PASS"
       ],
       "criteria": [
         "v0.1 spell activation snapshot matches staging",
@@ -27,7 +28,9 @@
         "active spell records have complete mastery/graphics/effect shape",
         "active spell level/school/polarity identity matches the committed snapshot",
         "Fateful Exchange is the only intentional active multi-school exception (Fire + Water)",
-        "active spell mana costs and native numeric effect magnitudes do not regress across mastery"
+        "active spell mana costs and native numeric effect magnitudes do not regress across mastery",
+        "all seven Crimson base-to-upgrade creature chains preserve or improve core combat values",
+        "Crimson upgrade growth remains equal to its base creature and upgrade fightValue equals aiValue"
       ]
     },
     {
@@ -153,10 +156,10 @@
   "rule": "Never report a blocked or pending gate as passed without its required evidence.",
   "ciEvidence": {
     "workflow": "Crimson Static QA",
-    "lastVerifiedRun": 82,
-    "lastVerifiedRunId": 37116902645,
-    "headSha": "86262557c03d799026142acb93a793d3e36bba4e",
+    "lastVerifiedRun": 85,
+    "lastVerifiedRunId": 37117159336,
+    "headSha": "fda3bf781c336227229c2b75adecb71543e7de9c",
     "conclusion": "success",
-    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact 12-spell activation, record-shape, implementation-class, identity and mastery-progression contracts; explicit Fateful Exchange Fire+Water exception; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
+    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact 12-spell activation, record-shape, implementation-class, identity and mastery-progression contracts; seven-chain Crimson creature upgrade progression; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
   }
 }
