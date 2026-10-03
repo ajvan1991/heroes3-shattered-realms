@@ -184,6 +184,42 @@ ck("heroClassCommanders",not badCommander,badCommander)
 ck("heroClassFaction",not badFaction,badFaction)
 ck("heroClassAffinity",not badAffinity,badAffinity)
 
+# Hero/class presentation references are staging contracts, not proof that media
+# exists. Validate the complete path shape now while deliberately leaving G3/G4
+# blocked until real assets are supplied and runtime-tested.
+heroPresentationErrors=[]
+for cid,cls in hc.items():
+ if not isinstance(cls.get("name"),str) or not cls.get("name").strip():
+  heroPresentationErrors.append([cid,"name"])
+ battle=(cls.get("animation") or {}).get("battle") or {}
+ for sex in ("female","male"):
+  path=battle.get(sex)
+  if not isinstance(path,str) or not path.startswith("SPRITES/CRIMSON/") or not path.endswith(".DEF"):
+   heroPresentationErrors.append([cid,"battle-animation",sex,path])
+ template=(((cls.get("mapObject") or {}).get("templates") or {}).get("default") or {})
+ for key in ("animation","editorAnimation"):
+  path=template.get(key)
+  if not isinstance(path,str) or not path.startswith("SPRITES/CRIMSON/") or not path.endswith(".DEF"):
+   heroPresentationErrors.append([cid,"map-object",key,path])
+ secondary=cls.get("secondarySkills") or {}
+ if any(not isinstance(v,(int,float)) or v<0 for v in secondary.values()):
+  heroPresentationErrors.append([cid,"secondary-skill-weight",secondary])
+for hid,h in he.items():
+ images=h.get("images") or {}
+ expectedImageShape={
+  "large":("HEROES/CRIMSON/",hid+"_large.png"),
+  "small":("HEROES/CRIMSON/",hid+"_small.png"),
+  "specialtyLarge":("HEROES/CRIMSON/specialties/",hid+"_large.png"),
+  "specialtySmall":("HEROES/CRIMSON/specialties/",hid+"_small.png"),
+ }
+ if set(images)!=set(expectedImageShape):
+  heroPresentationErrors.append([hid,"image-keys",sorted(images)])
+ for key,(prefix,suffix) in expectedImageShape.items():
+  path=images.get(key)
+  if not isinstance(path,str) or not path.startswith(prefix) or not path.endswith(suffix):
+   heroPresentationErrors.append([hid,key,path])
+ck("heroClassAndPortraitStagingContract",not heroPresentationErrors,heroPresentationErrors)
+
 # Crimson class-passive contract: each hero class must actually start with its exclusive
 # passive. gainChance=0 only prevents random level-up offers; it does not grant the skill.
 exclusiveByClass={"bloodlord":"bloodCommand","sanguineSeer":"crimsonDivination"}
