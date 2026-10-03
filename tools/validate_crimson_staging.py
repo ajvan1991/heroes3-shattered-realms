@@ -313,6 +313,28 @@ for bid,gold in expectedIncome.items():
 if b.get("resourceSilo",{}).get("produce")!={"wood":1,"ore":1}: buildingEconomyErrors.append(["resourceSilo","produce",b.get("resourceSilo",{}).get("produce")])
 ck("buildingEconomyAndSyncContract",not buildingEconomyErrors,buildingEconomyErrors)
 
+# Dwelling progression snapshot protects the seven-tier economic curve and
+# prevents a valid dependency edit from silently flattening town development.
+dwellingErrors=[]
+dwellingPairs=[
+ ("veinHouse","veinHouseUp",400,900),("thornGallery","crimsonGallery",1000,1500),
+ ("gorewingRoost","bloodwingRoost",1800,2200),("hallVeins","oracleHall",2500,3000),
+ ("scarletLodge","bloodstalkerLodge",3500,4500),("sanguinePalace","archonPalace",7000,9000),
+ ("heartAviary","eternalAviary",12000,16000),
+]
+lastBaseGold=-1
+for baseId,upId,baseGold,upGold in dwellingPairs:
+ base=b.get(baseId,{}); up=b.get(upId,{})
+ if base.get("cost",{}).get("gold")!=baseGold or up.get("cost",{}).get("gold")!=upGold: dwellingErrors.append([baseId,upId,"gold-cost",base.get("cost",{}).get("gold"),up.get("cost",{}).get("gold"),baseGold,upGold])
+ if up.get("upgrades")!=baseId: dwellingErrors.append([upId,"upgrade-target",up.get("upgrades"),baseId])
+ if baseGold<=lastBaseGold: dwellingErrors.append([baseId,"base-tier-gold-not-increasing",baseGold,lastBaseGold])
+ if upGold<baseGold: dwellingErrors.append([upId,"upgrade-cheaper-than-base",upGold,baseGold])
+ lastBaseGold=baseGold
+# High-tier gates are intentional pacing anchors.
+if b.get("sanguinePalace",{}).get("requires")!=["allOf",["scarletLodge"],["cityHall"],["mageGuild2"]]: dwellingErrors.append(["sanguinePalace","gate-drift"])
+if b.get("heartAviary",{}).get("requires")!=["allOf",["sanguinePalace"],["castle"],["mageGuild3"]]: dwellingErrors.append(["heartAviary","gate-drift"])
+ck("dwellingProgressionSnapshot",not dwellingErrors,dwellingErrors)
+
 # Creature upgrade balance regression: every base->upgrade pair must remain a
 # strict combat improvement without silently reducing core values.
 creatureUpgradeErrors=[]
