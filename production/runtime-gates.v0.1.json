@@ -37,7 +37,9 @@
         "GitHub Actions Crimson Static QA run #103: building economy and embedded-building synchronization PASS",
         "GitHub Actions Crimson Static QA run #104: full QA chain with town-family evidence PASS",
         "GitHub Actions Crimson Static QA run #105: seven-tier dwelling economy progression PASS",
-        "GitHub Actions Crimson Static QA run #106: full QA chain with building-economy evidence PASS"
+        "GitHub Actions Crimson Static QA run #106: full QA chain with building-economy evidence PASS",
+        "GitHub Actions Crimson Static QA run #107: fortification progression PASS",
+        "GitHub Actions Crimson Static QA run #108: full QA chain with dwelling evidence PASS"
       ],
       "criteria": [
         "v0.1 spell activation snapshot matches staging",
@@ -64,7 +66,9 @@
         "building IDs are unique; costs/production use valid nonnegative resources; Hall/Grail/resource-silo economy backbone is snapshot-locked",
         "all seven Crimson base/upgrade dwelling gold-cost pairs and upgrade targets are snapshot-locked",
         "base dwelling gold costs increase across T1–T7 and T6/T7 retain their City Hall/Mage Guild/Castle pacing gates",
-        "Fort→Citadel→Castle fortification health/moat/tower progression is exact and all configured tower shooters remain Bloodstalker"
+        "Fort→Citadel→Castle fortification health/moat/tower progression is exact and all configured tower shooters remain Bloodstalker",
+        "all 41 Crimson town structures map one-to-one to buildings with animation/border/area and integer nonnegative screen coordinates",
+        "Crimson town presentation anchors lock music, moat ability, crystal primary resource, Mage Guild 5 and 100/100 Bloodlord/Sanguine Seer tavern weights"
       ]
     },
     {
@@ -190,10 +194,10 @@
   "rule": "Never report a blocked or pending gate as passed without its required evidence.",
   "ciEvidence": {
     "workflow": "Crimson Static QA",
-    "lastVerifiedRun": 106,
-    "lastVerifiedRunId": 37119304202,
-    "headSha": "c009e490fdb103b2d7eea473c15e6de5e27e01a5",
+    "lastVerifiedRun": 108,
+    "lastVerifiedRunId": 37145490489,
+    "headSha": "976c6f37fa0657d412319152320c71f94e5b6f4c",
     "conclusion": "success",
-    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact 12-spell contracts; Crimson creature/hero/class-passive contracts; Crimson town identity/special families/building economy plus seven-tier dwelling progression; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
+    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact 12-spell contracts; Crimson creature/hero/class-passive contracts; Crimson town identity/economy/dwellings plus Fort-Citadel-Castle fortification progression; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
   }
 }
