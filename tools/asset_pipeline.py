@@ -50,6 +50,22 @@ statusTruthErrors=[]
 # VCMI derives puzzle filenames from zero-based vector positions, padded to 00..47.
 expectedPuzzle={f"CRIMSON/PUZZLE/CRP{i:02d}.png" for i in range(48)}
 manifestResources={a.get("resource") for a in assets}
+# Re-derive direct media references from committed staging on every QA run.
+# A new/renamed gameplay media path must therefore enter the production manifest.
+MEDIA_EXTS=set(EXT_TYPE)
+stagingRoot=ROOT/"shattered-realms/Content/config/shattered-realms"
+directStagingResources=set()
+def collect_media(v):
+    if isinstance(v,str) and Path(v).suffix.lower() in MEDIA_EXTS: directStagingResources.add(v)
+    elif isinstance(v,dict):
+        for x in v.values(): collect_media(x)
+    elif isinstance(v,list):
+        for x in v: collect_media(x)
+for src in sorted(stagingRoot.rglob("*.staging.json")):
+    try: collect_media(json.loads(src.read_text(encoding="utf-8")))
+    except json.JSONDecodeError as e: errors.append(f"invalid staging JSON while deriving asset surface: {src.relative_to(ROOT)}: {e}")
+missingDirectManifest=sorted(directStagingResources-manifestResources)
+if missingDirectManifest: errors.append(f"staging media references absent from asset manifest: {missingDirectManifest}")
 missingPuzzle=sorted(expectedPuzzle-manifestResources)
 extraPuzzle=sorted(r for r in manifestResources if isinstance(r,str) and r.startswith("CRIMSON/PUZZLE/CRP") and r not in expectedPuzzle)
 if missingPuzzle: errors.append(f"missing derived puzzle manifest entries: {missingPuzzle}")
@@ -140,6 +156,7 @@ report={
  "scope":{"bootSlice":args.boot_slice,"priority":args.priority,"batch":args.batch},
  "manifestAssets":len(assets),"selected":len(sel),
  "batchCoverage":{"ownedResources":len(manifestResources)-len(unowned),"unownedResources":len(unowned),"unownedBootSlice":len(unownedBoot),"multiOwnedResources":len(multiOwned),"priorityMismatches":len(priorityMismatch)},
+ "referenceCoverage":{"directStagingReferences":len(directStagingResources),"missingFromManifest":len(missingDirectManifest),"missingSample":missingDirectManifest[:100]},
  "byPriority":dict(sorted(by_pri.items())),"byStatus":dict(sorted(by_status.items())),"byType":dict(sorted(by_type.items())),
  "physicalFilesPresent":len(sel)-len(missing),"physicalFilesMissing":len(missing),
  "manifestErrors":errors,"statusTruthErrors":statusTruthErrors,"strictPass":not errors and not missing,
