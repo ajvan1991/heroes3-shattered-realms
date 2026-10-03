@@ -218,6 +218,63 @@ for hid,h in he.items():
  if len({x.get("skill") for x in skillsList})!=len(skillsList): heroShape.append([hid,"duplicate-skill"])
  if h.get("class")=="sanguineSeer" and "spellbook" not in h: heroShape.append([hid,"missing-spellbook"])
 ck("heroRuntimeShape",not heroShape,heroShape)
+
+# Every starting secondary skill must be a legal VCMI mastery value and must be
+# available in the hero's own class table. This prevents a typo or cross-class
+# edit from producing a hero record that is structurally valid but cannot follow
+# the intended level-up progression.
+heroSkillContractErrors=[]
+validSkillLevels={"basic","advanced","expert"}
+for hid,h in he.items():
+ cls=h.get("class")
+ classSkills=(hc.get(cls,{}) or {}).get("secondarySkills",{}) or {}
+ for entry in h.get("skills",[]) or []:
+  sid=entry.get("skill"); level=entry.get("level")
+  if not isinstance(sid,str) or not sid:
+   heroSkillContractErrors.append([hid,"invalid-skill-id",sid])
+   continue
+  if level not in validSkillLevels:
+   heroSkillContractErrors.append([hid,sid,"invalid-level",level])
+  if not isinstance(classSkills.get(sid),(int,float)) or classSkills.get(sid,0)<=0:
+   heroSkillContractErrors.append([hid,sid,"not-available-in-class",cls,classSkills.get(sid)])
+ # v0.1 heroes deliberately begin with exactly two Basic skills: their class
+ # baseline plus the exclusive Crimson passive.
+ if len(h.get("skills",[]) or [])!=2:
+  heroSkillContractErrors.append([hid,"starting-skill-count",len(h.get("skills",[]) or [])])
+ if any(x.get("level")!="basic" for x in h.get("skills",[]) or []):
+  heroSkillContractErrors.append([hid,"non-basic-starting-skill"])
+ck("heroStartingSkillAvailabilityContract",not heroSkillContractErrors,heroSkillContractErrors)
+
+# Creature records must stay faction-local and use a constrained economy shape.
+# Gold is mandatory; only the faction's primary crystal surcharge is permitted
+# on the T7 pair. Presentation fields are also required even while special=true
+# keeps the roster inert before the media/runtime gates.
+creatureRecordErrors=[]
+allowedCreatureCost={"gold","crystal"}
+for cid,x in cr.items():
+ if x.get("faction")!="crimsonCourt":
+  creatureRecordErrors.append([cid,"faction",x.get("faction")])
+ cost=x.get("cost") or {}
+ if "gold" not in cost or any(k not in allowedCreatureCost for k in cost):
+  creatureRecordErrors.append([cid,"cost-resources",cost])
+ if x.get("level")<7 and set(cost)!={"gold"}:
+  creatureRecordErrors.append([cid,"unexpected-non-gold-cost",cost])
+ if x.get("level")==7 and set(cost)!={"gold","crystal"}:
+  creatureRecordErrors.append([cid,"t7-cost-shape",cost])
+ name=x.get("name") or {}
+ if not all(isinstance(name.get(k),str) and name.get(k).strip() for k in ("singular","plural")):
+  creatureRecordErrors.append([cid,"name-shape",name])
+ if not isinstance(x.get("description"),str) or not x.get("description").strip():
+  creatureRecordErrors.append([cid,"description"])
+ graphics=x.get("graphics") or {}
+ for key in ("animation","iconLarge","iconSmall"):
+  if not isinstance(graphics.get(key),str) or not graphics.get(key):
+   creatureRecordErrors.append([cid,"graphics",key,graphics.get(key)])
+ sound=x.get("sound") or {}
+ for key in ("attack","defend","killed","move","wince"):
+  if not isinstance(sound.get(key),str) or not sound.get(key):
+   creatureRecordErrors.append([cid,"sound",key,sound.get(key)])
+ck("creatureFactionEconomyPresentationContract",not creatureRecordErrors,creatureRecordErrors)
 ck("heroClassRosterBalance",classCounts=={"bloodlord":8,"sanguineSeer":8},classCounts)
 
 # Hero starting-kit contract: every regular hero starts its class-exclusive
