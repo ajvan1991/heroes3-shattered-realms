@@ -116,6 +116,13 @@ ck(not manifestBad,f"candidate manifest mismatch: {manifestBad}")
 ck(manifest.get("fileCount")==len(manifest.get("files",[])),"candidate manifest fileCount mismatch")
 ck(manifest.get("totalBytes")==sum(x.get("bytes",0) for x in manifest.get("files",[]) if isinstance(x,dict) and type(x.get("bytes")) is int),"candidate manifest totalBytes mismatch")
 ck(report.get("manifestFiles")==manifest.get("fileCount"),"candidate report manifest count mismatch")
+# Inventory identity must be canonical as well as hash-correct. Sorted unique
+# paths make manifests reproducible and prevent duplicate/case-collision entries
+# from becoming platform-dependent on Windows vs Linux.
+manifestPaths=[str(x.get("path","")) for x in manifest.get("files",[]) if isinstance(x,dict)]
+ck(manifestPaths==sorted(manifestPaths),"candidate manifest paths are not canonical sorted order")
+casefolded=[x.casefold() for x in manifestPaths]
+ck(len(casefolded)==len(set(casefolded)),"candidate manifest contains case-insensitive path collisions")
 actualFiles=sorted(p.relative_to(C).as_posix() for p in C.rglob("*") if p.is_file() and p.name not in {"candidate-report.json","candidate-manifest.json"})
 manifestFiles=sorted(str(x.get("path","")) for x in manifest.get("files",[]))
 ck(len(manifestFiles)==len(set(manifestFiles)),"candidate manifest contains duplicate paths")
