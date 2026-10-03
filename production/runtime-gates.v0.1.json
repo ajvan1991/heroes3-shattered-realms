@@ -96,13 +96,16 @@
         "every registered spellEffect has implements/script/patches/schema",
         "all custom spell-effect references resolve",
         "every registered runtime script has a real non-empty Lua source",
-        "isolated candidate packages exactly the registered runtime-script surface"
+        "isolated candidate packages exactly the registered runtime-script surface",
+        "Blood Rite Lua statically preserves nonlethal sacrifice, living/alive target checks, once-per-target battle markers and bounded-turn bonuses"
       ],
       "evidence": [
         "tools/validate_crimson_staging.py",
         "GitHub Actions Crimson Static QA run #2: combat registration checks PASS",
         "GitHub Actions Crimson Static QA run #56: combat + spell-effect staging closure PASS",
-        "GitHub Actions Crimson Static QA run #58: isolated candidate exact six-script surface and Lua materialization PASS"
+        "GitHub Actions Crimson Static QA run #58: isolated candidate exact six-script surface and Lua materialization PASS",
+        "GitHub Actions Crimson Static QA run #117: Blood Rite effect bridge schema PASS",
+        "GitHub Actions Crimson Static QA run #118: full QA chain with Blood Rite bridge evidence PASS"
       ]
     },
     {
@@ -208,10 +211,10 @@
   "rule": "Never report a blocked or pending gate as passed without its required evidence.",
   "ciEvidence": {
     "workflow": "Crimson Static QA",
-    "lastVerifiedRun": 116,
-    "lastVerifiedRunId": 37146642739,
-    "headSha": "a53e246b7de8eb0aced20766527a63a52835b693",
+    "lastVerifiedRun": 118,
+    "lastVerifiedRunId": 37149086329,
+    "headSha": "f2e92421b0c3a8073a9928e19dca075f0d0255bc",
     "conclusion": "success",
-    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact universal-spell and Blood Rite payload/presentation contracts; Crimson creature/hero/class-passive contracts; Crimson town identity/economy/layout/fortification contracts; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
+    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact universal-spell and Blood-Rite payload/presentation/effect-bridge contracts; Crimson creature/hero/class-passive/town contracts; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
   }
 }
