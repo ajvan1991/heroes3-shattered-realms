@@ -185,6 +185,35 @@ for hid,h in he.items():
  if not all(specText.get(k) for k in ("name","description","tooltip")): heroKitErrors.append([hid,"incomplete-specialty-text"])
 ck("heroStartingKitContract",not heroKitErrors,heroKitErrors)
 
+# Exact v0.1 specialty distribution: six Bloodlord creature specialists, one
+# Seer creature specialist, and conservative native secondary specialists.
+specialtyDistributionErrors=[]
+expectedCreature={
+ "vaelor":"veinling","seris":"thornDancer","khaeren":"gorewing","maelira":"scarletHuntress",
+ "othrys":"sanguineNoble","rhaevan":"bloodPhoenix","aveline":"hemomancer",
+}
+expectedSecondary={
+ "thaliaVeyn":"offence","ilyrThorn":"offence","sevrin":"wisdom",
+ "miraleth":"intelligence","caelis":"intelligence","vespera":"sorcery",
+ "elyssVane":"mysticism","saereth":"mysticism","lysandraNoct":"sorcery",
+}
+for hid,h in he.items():
+ spec=h.get("specialty") or {}
+ expected={"creature":expectedCreature[hid]} if hid in expectedCreature else {"secondary":expectedSecondary.get(hid)}
+ if spec!=expected: specialtyDistributionErrors.append([hid,spec,expected])
+ # Creature specialties deliberately name the base creature of an upgrade pair.
+ if hid in expectedCreature and expectedCreature[hid] not in cr: specialtyDistributionErrors.append([hid,"unknown-creature-specialty",expectedCreature[hid]])
+ck("heroSpecialtyDistributionSnapshot",not specialtyDistributionErrors,specialtyDistributionErrors)
+
+# Starting armies are deliberately restricted to early Crimson troops so no
+# hero can accidentally begin with a high-tier unit through a data edit.
+armyTierErrors=[]
+allowedStarting={"veinling","thornDancer"}
+for hid,h in he.items():
+ for stack in h.get("army",[]) or []:
+  if stack.get("creature") not in allowedStarting: armyTierErrors.append([hid,stack.get("creature")])
+ck("heroStartingArmyTierContract",not armyTierErrors,armyTierErrors)
+
 # Creature upgrade balance regression: every base->upgrade pair must remain a
 # strict combat improvement without silently reducing core values.
 creatureUpgradeErrors=[]
