@@ -165,6 +165,26 @@ for hid,h in he.items():
 ck("heroRuntimeShape",not heroShape,heroShape)
 ck("heroClassRosterBalance",classCounts=={"bloodlord":8,"sanguineSeer":8},classCounts)
 
+# Hero starting-kit contract: every regular hero starts its class-exclusive
+# passive at Basic; Seers explicitly own an empty spellbook and no hero starts
+# the opposite class passive.
+heroKitErrors=[]
+classPassive={"bloodlord":"bloodCommand","sanguineSeer":"crimsonDivination"}
+for hid,h in he.items():
+ cls=h.get("class"); expected=classPassive.get(cls)
+ skillsList=h.get("skills") or []
+ pairs=[(x.get("skill"),x.get("level")) for x in skillsList]
+ if pairs.count((expected,"basic"))!=1: heroKitErrors.append([hid,"exclusive-passive",pairs,expected])
+ opposite="crimsonDivination" if expected=="bloodCommand" else "bloodCommand"
+ if any(x.get("skill")==opposite for x in skillsList): heroKitErrors.append([hid,"cross-class-passive",opposite])
+ if cls=="sanguineSeer" and h.get("spellbook")!=[]: heroKitErrors.append([hid,"seer-spellbook-must-be-explicit-empty",h.get("spellbook")])
+ if cls=="bloodlord" and "spellbook" in h: heroKitErrors.append([hid,"bloodlord-unexpected-spellbook",h.get("spellbook")])
+ if not isinstance(h.get("female"),bool): heroKitErrors.append([hid,"female-flag"])
+ texts=h.get("texts") or {}; specText=texts.get("specialty") or {}
+ if not texts.get("name") or not texts.get("biography"): heroKitErrors.append([hid,"missing-name-or-biography"])
+ if not all(specText.get(k) for k in ("name","description","tooltip")): heroKitErrors.append([hid,"incomplete-specialty-text"])
+ck("heroStartingKitContract",not heroKitErrors,heroKitErrors)
+
 # Creature upgrade balance regression: every base->upgrade pair must remain a
 # strict combat improvement without silently reducing core values.
 creatureUpgradeErrors=[]
