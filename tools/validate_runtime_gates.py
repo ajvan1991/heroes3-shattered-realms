@@ -21,6 +21,22 @@ for g in gates:
   elif ids.index(dep)>=ids.index(g["id"]): errors.append(f"non-earlier dependency {dep}: {g.get('id')}")
  if g.get("status")=="PASS" and not g.get("evidence"): errors.append(f"PASS without evidence: {g.get('id')}")
  if g.get("status")=="BLOCKED" and not g.get("blocker"): errors.append(f"BLOCKED without blocker: {g.get('id')}")
+# Gate semantics are fail-closed: automated gates must carry criteria, manual
+# runtime gates must depend on an earlier gate, and no downstream PENDING gate
+# may accidentally become automated without an explicit contract change.
+for g in gates:
+ gid=g.get("id")
+ if g.get("automated") is True and not g.get("criteria"):
+  errors.append(f"automated gate without criteria: {gid}")
+ if gid in {"G5","G6","G7","G8","G9","G10"} and g.get("automated") is not False:
+  errors.append(f"manual runtime gate unexpectedly automated: {gid}")
+ if gid in {"G5","G6","G7","G8","G9","G10"} and not g.get("dependsOn"):
+  errors.append(f"manual runtime gate without dependency: {gid}")
+ if g.get("status")=="PENDING" and g.get("evidence"):
+  errors.append(f"PENDING gate already carries evidence: {gid}")
+ if g.get("status")=="BLOCKED" and g.get("automated") is not True:
+  errors.append(f"blocked pre-runtime gate must remain automated: {gid}")
+
 # A passed gate cannot depend on a gate that is not itself passed.
 for g in gates:
  if g.get("status")=="PASS":
