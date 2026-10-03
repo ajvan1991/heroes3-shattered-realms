@@ -352,6 +352,24 @@ for bid in ("citadel","castle"):
   if k.endswith("Shooter") and v!="bloodstalker": fortErrors.append([bid,k,v])
 ck("fortificationProgressionSnapshot",not fortErrors,fortErrors)
 
+# Town presentation coordinates are runtime-sensitive: require complete,
+# nonnegative clickable structures and exact top-level presentation anchors.
+presentationErrors=[]
+structures=town.get("structures") or {}
+if set(structures)!=set(b): presentationErrors.append(["structure-building-membership",sorted(set(structures)^set(b))])
+for sid,node in structures.items():
+ for field in ("animation","border","area"):
+  if not isinstance(node.get(field),str) or not node.get(field): presentationErrors.append([sid,"missing-"+field])
+ for field in ("x","y","z"):
+  if not isinstance(node.get(field),int): presentationErrors.append([sid,"invalid-"+field,node.get(field)])
+ if isinstance(node.get("x"),int) and node["x"]<0: presentationErrors.append([sid,"negative-x",node["x"]])
+ if isinstance(node.get("y"),int) and node["y"]<0: presentationErrors.append([sid,"negative-y",node["y"]])
+if town.get("musicTheme")!=["CRIMSON/MUSIC/crimson_court.ogg"]: presentationErrors.append(["musicTheme",town.get("musicTheme")])
+if town.get("moatAbility")!="core:spell.castleMoat": presentationErrors.append(["moatAbility",town.get("moatAbility")])
+if town.get("primaryResource")!="crystal" or town.get("mageGuild")!=5: presentationErrors.append(["town-resource-guild",town.get("primaryResource"),town.get("mageGuild")])
+if town.get("defaultTavern")!=5 or town.get("tavern")!={"bloodlord":100,"sanguineSeer":100}: presentationErrors.append(["town-tavern",town.get("defaultTavern"),town.get("tavern")])
+ck("townPresentationStructureContract",not presentationErrors,presentationErrors)
+
 # Creature upgrade balance regression: every base->upgrade pair must remain a
 # strict combat improvement without silently reducing core values.
 creatureUpgradeErrors=[]
