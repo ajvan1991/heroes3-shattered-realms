@@ -43,6 +43,10 @@ bootCount=sum(1 for a in assets if a.get("bootSlice"))
 declaredBoot=m.get("bootSlice",{}).get("directAndDerivedAssetJobs")
 if declaredBoot!=bootCount: errors.append(f"boot-slice count mismatch: {declaredBoot} != {bootCount}")
 seen=set()
+# Manifest status is evidence, not a planning label. Keep it synchronized with
+# the physical source tree in both directions: present files cannot remain
+# MISSING, and any status claiming produced media requires a real non-empty file.
+statusTruthErrors=[]
 # VCMI derives puzzle filenames from zero-based vector positions, padded to 00..47.
 expectedPuzzle={f"CRIMSON/PUZZLE/CRP{i:02d}.png" for i in range(48)}
 manifestResources={a.get("resource") for a in assets}
@@ -100,8 +104,12 @@ for a in assets:
     if expectedType and str(a.get("type","")).upper()!=expectedType:
         errors.append(f"type/extension mismatch {a.get('type')} vs {expectedType}: {r}")
     if not expectedType: errors.append(f"unsupported asset extension {ext}: {r}")
-    if a.get("status") in {"SOURCE_READY","CONVERTED","VALIDATED_VCMI"} and not exists(r):
-        errors.append(f"status claims file but resource is absent/empty: {r}")
+    present=exists(r)
+    if a.get("status") in {"SOURCE_READY","CONVERTED","VALIDATED_VCMI"} and not present:
+        statusTruthErrors.append(f"status claims file but resource is absent/empty: {r}")
+    if a.get("status")=="MISSING" and present:
+        statusTruthErrors.append(f"resource exists but manifest still claims MISSING: {r}")
+if statusTruthErrors: errors.extend(statusTruthErrors)
 
 unowned=sorted(r for r in manifestResources if isinstance(r,str) and not resourceOwners.get(r))
 multiOwned=sorted([r,sorted(set(resourceOwners.get(r,[])))] for r in manifestResources if isinstance(r,str) and len(set(resourceOwners.get(r,[])))>1)
@@ -134,7 +142,7 @@ report={
  "batchCoverage":{"ownedResources":len(manifestResources)-len(unowned),"unownedResources":len(unowned),"unownedBootSlice":len(unownedBoot),"multiOwnedResources":len(multiOwned),"priorityMismatches":len(priorityMismatch)},
  "byPriority":dict(sorted(by_pri.items())),"byStatus":dict(sorted(by_status.items())),"byType":dict(sorted(by_type.items())),
  "physicalFilesPresent":len(sel)-len(missing),"physicalFilesMissing":len(missing),
- "manifestErrors":errors,"strictPass":not errors and not missing,
+ "manifestErrors":errors,"statusTruthErrors":statusTruthErrors,"strictPass":not errors and not missing,
  "nextMissing":missing[:100],"unownedSample":unowned[:100],"multiOwnedSample":multiOwned[:100]
 }
 out=ROOT/args.report;out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
