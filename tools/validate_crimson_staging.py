@@ -260,6 +260,22 @@ for sid,tiers in expectedPassive.items():
   if not node.get("description"): passiveRuntimeErrors.append([sid,tier,"description"])
 ck("activeClassPassiveRuntimeSnapshot",not passiveRuntimeErrors,passiveRuntimeErrors)
 
+# Town roster/UI/siege identity snapshot. This complements graph/reference
+# closure by detecting semantically valid but unintended town-layout drift.
+townIdentityErrors=[]
+fac=faction.get("crimsonCourt",{}); town=fac.get("town",{})
+expectedTiers=[["veinling","bloodbound"],["thornDancer","crimsonDancer"],["gorewing","bloodwing"],["hemomancer","veinOracle"],["scarletHuntress","bloodstalker"],["sanguineNoble","crimsonArchon"],["bloodPhoenix","eternalBloodPhoenix"]]
+if town.get("creatures")!=expectedTiers: townIdentityErrors.append(["creature-tiers",town.get("creatures")])
+slots=town.get("hallSlots") or []
+if len(slots)!=5 or any(not (1<=len(row)<=4) for row in slots): townIdentityErrors.append(["hall-shape",[len(x) for x in slots]])
+expectedHall0=[["villageHall","townHall","cityHall","capitol"],["fort","citadel","castle"],["tavern","blacksmith"],["marketplace","resourceSilo"]]
+if not slots or slots[0]!=expectedHall0: townIdentityErrors.append(["hall-core-row",slots[0] if slots else None])
+if len(town.get("structures") or {})!=41: townIdentityErrors.append(["structure-count",len(town.get("structures") or {})])
+siege=town.get("siege") or {}
+if siege.get("shooter")!="bloodstalker" or siege.get("imagePrefix")!="CRIMSON/SIEGE/CRSG": townIdentityErrors.append(["siege-identity",siege.get("shooter"),siege.get("imagePrefix")])
+if fac.get("alignment")!="neutral" or fac.get("nativeTerrain")!="dirt": townIdentityErrors.append(["faction-identity",fac.get("alignment"),fac.get("nativeTerrain")])
+ck("townRuntimeIdentitySnapshot",not townIdentityErrors,townIdentityErrors)
+
 # Creature upgrade balance regression: every base->upgrade pair must remain a
 # strict combat improvement without silently reducing core values.
 creatureUpgradeErrors=[]
