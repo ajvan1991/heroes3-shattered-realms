@@ -292,6 +292,27 @@ specialIds={k:v.get("id") for k,v in (town.get("buildings") or {}).items() if is
 if specialIds!={"courtVeins":50,"scarletConservatory":51,"firstChalice":52,"moonlitMenagerie":53,"thornTribunal":54,"redMoonObservatory":55}: townFamilyErrors.append(["special-building-ids",specialIds])
 ck("townSpecialFamiliesSnapshot",not townFamilyErrors,townFamilyErrors)
 
+# Building economy/progression safety: IDs and costs must remain sane and
+# canonical staging must stay synchronized with the faction-embedded copy.
+buildingEconomyErrors=[]
+embedded=town.get("buildings") or {}
+if embedded!=b: buildingEconomyErrors.append(["embedded-buildings-drift"])
+ids=[x.get("id") for x in b.values()]
+if len(ids)!=len(set(ids)): buildingEconomyErrors.append(["duplicate-building-ids",ids])
+allowedResources={"wood","ore","mercury","sulfur","crystal","gems","gold"}
+for bid,x in b.items():
+ cost=x.get("cost") or {}
+ if any(k not in allowedResources or not isinstance(v,int) or v<0 for k,v in cost.items()): buildingEconomyErrors.append([bid,"invalid-cost",cost])
+ prod=x.get("produce") or {}
+ if any(k not in allowedResources or not isinstance(v,int) or v<0 for k,v in prod.items()): buildingEconomyErrors.append([bid,"invalid-produce",prod])
+ if x.get("upgrades")==bid: buildingEconomyErrors.append([bid,"self-upgrade"])
+# Exact economic backbone protects classic H3 town pacing.
+expectedIncome={"villageHall":500,"townHall":1000,"cityHall":2000,"capitol":4000,"grail":5000}
+for bid,gold in expectedIncome.items():
+ if b.get(bid,{}).get("produce",{}).get("gold")!=gold: buildingEconomyErrors.append([bid,"gold-income",b.get(bid,{}).get("produce"),gold])
+if b.get("resourceSilo",{}).get("produce")!={"wood":1,"ore":1}: buildingEconomyErrors.append(["resourceSilo","produce",b.get("resourceSilo",{}).get("produce")])
+ck("buildingEconomyAndSyncContract",not buildingEconomyErrors,buildingEconomyErrors)
+
 # Creature upgrade balance regression: every base->upgrade pair must remain a
 # strict combat improvement without silently reducing core values.
 creatureUpgradeErrors=[]
