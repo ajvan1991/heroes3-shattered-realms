@@ -165,6 +165,27 @@ for hid,h in he.items():
 ck("heroRuntimeShape",not heroShape,heroShape)
 ck("heroClassRosterBalance",classCounts=={"bloodlord":8,"sanguineSeer":8},classCounts)
 
+# Creature upgrade balance regression: every base->upgrade pair must remain a
+# strict combat improvement without silently reducing core values.
+creatureUpgradeErrors=[]
+for baseId,base in creatures.items():
+ for upId in base.get("upgrades",[]) or []:
+  up=creatures.get(upId)
+  if not up: continue
+  for field in ["attack","defense","hitPoints","speed","fightValue","aiValue"]:
+   bv=base.get(field); uv=up.get(field)
+   if isinstance(bv,(int,float)) and isinstance(uv,(int,float)) and uv<bv:
+    creatureUpgradeErrors.append([baseId,upId,field,bv,uv])
+  bd=base.get("damage") or {}; ud=up.get("damage") or {}
+  for field in ["min","max"]:
+   if isinstance(bd.get(field),(int,float)) and isinstance(ud.get(field),(int,float)) and ud[field]<bd[field]:
+    creatureUpgradeErrors.append([baseId,upId,"damage."+field,bd[field],ud[field]])
+  if up.get("growth")!=base.get("growth"):
+   creatureUpgradeErrors.append([baseId,upId,"growth",base.get("growth"),up.get("growth")])
+  if up.get("fightValue")!=up.get("aiValue"):
+   creatureUpgradeErrors.append([upId,"fightValue-aiValue",up.get("fightValue"),up.get("aiValue")])
+ck("creatureUpgradeProgression",not creatureUpgradeErrors,creatureUpgradeErrors)
+
 # Specialty shortcuts must point to something the hero can actually use/grow.
 specialtySkillErrors=[]
 for hid,h in he.items():
