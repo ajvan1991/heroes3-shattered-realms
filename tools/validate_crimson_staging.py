@@ -370,6 +370,23 @@ if town.get("primaryResource")!="crystal" or town.get("mageGuild")!=5: presentat
 if town.get("defaultTavern")!=5 or town.get("tavern")!={"bloodlord":100,"sanguineSeer":100}: presentationErrors.append(["town-tavern",town.get("defaultTavern"),town.get("tavern")])
 ck("townPresentationStructureContract",not presentationErrors,presentationErrors)
 
+# Mage Guild and town identity layout snapshot. Spell slots are intentionally
+# 6/5/4/3/2 across five guild levels and must stay screen-safe.
+guildLayoutErrors=[]
+positions=town.get("guildSpellPositions") or []
+if [len(row) for row in positions]!=[6,5,4,3,2]: guildLayoutErrors.append(["guild-slot-counts",[len(row) for row in positions]])
+for level,row in enumerate(positions,1):
+ for slot,pos in enumerate(row):
+  if not isinstance(pos,dict) or not isinstance(pos.get("x"),int) or not isinstance(pos.get("y"),int) or pos["x"]<0 or pos["y"]<0: guildLayoutErrors.append(["guild-position",level,slot,pos])
+expectedTownMedia={"buildingsIcons":"CRIMSON/TOWN/building_icons.DEF","hallBackground":"CRIMSON/TOWN/hall_background.png","townBackground":"CRIMSON/TOWN/town_background.png","guildWindow":"CRIMSON/TOWN/mage_guild_window.png","guildBackground":"CRIMSON/TOWN/mage_guild_background.png","tavernVideo":"CRIMSON/TOWN/tavern.webm"}
+for field,path in expectedTownMedia.items():
+ if town.get(field)!=path: guildLayoutErrors.append([field,town.get(field),path])
+if town.get("guildWindowPosition")!={"x":332,"y":76}: guildLayoutErrors.append(["guildWindowPosition",town.get("guildWindowPosition")])
+expectedNames=["Veyrath","Sanguinar","Thornveil","Caer Veyn","Redharrow","Nocthyr","Velisara","Bloodmere","Ilyrion","Scarlet Reach","Vael Noctis","Moonthorn"]
+if town.get("names")!=expectedNames: guildLayoutErrors.append(["town-names",town.get("names")])
+if town.get("horde")!=[1,4]: guildLayoutErrors.append(["horde-tiers",town.get("horde")])
+ck("townGuildAndIdentityLayoutSnapshot",not guildLayoutErrors,guildLayoutErrors)
+
 # Creature upgrade balance regression: every base->upgrade pair must remain a
 # strict combat improvement without silently reducing core values.
 creatureUpgradeErrors=[]
