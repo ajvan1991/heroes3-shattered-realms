@@ -594,6 +594,27 @@ for sid,exp in riteExpected.items():
   elif eff.get("rangedReduction")!=exp["rangedReduction"]: ritePayloadErrors.append([sid,m,"rangedReduction",eff.get("rangedReduction")])
 ck("bloodRitePayloadSnapshot",not ritePayloadErrors,ritePayloadErrors)
 
+# Blood Rite presentation and safety shape is exact: all UI references exist,
+# descriptions are nonempty, and mastery may only reduce sacrifice/cost.
+riteShapeErrors=[]
+for sid,exp in riteExpected.items():
+ s=rites.get(sid,{})
+ graphics=s.get("graphics") or {}
+ requiredGraphics={"iconBook","iconScroll","iconEffect","iconImmune","iconScenarioBonus"}
+ if set(graphics)!=requiredGraphics or not all(isinstance(graphics.get(k),str) and graphics.get(k) for k in requiredGraphics):
+  riteShapeErrors.append([sid,"graphics",graphics])
+ sacrifices=[]; costs=[]
+ for m in masteries:
+  node=(s.get("levels") or {}).get(m,{})
+  eff=(node.get("effects") or {}).get("rite",{})
+  if not node.get("description"): riteShapeErrors.append([sid,m,"description"])
+  if node.get("range")!="0" or node.get("power")!=0: riteShapeErrors.append([sid,m,"range-power",node.get("range"),node.get("power")])
+  sacrifices.append(eff.get("sacrifice")); costs.append(node.get("cost"))
+ if all(isinstance(v,int) for v in sacrifices) and any(sacrifices[i]<sacrifices[i+1] for i in range(3)): riteShapeErrors.append([sid,"sacrifice-regression",sacrifices])
+ if all(isinstance(v,int) for v in costs) and any(costs[i]<costs[i+1] for i in range(3)): riteShapeErrors.append([sid,"cost-regression",costs])
+ if s.get("power")!=0: riteShapeErrors.append([sid,"top-level-power",s.get("power")])
+ck("bloodRitePresentationAndProgression",not riteShapeErrors,riteShapeErrors)
+
 # Lock the exact v0.1 spell surface so generation status cannot drift silently.
 sc=spellContract
 cp=sc.get("counterplay",{})
