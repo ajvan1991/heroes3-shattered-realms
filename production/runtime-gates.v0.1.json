@@ -29,7 +29,10 @@
         "GitHub Actions Crimson Static QA run #92: exact hero specialty and starting-army contracts PASS",
         "GitHub Actions Crimson Static QA run #93: full QA chain with hero specialty criteria PASS",
         "GitHub Actions Crimson Static QA run #94: hero-class progression identity PASS",
-        "GitHub Actions Crimson Static QA run #95: full QA chain with hero-class criteria PASS"
+        "GitHub Actions Crimson Static QA run #95: full QA chain with hero-class criteria PASS",
+        "GitHub Actions Crimson Static QA run #96: active class-passive runtime effects PASS",
+        "GitHub Actions Crimson Static QA run #97: full QA chain with class-passive criteria PASS",
+        "GitHub Actions Crimson Static QA run #99: Crimson town runtime identity PASS after registry binding fix"
       ],
       "criteria": [
         "v0.1 spell activation snapshot matches staging",
@@ -49,7 +52,9 @@
         "Crimson hero-class affinity, primary-skill starts, low/high level-up distributions, commander and tavern identity are snapshot-locked",
         "Bloodlord and Sanguine Seer level-up chance tables each sum to 100",
         "Blood Command and Crimson Divination native Basic/Advanced/Expert effect payloads are exact and fully populated",
-        "active Crimson class passives remain generation-disabled globally, class-exclusive, and progression-safe with offerCooldown 0"
+        "active Crimson class passives remain generation-disabled globally, class-exclusive, and progression-safe with offerCooldown 0",
+        "Crimson town runtime identity locks seven creature tiers, five Hall rows, 41 structures and Bloodstalker siege family",
+        "Crimson puzzle map is exactly 48 indexed pieces; Grail, four horde buildings and six special-building IDs are snapshot-locked"
       ]
     },
     {
@@ -175,10 +180,10 @@
   "rule": "Never report a blocked or pending gate as passed without its required evidence.",
   "ciEvidence": {
     "workflow": "Crimson Static QA",
-    "lastVerifiedRun": 95,
-    "lastVerifiedRunId": 37118088423,
-    "headSha": "ce52a723ea65cd5d80bbd7f6a4ec43182407450b",
+    "lastVerifiedRun": 99,
+    "lastVerifiedRunId": 37118762208,
+    "headSha": "4865991e9eb68dad7652b024a8efa64c2e37e702",
     "conclusion": "success",
-    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact 12-spell contracts; Crimson creature progression/roles/abilities; 16-hero contracts; Bloodlord/Sanguine Seer progression identity; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
+    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact 12-spell contracts; Crimson creature progression/roles/abilities; 16-hero and class-passive contracts; Crimson town seven-tier/Hall/41-structure/siege identity; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
   }
 }
