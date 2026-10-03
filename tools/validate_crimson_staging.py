@@ -642,6 +642,24 @@ for sid in sorted(riteExpected):
 if markers!={"shattered-realms:riteOpenVeinUsed","shattered-realms:riteScarletShelterUsed"}: riteBridgeErrors.append(["marker-set",sorted(str(x) for x in markers)])
 ck("bloodRiteEffectBridgeSchema",not riteBridgeErrors,riteBridgeErrors)
 
+# Blood Rite Lua is safety-critical: keep the nonlethal sacrifice and
+# once-per-target battle marker semantics visible to static QA.
+riteLuaErrors=[]
+riteLuaPath=ROOT/"shattered-realms/Content/scripts/shattered-realms/spells/bloodRiteUnitEffect.lua"
+riteLua=riteLuaPath.read_text(encoding="utf-8") if riteLuaPath.exists() else ""
+requiredLuaTokens=[
+ "math.min(amount, hp - 1)","unit:getAvailableHealth() <= 1","not unit:isAlive()",
+ "not unit:isLiving()","unit:hasBonuses({ type = self.usedMarker })",
+ "server:damageUnit(battle, unit, amount)","type = \"PRIMARY_SKILL\"",
+ "type = \"GENERAL_DAMAGE_REDUCTION\"","duration = ENUM.BonusDuration.nTurns",
+ "duration = ENUM.BonusDuration.oneBattle","stacking = mechanics:getSpell():getJsonKey()",
+]
+for token in requiredLuaTokens:
+ if token not in riteLua: riteLuaErrors.append(["missing-token",token])
+# Marker must be applied only after target validation/damage path exists.
+if riteLua and riteLua.find("server:damageUnit")>riteLua.find("duration = ENUM.BonusDuration.oneBattle"): riteLuaErrors.append(["marker-before-damage"])
+ck("bloodRiteLuaSafetyContract",not riteLuaErrors,riteLuaErrors)
+
 # Lock the exact v0.1 spell surface so generation status cannot drift silently.
 sc=spellContract
 cp=sc.get("counterplay",{})
