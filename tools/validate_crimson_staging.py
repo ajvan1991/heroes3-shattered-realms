@@ -263,7 +263,7 @@ ck("activeClassPassiveRuntimeSnapshot",not passiveRuntimeErrors,passiveRuntimeEr
 # Town roster/UI/siege identity snapshot. This complements graph/reference
 # closure by detecting semantically valid but unintended town-layout drift.
 townIdentityErrors=[]
-fac=faction.get("crimsonCourt",{}); town=fac.get("town",{})
+fac=D["faction"].get("crimsonCourt",{}); town=fac.get("town",{})
 expectedTiers=[["veinling","bloodbound"],["thornDancer","crimsonDancer"],["gorewing","bloodwing"],["hemomancer","veinOracle"],["scarletHuntress","bloodstalker"],["sanguineNoble","crimsonArchon"],["bloodPhoenix","eternalBloodPhoenix"]]
 if town.get("creatures")!=expectedTiers: townIdentityErrors.append(["creature-tiers",town.get("creatures")])
 slots=town.get("hallSlots") or []
