@@ -68,6 +68,18 @@ jobs:
         run: python tools/build_crimson_candidate.py --allow-missing-assets
       - name: Verify structural candidate
         run: python tools/verify_crimson_candidate.py
+      - name: Assert structural candidate stays non-runtime-ready
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("build/crimson-v01-candidate/candidate-report.json")
+          r=json.loads(p.read_text())
+          assert r["runtimeReady"] is False, r
+          assert r["missingDirectMedia"] > 0 or r["missingDerivedSiege"] > 0 or r["missingDerivedPuzzle"] > 0, r
+          print("Structural candidate remains correctly blocked by missing media")
+          PY
       - name: Publish QA evidence summary
         if: always()
         shell: bash
