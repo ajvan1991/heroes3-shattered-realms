@@ -168,9 +168,9 @@ ck("heroClassRosterBalance",classCounts=={"bloodlord":8,"sanguineSeer":8},classC
 # Creature upgrade balance regression: every base->upgrade pair must remain a
 # strict combat improvement without silently reducing core values.
 creatureUpgradeErrors=[]
-for baseId,base in creatures.items():
+for baseId,base in cr.items():
  for upId in base.get("upgrades",[]) or []:
-  up=creatures.get(upId)
+  up=cr.get(upId)
   if not up: continue
   for field in ["attack","defense","hitPoints","speed","fightValue","aiValue"]:
    bv=base.get(field); uv=up.get(field)
