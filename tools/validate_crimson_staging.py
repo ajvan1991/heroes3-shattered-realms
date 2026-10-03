@@ -186,6 +186,21 @@ for baseId,base in cr.items():
    creatureUpgradeErrors.append([upId,"fightValue-aiValue",up.get("fightValue"),up.get("aiValue")])
 ck("creatureUpgradeProgression",not creatureUpgradeErrors,creatureUpgradeErrors)
 
+# v0.1 activation safety and ranged/flying identity are explicit contracts.
+creatureActivationErrors=[]
+expectedShooters={"scarletHuntress":12,"bloodstalker":16}
+expectedFlyers={"gorewing","bloodwing","bloodPhoenix","eternalBloodPhoenix"}
+for cid,x in cr.items():
+ if x.get("special") is not True: creatureActivationErrors.append([cid,"must-remain-special-before-G3/G4"])
+ abilities=x.get("abilities") or {}
+ isShooter="shooter" in abilities
+ if (cid in expectedShooters)!=isShooter: creatureActivationErrors.append([cid,"shooter-contract",isShooter])
+ if cid in expectedShooters and x.get("shots")!=expectedShooters[cid]: creatureActivationErrors.append([cid,"shots",x.get("shots"),expectedShooters[cid]])
+ if cid not in expectedShooters and x.get("shots") not in (None,0): creatureActivationErrors.append([cid,"unexpected-shots",x.get("shots")])
+ isFlyer="canFly" in abilities
+ if (cid in expectedFlyers)!=isFlyer: creatureActivationErrors.append([cid,"flying-contract",isFlyer])
+ck("creatureActivationAndRoleContract",not creatureActivationErrors,creatureActivationErrors)
+
 # Specialty shortcuts must point to something the hero can actually use/grow.
 specialtySkillErrors=[]
 for hid,h in he.items():
