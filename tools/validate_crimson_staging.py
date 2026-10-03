@@ -570,6 +570,30 @@ for sid,s in counterplay.items():
  else: spellStageErrors.append([sid,"invalid-defaultGainChance",dg])
 ck("spellGenerationContract",not spellStageErrors,spellStageErrors)
 
+# Blood Rite payload snapshot: generation stays disabled, while mastery may
+# reduce sacrifice/mana cost but never changes the core reward or marker.
+ritePayloadErrors=[]
+riteExpected={
+ "riteOpenVein":{"school":"fire","stat":"attack","statValue":2,"rangedReduction":None,"sacrifice":[8,8,6,4],"cost":[6,6,5,4],"marker":"shattered-realms:riteOpenVeinUsed"},
+ "riteScarletShelter":{"school":"earth","stat":"defence","statValue":3,"rangedReduction":10,"sacrifice":[10,10,7,4],"cost":[7,7,6,5],"marker":"shattered-realms:riteScarletShelterUsed"},
+}
+masteries=["none","basic","advanced","expert"]
+for sid,exp in riteExpected.items():
+ s=rites.get(sid,{})
+ schools=sorted(k for k,v in (s.get("school") or {}).items() if v is True)
+ if schools!=[exp["school"]] or s.get("level")!=2 or s.get("targetType")!="CREATURE" or s.get("flags")!={"positive":True}: ritePayloadErrors.append([sid,"identity",schools,s.get("level"),s.get("targetType"),s.get("flags")])
+ for idx,m in enumerate(masteries):
+  node=(s.get("levels") or {}).get(m,{})
+  eff=(node.get("effects") or {}).get("rite",{})
+  expectedCore=(exp["sacrifice"][idx],exp["stat"],exp["statValue"],exp["marker"],2)
+  actualCore=(eff.get("sacrifice"),eff.get("stat"),eff.get("statValue"),eff.get("usedMarker"),eff.get("turns"))
+  if actualCore!=expectedCore or node.get("cost")!=exp["cost"][idx]: ritePayloadErrors.append([sid,m,"payload",actualCore,node.get("cost"),expectedCore,exp["cost"][idx]])
+  if eff.get("type")!="shattered-realms:bloodRiteUnitEffect": ritePayloadErrors.append([sid,m,"effect-type",eff.get("type")])
+  if exp["rangedReduction"] is None:
+   if "rangedReduction" in eff: ritePayloadErrors.append([sid,m,"unexpected-rangedReduction",eff.get("rangedReduction")])
+  elif eff.get("rangedReduction")!=exp["rangedReduction"]: ritePayloadErrors.append([sid,m,"rangedReduction",eff.get("rangedReduction")])
+ck("bloodRitePayloadSnapshot",not ritePayloadErrors,ritePayloadErrors)
+
 # Lock the exact v0.1 spell surface so generation status cannot drift silently.
 sc=spellContract
 cp=sc.get("counterplay",{})
