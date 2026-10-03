@@ -15,11 +15,17 @@
         "GitHub Actions Crimson Static QA run #23: staging + executable reference-closure validation PASS",
         "production/crimson-spell-contract.v0.1.json",
         "GitHub Actions Crimson Static QA run #66: exact spell activation snapshot PASS",
-        "GitHub Actions Crimson Static QA run #69: exact 12-spell isolated candidate surface + reserved-spell exclusion PASS"
+        "GitHub Actions Crimson Static QA run #69: exact 12-spell isolated candidate surface + reserved-spell exclusion PASS",
+        "GitHub Actions Crimson Static QA run #76: explicit multi-school exception contract PASS",
+        "GitHub Actions Crimson Static QA run #78: active spell identity snapshot PASS",
+        "GitHub Actions Crimson Static QA run #79: independent candidate spell identity verification PASS"
       ],
       "criteria": [
         "v0.1 spell activation snapshot matches staging",
-        "isolated candidate contains exactly 12 active universal spells and no reserved spell"
+        "isolated candidate contains exactly 12 active universal spells and no reserved spell",
+        "active spell records have complete mastery/graphics/effect shape",
+        "active spell level/school/polarity identity matches the committed snapshot",
+        "Fateful Exchange is the only intentional active multi-school exception (Fire + Water)"
       ]
     },
     {
@@ -145,10 +151,10 @@
   "rule": "Never report a blocked or pending gate as passed without its required evidence.",
   "ciEvidence": {
     "workflow": "Crimson Static QA",
-    "lastVerifiedRun": 69,
-    "lastVerifiedRunId": 36779760754,
-    "headSha": "cf79c137c3b53625db1efa010a9bacd7d2389493",
+    "lastVerifiedRun": 79,
+    "lastVerifiedRunId": 37077566688,
+    "headSha": "6d78cf9144bfeb7c6293c7c1881476af0949e323",
     "conclusion": "success",
-    "scope": "structural/non-strict candidate; exact 12-spell active universal surface with reserved-spell exclusion; full + pre-build runtime-gate validation; executable reference closure; all 16 production batches; 530/530 exclusive production ownership; exact six-script combatEvent+spellEffect registry and Lua materialization; candidate integrity"
+    "scope": "structural/non-strict candidate; exact 12-spell activation, record-shape, implementation-class and level/school/polarity identity contracts; explicit Fateful Exchange Fire+Water exception; full + pre-build runtime-gate validation; 530/530 exclusive asset ownership; exact six-script runtime surface; candidate integrity"
   }
 }
