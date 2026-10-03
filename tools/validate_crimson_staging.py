@@ -214,6 +214,23 @@ for hid,h in he.items():
   if stack.get("creature") not in allowedStarting: armyTierErrors.append([hid,stack.get("creature")])
 ck("heroStartingArmyTierContract",not armyTierErrors,armyTierErrors)
 
+# Hero-class identity snapshot. These values control level-up identity and must
+# not drift while balancing individual heroes.
+classIdentityErrors=[]
+expectedClass={
+ "bloodlord":{"affinity":"might","commander":"bloodstalker","primarySkills":{"attack":2,"defence":2,"spellpower":1,"knowledge":1},"lowLevelChance":{"attack":40,"defence":35,"spellpower":15,"knowledge":10},"highLevelChance":{"attack":30,"defence":30,"spellpower":20,"knowledge":20},"passive":"bloodCommand"},
+ "sanguineSeer":{"affinity":"magic","commander":"bloodstalker","primarySkills":{"attack":1,"defence":1,"spellpower":2,"knowledge":2},"lowLevelChance":{"attack":15,"defence":15,"spellpower":35,"knowledge":35},"highLevelChance":{"attack":20,"defence":20,"spellpower":30,"knowledge":30},"passive":"crimsonDivination"},
+}
+for cid,exp in expectedClass.items():
+ cls=hc.get(cid,{})
+ for field in ("affinity","commander","primarySkills","lowLevelChance","highLevelChance"):
+  if cls.get(field)!=exp[field]: classIdentityErrors.append([cid,field,cls.get(field),exp[field]])
+ if cls.get("faction")!="crimsonCourt" or cls.get("defaultTavern")!=5 or cls.get("tavern")!={"crimsonCourt":100}: classIdentityErrors.append([cid,"faction-tavern-contract"])
+ if cls.get("secondarySkills",{}).get(exp["passive"])!=1: classIdentityErrors.append([cid,"exclusive-passive-weight",cls.get("secondarySkills",{}).get(exp["passive"])])
+ for chanceField in ("lowLevelChance","highLevelChance"):
+  if sum(cls.get(chanceField,{}).values())!=100: classIdentityErrors.append([cid,chanceField+"-sum",sum(cls.get(chanceField,{}).values())])
+ck("heroClassIdentitySnapshot",not classIdentityErrors,classIdentityErrors)
+
 # Creature upgrade balance regression: every base->upgrade pair must remain a
 # strict combat improvement without silently reducing core values.
 creatureUpgradeErrors=[]
