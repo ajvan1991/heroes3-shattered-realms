@@ -303,6 +303,54 @@ for hid,h in he.items():
  if h.get("class")=="sanguineSeer" and "spellbook" not in h: heroShape.append([hid,"missing-spellbook"])
 ck("heroRuntimeShape",not heroShape,heroShape)
 
+# Starting armies are intentionally restricted to low-tier Crimson creatures.
+# This keeps tavern recruitment deterministic and prevents an accidental edit
+# from handing a hero an upgraded/high-tier stack or duplicating one creature in
+# multiple slots.
+heroArmyContractErrors=[]
+allowedStartingArmy={"veinling","thornDancer"}
+for hid,h in he.items():
+ army=h.get("army",[]) or []
+ seen=set()
+ for slot in army:
+  cid=slot.get("creature")
+  if cid not in allowedStartingArmy:
+   heroArmyContractErrors.append([hid,"starting-creature",cid])
+  if cid in seen:
+   heroArmyContractErrors.append([hid,"duplicate-starting-creature",cid])
+  seen.add(cid)
+  if cid in cr and cr[cid].get("level") not in {1,2}:
+   heroArmyContractErrors.append([hid,"starting-tier",cid,cr[cid].get("level")])
+ # Current v0.1 roster uses either one T1 stack or T1+T2; T2 may never appear
+ # without T1 because that changes the intended early-game baseline.
+ ids=[x.get("creature") for x in army]
+ if "thornDancer" in ids and "veinling" not in ids:
+  heroArmyContractErrors.append([hid,"t2-without-t1",ids])
+ck("heroStartingArmyRosterContract",not heroArmyContractErrors,heroArmyContractErrors)
+
+# Specialty objects have exactly one supported target kind in v0.1. Creature
+# specialties must point at the base member of a town upgrade pair; secondary
+# specialties must be available to the hero's class.
+heroSpecialtyErrors=[]
+for hid,h in he.items():
+ spec=h.get("specialty")
+ if not isinstance(spec,dict):
+  heroSpecialtyErrors.append([hid,"not-object",spec]); continue
+ kinds=[k for k in ("creature","secondary") if k in spec]
+ if len(kinds)!=1:
+  heroSpecialtyErrors.append([hid,"target-kind",sorted(spec)]); continue
+ if kinds[0]=="creature":
+  cid=spec.get("creature")
+  pair=next((tier for tier in town.get("creatures",[]) if tier and tier[0]==cid),None)
+  if not pair:
+   heroSpecialtyErrors.append([hid,"creature-not-base-town-unit",cid])
+ elif kinds[0]=="secondary":
+  sid=spec.get("secondary"); cls=h.get("class")
+  chance=(hc.get(cls,{}) or {}).get("secondarySkills",{}).get(sid)
+  if not isinstance(chance,(int,float)) or chance<=0:
+   heroSpecialtyErrors.append([hid,"secondary-not-in-class",sid,cls,chance])
+ck("heroSpecialtyTargetContract",not heroSpecialtyErrors,heroSpecialtyErrors)
+
 # Every starting secondary skill must be a legal VCMI mastery value and must be
 # available in the hero's own class table. This prevents a typo or cross-class
 # edit from producing a hero record that is structurally valid but cannot follow
