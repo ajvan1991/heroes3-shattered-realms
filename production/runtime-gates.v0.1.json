@@ -33,7 +33,9 @@
         "GitHub Actions Crimson Static QA run #96: active class-passive runtime effects PASS",
         "GitHub Actions Crimson Static QA run #97: full QA chain with class-passive criteria PASS",
         "GitHub Actions Crimson Static QA run #99: Crimson town runtime identity PASS after registry binding fix",
-        "GitHub Actions Crimson Static QA run #102: puzzle/Grail/horde/special-family contract PASS"
+        "GitHub Actions Crimson Static QA run #102: puzzle/Grail/horde/special-family contract PASS",
+        "GitHub Actions Crimson Static QA run #103: building economy and embedded-building synchronization PASS",
+        "GitHub Actions Crimson Static QA run #104: full QA chain with town-family evidence PASS"
       ],
       "criteria": [
         "v0.1 spell activation snapshot matches staging",
@@ -57,7 +59,9 @@
         "Crimson town runtime identity locks seven creature tiers, five Hall rows, 41 structures and Bloodstalker siege family",
         "Crimson puzzle map is exactly 48 indexed pieces; Grail, four horde buildings and six special-building IDs are snapshot-locked",
         "Crimson canonical building staging and faction-embedded building copy must be byte-equivalent as parsed data",
-        "building IDs are unique; costs/production use valid nonnegative resources; Hall/Grail/resource-silo economy backbone is snapshot-locked"
+        "building IDs are unique; costs/production use valid nonnegative resources; Hall/Grail/resource-silo economy backbone is snapshot-locked",
+        "all seven Crimson base/upgrade dwelling gold-cost pairs and upgrade targets are snapshot-locked",
+        "base dwelling gold costs increase across T1–T7 and T6/T7 retain their City Hall/Mage Guild/Castle pacing gates"
       ]
     },
     {
@@ -183,10 +187,10 @@
   "rule": "Never report a blocked or pending gate as passed without its required evidence.",
   "ciEvidence": {
     "workflow": "Crimson Static QA",
-    "lastVerifiedRun": 102,
-    "lastVerifiedRunId": 37118819582,
-    "headSha": "8842025821fa8af276fbcbb27df36f3944d069d5",
+    "lastVerifiedRun": 104,
+    "lastVerifiedRunId": 37119056117,
+    "headSha": "c070c2126949491d545e5164295e5622e5257a27",
     "conclusion": "success",
-    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact 12-spell contracts; Crimson creature/hero/class-passive contracts; Crimson town seven-tier/Hall/41-structure/siege plus 48-piece puzzle/Grail/horde/special families; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
+    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact 12-spell contracts; Crimson creature/hero/class-passive contracts; Crimson town identity, special families, building economy and embedded synchronization; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
   }
 }
