@@ -75,6 +75,61 @@ for start in b:
         seen.append(cur); cur=b[cur]["upgrades"]
 ck("buildingUpgradeCycles",not cycles,cycles)
 
+# Full construction dependency graph must also be acyclic. A building depends on
+# every referenced requirement and on the building it upgrades; cycles across
+# those two surfaces can pass simple reference validation yet make a town
+# impossible to construct.
+dependencyErrors=[]
+dependencyGraph={}
+for bid,node in b.items():
+ deps=set(reqrefs(node.get("requires")))
+ upgraded=node.get("upgrades")
+ if upgraded:
+  deps.add(upgraded)
+ if bid in deps:
+  dependencyErrors.append([bid,"self-dependency"])
+ dependencyGraph[bid]=sorted(d for d in deps if d in b)
+
+dependencyCycles=[]
+state={}
+stack=[]
+def visitBuilding(bid):
+ state[bid]=1
+ stack.append(bid)
+ for dep in dependencyGraph.get(bid,[]):
+  if state.get(dep,0)==0:
+   visitBuilding(dep)
+  elif state.get(dep)==1:
+   start=stack.index(dep)
+   cycle=stack[start:]+[dep]
+   if cycle not in dependencyCycles:
+    dependencyCycles.append(cycle)
+ stack.pop()
+ state[bid]=2
+for bid in b:
+ if state.get(bid,0)==0:
+  visitBuilding(bid)
+if dependencyCycles:
+ dependencyErrors.append(["cycles",dependencyCycles])
+
+# Horde buildings are paired with the exact base/upgraded dwelling they augment.
+# Lock both the upgrade target and the direct requirement so an apparently valid
+# graph cannot redirect growth to another tier.
+expectedHordeDependencies={
+ "hordeThorns":("thornGallery","thornGallery"),
+ "hordeThornsUp":("crimsonGallery","hordeThorns"),
+ "hordeHunt":("scarletLodge","scarletLodge"),
+ "hordeHuntUp":("bloodstalkerLodge","hordeHunt"),
+}
+for bid,(upgradeTarget,requiredTarget) in expectedHordeDependencies.items():
+ node=b.get(bid,{})
+ if node.get("upgrades")!=upgradeTarget:
+  dependencyErrors.append([bid,"upgrade-target",node.get("upgrades"),upgradeTarget])
+ refs=reqrefs(node.get("requires"))
+ if refs!=[requiredTarget]:
+  dependencyErrors.append([bid,"requirement",refs,[requiredTarget]])
+ck("buildingDependencyGraphContract",not dependencyErrors,dependencyErrors)
+
 # Numeric building IDs are part of the town contract and must remain unique.
 ids=[x.get("id") for x in b.values()]
 dupeIds=sorted({x for x in ids if ids.count(x)>1})
