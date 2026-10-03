@@ -276,6 +276,22 @@ if siege.get("shooter")!="bloodstalker" or siege.get("imagePrefix")!="CRIMSON/SI
 if fac.get("alignment")!="neutral" or fac.get("nativeTerrain")!="dirt": townIdentityErrors.append(["faction-identity",fac.get("alignment"),fac.get("nativeTerrain")])
 ck("townRuntimeIdentitySnapshot",not townIdentityErrors,townIdentityErrors)
 
+# Puzzle/Grail/horde families are exact runtime-facing town contracts.
+townFamilyErrors=[]
+puzzle=town.get("puzzleMap") or {}
+pieces=puzzle.get("pieces") or []
+if puzzle.get("prefix")!="CRIMSON/PUZZLE/CRP": townFamilyErrors.append(["puzzle-prefix",puzzle.get("prefix")])
+if len(pieces)!=48 or [p.get("index") for p in pieces]!=list(range(1,49)): townFamilyErrors.append(["puzzle-index-family",len(pieces),[p.get("index") for p in pieces]])
+grail=(town.get("buildings") or {}).get("grail",{})
+if (grail.get("id"),grail.get("mode"),grail.get("produce"))!=(26,"grail",{"gold":5000}): townFamilyErrors.append(["grail-contract",grail])
+expectedHorde={"hordeThorns":(44,"thornGallery"),"hordeThornsUp":(45,"crimsonGallery"),"hordeHunt":(46,"scarletLodge"),"hordeHuntUp":(47,"bloodstalkerLodge")}
+for bid,(eid,upgrade) in expectedHorde.items():
+ bld=(town.get("buildings") or {}).get(bid,{})
+ if (bld.get("id"),bld.get("upgrades"))!=(eid,upgrade): townFamilyErrors.append([bid,bld.get("id"),bld.get("upgrades"),eid,upgrade])
+specialIds={k:v.get("id") for k,v in (town.get("buildings") or {}).items() if isinstance(v,dict) and 50<=v.get("id",-1)<=55}
+if specialIds!={"courtVeins":50,"scarletConservatory":51,"firstChalice":52,"moonlitMenagerie":53,"thornTribunal":54,"redMoonObservatory":55}: townFamilyErrors.append(["special-building-ids",specialIds])
+ck("townSpecialFamiliesSnapshot",not townFamilyErrors,townFamilyErrors)
+
 # Creature upgrade balance regression: every base->upgrade pair must remain a
 # strict combat improvement without silently reducing core values.
 creatureUpgradeErrors=[]
