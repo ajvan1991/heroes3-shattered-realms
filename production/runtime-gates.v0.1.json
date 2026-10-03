@@ -41,7 +41,9 @@
         "GitHub Actions Crimson Static QA run #107: fortification progression PASS",
         "GitHub Actions Crimson Static QA run #108: full QA chain with dwelling evidence PASS",
         "GitHub Actions Crimson Static QA run #109: town presentation structure PASS",
-        "GitHub Actions Crimson Static QA run #110: full QA chain with fortification evidence PASS"
+        "GitHub Actions Crimson Static QA run #110: full QA chain with fortification evidence PASS",
+        "GitHub Actions Crimson Static QA run #111: Mage Guild and town identity layout PASS",
+        "GitHub Actions Crimson Static QA run #112: full QA chain with town presentation evidence PASS"
       ],
       "criteria": [
         "v0.1 spell activation snapshot matches staging",
@@ -72,7 +74,8 @@
         "all 41 Crimson town structures map one-to-one to buildings with animation/border/area and integer nonnegative screen coordinates",
         "Crimson town presentation anchors lock music, moat ability, crystal primary resource, Mage Guild 5 and 100/100 Bloodlord/Sanguine Seer tavern weights",
         "Mage Guild spell-slot layout is exact 6/5/4/3/2 with valid nonnegative coordinates and fixed guild window anchor",
-        "Crimson town core media paths, 12 town names and horde tiers 1/4 are snapshot-locked"
+        "Crimson town core media paths, 12 town names and horde tiers 1/4 are snapshot-locked",
+        "Rite of the Open Vein and Rite of Scarlet Shelter have exact mastery-by-mastery sacrifice, mana cost, reward, marker, duration, school and target payloads while remaining generation-disabled"
       ]
     },
     {
@@ -198,10 +201,10 @@
   "rule": "Never report a blocked or pending gate as passed without its required evidence.",
   "ciEvidence": {
     "workflow": "Crimson Static QA",
-    "lastVerifiedRun": 110,
-    "lastVerifiedRunId": 37145659593,
-    "headSha": "f709c660118e91cbf663ebca4769986e6b296f98",
+    "lastVerifiedRun": 112,
+    "lastVerifiedRunId": 37146007798,
+    "headSha": "45e419e4c5a4ec3b408c5bb134456b85a580dc1e",
     "conclusion": "success",
-    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact 12-spell contracts; Crimson creature/hero/class-passive contracts; Crimson town identity/economy/dwellings/fortifications plus 41-structure presentation contract; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
+    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact 12-spell contracts; Crimson creature/hero/class-passive contracts; Crimson town economy/fortification/presentation plus Mage Guild and town identity layout; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
   }
 }
