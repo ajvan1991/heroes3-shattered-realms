@@ -201,6 +201,31 @@ for cid,x in cr.items():
  if (cid in expectedFlyers)!=isFlyer: creatureActivationErrors.append([cid,"flying-contract",isFlyer])
 ck("creatureActivationAndRoleContract",not creatureActivationErrors,creatureActivationErrors)
 
+# Ability topology is a gameplay-facing contract: custom triggers must stay on
+# the intended creatures and native spellcaster/rebirth/aura parameters must
+# not drift silently.
+abilityErrors=[]
+expectedCustom={
+ "bloodbound":{"bloodied":"crimsonBloodied"},
+ "crimsonDancer":{"crimsonGrace":"crimsonDancerGrace","bloodied":"crimsonBloodied"},
+ "bloodwing":{"bloodFeast":"crimsonBloodwingDrain","bloodied":"crimsonBloodied"},
+ "veinOracle":{"bloodied":"crimsonBloodied"},
+ "bloodstalker":{"bloodied":"crimsonBloodied","quarryMark":"crimsonQuarryMark"},
+ "crimsonArchon":{"bloodied":"crimsonBloodied"},
+ "eternalBloodPhoenix":{"bloodied":"crimsonBloodied"},
+}
+for cid,x in cr.items():
+ abilities=x.get("abilities") or {}
+ actual={k:v.get("subtype") for k,v in abilities.items() if isinstance(v,dict) and v.get("type")=="COMBAT_EVENT_TRIGGER" and str(v.get("subtype","")).startswith("crimson")}
+ if actual!=expectedCustom.get(cid,{}): abilityErrors.append([cid,"custom-trigger-topology",actual,expectedCustom.get(cid,{})])
+# Lock the current native contracts that materially define T4/T6/T7 roles.
+hemo=cr["hemomancer"]["abilities"]; oracle=cr["veinOracle"]["abilities"]; arch=cr["crimsonArchon"]["abilities"]; phoenix=cr["eternalBloodPhoenix"]["abilities"]
+if (hemo.get("castsWeakness",{}).get("subtype"),hemo.get("castsWeakness",{}).get("val"),hemo.get("castsCount",{}).get("val"),hemo.get("castLength",{}).get("val"))!=("weakness",1,2,2): abilityErrors.append(["hemomancer","spellcaster-contract"])
+if (oracle.get("castsWeakness",{}).get("val"),oracle.get("castsStoneSkin",{}).get("subtype"),oracle.get("castsStoneSkin",{}).get("val"),oracle.get("castsCount",{}).get("val"),oracle.get("castLength",{}).get("val"))!=(2,"stoneSkin",1,3,3): abilityErrors.append(["veinOracle","spellcaster-contract"])
+if (arch.get("crimsonPresence",{}).get("type"),arch.get("crimsonPresence",{}).get("subtype"),arch.get("crimsonPresence",{}).get("val"))!=("PRIMARY_SKILL","defence",1): abilityErrors.append(["crimsonArchon","presence-contract"])
+if (phoenix.get("eternalRebirth",{}).get("subtype"),phoenix.get("eternalRebirth",{}).get("val"),phoenix.get("eternalRebirth",{}).get("addInfo",{}).get("guaranteed"))!=("rebirth",20,True): abilityErrors.append(["eternalBloodPhoenix","rebirth-contract"])
+ck("creatureAbilityTopology",not abilityErrors,abilityErrors)
+
 # Specialty shortcuts must point to something the hero can actually use/grow.
 specialtySkillErrors=[]
 for hid,h in he.items():
