@@ -520,6 +520,39 @@ if siege.get("shooter")!="bloodstalker" or siege.get("imagePrefix")!="CRIMSON/SI
 if fac.get("alignment")!="neutral" or fac.get("nativeTerrain")!="dirt": townIdentityErrors.append(["faction-identity",fac.get("alignment"),fac.get("nativeTerrain")])
 ck("townRuntimeIdentitySnapshot",not townIdentityErrors,townIdentityErrors)
 
+# All runtime-facing town presentation references must stay inside the Crimson
+# namespace and keep the exact village/castle/capitol map-object trio. This is a
+# staging path contract only; it deliberately does not claim that media exists.
+townMediaPathErrors=[]
+templates=((town.get("mapObject") or {}).get("templates") or {})
+if set(templates)!={"village","castle","capitol"}:
+ townMediaPathErrors.append(["map-template-keys",sorted(templates)])
+for state,node in templates.items():
+ if not isinstance(node,dict):
+  townMediaPathErrors.append([state,"not-object",node]); continue
+ for key in ("animation","editorAnimation"):
+  path=node.get(key)
+  if not isinstance(path,str) or not path.startswith("CRIMSON/MAP/") or not path.endswith(".DEF"):
+   townMediaPathErrors.append([state,key,path])
+siege=town.get("siege") or {}
+prefix=siege.get("imagePrefix")
+if not isinstance(prefix,str) or not prefix.startswith("CRIMSON/SIEGE/"):
+ townMediaPathErrors.append(["siege-prefix",prefix])
+for field in ("buildingsIcons","guildWindow","hallBackground","guildBackground","townBackground","tavernVideo"):
+ path=town.get(field)
+ if not isinstance(path,str) or not path.startswith("CRIMSON/"):
+  townMediaPathErrors.append([field,path])
+music=town.get("musicTheme")
+if not isinstance(music,str) or not music.startswith("CRIMSON/"):
+ townMediaPathErrors.append(["musicTheme",music])
+creatureBg=fac.get("creatureBackground") or {}
+if set(creatureBg)!={"120px","130px"}:
+ townMediaPathErrors.append(["creature-background-keys",sorted(creatureBg)])
+for key,path in creatureBg.items():
+ if not isinstance(path,str) or not path.startswith("CRIMSON/UI/") or not path.endswith(".png"):
+  townMediaPathErrors.append(["creature-background",key,path])
+ck("townMediaNamespaceContract",not townMediaPathErrors,townMediaPathErrors)
+
 # Puzzle/Grail/horde families are exact runtime-facing town contracts.
 townFamilyErrors=[]
 puzzle=fac.get("puzzleMap") or {}
