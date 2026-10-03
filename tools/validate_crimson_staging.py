@@ -335,6 +335,23 @@ if b.get("sanguinePalace",{}).get("requires")!=["allOf",["scarletLodge"],["cityH
 if b.get("heartAviary",{}).get("requires")!=["allOf",["sanguinePalace"],["castle"],["mageGuild3"]]: dwellingErrors.append(["heartAviary","gate-drift"])
 ck("dwellingProgressionSnapshot",not dwellingErrors,dwellingErrors)
 
+# Fortification progression is combat-critical and must remain monotonic.
+fortErrors=[]
+expectedFort={
+ "fort":{"wallsHealth":2,"citadelHealth":0,"upperTowerHealth":0,"lowerTowerHealth":0,"hasMoat":False},
+ "citadel":{"wallsHealth":2,"citadelHealth":2,"upperTowerHealth":0,"lowerTowerHealth":0,"hasMoat":True,"citadelShooter":"bloodstalker"},
+ "castle":{"wallsHealth":3,"citadelHealth":2,"upperTowerHealth":2,"lowerTowerHealth":2,"hasMoat":True,"citadelShooter":"bloodstalker","upperTowerShooter":"bloodstalker","lowerTowerShooter":"bloodstalker"},
+}
+for bid,exp in expectedFort.items():
+ actual=b.get(bid,{}).get("fortifications") or {}
+ if actual!=exp: fortErrors.append([bid,actual,exp])
+if b.get("citadel",{}).get("upgrades")!="fort" or b.get("castle",{}).get("upgrades")!="citadel": fortErrors.append(["fort-upgrade-chain"])
+# Every configured tower shooter must resolve to the town's intended ranged unit.
+for bid in ("citadel","castle"):
+ for k,v in (b.get(bid,{}).get("fortifications") or {}).items():
+  if k.endswith("Shooter") and v!="bloodstalker": fortErrors.append([bid,k,v])
+ck("fortificationProgressionSnapshot",not fortErrors,fortErrors)
+
 # Creature upgrade balance regression: every base->upgrade pair must remain a
 # strict combat improvement without silently reducing core values.
 creatureUpgradeErrors=[]
