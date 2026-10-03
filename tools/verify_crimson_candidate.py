@@ -18,6 +18,13 @@ if not C.is_dir(): raise SystemExit("Candidate missing; run build_crimson_candid
 mod=load(C/"mod.json")
 expected={"factions":"config/factions.json","heroClasses":"config/heroClasses.json","heroes":"config/heroes.json","creatures":"config/creatures.json","spells":"config/spells.json","skills":"config/skills.json","scripts":"config/scripts.json"}
 for k,v in expected.items(): ck(mod.get(k)==[v],f"registration {k}: expected {[v]!r}, got {mod.get(k)!r}")
+# Candidate verification independently rejects any extra gameplay registration
+# inherited or injected outside the explicit Crimson v0.1 surface.
+gameplayKeys={"factions","heroClasses","heroes","creatures","spells","skills","scripts","artifacts","objects","terrains","roads","rivers","battlefields","obstacles","mapLayers","templates"}
+unexpectedGameplay=sorted(k for k in gameplayKeys if k in mod and k not in expected)
+ck(not unexpectedGameplay,f"unexpected candidate gameplay registrations: {unexpectedGameplay}")
+ck(mod.get("keepDisabled") is True,"candidate must remain keepDisabled until runtime gates are promoted")
+ck(mod.get("name")=="Shattered Realms — Crimson v0.1 Candidate",f"candidate name mismatch: {mod.get('name')!r}")
 for k,v in expected.items():
  p=C/"Content"/v
  ck(p.is_file() and p.stat().st_size>0,f"registered config missing/empty for {k}: {v}")
