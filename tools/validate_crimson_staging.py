@@ -1148,6 +1148,46 @@ for sid,s in spellEffectDefs.items():
  if not scriptfile.is_file() or scriptfile.stat().st_size<=0: badSpellEffectDefs.append([sid,"lua",str(scriptfile.relative_to(ROOT))])
 ck("spellEffectDefinitions",not badSpellEffectDefs,badSpellEffectDefs)
 
+# The two custom spell bridges are a small runtime ABI. Lock their JSON schemas
+# so staged spell payloads cannot drift away from what the Lua implementation is
+# expected to receive while still passing simple registry/reference checks.
+spellEffectSchemaErrors=[]
+expectedEffectSchemas={
+ "bloodRiteUnitEffect":{
+  "required":["sacrifice","stat","statValue","usedMarker","turns"],
+  "properties":{
+   "sacrifice":{"type":"integer","minimum":4,"maximum":25},
+   "stat":{"type":"string","enum":["attack","defence"]},
+   "statValue":{"type":"integer","minimum":1,"maximum":5},
+   "rangedReduction":{"type":"integer","minimum":0,"maximum":30},
+   "usedMarker":{"type":"string"},
+   "turns":{"type":"integer","minimum":1,"maximum":5},
+  },
+ },
+ "selectiveDispel":{
+  "required":None,
+  "properties":{
+   "positive":{"type":"boolean"},
+   "negative":{"type":"boolean"},
+   "neutral":{"type":"boolean"},
+  },
+ },
+}
+if set(spellEffectDefs)!=set(expectedEffectSchemas):
+ spellEffectSchemaErrors.append(["registry-membership",sorted(spellEffectDefs),sorted(expectedEffectSchemas)])
+for eid,expected in expectedEffectSchemas.items():
+ schema=(spellEffectDefs.get(eid,{}) or {}).get("schema") or {}
+ if schema.get("type")!="object" or schema.get("additionalProperties") is not False:
+  spellEffectSchemaErrors.append([eid,"schema-envelope",schema.get("type"),schema.get("additionalProperties")])
+ if schema.get("properties")!=expected["properties"]:
+  spellEffectSchemaErrors.append([eid,"properties",schema.get("properties"),expected["properties"]])
+ if expected["required"] is None:
+  if "required" in schema and schema.get("required"):
+   spellEffectSchemaErrors.append([eid,"unexpected-required",schema.get("required")])
+ elif schema.get("required")!=expected["required"]:
+  spellEffectSchemaErrors.append([eid,"required",schema.get("required"),expected["required"]])
+ck("spellEffectSchemaAbiContract",not spellEffectSchemaErrors,spellEffectSchemaErrors)
+
 # Siege prefix is a derived resource contract: VCMI composes filenames from it.
 siege=town["siege"]
 prefix=siege.get("imagePrefix")
