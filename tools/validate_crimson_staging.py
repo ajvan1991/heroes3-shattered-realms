@@ -150,6 +150,54 @@ for n,tier in enumerate(town.get("creatures",[]),1):
 ck("townCreaturePairShape",not tierShape,tierShape)
 ck("townCreatureUpgradeChains",not upgradeErrors,upgradeErrors)
 
+# Lock the v0.1 dwelling chain to the seven town creature pairs. Building graph
+# validity alone cannot prove that a dwelling actually recruits the intended
+# tier, because recruitment is derived from the town creature ordering plus
+# canonical dwelling IDs.
+expectedDwellingIds={
+ "veinHouse":30,"thornGallery":31,"gorewingRoost":32,"hallVeins":33,
+ "scarletLodge":34,"sanguinePalace":35,"heartAviary":36,
+ "veinHouseUp":37,"crimsonGallery":38,"bloodwingRoost":39,"oracleHall":40,
+ "bloodstalkerLodge":41,"archonPalace":42,"eternalAviary":43,
+}
+dwellingErrors=[]
+for bid,expectedId in expectedDwellingIds.items():
+ node=b.get(bid,{})
+ if node.get("id")!=expectedId:
+  dwellingErrors.append([bid,"id",node.get("id"),expectedId])
+ tier=(expectedId-30)%7+1
+ expectedCreature=town.get("creatures",[[]]*7)[tier-1][0 if expectedId<37 else 1] if len(town.get("creatures",[]))>=tier and len(town.get("creatures",[])[tier-1])==2 else None
+ if expectedCreature not in cr:
+  dwellingErrors.append([bid,"derived-creature",expectedCreature])
+ if expectedId>=37:
+  baseId=expectedId-7
+  baseBuilding=next((name for name,node2 in b.items() if node2.get("id")==baseId),None)
+  if node.get("upgrades")!=baseBuilding:
+   dwellingErrors.append([bid,"upgrade-building",node.get("upgrades"),baseBuilding])
+ck("dwellingIdAndTierContract",not dwellingErrors,dwellingErrors)
+
+# Economy-bearing buildings use only canonical resources and non-negative integer
+# amounts. Empty cost is reserved for automatic/grail structures; ordinary
+# buildable structures must have a real price.
+buildingEconomyErrors=[]
+canonicalResources={"wood","ore","mercury","sulfur","crystal","gems","gold"}
+for bid,node in b.items():
+ for field in ("cost","produce"):
+  values=node.get(field)
+  if values is None:
+   continue
+  if not isinstance(values,dict):
+   buildingEconomyErrors.append([bid,field,"not-object",values]); continue
+  for resource,amount in values.items():
+   if resource not in canonicalResources:
+    buildingEconomyErrors.append([bid,field,"resource",resource])
+   if not isinstance(amount,int) or amount<0:
+    buildingEconomyErrors.append([bid,field,resource,amount])
+ cost=node.get("cost")
+ if isinstance(cost,dict) and not cost and node.get("mode") not in {"auto","grail"}:
+  buildingEconomyErrors.append([bid,"empty-build-cost",node.get("mode")])
+ck("buildingEconomyShapeContract",not buildingEconomyErrors,buildingEconomyErrors)
+
 creatureNumeric=[]
 for cid,x in cr.items():
  dmg=x.get("damage",{}); cost=x.get("cost",{})
