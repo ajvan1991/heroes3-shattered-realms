@@ -231,6 +231,35 @@ for cid,exp in expectedClass.items():
   if sum(cls.get(chanceField,{}).values())!=100: classIdentityErrors.append([cid,chanceField+"-sum",sum(cls.get(chanceField,{}).values())])
 ck("heroClassIdentitySnapshot",not classIdentityErrors,classIdentityErrors)
 
+# Active Crimson class passives are native, fully populated three-tier skills.
+# Future faction passives remain inert elsewhere in this validator.
+passiveRuntimeErrors=[]
+expectedPassive={
+ "bloodCommand":{
+  "basic":{"bloodCommandAttack":("PRIMARY_SKILL","attack",1)},
+  "advanced":{"bloodCommandAttack":("PRIMARY_SKILL","attack",1),"bloodCommandDefence":("PRIMARY_SKILL","defence",1)},
+  "expert":{"bloodCommandAttack":("PRIMARY_SKILL","attack",2),"bloodCommandDefence":("PRIMARY_SKILL","defence",1)},
+ },
+ "crimsonDivination":{
+  "basic":{"riteDiscipline":("MANA_PER_KNOWLEDGE_PERCENTAGE",None,10)},
+  "advanced":{"riteDiscipline":("MANA_PER_KNOWLEDGE_PERCENTAGE",None,15),"riteFocus":("SPELL_DAMAGE","any",5)},
+  "expert":{"riteDiscipline":("MANA_PER_KNOWLEDGE_PERCENTAGE",None,20),"riteFocus":("SPELL_DAMAGE","any",10)},
+ },
+}
+for sid,tiers in expectedPassive.items():
+ s=skills.get(sid,{})
+ if s.get("gainChance")!={"might":0,"magic":0} or s.get("offerCooldown")!=0: passiveRuntimeErrors.append([sid,"availability-contract",s.get("gainChance"),s.get("offerCooldown")])
+ if s.get("tags",{}).get("classExclusive") is not True: passiveRuntimeErrors.append([sid,"classExclusive-tag"])
+ for tier,expectedEffects in tiers.items():
+  node=s.get(tier,{})
+  actual={}
+  for eid,e in (node.get("effects") or {}).items(): actual[eid]=(e.get("type"),e.get("subtype"),e.get("val"))
+  if actual!=expectedEffects: passiveRuntimeErrors.append([sid,tier,"effects",actual,expectedEffects])
+  images=node.get("images") or {}
+  if set(images)!={"small","medium","large","scenarioBonus"} or not all(images.values()): passiveRuntimeErrors.append([sid,tier,"images"])
+  if not node.get("description"): passiveRuntimeErrors.append([sid,tier,"description"])
+ck("activeClassPassiveRuntimeSnapshot",not passiveRuntimeErrors,passiveRuntimeErrors)
+
 # Creature upgrade balance regression: every base->upgrade pair must remain a
 # strict combat improvement without silently reducing core values.
 creatureUpgradeErrors=[]
