@@ -962,6 +962,40 @@ for sid in actualReserved:
  if counterplay[sid].get("defaultGainChance")!=cp.get("reservedDefaultGainChance"): spellSnapshotErrors.append([sid,"reservedChance"])
 ck("spellActivationSnapshot",not spellSnapshotErrors,spellSnapshotErrors)
 
+# Blood Rites remain reserved in v0.1 until their bridge/runtime evidence is
+# explicitly promoted. Lock every generation surface, mastery shape and routing
+# field so a partial edit cannot make them randomly learnable.
+bloodRiteReservationErrors=[]
+expectedMasteries={"none","basic","advanced","expert"}
+expectedRiteEffect=f"shattered-realms:{br.get('customEffect')}"
+for sid in sorted(set(br.get("ids",[]))):
+ s=rites.get(sid,{})
+ if s.get("defaultGainChance")!=br.get("defaultGainChance"):
+  bloodRiteReservationErrors.append([sid,"defaultGainChance",s.get("defaultGainChance")])
+ gain=s.get("gainChance")
+ if gain!={"crimsonCourt":br.get("crimsonCourtGainChance")}:
+  bloodRiteReservationErrors.append([sid,"gainChance",gain])
+ if set((s.get("levels") or {}))!=expectedMasteries:
+  bloodRiteReservationErrors.append([sid,"masteries",sorted((s.get("levels") or {}).keys())])
+ if s.get("type")!="combat" or s.get("targetType")!="CREATURE":
+  bloodRiteReservationErrors.append([sid,"combat-target",s.get("type"),s.get("targetType")])
+ if s.get("flags")!={"positive":True}:
+  bloodRiteReservationErrors.append([sid,"flags",s.get("flags")])
+ for mastery,lvlDoc in (s.get("levels") or {}).items():
+  effects=lvlDoc.get("effects") or {}
+  if set(effects)!={"rite"}:
+   bloodRiteReservationErrors.append([sid,mastery,"effect-keys",sorted(effects)])
+   continue
+  effect=effects.get("rite") or {}
+  if effect.get("type")!=expectedRiteEffect:
+   bloodRiteReservationErrors.append([sid,mastery,"effect-type",effect.get("type"),expectedRiteEffect])
+  if not isinstance(effect.get("usedMarker"),str) or not effect["usedMarker"].startswith(f"shattered-realms:{sid}"):
+   bloodRiteReservationErrors.append([sid,mastery,"usedMarker",effect.get("usedMarker")])
+  for field in ("sacrifice","statValue","turns"):
+   if not isinstance(effect.get(field),int) or effect[field]<=0:
+    bloodRiteReservationErrors.append([sid,mastery,field,effect.get(field)])
+ck("bloodRiteReservationAndRoutingContract",not bloodRiteReservationErrors,bloodRiteReservationErrors)
+
 # Spell text must remain truthful to the implementation class recorded by the
 # activation snapshot. Native spells may not contain custom Shattered effects;
 # bridge spells must contain the declared custom effect on every mastery level.
