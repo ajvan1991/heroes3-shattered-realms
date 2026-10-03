@@ -371,6 +371,29 @@ for sid in sorted(actualActive):
  if flags!=[exp.get("flag")]: spellIdentityErrors.append([sid,"polarity",flags,exp.get("flag")])
 ck("activeSpellIdentitySnapshot",not spellIdentityErrors,spellIdentityErrors)
 
+# Mastery must not become cheaper and native numeric effects must not silently
+# weaken as skill mastery increases. This is a conservative balance regression
+# guard; intentional non-monotonic designs should use a custom-effect contract.
+spellProgressionErrors=[]
+levelOrder=["none","basic","advanced","expert"]
+for sid in sorted(actualActive):
+ s=counterplay[sid]; lv=s.get("levels") or {}
+ costs=[lv.get(k,{}).get("cost") for k in levelOrder]
+ if all(isinstance(x,int) for x in costs) and any(costs[i]>costs[i+1] for i in range(3)): spellProgressionErrors.append([sid,"cost-regression",costs])
+ if sid in expectedNative:
+  signatures={}
+  for mastery in levelOrder:
+   for key,e in (lv.get(mastery,{}).get("effects") or {}).items():
+    if not isinstance(e,dict) or not isinstance(e.get("val"),(int,float)): continue
+    sig=(key,e.get("type"),e.get("subtype"))
+    signatures.setdefault(sig,[]).append(e.get("val"))
+  for sig,vals in signatures.items():
+   if len(vals)!=4: continue
+   # Effects should not move toward zero at higher mastery.
+   mags=[abs(v) for v in vals]
+   if any(mags[i]>mags[i+1] for i in range(3)): spellProgressionErrors.append([sid,"effect-regression",list(sig),vals])
+ck("activeSpellMasteryProgression",not spellProgressionErrors,spellProgressionErrors)
+
 # Custom spell-effect references must resolve to the staged spell-effect registry.
 effectIds=set()
 if isinstance(spellEffects,dict):
