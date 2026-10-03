@@ -96,9 +96,13 @@ for sp in sorted(set(registeredScriptPaths)):
  shutil.copy2(src,dst)
 
 base=load(SRC/"mod.json")
-base.update({
- "name":"Shattered Realms — Crimson v0.1 Candidate",
- "keepDisabled":True,
+# Source mod.json is intentionally inert. Refuse to build if gameplay registration
+# keys have leaked into source, because inheriting them into the isolated candidate
+# could silently widen the activation surface beyond the explicit v0.1 package.
+gameplayKeys={"factions","heroClasses","heroes","creatures","spells","skills","scripts","artifacts","objects","terrains","roads","rivers","battlefields","obstacles","mapLayers","templates"}
+leakedSourceKeys=sorted(gameplayKeys & set(base))
+if leakedSourceKeys: raise SystemExit(f"FAIL: source mod.json is not inert: {leakedSourceKeys}")
+candidateRegistrations={
  "factions":["config/factions.json"],
  "heroClasses":["config/heroClasses.json"],
  "heroes":["config/heroes.json"],
@@ -106,7 +110,14 @@ base.update({
  "spells":["config/spells.json"],
  "skills":["config/skills.json"],
  "scripts":["config/scripts.json"],
+}
+base.update({
+ "name":"Shattered Realms — Crimson v0.1 Candidate",
+ "keepDisabled":True,
+ **candidateRegistrations,
 })
+if any(base.get(k)!=v for k,v in candidateRegistrations.items()):
+ raise SystemExit("FAIL: candidate registration surface drifted during construction")
 dump(OUT/"mod.json",base)
 
 # Asset preflight: direct quoted media paths from candidate JSON.
