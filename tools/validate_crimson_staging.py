@@ -543,7 +543,7 @@ for field in ("buildingsIcons","guildWindow","hallBackground","guildBackground",
  if not isinstance(path,str) or not path.startswith("CRIMSON/"):
   townMediaPathErrors.append([field,path])
 music=town.get("musicTheme")
-if not isinstance(music,str) or not music.startswith("CRIMSON/"):
+if not isinstance(music,list) or not music or any(not isinstance(path,str) or not path.startswith("CRIMSON/MUSIC/") or not path.endswith(".ogg") for path in music):
  townMediaPathErrors.append(["musicTheme",music])
 creatureBg=fac.get("creatureBackground") or {}
 if set(creatureBg)!={"120px","130px"}:
