@@ -278,7 +278,7 @@ ck("townRuntimeIdentitySnapshot",not townIdentityErrors,townIdentityErrors)
 
 # Puzzle/Grail/horde families are exact runtime-facing town contracts.
 townFamilyErrors=[]
-puzzle=town.get("puzzleMap") or {}
+puzzle=fac.get("puzzleMap") or {}
 pieces=puzzle.get("pieces") or []
 if puzzle.get("prefix")!="CRIMSON/PUZZLE/CRP": townFamilyErrors.append(["puzzle-prefix",puzzle.get("prefix")])
 if len(pieces)!=48 or [p.get("index") for p in pieces]!=list(range(1,49)): townFamilyErrors.append(["puzzle-index-family",len(pieces),[p.get("index") for p in pieces]])
