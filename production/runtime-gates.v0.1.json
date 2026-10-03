@@ -25,7 +25,9 @@
         "GitHub Actions Crimson Static QA run #88: creature ability topology PASS",
         "GitHub Actions Crimson Static QA run #89: full QA chain with creature role evidence PASS",
         "GitHub Actions Crimson Static QA run #90: hero starting-kit/class-passive contract PASS",
-        "GitHub Actions Crimson Static QA run #91: full QA chain with hero-kit criteria PASS"
+        "GitHub Actions Crimson Static QA run #91: full QA chain with hero-kit criteria PASS",
+        "GitHub Actions Crimson Static QA run #92: exact hero specialty and starting-army contracts PASS",
+        "GitHub Actions Crimson Static QA run #93: full QA chain with hero specialty criteria PASS"
       ],
       "criteria": [
         "v0.1 spell activation snapshot matches staging",
@@ -41,7 +43,9 @@
         "all 16 Crimson regular heroes have explicit class-exclusive Basic passives and class-correct spellbook state",
         "all 16 Crimson regular heroes have complete identity/biography/specialty text shape",
         "Crimson v0.1 hero specialty distribution is exact: seven creature specialists and nine native secondary-skill specialists",
-        "Crimson hero starting armies are restricted to Veinling and Thorn Dancer stacks"
+        "Crimson hero starting armies are restricted to Veinling and Thorn Dancer stacks",
+        "Crimson hero-class affinity, primary-skill starts, low/high level-up distributions, commander and tavern identity are snapshot-locked",
+        "Bloodlord and Sanguine Seer level-up chance tables each sum to 100"
       ]
     },
     {
@@ -167,10 +171,10 @@
   "rule": "Never report a blocked or pending gate as passed without its required evidence.",
   "ciEvidence": {
     "workflow": "Crimson Static QA",
-    "lastVerifiedRun": 91,
-    "lastVerifiedRunId": 37117767956,
-    "headSha": "b0936e8cad912bb357e3b3efb60b6c83429d8d70",
+    "lastVerifiedRun": 93,
+    "lastVerifiedRunId": 37117961858,
+    "headSha": "036c1c0cd2fb89de887696ad9020f9761bcd7a63",
     "conclusion": "success",
-    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact 12-spell contracts; Crimson creature progression/roles/abilities; 16-hero class-passive, spellbook and identity contract; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
+    "scope": "structural/non-strict candidate; executable reference closure; all 16 production batches; exact 12-spell contracts; Crimson creature progression/roles/abilities; 16-hero class-passive, spellbook, identity, specialty and starting-army contracts; full + pre-build runtime-gate validation; 530/530 exclusive production ownership; exact six-script runtime surface; candidate integrity"
   }
 }
