@@ -1055,6 +1055,48 @@ for sid in sorted(actualActive):
  if flags!=[exp.get("flag")]: spellIdentityErrors.append([sid,"polarity",flags,exp.get("flag")])
 ck("activeSpellIdentitySnapshot",not spellIdentityErrors,spellIdentityErrors)
 
+# Generation chances are a cross-faction gameplay contract. Every active
+# counterplay spell must be equally available to all five planned factions;
+# every reserved spell must remain zero everywhere. Missing/extra faction keys
+# are treated as activation drift rather than silently accepting engine defaults.
+spellGenerationErrors=[]
+requiredFactionChances=set(cp.get("requiredFactionChances",[]))
+for sid,s in counterplay.items():
+ gain=s.get("gainChance")
+ if not isinstance(gain,dict):
+  spellGenerationErrors.append([sid,"gainChance-not-object",gain]); continue
+ if set(gain)!=requiredFactionChances:
+  spellGenerationErrors.append([sid,"faction-keys",sorted(gain),sorted(requiredFactionChances)])
+ expectedChance=cp.get("activeDefaultGainChance") if sid in actualActive else cp.get("reservedDefaultGainChance")
+ for faction,chance in gain.items():
+  if chance!=expectedChance:
+   spellGenerationErrors.append([sid,faction,chance,expectedChance])
+ck("counterplayFactionGenerationContract",not spellGenerationErrors,spellGenerationErrors)
+
+# Spell graphics are staged resources, but path identity can still be validated
+# before media exists. This prevents a typo/cross-faction namespace from reaching
+# the later asset gate where the root cause is harder to diagnose.
+spellGraphicsErrors=[]
+for sid,s in counterplay.items():
+ graphics=s.get("graphics") or {}
+ expected={
+  "iconBook":f"SPELLS/SHATTERED/{sid}_book.png",
+  "iconScroll":f"SPELLS/SHATTERED/{sid}_scroll.png",
+  "iconEffect":f"SPELLS/SHATTERED/{sid}_effect.png",
+  "iconImmune":f"SPELLS/SHATTERED/{sid}_immune.png",
+  "iconScenarioBonus":f"SPELLS/SHATTERED/{sid}_scenario.png",
+ }
+ if graphics!=expected:
+  spellGraphicsErrors.append([sid,graphics,expected])
+for sid,s in rites.items():
+ graphics=s.get("graphics") or {}
+ if set(graphics)!={"iconBook","iconScroll","iconEffect","iconImmune","iconScenarioBonus"}:
+  spellGraphicsErrors.append([sid,"keys",sorted(graphics)])
+ for field,path in graphics.items():
+  if not isinstance(path,str) or not path.startswith("SPELLS/CRIMSON/") or not path.endswith(".png"):
+   spellGraphicsErrors.append([sid,field,path])
+ck("spellGraphicsNamespaceContract",not spellGraphicsErrors,spellGraphicsErrors)
+
 # Mastery must not become cheaper and native numeric effects must not silently
 # weaken as skill mastery increases. This is a conservative balance regression
 # guard; intentional non-monotonic designs should use a custom-effect contract.
